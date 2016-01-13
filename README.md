@@ -9,9 +9,9 @@ Cafe SDK에 대하여 자세히 알고싶으시면 [네이버 CafeSDK 공식카�
 
 v.1.0.1
 -------------
- NaverCafeSDK For Android 1.0.1
+ NaverCafeSDK For Android 1.1.0
  
- NaverCafeSDK For iOS 1.0.0
+ NaverCafeSDK For iOS 1.1.0
 
 
 폴더 구조
