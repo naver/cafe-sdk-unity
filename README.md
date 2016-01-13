@@ -9,6 +9,8 @@ Cafe SDK에 대하여 자세히 알고싶으시면 [네이버 CafeSDK 공식카�
 
 v.1.1.0
 -------------
+ Unity Package 1.1.0 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
+
  NaverCafeSDK For Android 1.1.0
  
  NaverCafeSDK For iOS 1.1.0
@@ -30,15 +32,13 @@ README.md   | readme 파일
 [Android]
 
 1. [네이버 아이디 로그인](https://nid.naver.com/devcenter/docs.nhn?menu=Android)
-2. android support library v13
+2. android support library v4
 3. [naver volleyer](http://mvnrepository.com/artifact/com.navercorp.volleyextensions/volleyer)   (2.0.1 사용 중)
 4. [volley](http://mvnrepository.com/artifact/com.mcxiaoke.volley/library/) (1.0.2사용 중)
 5. [google gson](http://mvnrepository.com/artifact/com.google.code.gson/gson)  (2.3.1 사용 중)
 6. [glide](http://mvnrepository.com/artifact/com.github.bumptech.glide/glide)  (3.6.1 사용 중)
 7. [otto](http://mvnrepository.com/artifact/com.squareup/otto)  (1.3.8 사용 중)
-8. [VierwPagerIndicator](http://mvnrepository.com/artifact/com.viewpagerindicator/library) (2.4.1 사용 중) 
-<br>**ViewPagerIndicator의 경우 jar가 아닌 라이브러리 형태로 배포되고 있습니다. aar or apklib or zip으로 받아 개발툴에 맞는 라이브러리를 사용하시면 됩니다.
-<br>**aar (https://bintray.com/populov/maven/com.viewpagerindicator:library)
+
 
 [iOS]
 
@@ -48,7 +48,7 @@ README.md   | readme 파일
 
 라이선스
 -------------
-NAVER Cafe SDK for iOS
+NAVER Cafe SDK for Unity
 
 Copyright 2015 NAVER Corp. All rights reserved.
 
