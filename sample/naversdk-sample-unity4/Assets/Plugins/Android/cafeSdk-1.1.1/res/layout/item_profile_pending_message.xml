@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="28dp"
+    android:gravity="center_horizontal"
+    android:text="이미 가입신청하신 상태로\n현재 가입승인 절차가 진행 중입니다."
+    android:textColor="@color/black1"
+    android:textSize="16dp"/>

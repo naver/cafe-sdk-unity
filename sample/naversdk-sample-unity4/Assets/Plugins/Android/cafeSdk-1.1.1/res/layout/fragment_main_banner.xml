@@ -1,0 +1,27 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ImageView
+      android:id="@+id/image_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+  <ImageView
+      android:id="@+id/movie_gradient"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:scaleType="fitXY"
+      android:src="@drawable/gl_img_fullboard_gradient"/>
+
+  <ImageView
+      android:id="@+id/movie_icon"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:visibility="gone"
+      android:src="@drawable/gl_icon_mainmov"/>
+</RelativeLayout>
