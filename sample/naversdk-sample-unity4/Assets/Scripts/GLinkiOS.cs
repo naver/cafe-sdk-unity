@@ -27,6 +27,25 @@ public class GLinkiOS : IGLink
 	
 	[DllImport("__Internal")]
 	public static extern void _ExecuteArticlePostWithVideo(int menuId, string subject, string content, string filePath);
+
+	[DllImport("__Internal")]
+	public static extern void _ExcuteNotice();
+
+	[DllImport("__Internal")]
+	public static extern void _ExcuteEvent();
+
+	[DllImport("__Internal")]
+	public static extern void _ExecuteMenu();
+
+	[DllImport("__Internal")]
+	public static extern void _ExecuteProfile();
+
+	[DllImport("__Internal")]
+	public static extern void _ExecuteArticle(int articleId);
+
+	[DllImport("__Internal")]
+	public static extern void _SetGameUserId(string gameUserId, string fieldName);
+
 	#endif
 
 	public GLinkiOS() {
@@ -35,12 +54,42 @@ public class GLinkiOS : IGLink
 		#endif
 	}
 
-	public void executeMain() {
+	public void executeHome() {
 		#if UNITY_IPHONE 
 		_ExecuteMain ();
 		#endif
 	}
-	
+
+	public void executeNotice() {
+		#if UNITY_IPHONE 
+		_ExecuteNotice ();
+		#endif
+	}
+
+	public void executeEvent() {
+		#if UNITY_IPHONE 
+		_ExcuteEvent ();
+		#endif
+	}
+
+	public void executeMenu() {
+		#if UNITY_IPHONE 
+		_ExecuteMenu ();
+		#endif
+	}
+
+	public void executeProfile() {
+		#if UNITY_IPHONE 
+		_ExecuteProfile ();
+		#endif
+	}
+
+	public void executeArticle (int articleId) {
+		#if UNITY_IPHONE 
+		_ExecuteArticle (articleId);
+		#endif
+	}
+
 	public void executeArticlePost(int menuId, string subject, string content) {
 		#if UNITY_IPHONE
 		_ExecuteArticlePost(menuId, subject, content);
@@ -58,6 +107,10 @@ public class GLinkiOS : IGLink
 		_ExecuteArticlePostWithVideo(menuId, subject, content, filePath);
 		#endif
 	}
+
+	public void setGameUserId (string gameUserId, string fieldName) {
+		#if UNITY_IPHONE 
+		_SetGameUserId(gameUserId, fieldName);
+		#endif
+	}
 }
-
-

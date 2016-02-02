@@ -6,7 +6,7 @@ using System.IO;
 
 public class SampleBehaviour : MonoBehaviour {
 	public void OnClickGlinkButton () {
-		GLinkUnity.executeMain ();
+		GLink.sharedInstance().executeHome ();
 	}
 	
 	public void OnClickScreenShotButton () {
@@ -21,7 +21,7 @@ public class SampleBehaviour : MonoBehaviour {
 		string path = Application.persistentDataPath + "/GLShareImage.png";
 		File.WriteAllBytes(path, bytes);		
 
-		GLinkUnity.executeArticlePostWithImage(10, "스크린샷!!", "제 점수는요~", path);
+		GLink.sharedInstance().executeArticlePostWithImage(10, "스크린샷!!", "제 점수는요~", path);
 	}
 
 	IEnumerator CoFunction () {

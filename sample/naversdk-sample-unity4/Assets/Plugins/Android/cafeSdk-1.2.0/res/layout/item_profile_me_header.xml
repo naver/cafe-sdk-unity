@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="104dp">
+
+  <ImageView
+      android:id="@+id/background_image"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:alpha="0.4"/>
+
+  <View
+      android:id="@+id/background_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+  <RelativeLayout
+      android:id="@+id/header_content_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="내 프로필"
+        android:textColor="@color/white1"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="64dp"
+        android:layout_height="67dp"
+        android:layout_centerInParent="true">
+
+      <ImageView
+          android:id="@+id/profile_image"
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          android:layout_alignParentTop="true"
+          android:layout_marginLeft="1dp"
+          android:layout_marginTop="1dp"/>
+
+      <ImageView
+          android:layout_width="62dp"
+          android:layout_height="62dp"
+          android:layout_alignParentTop="true"
+          android:src="@drawable/gl_thumb_personal_profile_stroke"/>
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:src="@drawable/gl_btn_personal_profile_setting"/>
+    </RelativeLayout>
+
+      <TextView
+        android:id="@+id/logout_button"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/gl_btn_logout"
+        android:textSize="13dp"
+        android:textColor="@color/white1"
+        android:textStyle="bold"
+          android:gravity="center"
+        android:text="로그아웃"/>
+  </RelativeLayout>
+</FrameLayout>

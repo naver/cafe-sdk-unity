@@ -12,13 +12,29 @@ using System.Runtime.InteropServices;
 
 public interface IGLink
 {
-	void executeMain();
-	
-	void executeArticlePost(int menuId, string subject, string content);
-	
-	void executeArticlePostWithImage(int menuId, string subject, string content, string filePath);
+	// home 탭으로 시작.
+	void executeHome ();
 
-	void executeArticlePostWithVideo(int menuId, string subject, string content, string filePath);
+	// notice 탭으로 시작.
+	void executeNotice ();
+
+	// event 탭으로 시작.
+	void executeEvent ();
+
+	// menu 탭으로 시작.
+	void executeMenu ();
+
+	// profile 탭으로 시작.
+	void executeProfile ();
+
+	// 특정 게시글로 바로 시작.
+	void executeArticle (int articleId);
+
+	void executeArticlePost (int menuId, string subject, string content);
+
+	void executeArticlePostWithImage (int menuId, string subject, string content, string filePath);
+
+	void executeArticlePostWithVideo (int menuId, string subject, string content, string filePath);
+
+	void setGameUserId (string gameUserId, string fieldName);
 }
-
-

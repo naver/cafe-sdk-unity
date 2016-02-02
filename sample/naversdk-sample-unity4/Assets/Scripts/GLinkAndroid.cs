@@ -13,19 +13,16 @@ using System.Collections;
 using System.Runtime.InteropServices;
 
 public class GLinkAndroid : IGLink {
+	
 	#if UNITY_ANDROID
-	AndroidJavaClass mGLinkClass = null;
-	AndroidJavaObject mCurrentActivity = null;
+	AndroidJavaClass ginkClass = null;
+	AndroidJavaObject currentActivity = null;
 
 	class OnClickAppSchemeBannerListener : AndroidJavaProxy {
 		public OnClickAppSchemeBannerListener () : base("com.naver.glink.android.sdk.Glink$OnClickAppSchemeBannerListener") { /* empty. */ }
-		
+
 		void onClickAppSchemeBanner (string appScheme) {
-			var activity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
-			activity.Call ("runOnUiThread", new AndroidJavaRunnable (() => {
-				AndroidJavaObject toast = new AndroidJavaClass ("android.widget.Toast").CallStatic<AndroidJavaObject>("makeText", activity, appScheme, 1);
-				toast.Call ("show");
-			}));
+			showToast ("tapped:" + appScheme);
 		}
 	}
 
@@ -33,11 +30,7 @@ public class GLinkAndroid : IGLink {
 		public OnSdkStartedListener () : base("com.naver.glink.android.sdk.Glink$OnSdkStartedListener") { /* empty. */ }
 
 		void onSdkStarted () {
-			var activity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
-			activity.Call ("runOnUiThread", new AndroidJavaRunnable (() => {
-				AndroidJavaObject toast = new AndroidJavaClass ("android.widget.Toast").CallStatic<AndroidJavaObject>("makeText", activity, "sdk start.", 1);
-				toast.Call ("show");
-			}));
+			showToast ("sdk start.");
 		}
 	}
 
@@ -45,58 +38,105 @@ public class GLinkAndroid : IGLink {
 		public OnSdkStoppedListener () : base("com.naver.glink.android.sdk.Glink$OnSdkStoppedListener") { /* empty. */ }
 
 		void onSdkStopped () {
-			var activity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
-			activity.Call ("runOnUiThread", new AndroidJavaRunnable (() => {
-				AndroidJavaObject toast = new AndroidJavaClass ("android.widget.Toast").CallStatic<AndroidJavaObject>("makeText", activity, "sdk stop.", 1);
-				toast.Call ("show");
-			}));
+			showToast ("sdk stop.");
 		}
+	}
+
+	class OnLoggedInListener : AndroidJavaProxy {
+		public OnLoggedInListener () : base("com.naver.glink.android.sdk.Glink$OnLoggedInListener") { /* empty. */ }
+
+		void onLoggedIn (bool success) {
+			showToast ("logged in:" + success);
+		} 
+
+	}
+
+	static void showToast(string message) {
+		var activity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
+		activity.Call ("runOnUiThread", new AndroidJavaRunnable (() => {
+			AndroidJavaObject toast = new AndroidJavaClass ("android.widget.Toast").CallStatic<AndroidJavaObject>("makeText", activity, message, 1);
+			toast.Call ("show");
+		}));
 	}
 	#endif
 
 	public GLinkAndroid () {
 		#if UNITY_ANDROID
-		mCurrentActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
-		mGLinkClass = new AndroidJavaClass ("com.naver.glink.android.sdk.Glink");
-		mGLinkClass.CallStatic ("init", GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
+		currentActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
+		ginkClass = new AndroidJavaClass ("com.naver.glink.android.sdk.Glink");
+		ginkClass.CallStatic ("init", GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
 
 		// 앱스킴 listener 사용 하려면 아래 주석을 풀어 주세요.
-		mGLinkClass.CallStatic ("setOnClickAppSchemeBannerListener", new OnClickAppSchemeBannerListener ());
+		// ginkClass.CallStatic ("setOnClickAppSchemeBannerListener", new OnClickAppSchemeBannerListener ());
 
 		// sdk start listener 사용 하려면 아래 주석을 풀어 주세요.
-		mGLinkClass.CallStatic ("setOnSdkStartedListener", new OnSdkStartedListener ());
+		// ginkClass.CallStatic ("setOnSdkStartedListener", new OnSdkStartedListener ());
 
 		// sdk stop listener 사용 하려면 아래 주석을 풀어 주세요.
-		mGLinkClass.CallStatic ("setOnSdkStoppedListener", new OnSdkStoppedListener ());
+		// ginkClass.CallStatic ("setOnSdkStoppedListener", new OnSdkStoppedListener ());
 
 		// 게임 아이디 연동을 하려면 아래 주석을 풀어 주세요.
-		// mGLinkClass.CallStatic ("setGameUserId", mCurrentActivity, "197CymaStoevCg", "");
+		// setGameUserId ("yourGameId", "");
 		#endif
 	}
-	
-	public void executeMain() {
+
+	public void executeHome() {
 		#if UNITY_ANDROID
-		mGLinkClass.CallStatic("startHome", mCurrentActivity);
+		ginkClass.CallStatic("startHome", currentActivity);
 		#endif
 	}
-	
+
+	public void executeNotice() {
+		#if UNITY_ANDROID
+		ginkClass.CallStatic("startNotice", currentActivity);
+		#endif
+	}
+
+	public void executeEvent() {
+		#if UNITY_ANDROID
+		ginkClass.CallStatic("startEvent", currentActivity);
+		#endif
+	}
+
+	public void executeMenu() {
+		#if UNITY_ANDROID
+		ginkClass.CallStatic("startMenu", currentActivity);
+		#endif
+	}
+
+	public void executeProfile() {
+		#if UNITY_ANDROID
+		ginkClass.CallStatic("startProfile", currentActivity);
+		#endif
+	}
+
+	public void executeArticle (int articleId) {
+		#if UNITY_ANDROID
+		ginkClass.CallStatic("startArticle", currentActivity, articleId);
+		#endif
+	}
+
 	public void executeArticlePost(int menuId, string subject, string content) {
 		#if UNITY_ANDROID
-		mGLinkClass.CallStatic ("startWrite", mCurrentActivity, menuId, subject, content);
+		ginkClass.CallStatic ("startWrite", currentActivity, menuId, subject, content);
 		#endif
 	}
-	
+
 	public void executeArticlePostWithImage(int menuId, string subject, string content, string filePath) {
 		#if UNITY_ANDROID
-		mGLinkClass.CallStatic ("startImageWrite", mCurrentActivity, menuId, subject, content, "file://" + filePath);
+		ginkClass.CallStatic ("startImageWrite", currentActivity, menuId, subject, content, "file://" + filePath);
 		#endif
 	}
-	
+
 	public void executeArticlePostWithVideo(int menuId, string subject, string content, string filePath) {
 		#if UNITY_ANDROID
-		mGLinkClass.CallStatic ("startVideoWrite", mCurrentActivity, subject, content, "file://" + filePath);
+		ginkClass.CallStatic ("startVideoWrite", currentActivity, subject, content, "file://" + filePath);
+		#endif
+	}
+
+	public void setGameUserId (string gameUserId, string fieldName) {
+		#if UNITY_ANDROID
+		ginkClass.CallStatic ("setGameUserId", currentActivity, gameUserId, fieldName);
 		#endif
 	}
 }
-
-
