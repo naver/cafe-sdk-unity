@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.naver.glink.android.sdk.ui.widget.TouchInterceptLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/glink_root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:gravity="center">
+
+  <RelativeLayout
+      android:id="@+id/glink_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true">
+  </RelativeLayout>
+</com.naver.glink.android.sdk.ui.widget.TouchInterceptLayout>
