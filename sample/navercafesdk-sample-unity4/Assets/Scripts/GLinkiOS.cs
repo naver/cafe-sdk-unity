@@ -29,10 +29,10 @@ public class GLinkiOS : IGLink
 	public static extern void _ExecuteArticlePostWithVideo(int menuId, string subject, string content, string filePath);
 
 	[DllImport("__Internal")]
-	public static extern void _ExcuteNotice();
+	public static extern void _ExecuteNotice();
 
 	[DllImport("__Internal")]
-	public static extern void _ExcuteEvent();
+	public static extern void _ExecuteEvent();
 
 	[DllImport("__Internal")]
 	public static extern void _ExecuteMenu();
@@ -68,7 +68,7 @@ public class GLinkiOS : IGLink
 
 	public void executeEvent() {
 		#if UNITY_IPHONE 
-		_ExcuteEvent ();
+		_ExecuteEvent ();
 		#endif
 	}
 
