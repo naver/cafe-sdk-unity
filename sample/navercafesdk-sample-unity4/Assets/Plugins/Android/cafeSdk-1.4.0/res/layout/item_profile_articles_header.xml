@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/manage_member_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/article_count_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/article_count"
+                android:layout_width="match_parent"
+                android:layout_height="30.67dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="3dp"
+                android:textColor="@drawable/gl_article_header_text_color"
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/article_count_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="30.67dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingBottom="6dp"
+                android:text="@string/article_count_txt"
+                android:textColor="@drawable/gl_article_header_text_color"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:background="@drawable/gl_article_header_background"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/written_comment_count_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/written_comment_count"
+                android:layout_width="match_parent"
+                android:layout_height="30.67dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="3dp"
+                android:textColor="@drawable/gl_article_header_text_color"
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/written_comment_count_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="30.67dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingBottom="6dp"
+                android:text="@string/written_comment_count_txt"
+                android:textColor="@drawable/gl_article_header_text_color"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:background="@drawable/gl_article_header_background"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/like_article_count_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/like_article_count"
+                android:layout_width="match_parent"
+                android:layout_height="30.67dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="3dp"
+                android:textColor="@drawable/gl_article_header_text_color"
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/like_article_count_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="30.67dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingBottom="6dp"
+                android:text="@string/like_article_count_txt"
+                android:textColor="@drawable/gl_article_header_text_color"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:background="@drawable/gl_article_header_background"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/view_divider_opacity_5"/>
+</LinearLayout>

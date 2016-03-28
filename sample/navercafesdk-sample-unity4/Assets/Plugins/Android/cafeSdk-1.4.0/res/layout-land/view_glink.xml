@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:clickable="true">
+
+  <RelativeLayout
+      android:id="@+id/glink_touchi_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_centerInParent="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+      <com.naver.glink.android.sdk.ui.widget.TransparentGlinkLayout
+          android:id="@+id/transparent_glink"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:layout_below="@+id/top_layout">
+
+        <FrameLayout
+            android:id="@+id/glink"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingBottom="34dp"
+            android:background="@drawable/gl_img_plate_shadow"/>
+
+        <ImageView
+            android:id="@+id/copyright"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-23dp"
+            android:layout_marginRight="23dp"
+            android:layout_below="@+id/glink"
+            android:layout_alignRight="@+id/glink"/>
+
+          <TextView
+              android:id="@+id/version"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="-23dp"
+              android:layout_marginLeft="23dp"
+              android:layout_below="@+id/glink"
+              android:layout_alignBaseline="@id/copyright"
+              android:layout_alignLeft="@+id/glink"
+              android:textSize="11dp"
+              android:textColor="@color/white1_30p"
+              android:text="@string/version"
+              android:visibility="gone"/>
+      </com.naver.glink.android.sdk.ui.widget.TransparentGlinkLayout>
+
+
+      <FrameLayout
+          android:id="@+id/glink_touch_layout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:visibility="gone"
+          android:background="@android:color/transparent"></FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/transparent_glink"
+            android:layout_marginRight="22dp"
+            android:layout_marginLeft="22dp">
+            <Button
+                android:id="@+id/close"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/gl_btn_close"
+                android:visibility="gone"/>
+
+
+            <SeekBar
+                android:id="@+id/transparent_seekbar"
+                style="@style/Glink.SeekBar"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:progress="100"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+
+        <FrameLayout
+          android:id="@+id/fullscreen_custom_content"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:visibility="gone"
+          android:background="@android:color/black"></FrameLayout>
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+
+</RelativeLayout>
