@@ -7,13 +7,13 @@ Cafe SDK에 대하여 자세히 알고싶으시면 [네이버 CafeSDK 공식카�
 
 
 
-v.1.4.0
+v.1.5.0
 -------------
- - Unity Package 1.4.0 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
+ - Unity Package 1.5.0 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
 
- NaverCafeSDK For Android 1.4.0
+ NaverCafeSDK For Android 1.5.0
  
- NaverCafeSDK For iOS 1.4.0
+ NaverCafeSDK For iOS 1.5.0
 
 
 폴더 구조
@@ -44,7 +44,7 @@ README.md   | readme 파일
 
 1. [네이버 아이디 로그인-4.1.4](https://nid.naver.com/devcenter/docs.nhn?menu=IOS)
 2. [AFNetworking](https://github.com/AFNetworking/AFNetworking)(UIImageView+AFNetworking)
-<br>1.x ~ 2.x 모두 사용 가능하며 2.6.1에서 테스트 진행했습니다.
+<br>1.x ~ 2.x 모두 사용 가능하며 2.6.3에서 테스트 진행했습니다.
 
 라이선스
 -------------
