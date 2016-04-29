@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="77dp"
+    android:paddingBottom="4dp"
+    android:paddingRight="11dp"
+    android:paddingLeft="11dp"
+    android:clickable="true"
+    android:orientation="horizontal">
+
+  <RelativeLayout
+      android:id="@+id/attachment1"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@drawable/gl_img_imagethumbmov_stroke"
+      android:padding="1dp">
+
+    <ImageView
+        android:id="@+id/thumbnail1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#e9ecef"/>
+
+      <TextView
+        android:id="@+id/delete_attachment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dp"
+        android:paddingBottom="6dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/gl_btn_imagethumbdelete"/>
+
+    <ImageView
+        android:id="@+id/video_icon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/gl_btn_imagethumbmov"/>
+
+    <ImageView
+        android:id="@+id/video_gradient1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/gl_img_imagethumbmov_gradient"/>
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/attachment2"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginLeft="4dp"
+      android:layout_weight="1"
+      android:background="@drawable/gl_img_imagethumbmov_stroke"
+      android:padding="1dp">
+
+    <ImageView
+        android:id="@+id/thumbnail2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#e9ecef"/>
+
+      <TextView
+        android:id="@+id/delete_attachment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dp"
+        android:paddingBottom="6dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/gl_btn_imagethumbdelete"/>
+
+    <ImageView
+        android:id="@+id/video_icon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/gl_btn_imagethumbmov"/>
+
+    <ImageView
+        android:id="@+id/video_gradient2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/gl_img_imagethumbmov_gradient"/>
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/attachment3"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginLeft="4dp"
+      android:layout_weight="1"
+      android:background="@drawable/gl_img_imagethumbmov_stroke"
+      android:padding="1dp">
+
+    <ImageView
+        android:id="@+id/thumbnail3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#e9ecef"/>
+
+      <TextView
+        android:id="@+id/delete_attachment3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dp"
+        android:paddingBottom="6dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/gl_btn_imagethumbdelete"/>
+
+    <ImageView
+        android:id="@+id/video_icon3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/gl_btn_imagethumbmov"/>
+
+    <ImageView
+        android:id="@+id/video_gradient3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/gl_img_imagethumbmov_gradient"/>
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/attachment4"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginLeft="4dp"
+      android:layout_weight="1"
+      android:background="@drawable/gl_img_imagethumbmov_stroke"
+      android:padding="1dp">
+
+    <ImageView
+        android:id="@+id/thumbnail4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#e9ecef"/>
+
+      <TextView
+        android:id="@+id/delete_attachment4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dp"
+        android:paddingBottom="6dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/gl_btn_imagethumbdelete"/>
+
+    <ImageView
+        android:id="@+id/video_icon4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/gl_btn_imagethumbmov"/>
+
+    <ImageView
+        android:id="@+id/video_gradient4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/gl_img_imagethumbmov_gradient"/>
+  </RelativeLayout>
+</LinearLayout>

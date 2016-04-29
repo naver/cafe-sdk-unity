@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:id="@+id/manage_member_menu_layout"
+      android:layout_width="match_parent"
+      android:layout_height="45dp"
+      android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/article_count_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+      <TextView
+          android:id="@+id/article_count_txt"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical|left"
+          android:paddingLeft="1dp"
+          android:paddingRight="1dp"
+          android:text="@string/article_count_txt"
+          android:textColor="@drawable/gl_article_header_text_color"
+          android:textSize="16dp"
+          android:textStyle="bold"
+          android:background="@drawable/gl_article_header_background"/>
+      <TextView
+          android:id="@+id/article_count"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:paddingLeft="9dp"
+          android:gravity="center_vertical|left"
+          android:text="222"
+          android:textColor="@drawable/gl_article_header_text_color"
+          android:textSize="16dp"
+          android:background="@drawable/gl_article_header_background"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/written_comment_count_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+      <TextView
+          android:id="@+id/written_comment_count_txt"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical|left"
+          android:paddingLeft="1dp"
+          android:paddingRight="1dp"
+          android:text="@string/written_comment_count_txt"
+          android:textColor="@drawable/gl_article_header_text_color"
+          android:textSize="16dp"
+          android:textStyle="bold"
+          android:background="@drawable/gl_article_header_background"/>
+      <TextView
+          android:id="@+id/written_comment_count"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:paddingLeft="9dp"
+          android:gravity="center_vertical|left"
+          android:text="222"
+          android:textColor="@drawable/gl_article_header_text_color"
+          android:textSize="16dp"
+          android:background="@drawable/gl_article_header_background"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/like_article_count_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+      <TextView
+          android:id="@+id/like_article_count_txt"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical|left"
+          android:paddingLeft="1dp"
+          android:paddingRight="1dp"
+          android:text="@string/like_article_count_txt"
+          android:textColor="@drawable/gl_article_header_text_color"
+          android:textSize="16dp"
+          android:textStyle="bold"
+          android:background="@drawable/gl_article_header_background"/>
+      <TextView
+          android:id="@+id/like_article_count"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:paddingLeft="9dp"
+          android:gravity="center_vertical|left"
+          android:text="222"
+          android:textColor="@drawable/gl_article_header_text_color"
+          android:textSize="16dp"
+          android:background="@drawable/gl_article_header_background"
+          android:visibility="gone"/>
+
+    </LinearLayout>
+  </LinearLayout>
+
+  <include layout="@layout/view_divider_opacity_5"/>
+</LinearLayout>
