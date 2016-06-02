@@ -76,6 +76,23 @@ public class GLinkAndroid : IGLink {
 		}
 	}
 
+	class OnWidgetScreenshotClickListener : AndroidJavaProxy {
+		public OnWidgetScreenshotClickListener () : base("com.naver.glink.android.sdk.Glink$OnWidgetScreenshotClickListener") { /* empty. */ }
+
+		void onScreenshotClick() {
+			string name = "CafeSdkController";
+
+			GameObject obj = GameObject.Find (name);
+			if (obj == null) {
+				obj = new GameObject ("CafeSdkController");
+				obj.AddComponent<SampleBehaviour> ();
+			}
+
+			SampleBehaviour behaviour = obj.GetComponent<SampleBehaviour> ();
+			behaviour.OnClickScreenShotButton ();
+		}
+	}
+
 	static void showToast(string message) {
 		var activity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
 		activity.Call ("runOnUiThread", new AndroidJavaRunnable (() => {
@@ -109,6 +126,7 @@ public class GLinkAndroid : IGLink {
 		// post comment listener 사용 하려면 아래 주석을 풀어 주세요.
 		// glinkClass.CallStatic ("setOnPostedCommentListener", new OnPostedCommentListener ());
 
+		glinkClass.CallStatic ("setOnWidgetScreenshotClickListener", new OnWidgetScreenshotClickListener ());
 		// 게임 아이디 연동을 하려면 아래 주석을 풀어 주세요.
 		// setGameUserId ("yourGameId", "");
 		#endif
@@ -159,7 +177,7 @@ public class GLinkAndroid : IGLink {
 	public void executeArticlePostWithImage(int menuId, string subject, string content, string filePath) {
 		#if UNITY_ANDROID
 		glinkClass.CallStatic ("startImageWrite", currentActivity, menuId, subject, content, "file://" + filePath);
-		#endif
+		#endif 
 	}
 
 	public void executeArticlePostWithVideo(int menuId, string subject, string content, string filePath) {

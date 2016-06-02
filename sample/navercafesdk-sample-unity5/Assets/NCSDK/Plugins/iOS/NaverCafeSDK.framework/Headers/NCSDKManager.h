@@ -12,6 +12,13 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
     kGLArticlePostTypeImage = 1,
     kGLArticlePostTypeVideo = 2,
 };
+typedef NS_ENUM(NSUInteger, GLTabType) {
+    kGLTabTypeHome = 0,
+    kGLTabTypeNotice = 1,
+    kGLTabTypeEvent = 2,
+    kGLTabTypeMenuList = 3,
+    kGLTabTypeProfile = 4,
+};
 
 @protocol NCSDKManagerDelegate;
 
@@ -117,11 +124,17 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
  네이버 카페 ViewController에 제일 상단 ViewController 제거
  */
 - (void)dismissTopViewController;
-- (void)showToast:(NSString *)str;
 
-#ifndef BUILD_REAL
+/*
+ 위젯실행
+ */
+- (void)startWidget;
+
+/*
+ 테스트용
+ */
+- (void)showToast:(NSString *)str;
 - (void)presentEtc;
-#endif
 @end
 
 @protocol NCSDKManagerDelegate <NSObject>
@@ -138,4 +151,5 @@ typedef NS_ENUM(NSUInteger, GLArticlePostType) {
 - (void)ncSDKJoinedCafeMember;
 - (void)ncSDKPostedArticleAtMenu:(NSInteger)menuId;
 - (void)ncSDKPostedCommentAtArticle:(NSInteger)articleId;
+- (void)ncSDKRequestScreenShot;
 @end

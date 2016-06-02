@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "UnityAppController.h"
 #import <NaverCafeSDK/NCSDKManager.h>
+#import <NaverCafeSDK/NCWidget.h>
 
 typedef void (*GLSDKDidLoadDelegate)();
 typedef void (*GLSDKDidUnLoadDelegate)();
@@ -8,8 +9,9 @@ typedef void (*GLSDKDidUnLoadDelegate)();
 typedef void (*GLSDKJoinedCafeDelegate)();
 typedef void (*GLSDKPostedArticleAtMenuDelegate)(NSInteger menuId);
 typedef void (*GLSDKPostedCommentAtArticleDelegate)(NSInteger articleId);
+typedef void (*GLSDKWidgetPostAriticleWithImageDelegate)();
 
-@interface GLinkViewController : UIViewController <NCSDKManagerDelegate>
+@interface GLinkViewController : UIViewController <NCSDKManagerDelegate, NCWidgetDelegate>
 @property (nonatomic, strong) UIView *mainView;
 @property (nonatomic, strong) UIViewController *mainViewcontroller;
 
@@ -18,6 +20,8 @@ typedef void (*GLSDKPostedCommentAtArticleDelegate)(NSInteger articleId);
 @property (nonatomic, assign) GLSDKJoinedCafeDelegate glSDKJoinedCafeDelegate;
 @property (nonatomic, assign) GLSDKPostedArticleAtMenuDelegate glSDKPostedArticleAtMenuDelegate;
 @property (nonatomic, assign) GLSDKPostedCommentAtArticleDelegate glSDKPostedCommentAtArticleDelegate;
+@property (nonatomic, assign) GLSDKWidgetPostAriticleWithImageDelegate glSDKWidgetPostAriticleWithImageDelegate;
+
 - (void)executeGlink;
 
 @end
@@ -28,6 +32,7 @@ typedef void (*GLSDKPostedCommentAtArticleDelegate)(NSInteger articleId);
 - (id)init {
     self = [super init];
     if (self) {
+        [[NCWidget getSharedInstance] setNcWidgetDelegate:self];
     }
     return self;
 }
@@ -41,6 +46,7 @@ typedef void (*GLSDKPostedCommentAtArticleDelegate)(NSInteger articleId);
     
     [[NCSDKManager getSharedInstance] setParentViewController:_mainViewcontroller];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
+    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
 }
 - (void)executeGlink{
     [self setGLRootViewController];
@@ -138,6 +144,8 @@ typedef void (*GLSDKPostedCommentAtArticleDelegate)(NSInteger articleId);
     if (self.glSDKDidUnLoadDelegate) {
         self.glSDKDidUnLoadDelegate();
     }
+    
+    [[NCSDKManager getSharedInstance] startWidget];
 }
 
 - (void)ncSDKJoinedCafeMember {
@@ -156,6 +164,25 @@ typedef void (*GLSDKPostedCommentAtArticleDelegate)(NSInteger articleId);
         self.glSDKPostedCommentAtArticleDelegate(articleId);
     }
     
+}
+
+#pragma mark - NCWidgetDelegate
+- (void)ncWidtetExecuteGLink {
+    [self executeGlink];
+}
+
+- (void)ncWidgetPostArticle {
+    [self executeArticleWithMenuId:0 subject:@"" content:@""];
+}
+
+- (void)ncWidgetPostArticleWithImage {
+    if (self.glSDKWidgetPostAriticleWithImageDelegate) {
+        self.glSDKWidgetPostAriticleWithImageDelegate();
+    }
+}
+
+- (void)ncWidgetPostArticleWithImageByUnity {
+    UnitySendMessage("CafeSdkController", "executeCaptureScreenshopAndPostArticle", "capture");
 }
 
 @end
@@ -249,5 +276,22 @@ extern "C" {
     }
     void _SetSDKPostedCommentAtArticleDelegate(GLSDKPostedCommentAtArticleDelegate glSDKPostedCommentAtArticleDelegate) {
         vc.glSDKPostedCommentAtArticleDelegate = glSDKPostedCommentAtArticleDelegate;
+    }
+    void _SetSDKWidgetPostAriticleWithImageCallback(GLSDKWidgetPostAriticleWithImageDelegate glSDKWidgetPostAriticleWithImageDelegate) {
+        vc.glSDKWidgetPostAriticleWithImageDelegate = glSDKWidgetPostAriticleWithImageDelegate;
+    }
+    void _SaveCameraRoll(const char *fileName)
+    {
+        NSString *convertFileName = CreateNSString(fileName);
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory,convertFileName];
+        UIImage *image = [[UIImage alloc] initWithContentsOfFile:filePath];
+        
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+        
+    }
+    void _ExecuteCaptureScreenshopAndPostArticle() {
+        [vc ncWidgetPostArticleWithImageByUnity];
     }
 }

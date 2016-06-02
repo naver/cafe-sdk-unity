@@ -41,7 +41,8 @@
 /*
  네아로 로그인 확인 및 토큰 만료시 갱신 및 콜백
  */
-- (void)isLoginWithFinish:(void (^)(BOOL successACToken))finish;
+- (void)isLoginWithFinish:(void (^)(BOOL successACToken))finish
+                  failure:(void (^)(NSError *error))failure;
 
 /*
  네아로 토큰 갱신 및 콜백
