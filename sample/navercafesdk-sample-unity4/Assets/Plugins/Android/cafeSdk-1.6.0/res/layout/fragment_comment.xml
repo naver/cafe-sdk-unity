@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_edit_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white1"
+    android:orientation="horizontal"
+    android:layout_gravity="bottom">
+
+  <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black2_opacity_10"/>
+
+    <com.naver.glink.android.sdk.ui.widget.PreImeKeyListeningEditText
+        android:id="@+id/comment_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="@string/comment_hint"
+        android:maxHeight="80dp"
+        android:padding="14dp"
+        android:textColor="@color/black1"
+        android:textSize="16dp"
+        android:imeOptions="flagNoExtractUi"/>
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/comment_save"
+      android:layout_width="70dp"
+      android:layout_height="match_parent"
+      android:background="@drawable/gl_btn_keypad"
+      android:text="@string/save"
+      android:textColor="@color/white1"
+      android:textSize="16dp"/>
+</LinearLayout>

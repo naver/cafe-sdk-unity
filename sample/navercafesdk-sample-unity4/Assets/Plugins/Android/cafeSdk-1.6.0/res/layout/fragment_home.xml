@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gl_img_plate"
+    tools:context=".ui.home.HomeFragment">
+
+  <RelativeLayout
+      android:id="@+id/full_banners_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:visibility="gone"
+      android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.naver.glink.android.sdk.ui.widget.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:padding="1dp"
+        app:radius="5dp"
+        app:fillColor="#00c300"
+        app:pageColor="@android:color/transparent"
+        app:strokeColor="#ffffff"
+        app:strokeWidth="1dp"/>
+  </RelativeLayout>
+
+  <LinearLayout
+      android:id="@+id/main_and_banners_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/main_banner"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:cacheColorHint="@android:color/transparent"/>
+  </LinearLayout>
+
+  <include layout="@layout/view_fragment_error"/>
+</FrameLayout>

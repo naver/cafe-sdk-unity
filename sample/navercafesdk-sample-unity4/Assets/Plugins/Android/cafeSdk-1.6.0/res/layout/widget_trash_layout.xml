@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.naver.glink.android.sdk.ui.floating.WidgetTrashLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="70dp">
+
+  <TextView
+      android:id="@+id/trash_background"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/widget_trash_rectangle"/>
+
+  <TextView
+      android:id="@+id/btn_trash"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:background="@drawable/gl_btn_trash"/>
+
+</com.naver.glink.android.sdk.ui.floating.WidgetTrashLayout>

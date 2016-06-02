@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp">
+
+      <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/gl_btn_boardcancel"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+          android:gravity="center"
+          android:text="@string/cancel"
+        android:textColor="@color/gray4"
+        android:textSize="14dp"/>
+
+      <TextView
+        android:id="@+id/join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/gl_btn_boardconfirm"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+          android:gravity="center"
+          android:text="@string/save"
+        android:textColor="@color/white1"
+        android:textSize="14dp"/>
+  </RelativeLayout>
+
+  <include layout="@layout/view_divider"/>
+</LinearLayout>

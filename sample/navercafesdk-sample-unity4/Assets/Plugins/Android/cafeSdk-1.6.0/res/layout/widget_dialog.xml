@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+  <TextView
+      android:id="@+id/ani_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/gl_btn_default_big_normal"
+      android:visibility="gone"/>
+
+
+  <com.github.clans.fab.FloatingActionMenu
+      android:id="@+id/float_menu"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_alignParentRight="false"
+      android:padding="@dimen/glink_widget_padding"
+      fab:menu_icon="@drawable/gl_icon_close"
+      fab:menu_buttonSpacing="9dp"
+      fab:menu_labels_ellipsize="end"
+      fab:menu_labels_singleLine="true"
+      fab:menu_labels_position="right"
+      fab:menu_labels_textSize="15dp"
+      fab:menu_labels_paddingLeft="1dp"
+      fab:menu_labels_paddingRight="1dp"
+      fab:menu_backgroundColor="#ccffffff"
+      fab:menu_openDirection="up">
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/float_item_cafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gl_icon_home"
+        fab:fab_label="@string/widget_button_cafe"/>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/float_item_capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gl_icon_capture"
+        fab:fab_label="@string/widget_button_capture"/>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/float_item_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gl_icon_video"
+        fab:fab_label="@string/widget_button_record"/>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/float_item_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gl_icon_write"
+        fab:fab_label="@string/widget_button_write"/>
+
+  </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

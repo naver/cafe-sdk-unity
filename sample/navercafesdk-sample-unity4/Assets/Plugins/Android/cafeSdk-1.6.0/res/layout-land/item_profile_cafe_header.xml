@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="104dp">
+
+  <ImageView
+      android:id="@+id/background_image"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:alpha="0.4"/>
+
+  <View
+      android:id="@+id/background_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+  <LinearLayout
+      android:id="@+id/header_content_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/thumbnail_image"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:layout_centerVertical="true">
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/gl_thumb_cafeprofile_shadow"/>
+
+      <ImageView
+          android:id="@+id/cafe_image"
+          android:layout_width="59dp"
+          android:layout_height="59dp"
+          android:layout_marginLeft="5dp"
+          android:layout_marginTop="2dp"/>
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/gl_thumb_cafeprofile_stroke"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/cafe_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white1"
+          android:textSize="22dp"
+          android:textStyle="bold"
+          android:maxLines="2"
+          android:ellipsize="end"/>
+
+      <TextView
+          android:id="@+id/member_count"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:drawableLeft="@drawable/gl_icon_person"
+          android:drawablePadding="2dp"
+          android:textColor="@color/white1"
+          android:textSize="14dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@drawable/gl_btn_logout"
+        android:textSize="16dp"
+        android:textColor="@color/white1"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/profile_logout"/>
+  </LinearLayout>
+</FrameLayout>

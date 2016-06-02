@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="104dp">
+
+  <ImageView
+      android:id="@+id/background_image"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:alpha="0.4"/>
+
+  <View
+      android:id="@+id/background_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+  <RelativeLayout
+      android:id="@+id/header_content_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal">
+
+
+      <RelativeLayout
+          android:id="@+id/header_image_layout"
+          android:layout_marginLeft="8dp"
+          android:layout_width="64dp"
+          android:layout_height="67dp"
+          android:layout_centerVertical="true"
+          android:layout_alignParentLeft="true">
+
+      <ImageView
+          android:id="@+id/profile_image"
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          android:layout_alignParentTop="true"
+          android:layout_marginLeft="1dp"
+          android:layout_marginTop="1dp"/>
+
+      <ImageView
+          android:layout_width="62dp"
+          android:layout_height="62dp"
+          android:layout_alignParentTop="true"
+          android:src="@drawable/gl_thumb_personal_profile_stroke"/>
+
+      <ImageView
+          android:id="@+id/profile_setting_img"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:src="@drawable/gl_btn_personal_profile_setting"/>
+    </RelativeLayout>
+
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_toRightOf="@+id/header_image_layout"
+          android:layout_alignBaseline="@+id/header_image_layout"
+          android:layout_marginLeft="20dp">
+          <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true">
+
+              <LinearLayout
+                  android:id="@+id/header_mem_name_layout"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="2dp"
+                  android:orientation="horizontal">
+
+                  <TextView
+                      android:id="@+id/header_nickname"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentTop="true"
+                      android:textColor="@drawable/gl_white_text"
+                      android:textSize="22dp"
+                      android:text="name"
+                      android:singleLine="true"
+                      android:layout_weight="99"
+                      android:textStyle="bold"/>
+
+                  <ImageView
+                      android:id="@+id/header_nickname_setting"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_marginLeft="6dp"
+                      android:layout_marginRight="80dp"
+                      android:layout_weight="1"
+                      android:src="@drawable/gl_btn_profile_nickname_edit"/>
+
+              </LinearLayout>
+              <LinearLayout
+                  android:id="@+id/header_mem_info_layout"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="2dp"
+                  android:layout_below="@+id/header_mem_name_layout">
+                  <TextView
+                      android:id="@+id/header_grade"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="grade"
+                      android:textColor="@color/white1_30p"
+                      android:textSize="14dp"/>
+
+                  <ImageView
+                      android:id="@+id/header_nickname_dot"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="8dp"
+                      android:layout_gravity="center"
+                      android:src="@drawable/gl_img_info_dot"/>
+
+                  <TextView
+                      android:id="@+id/header_visit"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="8dp"
+                      android:text="@string/profile_visit"
+                      android:textColor="@color/white1_30p"
+                      android:textSize="14dp"/>
+
+              </LinearLayout>
+
+          </RelativeLayout>
+          <TextView
+              android:id="@+id/logout_button"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="4dp"
+              android:paddingLeft="12dp"
+              android:paddingRight="12dp"
+              android:background="@drawable/gl_btn_logout"
+              android:textSize="13dp"
+              android:textColor="@color/white1"
+              android:gravity="center"
+              android:layout_centerVertical="true"
+              android:text="로그아웃"/>
+      </RelativeLayout>
+
+  </RelativeLayout>
+</FrameLayout>

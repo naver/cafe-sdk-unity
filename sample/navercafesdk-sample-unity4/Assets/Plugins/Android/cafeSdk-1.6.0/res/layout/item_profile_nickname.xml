@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="18dp"
+    android:paddingTop="24dp"
+    android:paddingRight="18dp"
+    android:paddingBottom="9dp"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:baselineAligned="false"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/nick_name_header"
+          android:textColor="@color/black2"
+          android:textStyle="bold"
+          android:textSize="16dp"/>
+
+      <TextView
+          android:id="@+id/nickname_bytes"
+          android:layout_width="100dp"
+          android:layout_height="match_parent"
+          android:textColor="@color/gray4"
+          android:textSize="14dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/gl_img_nickname_input">
+
+          <EditText
+              android:id="@+id/nickname"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:background="@android:color/transparent"
+              android:gravity="center_vertical"
+              android:textColor="@color/black2"
+              android:textColorHint="#80999999"
+              android:hint="@string/nick_name_hint"
+              android:paddingLeft="12dp"
+              android:singleLine="true"
+              android:textSize="16dp"
+              android:imeOptions="flagNoExtractUi"/>
+
+            <TextView
+              android:id="@+id/nickname_deletion"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_marginRight="12dp"
+              android:layout_marginLeft="12dp"
+              android:background="@android:color/transparent"
+              android:drawableLeft="@drawable/gl_btn_cancel"/>
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/valid_check_text"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:textSize="12dp"/>
+
+      <LinearLayout
+          android:id="@+id/game_user_layout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/game_user_field_name"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/gl_img_boardname"
+            android:textSize="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray4"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/game_user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="@color/gray4"/>
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+
+  <View
+      android:id="@+id/divider"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginTop="18dp"
+      android:background="@color/black2_opacity_5"
+      android:visibility="gone"/>
+
+  <LinearLayout
+      android:id="@+id/agree_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="18dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:visibility="gone">
+
+    <TextView
+        android:id="@+id/agree_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="14dp"
+        android:textColor="@color/black2"
+        android:text="@string/nick_name_join_agree"/>
+
+    <CheckBox
+        android:id="@+id/agree_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/gl_btn_agree"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="18dp"
+      android:gravity="center_horizontal"
+      android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_weight="1"
+        android:layout_marginRight="6dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:gravity="center"
+        android:background="@drawable/gl_btn_confirm1_dimmed"
+        android:textColor="@color/white1"
+        android:textSize="16dp"
+        android:text="@string/cancel"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/join"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_weight="1"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:gravity="center"
+        android:background="@drawable/gl_btn_confirm1"
+        android:textColor="@color/white1"
+        android:textSize="16dp"
+        android:text="@string/nick_name_join"/>
+  </LinearLayout>
+</LinearLayout>

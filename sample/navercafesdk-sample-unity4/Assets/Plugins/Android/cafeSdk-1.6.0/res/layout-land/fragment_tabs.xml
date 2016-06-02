@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/glink_contents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:baselineAligned="false"
+      android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/tabs_view"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/gl_navi_none"
+        android:orientation="vertical"/>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+      <FrameLayout
+          android:id="@+id/tab_contents"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"/>
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:scaleType="fitXY"
+          android:src="@drawable/gl_img_shadow"/>
+    </FrameLayout>
+  </LinearLayout>
+
+  <ProgressBar
+      android:id="@+id/tab_progress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      style="?android:attr/progressBarStyleSmall"
+      android:max="100"
+      android:visibility="gone"
+      android:layout_gravity="center"/>
+</FrameLayout>
