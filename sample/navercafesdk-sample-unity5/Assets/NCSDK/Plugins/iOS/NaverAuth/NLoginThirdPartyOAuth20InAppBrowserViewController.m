@@ -13,7 +13,7 @@
 #define kThirdPartyMainWindowWidth ((int)UIScreen.mainScreen.bounds.size.width)
 #define kThirdPartyMainWindowHeight ((int)UIScreen.mainScreen.bounds.size.height)
 
-#define kBottomBarHeight    38
+#define kBottomBarHeight    46
 #define kButtonSize         24
 #define kHeightOfStatusbar  20
 #define kThirdPartyBannerHeight 57
@@ -76,31 +76,33 @@
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
+- (CGFloat) topMargin {
+    if(7 <= [[[UIDevice currentDevice] systemVersion] intValue] && (NO == [UIApplication sharedApplication].statusBarHidden)){
+        return 20.0f;
+    } else{
+        return 0.0f;
+    }
+}
+
 - (void)makeBottomBar   {
-    _bottomBar = [[UIView alloc] initWithFrame:CGRectMake(0, kThirdPartyMainWindowHeight - kBottomBarHeight, kThirdPartyMainWindowWidth, kThirdPartyMainWindowHeight)];
-    UIImage *loginBackground = [UIImage imageNamed:@"NaverAuth.bundle/login_bg_2.png"];
-    _bottomBar.backgroundColor = [UIColor colorWithPatternImage:loginBackground];
+    _bottomBar = [[UIView alloc] initWithFrame:CGRectMake(0, kThirdPartyMainWindowHeight - kBottomBarHeight, kThirdPartyMainWindowWidth, kBottomBarHeight)];
+    _bottomBar.backgroundColor = [UIColor whiteColor];
     [_mainView addSubview:_bottomBar];
     
-    BOOL isIpad = kThirdParty_IS_IPAD;
+    _bottomBarTopDivLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _bottomBar.frame.size.width, 1)];
+    _bottomBarTopDivLine.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    _bottomBarTopDivLine.backgroundColor = [UIColor colorWithRed:0xC6/255.0 green:0xC6/255.0 blue:0xC6/255.0 alpha:1.0];
+    [_bottomBar addSubview:_bottomBarTopDivLine];
+    
     // 24X24
-    int buttonOffsetY = (kBottomBarHeight - kButtonSize) / 2;
-    int buttonOffsetX = isIpad ? 115 : 32;
+    int numberOfBtn = 4;
+    CGFloat btnWidth = CGRectGetWidth(_bottomBar.frame) / numberOfBtn;
+    CGFloat btnHeight = CGRectGetHeight(_bottomBar.frame) - CGRectGetHeight(_bottomBarTopDivLine.bounds);
     
-    
-    buttonOffsetX += isIpad ? (kButtonSize + 168 + 179 + 118) : (kButtonSize + 60 + 60 + 32);
-    _diviView = [[UIView alloc] initWithFrame:CGRectMake(buttonOffsetX, 0, 3, kBottomBarHeight)];
-    _diviView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.06];
-    [_bottomBar addSubview:_diviView];
-    
-    UIView *diviLine = [[UIView alloc] initWithFrame:CGRectMake(1, 0, 1, kBottomBarHeight)];
-    diviLine.backgroundColor = [UIColor colorWithRed:(float)0x0d/255.0 green:(float)0x0e/255.0 blue:(float)0x10/255.0 alpha:1];
-    [_diviView addSubview:diviLine];
-    
-    buttonOffsetX += isIpad ? (3 + 45) : (3 + 19);
-    _closeBt = [[UIButton alloc] initWithFrame:CGRectMake(buttonOffsetX, buttonOffsetY, kButtonSize, kButtonSize)];
+    CGFloat closeBtnOriginX = btnWidth * 3;
+    _closeBt = [[UIButton alloc] initWithFrame:CGRectMake(closeBtnOriginX, 0, btnWidth, btnHeight)];
 
-    [_closeBt setBackgroundImage:[UIImage imageNamed:@"NaverAuth.bundle/login_ico_on_4.png"] forState:UIControlStateNormal];
+    [_closeBt setImage:[UIImage imageNamed:@"NaverAuth.bundle/btn_notice_close_normal.png"] forState:UIControlStateNormal];
     [_closeBt addTarget:self action:@selector(closeBtAction:) forControlEvents:UIControlEventTouchUpInside];
     [_bottomBar addSubview:_closeBt];
 }
@@ -113,13 +115,8 @@
     // XCode 5.X 에서 빌드 및 iOS 7 대응용
     // XCode 4.X 에서 빌드해서 등록한다면 _topMargin = 0; 만 두고 주석처리한다.
     
-    if (7 <= [[[UIDevice currentDevice] systemVersion] intValue] &&
-        (NO == [UIApplication sharedApplication].statusBarHidden)) {
-        _topMargin = 20;
-    } else {
-        _topMargin = 0;
-    }
-    _mainView = [[UIView alloc] initWithFrame:CGRectMake(0, _topMargin, kThirdPartyMainWindowWidth, kThirdPartyMainWindowHeight - _topMargin)];
+    CGFloat topMargin = [self topMargin];
+    _mainView = [[UIView alloc] initWithFrame:CGRectMake(0, topMargin, kThirdPartyMainWindowWidth, kThirdPartyMainWindowHeight - topMargin)];
     _mainView.backgroundColor = [UIColor colorWithRed:0x00/255.0 green:0x00/255.0 blue:0x00/255.0 alpha:0.5];
     [self.view addSubview:_mainView];
     
@@ -267,22 +264,24 @@
 - (void) drawRotateLayout:(UIInterfaceOrientation)orientation   {
     
     CGSize mainWindowSize = [self mainWindowSize:orientation];
-
-    int buttonOffsetY = (kBottomBarHeight - kButtonSize) / 2;
     
-    _mainView.frame = CGRectMake(0, _topMargin, mainWindowSize.width, mainWindowSize.height);
+    _mainView.frame = CGRectMake(0, [self topMargin], mainWindowSize.width, mainWindowSize.height);
     if ([_thirdPartyLoginConn isPossibleToOpenNaverApp] || YES == _isCloseBannerView) {
         _bannerView.frame = CGRectMake(0, 0, mainWindowSize.width, 0);
         _bannerView.hidden = YES;
     } else {
         _bannerView.frame = CGRectMake(0, 0, mainWindowSize.width, kThirdPartyBannerHeight);
         _bannerView.hidden = NO;
+        _bannerCloseButton.frame = CGRectMake(kThirdPartyMainWindowWidth - kThirdPartyBannerHeight, 0, kThirdPartyBannerHeight, kThirdPartyBannerHeight);
     }
     _webView.frame = CGRectMake(0, CGRectGetMaxY(_bannerView.frame), mainWindowSize.width, mainWindowSize.height - kBottomBarHeight - CGRectGetHeight(_bannerView.frame));
     _bottomBar.frame = CGRectMake(0, mainWindowSize.height - kBottomBarHeight, mainWindowSize.width, kBottomBarHeight);
+    _bottomBarTopDivLine.frame = CGRectMake(0, 0, mainWindowSize.width, 1);
     
-    _diviView.frame = CGRectMake(_bottomBar.frame.size.width * 0.75f, 0, 3, kBottomBarHeight);
-    _closeBt.frame = CGRectMake(_bottomBar.frame.size.width * 0.875f - kButtonSize/2, buttonOffsetY, kButtonSize, kButtonSize);
+    int btnWidth = mainWindowSize.width / 4.0;
+    int btnHeight = CGRectGetHeight(_bottomBar.frame) - CGRectGetHeight(_bottomBarTopDivLine.frame);
+    
+    _closeBt.frame = CGRectMake(btnWidth * 3, CGRectGetHeight(_bottomBarTopDivLine.frame), btnWidth, btnHeight);
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -309,7 +308,8 @@
     [self drawRotateLayout:[[UIApplication sharedApplication] statusBarOrientation]];
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
     if (kThirdParty_IS_IPAD) {
         return UIInterfaceOrientationMaskAll;
     } else if ([[NaverThirdPartyLoginConnection getSharedInstance] isOnlyPortraitSupportedInIphone]) {

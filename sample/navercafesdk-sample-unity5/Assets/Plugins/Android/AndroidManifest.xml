@@ -5,6 +5,9 @@
     <uses-sdk android:minSdkVersion="16"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+	<!-- 동영상 녹화 기능에 필요한 권한. -->
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application

@@ -1,7 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "UnityAppController.h"
 #import <NaverCafeSDK/NCSDKManager.h>
-#import <NaverCafeSDK/NCWidget.h>
 
 typedef void (*GLSDKDidLoadDelegate)();
 typedef void (*GLSDKDidUnLoadDelegate)();
@@ -10,8 +9,9 @@ typedef void (*GLSDKJoinedCafeDelegate)();
 typedef void (*GLSDKPostedArticleAtMenuDelegate)(NSInteger menuId);
 typedef void (*GLSDKPostedCommentAtArticleDelegate)(NSInteger articleId);
 typedef void (*GLSDKWidgetPostAriticleWithImageDelegate)();
+typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
 
-@interface GLinkViewController : UIViewController <NCSDKManagerDelegate, NCWidgetDelegate>
+@interface GLinkViewController : UIViewController <NCSDKManagerDelegate>
 @property (nonatomic, strong) UIView *mainView;
 @property (nonatomic, strong) UIViewController *mainViewcontroller;
 
@@ -21,6 +21,7 @@ typedef void (*GLSDKWidgetPostAriticleWithImageDelegate)();
 @property (nonatomic, assign) GLSDKPostedArticleAtMenuDelegate glSDKPostedArticleAtMenuDelegate;
 @property (nonatomic, assign) GLSDKPostedCommentAtArticleDelegate glSDKPostedCommentAtArticleDelegate;
 @property (nonatomic, assign) GLSDKWidgetPostAriticleWithImageDelegate glSDKWidgetPostAriticleWithImageDelegate;
+@property (nonatomic, assign) GLSDKDidVoteAtArticleDelegate glSDKDidVoteAtArticleDelegate;
 
 - (void)executeGlink;
 
@@ -32,7 +33,7 @@ typedef void (*GLSDKWidgetPostAriticleWithImageDelegate)();
 - (id)init {
     self = [super init];
     if (self) {
-        [[NCWidget getSharedInstance] setNcWidgetDelegate:self];
+        [[NCSDKManager getSharedInstance] setUseWidgetVideoRecord:YES];
     }
     return self;
 }
@@ -46,7 +47,6 @@ typedef void (*GLSDKWidgetPostAriticleWithImageDelegate)();
     
     [[NCSDKManager getSharedInstance] setParentViewController:_mainViewcontroller];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
 }
 - (void)executeGlink{
     [self setGLRootViewController];
@@ -78,9 +78,8 @@ typedef void (*GLSDKWidgetPostAriticleWithImageDelegate)();
     [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:articleId];
 }
 
-- (void)setGameUserId:(NSString *)gameUserId
-         andFieldName:(NSString *)fieldName {
-    [[NCSDKManager getSharedInstance] setGameUserId:gameUserId fieldName:fieldName];
+- (void)syncGameUserId:(NSString *)gameUserId {
+    [[NCSDKManager getSharedInstance] syncGameUserId:gameUserId];
 }
 
 - (void)executeArticleWithMenuId:(NSInteger)menuId
@@ -133,6 +132,22 @@ typedef void (*GLSDKWidgetPostAriticleWithImageDelegate)();
     [[NCSDKManager getSharedInstance] showToast:message];
 }
 
+- (void)setUseWidgetVideoRecord:(BOOL)useVideo {
+    [[NCSDKManager getSharedInstance] setUseWidgetVideoRecord:useVideo];
+}
+
+- (void)setShowWidgetWhenUnloadSDK:(BOOL)useWidget {
+    [[NCSDKManager getSharedInstance] setShowWidgetWhenUnloadSDK:useWidget];
+}
+
+- (void)startWidget {
+    [[NCSDKManager getSharedInstance] startWidget];
+}
+
+- (void)stopWidget {
+    [[NCSDKManager getSharedInstance] stopWidget];
+}
+
 #pragma mark - NCSDKDelegate
 - (void)ncSDKViewDidLoad {
     if (self.glSDKDidLoadDelegate) {
@@ -144,8 +159,6 @@ typedef void (*GLSDKWidgetPostAriticleWithImageDelegate)();
     if (self.glSDKDidUnLoadDelegate) {
         self.glSDKDidUnLoadDelegate();
     }
-    
-    [[NCSDKManager getSharedInstance] startWidget];
 }
 
 - (void)ncSDKJoinedCafeMember {
@@ -166,19 +179,21 @@ typedef void (*GLSDKWidgetPostAriticleWithImageDelegate)();
     
 }
 
+- (void)ncSDKDidVoteAtArticle:(NSInteger)articleId {
+    if (self.glSDKDidVoteAtArticleDelegate) {
+        self.glSDKDidVoteAtArticleDelegate(articleId);
+    }
+}
+
 #pragma mark - NCWidgetDelegate
-- (void)ncWidtetExecuteGLink {
-    [self executeGlink];
-}
-
-- (void)ncWidgetPostArticle {
-    [self executeArticleWithMenuId:0 subject:@"" content:@""];
-}
-
-- (void)ncWidgetPostArticleWithImage {
+- (void)ncSDKWidgetPostArticleWithImage {
     if (self.glSDKWidgetPostAriticleWithImageDelegate) {
         self.glSDKWidgetPostAriticleWithImageDelegate();
     }
+}
+
+- (void)ncSDKWidgetSuccessVideoRecord {
+    [self executeArticleWithMenuId:0 subject:@"" content:@""];
 }
 
 - (void)ncWidgetPostArticleWithImageByUnity {
@@ -229,8 +244,8 @@ extern "C" {
         [vc executeArticle:articleId];
     }
     
-    void _SetGameUserId(const char* gameUserId, const char* fieldName) {
-        [vc setGameUserId:CreateNSString(gameUserId) andFieldName:CreateNSString(fieldName)];
+    void _SyncGameUserId(const char* gameUserId) {
+        [vc syncGameUserId:CreateNSString(gameUserId)];
     }
     
     void _ExecuteArticlePost(int menuId, const char* subject, const char* content) {
@@ -293,5 +308,25 @@ extern "C" {
     }
     void _ExecuteCaptureScreenshopAndPostArticle() {
         [vc ncWidgetPostArticleWithImageByUnity];
+    }
+    
+    void _SetSDKDidVoteAtArticleDelegate(GLSDKDidVoteAtArticleDelegate glSDKDidVoteAtArticleDelegate) {
+        vc.glSDKDidVoteAtArticleDelegate = glSDKDidVoteAtArticleDelegate;
+    }
+    
+    void _StartWidget() {
+        [vc startWidget];
+    }
+    
+    void _StopWidget() {
+        [vc stopWidget];
+    }
+    
+    void _SetUseWidgetVideoRecord(BOOL useVideo) {
+        [vc setUseWidgetVideoRecord:useVideo];
+    }
+    
+    void _SetShowWidgetWhenUnloadSDK(BOOL useWidget) {
+        [vc setShowWidgetWhenUnloadSDK:useWidget];
     }
 }

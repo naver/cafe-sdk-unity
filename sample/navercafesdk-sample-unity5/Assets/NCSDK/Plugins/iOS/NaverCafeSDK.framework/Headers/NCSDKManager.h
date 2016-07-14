@@ -59,9 +59,8 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
                        cafeId:(NSInteger)cafeId;
 
 /*
- 네이버ID와 게임사용자ID 연동을 위해 사용자 게임사용자ID 세팅, fieldName 기본값:게임ID
+ 네이버ID와 게임사용자ID 연동을 위해 사용자 게임사용자ID 세팅
  */
-- (void)setGameUserId:(NSString *)gameUserId fieldName:(NSString *)fieldName;
 - (void)syncGameUserId:(NSString *)gameUserId;
 /*
  투명도 조절 기능 제거
@@ -129,6 +128,10 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
  위젯실행
  */
 - (void)startWidget;
+- (void)stopWidget;
+
+@property (nonatomic, assign) BOOL showWidgetWhenUnloadSDK;
+@property (nonatomic, assign) BOOL useWidgetVideoRecord;
 
 /*
  테스트용
@@ -149,7 +152,14 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 - (void)ncSDKViewDidUnLoad;
 
 - (void)ncSDKJoinedCafeMember;
-- (void)ncSDKPostedArticleAtMenu:(NSInteger)menuId;
+- (void)ncSDKPostedArticleAtMenu:(NSInteger)menuId
+                attachImageCount:(NSInteger)imageCount
+                attachVideoCount:(NSInteger)videoCount;
 - (void)ncSDKPostedCommentAtArticle:(NSInteger)articleId;
 - (void)ncSDKRequestScreenShot;
+- (void)ncSDKDidVoteAtArticle:(NSInteger)articleId;
+
+- (void)ncSDKWidgetPostArticleWithImage;
+- (void)ncSDKWidgetSuccessVideoRecord;
+
 @end

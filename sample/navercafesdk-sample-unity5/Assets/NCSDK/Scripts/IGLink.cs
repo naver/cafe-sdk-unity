@@ -14,27 +14,37 @@ public interface IGLink
 {
 	// home 탭으로 시작.
 	void executeHome ();
-
+	
 	// notice 탭으로 시작.
 	void executeNotice ();
-
+	
 	// event 탭으로 시작.
 	void executeEvent ();
-
+	
 	// menu 탭으로 시작.
 	void executeMenu ();
-
+	
 	// profile 탭으로 시작.
 	void executeProfile ();
-
+	
 	// 특정 게시글로 바로 시작.
 	void executeArticle (int articleId);
-
+	
 	void executeArticlePost (int menuId, string subject, string content);
-
+	
 	void executeArticlePostWithImage (int menuId, string subject, string content, string filePath);
-
+	
 	void executeArticlePostWithVideo (int menuId, string subject, string content, string filePath);
-
-	void setGameUserId (string gameUserId, string fieldName);
+	
+	void syncGameUserId (string gameUserId);
+	
+	void startWidget ();
+	
+	void stopWidget ();
+	
+	void setUseWidgetVideoRecord (bool useVideoRecord);
+	
+	void setShowWidgetWhenUnloadSDK (bool useWidget);
+	 
+	void executeMore ();
 }

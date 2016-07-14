@@ -70,7 +70,7 @@ public class GLinkAndroid : IGLink {
 	class OnPostedCommentListener : AndroidJavaProxy {
 		public OnPostedCommentListener () : base("com.naver.glink.android.sdk.Glink$OnPostedCommentListener") { /* empty. */ }
 
-		void onPostedComment(int articleId) {
+		void onPostedComment(int articleId, int imageCount, int videoCount) {
 			String message = String.Format ("댓글이 작성되었습니다. (from listener, 게시글: {0})", articleId);
 			showToast (message);
 		}
@@ -90,6 +90,24 @@ public class GLinkAndroid : IGLink {
 
 			SampleBehaviour behaviour = obj.GetComponent<SampleBehaviour> ();
 			behaviour.OnClickScreenShotButton ();
+		}
+	}
+
+	class OnRecordFinishListener : AndroidJavaProxy {
+		public OnRecordFinishListener () : base("com.naver.glink.android.sdk.Glink$OnRecordFinishListener") { /* empty. */ }
+
+		void onRecordFinished(String uri) {
+			GLinkAndroid glink = (GLinkAndroid) GLink.sharedInstance ();
+			glink.executeArticlePostWithVideo (-1, "", "", uri);
+		}
+	}
+
+	class OnVotedListener : AndroidJavaProxy {
+		public OnVotedListener () : base("com.naver.glink.android.sdk.Glink$OnVotedListener") { /* empty. */ }
+
+		void onVoted(int articleId) {
+			String message = String.Format ("on voted. (from listener, 게시글: {0})", articleId);
+			showToast (message);
 		}
 	}
 
@@ -127,8 +145,12 @@ public class GLinkAndroid : IGLink {
 		// glinkClass.CallStatic ("setOnPostedCommentListener", new OnPostedCommentListener ());
 
 		glinkClass.CallStatic ("setOnWidgetScreenshotClickListener", new OnWidgetScreenshotClickListener ());
+
+		setUseWidgetVideoRecord (true);
+		glinkClass.CallStatic ("setOnRecordFinishListener", new OnRecordFinishListener ());
+
 		// 게임 아이디 연동을 하려면 아래 주석을 풀어 주세요.
-		// setGameUserId ("yourGameId", "");
+		// syncGameUserId ("yourGameId");
 		#endif
 	}
 
@@ -186,9 +208,39 @@ public class GLinkAndroid : IGLink {
 		#endif
 	}
 
-	public void setGameUserId (string gameUserId, string fieldName) {
+	public void executeMore () {
 		#if UNITY_ANDROID
-		glinkClass.CallStatic ("setGameUserId", currentActivity, gameUserId, fieldName);
+		glinkClass.CallStatic ("startMore", currentActivity);
+		#endif
+	}
+
+	public void syncGameUserId (string gameUserId) {
+		#if UNITY_ANDROID
+		glinkClass.CallStatic ("syncGameUserId", currentActivity, gameUserId);
+		#endif
+	}
+	
+	public void startWidget () {
+		#if UNITY_ANDROID 
+		glinkClass.CallStatic ("startWidget", currentActivity);
+		#endif
+	}
+	
+	public void stopWidget () {
+		#if UNITY_ANDROID 
+		glinkClass.CallStatic ("stopWidget", currentActivity);
+		#endif
+	}
+	
+	public void setUseWidgetVideoRecord (bool useVideoRecord) {
+		#if UNITY_ANDROID 
+		glinkClass.CallStatic ("setUseVideoRecord", currentActivity, useVideoRecord);
+		#endif
+	}
+	
+	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
+		#if UNITY_ANDROID 
+		glinkClass.CallStatic ("showWidgetWhenUnloadSdk", currentActivity, useWidget);
 		#endif
 	}
 }
