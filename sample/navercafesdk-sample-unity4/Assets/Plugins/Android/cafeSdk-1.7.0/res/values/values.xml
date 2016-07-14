@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="boolean" name="centered"/>
+    <attr format="color" name="selectedColor"/>
+    <attr format="dimension" name="strokeWidth"/>
+    <attr format="color" name="unselectedColor"/>
+    <bool name="default_circle_indicator_centered">true</bool>
+    <bool name="default_circle_indicator_snap">false</bool>
+    <bool name="default_line_indicator_centered">true</bool>
+    <bool name="default_title_indicator_selected_bold">true</bool>
+    <bool name="default_underline_indicator_fades">true</bool>
+    <color name="black1">#44484e</color>
+    <color name="black1_opacity_5">#0d44484e</color>
+    <color name="black2">#000000</color>
+    <color name="black2_opacity_10">#1a000000</color>
+    <color name="black2_opacity_5">#0d000000</color>
+    <color name="blue2">#2e65d9</color>
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    <color name="default_line_indicator_selected_color">#FF33B5E5</color>
+    <color name="default_line_indicator_unselected_color">#FFBBBBBB</color>
+    <color name="default_title_indicator_footer_color">#FF33B5E5</color>
+    <color name="default_title_indicator_selected_color">#FFFFFFFF</color>
+    <color name="default_title_indicator_text_color">#BBFFFFFF</color>
+    <color name="default_underline_indicator_selected_color">#FF33B5E5</color>
+    <color name="gray1">#cccccc</color>
+    <color name="gray2">#c1c1c1</color>
+    <color name="gray3">#c7c8ca</color>
+    <color name="gray4">#999999</color>
+    <color name="green1">#00C73C</color>
+    <color name="list_selector_color">#e9ecef</color>
+    <color name="red1">#fa0505</color>
+    <color name="refresh_progress_1">#e91e63</color>
+    <color name="refresh_progress_2">#00b0ff</color>
+    <color name="refresh_progress_3">#3f51b5</color>
+    <color name="text_divider">#b2b2b2</color>
+    <color name="viewer_bg">#222222</color>
+    <color name="white1">#ffffff</color>
+    <color name="white1_30p">#4dffffff</color>
+    <declare-styleable name="CirclePageIndicator"><attr name="centered"/><attr format="color" name="fillColor"/><attr format="color" name="pageColor"/><attr name="android:orientation"/><attr format="dimension" name="radius"/><attr format="boolean" name="snap"/><attr format="color" name="strokeColor"/><attr name="strokeWidth"/><attr name="android:background"/></declare-styleable>
+    <declare-styleable name="FloatingActionButton"><attr format="color" name="fab_colorNormal"/><attr format="color" name="fab_colorPressed"/><attr format="color" name="fab_colorDisabled"/><attr format="color" name="fab_colorRipple"/><attr format="boolean" name="fab_showShadow"/><attr format="color" name="fab_shadowColor"/><attr format="dimension" name="fab_shadowRadius"/><attr format="dimension" name="fab_shadowXOffset"/><attr format="dimension" name="fab_shadowYOffset"/><attr format="enum" name="fab_size"><enum name="normal" value="0"/><enum name="mini" value="1"/></attr><attr format="reference" name="fab_showAnimation"/><attr format="reference" name="fab_hideAnimation"/><attr format="string" name="fab_label"/><attr format="dimension" name="fab_elevationCompat"/><attr format="color" name="fab_progress_color"/><attr format="color" name="fab_progress_backgroundColor"/><attr format="boolean" name="fab_progress_indeterminate"/><attr format="integer" name="fab_progress_max"/><attr format="integer" name="fab_progress"/><attr format="boolean" name="fab_progress_showBackground"/></declare-styleable>
+    <declare-styleable name="FloatingActionMenu"><attr format="boolean" name="menu_showShadow"/><attr format="dimension" name="menu_buttonSpacing"/><attr format="dimension" name="menu_labels_margin"/><attr format="reference" name="menu_labels_showAnimation"/><attr format="reference" name="menu_labels_hideAnimation"/><attr format="dimension" name="menu_labels_paddingTop"/><attr format="dimension" name="menu_labels_paddingLeft"/><attr format="dimension" name="menu_labels_paddingRight"/><attr format="dimension" name="menu_labels_paddingBottom"/><attr format="dimension" name="menu_labels_padding"/><attr format="reference|color" name="menu_labels_textColor"/><attr format="dimension" name="menu_labels_textSize"/><attr format="dimension" name="menu_labels_cornerRadius"/><attr format="boolean" name="menu_labels_showShadow"/><attr format="color" name="menu_labels_colorNormal"/><attr format="color" name="menu_labels_colorPressed"/><attr format="color" name="menu_labels_colorRipple"/><attr format="enum" name="menu_labels_position"><enum name="left" value="0"/><enum name="right" value="1"/></attr><attr format="reference" name="menu_icon"/><attr format="integer" name="menu_animationDelayPerItem"/><attr format="reference" name="menu_buttonToggleAnimation"/><attr format="boolean" name="menu_labels_singleLine"/><attr format="enum" name="menu_labels_ellipsize"><enum name="none" value="0"/><enum name="start" value="1"/><enum name="middle" value="2"/><enum name="end" value="3"/><enum name="marquee" value="4"/></attr><attr format="integer" name="menu_labels_maxLines"/><attr format="enum" name="menu_fab_size"><enum name="normal" value="0"/><enum name="mini" value="1"/></attr><attr format="reference" name="menu_labels_style"/><attr format="color" name="menu_shadowColor"/><attr format="dimension" name="menu_shadowRadius"/><attr format="dimension" name="menu_shadowXOffset"/><attr format="dimension" name="menu_shadowYOffset"/><attr format="color" name="menu_colorNormal"/><attr format="color" name="menu_colorPressed"/><attr format="color" name="menu_colorRipple"/><attr format="enum" name="menu_openDirection"><enum name="up" value="0"/><enum name="down" value="1"/><enum name="left" value="2"/><enum name="right" value="3"/></attr><attr format="color" name="menu_backgroundColor"/><attr format="string" name="menu_fab_label"/><attr format="reference" name="menu_fab_show_animation"/><attr format="reference" name="menu_fab_hide_animation"/></declare-styleable>
+    <declare-styleable name="LinePageIndicator"><attr name="centered"/><attr name="unselectedColor"/><attr name="selectedColor"/><attr format="dimension" name="lineWidth"/><attr name="strokeWidth"/><attr format="dimension" name="gapWidth"/><attr name="android:background"/></declare-styleable>
+    <declare-styleable name="TitlePageIndicator"><attr format="dimension" name="clipPadding"/><attr format="color" name="footerColor"/><attr format="dimension" name="footerLineHeight"/><attr name="footerIndicatorStyle"><enum name="none" value="0"/><enum name="triangle" value="1"/><enum name="underline" value="2"/></attr><attr format="dimension" name="footerIndicatorHeight"/><attr format="dimension" name="footerIndicatorUnderlinePadding"/><attr format="dimension" name="footerPadding"/><attr name="linePosition"><enum name="bottom" value="0"/><enum name="top" value="1"/></attr><attr name="selectedColor"/><attr format="boolean" name="selectedBold"/><attr name="android:textColor"/><attr name="android:textSize"/><attr format="dimension" name="titlePadding"/><attr format="dimension" name="topPadding"/><attr name="android:background"/></declare-styleable>
+    <declare-styleable name="UnderlinePageIndicator"><attr format="boolean" name="fades"/><attr format="integer" name="fadeDelay"/><attr format="integer" name="fadeLength"/><attr name="selectedColor"/><attr name="android:background"/></declare-styleable>
+    <declare-styleable name="ViewPagerIndicator"><attr format="reference" name="vpiCirclePageIndicatorStyle"/><attr format="reference" name="vpiIconPageIndicatorStyle"/><attr format="reference" name="vpiLinePageIndicatorStyle"/><attr format="reference" name="vpiTitlePageIndicatorStyle"/><attr format="reference" name="vpiTabPageIndicatorStyle"/><attr format="reference" name="vpiUnderlinePageIndicatorStyle"/></declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+    <dimen name="default_line_indicator_gap_width">4dp</dimen>
+    <dimen name="default_line_indicator_line_width">12dp</dimen>
+    <dimen name="default_line_indicator_stroke_width">1dp</dimen>
+    <dimen name="default_title_indicator_clip_padding">4dp</dimen>
+    <dimen name="default_title_indicator_footer_indicator_height">4dp</dimen>
+    <dimen name="default_title_indicator_footer_indicator_underline_padding">20dp</dimen>
+    <dimen name="default_title_indicator_footer_line_height">2dp</dimen>
+    <dimen name="default_title_indicator_footer_padding">7dp</dimen>
+    <dimen name="default_title_indicator_text_size">15dp</dimen>
+    <dimen name="default_title_indicator_title_padding">5dp</dimen>
+    <dimen name="default_title_indicator_top_padding">7dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="fab_size_normal">56dp</dimen>
+    <dimen name="glink_trash_round_size">64dp</dimen>
+    <dimen name="glink_trash_top_margine">6dp</dimen>
+    <dimen name="glink_widget_padding">9dp</dimen>
+    <dimen name="glink_widget_size_normal">54dp</dimen>
+    <dimen name="labels_text_size">14sp</dimen>
+    <dimen name="widget_speed">3dp</dimen>
+    <item name="fab_label" type="id"/>
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <integer name="default_title_indicator_footer_indicator_style">2</integer>
+    <integer name="default_title_indicator_line_position">0</integer>
+    <integer name="default_underline_indicator_fade_delay">300</integer>
+    <integer name="default_underline_indicator_fade_length">400</integer>
+    <string name="already_exist_nickname_message">이미 사용 중인 별명입니다.</string>
+    <string name="article_count_txt">작성한 글</string>
+    <string name="article_read_count_format">조회 %1$,d</string>
+    <string name="article_save_complete_message">게시글이 등록 되었습니다.</string>
+    <string name="article_save_fail_message">글쓰기에 실패했습니다.</string>
+    <string name="article_save_progress_message">글쓰기 저장중...</string>
+    <string name="attachment_add_fail_message">이미지/동영상을 첨부할 수 없습니다.</string>
+    <string name="available_nickname_message">사용 가능한 별명입니다.</string>
+    <string name="cafe_app_install_confirm_message">네이버 카페앱을 설치하거나 업데이트하시면 이용할 수 있습니다. 설치하시겠습니까?</string>
+    <string name="cancel">취소</string>
+    <string name="cancel_article_write_confirm_message">게시물 입력을 취소하시겠습니까?</string>
+    <string name="comment_hint">내용을 입력 하세요.</string>
+    <string name="comment_write_permission_error">댓글 작성 권한이 없습니다.</string>
+    <string name="confirm">확인</string>
+    <string name="delete_confirm_message">삭제하겠습니까?</string>
+    <string name="empty_articles_message">게시글이 없습니다.</string>
+    <string name="empty_recently_search_message">최근 검색기록이 없습니다.</string>
+    <string name="empty_search_articles_message">요청하신 내용을 찾을 수 없습니다.</string>
+    <string name="error_no_article_comment">댓글단 글이 없습니다.</string>
+    <string name="error_no_article_like">좋아요한 글이 없습니다.</string>
+    <string name="error_no_article_wirte">작성한 글이 없습니다.</string>
+    <string name="exist_prohibit_word_nickname_message">금칙어가 포함되어 있습니다.</string>
+    <string name="image_permission_setting_message">권한이 없어 사진 첨부를 할 수 없습니다. 설정 > 앱 > 해당 게임에서 저장 권한을 확인해 주세요.</string>
+    <string name="image_upload_fail_message">이미지를 업로드 할 수 없습니다.</string>
+    <string name="internet_not_connected_error">인터넷에 연결되어 있지 않습니다.\n무선 인터넷 연결 상태를 확인해주세요.</string>
+    <string name="like_article_count_txt">좋아요</string>
+    <string name="logout_complete_message">로그아웃 되었습니다.</string>
+    <string name="logout_confirm_message">로그아웃 하시겠습니까?</string>
+    <string name="member_count_format">회원수 %1$,d명</string>
+    <string name="modify_complete_message">수정되었습니다.</string>
+    <string name="movie_over_limit_size_message">선택한 동영상 용량이\n업로드 기준을 초과했습니다</string>
+    <string name="movie_permission_setting_message">권한이 없어 동영상 첨부를 할 수 없습니다. 설정 > 앱 > 해당 게임에서 저장 권한을 확인해 주세요.</string>
+    <string name="network_error">네트워크 문제로 연결되지 않습니다.\r\n네트워크 확인후 다시 시도해주세요.</string>
+    <string name="nick_name_already_join">이미 가입신청하신 상태로\n현재 가입승인 절차가 진행 중입니다.</string>
+    <string name="nick_name_header">별명입력</string>
+    <string name="nick_name_hint">별명을 입력하세요.</string>
+    <string name="nick_name_join">가입하기</string>
+    <string name="nick_name_join_agree">네이버 카페 이용약관에 동의합니다.</string>
+    <string name="nick_name_validate">최대 한글 10자....</string>
+    <string name="nickname_rule_message">최대 한글 10자, 영문 20자 (숫자 혼용가능)</string>
+    <string name="no_menu_setting_message">메뉴가 설정되지 않았습니다.</string>
+    <string name="not_available_nickname_message">사용할 수 없는 별명입니다.</string>
+    <string name="not_configured_event_menu_id">이벤트 메뉴가 설정되지 않았습니다.</string>
+    <string name="not_configured_notice_menu_id">공지사항 메뉴가 설정되지 않았습니다.</string>
+    <string name="profile_logout">로그아웃</string>
+    <string name="profile_visit">방문</string>
+    <string name="recent_article_menu">최신글 보기</string>
+    <string name="record_error">동영상이 정상적으로 녹화되지 않았습니다.</string>
+    <string name="record_permission_error">권한이 없어 영상녹화를 할 수 없습니다.\n설정 > 앱 > 해당 게임에서 마이크, 저장 권한을 확인해
+    주세요
+  </string>
+    <string name="record_quality">녹화 품질</string>
+    <string name="record_quality_high">HIGH</string>
+    <string name="record_quality_low">LOW</string>
+    <string name="record_quality_std">NORMAL</string>
+    <string name="record_saved">Movies 폴더에 저장되었습니다.</string>
+    <string name="record_size">녹화 해상도</string>
+    <string name="record_size_360">360p</string>
+    <string name="record_size_480">480p</string>
+    <string name="record_size_720">720p</string>
+    <string name="require_join_message">카페에 가입해야 합니다.</string>
+    <string name="require_login_message">네이버 아이디로 로그인 해주세요.</string>
+    <string name="retry">재시도</string>
+    <string name="retry_after_a_while_message">잠시 후 다시 시도해 주세요.</string>
+    <string name="retry_error">다시 시도하기</string>
+    <string name="save">완료</string>
+    <string name="save_error_contents">내용을 입력하세요.</string>
+    <string name="save_error_menu">게시판을 선택하세요.</string>
+    <string name="save_error_subject">제목을 입력하세요.</string>
+    <string name="search_all_menu">전체 게시판</string>
+    <string name="search_hint">검색어를 입력하세요.</string>
+    <string name="search_result_count">%1d건</string>
+    <string name="search_result_text">이 검색되었습니다</string>
+    <string name="select_menu">게시판 선택</string>
+    <string name="select_menu_button">게시판을 선택해주세요.</string>
+    <string name="version">VERSION 1.7.0</string>
+    <string name="waiting_join_apply_message">가입신청중입니다.</string>
+    <string name="widget_button_cafe">게임카페</string>
+    <string name="widget_button_capture">화면캡쳐</string>
+    <string name="widget_button_record">영상녹화</string>
+    <string name="widget_button_write">글쓰기</string>
+    <string name="widget_trash">게임카페 아이콘을 누르면 복구됩니다</string>
+    <string name="write_permission_error">해당 게시판의 글쓰기 권한이 없습니다.</string>
+    <string name="written_comment_count_txt">댓글단 글</string>
+    <style name="Glink.SeekBar" parent="android:Widget.SeekBar">
+    <item name="android:paddingLeft">0dip</item>
+    <item name="android:paddingRight">16dip</item>
+    <item name="android:thumbOffset">8dip</item>
+    <item name="android:layout_marginLeft">0dip</item>
+    <item name="android:thumb">@drawable/seekbar_control_selector</item>
+    <item name="android:progressDrawable">@drawable/seekbar_progress_background</item>
+    <item name="android:indeterminateOnly">false</item>
+    <item name="android:minHeight">13dip</item>
+    <item name="android:maxHeight">13dip</item>
+    <item name="android:focusable">true</item>
+  </style>
+    <style name="record_setting_anim" parent="android:Animation">
+    <item name="@android:windowEnterAnimation">@anim/record_setting_dialog_enter</item>
+    <item name="@android:windowExitAnimation">@anim/record_setting_dialog_exit</item>
+  </style>
+    <style name="record_widget_anim" parent="android:Animation">
+    <item name="@android:windowEnterAnimation">@anim/widget_record_enter</item>
+    <item name="@android:windowExitAnimation">@anim/widget_record_exit</item>
+  </style>
+    <style name="transparent_progress_dialog">
+    <item name="android:windowFrame">@null</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowTitleStyle">@null</item>
+    <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    <item name="android:backgroundDimEnabled">false</item>
+    <item name="android:background">@android:color/transparent</item>
+  </style>
+    <style name="widget_dialog_anim" parent="android:Animation">
+    <item name="@android:windowEnterAnimation">@anim/widget_enter</item>
+    <item name="@android:windowExitAnimation">@anim/widget_exit</item>
+  </style>
+    <style name="widget_show_animation"/>
+</resources>
