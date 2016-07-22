@@ -61,7 +61,7 @@ public class GLinkAndroid : IGLink {
 	class OnPostedArticleListener : AndroidJavaProxy {
 		public OnPostedArticleListener () : base("com.naver.glink.android.sdk.Glink$OnPostedArticleListener") { /* empty. */ }
 
-		void onPostedArticle(int menuId) {
+		void onPostedArticle(int menuId, int imageCount, int videoCount) {
 			String message = String.Format ("게시글이 작성되었습니다. (from listener, 메뉴: {0})", menuId);
 			showToast (message);
 		}
@@ -70,7 +70,7 @@ public class GLinkAndroid : IGLink {
 	class OnPostedCommentListener : AndroidJavaProxy {
 		public OnPostedCommentListener () : base("com.naver.glink.android.sdk.Glink$OnPostedCommentListener") { /* empty. */ }
 
-		void onPostedComment(int articleId, int imageCount, int videoCount) {
+		void onPostedComment(int articleId) {
 			String message = String.Format ("댓글이 작성되었습니다. (from listener, 게시글: {0})", articleId);
 			showToast (message);
 		}
