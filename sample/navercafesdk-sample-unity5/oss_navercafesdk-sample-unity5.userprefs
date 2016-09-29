@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NCSDK/Scripts/GLinkiOS.cs">
+    <Files>
+      <File FileName="Assets/NCSDK/Scripts/IGLink.cs" Line="36" Column="2" />
+      <File FileName="Assets/NCSDK/Scripts/GLinkiOS.cs" Line="72" Column="112" />
+      <File FileName="Assets/NCSDK/Sample/SampleBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/NCSDK/Scripts/GLinkAndroid.cs" Line="1" Column="1" />
+      <File FileName="Assets/NCSDK/Scripts/GLink.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

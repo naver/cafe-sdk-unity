@@ -1,0 +1,30 @@
+﻿#include "il2cpp-config.h"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+
+#include "class-internals.h"
+#include "codegen/il2cpp-codegen.h"
+
+extern const methodPointerType* native_delegate_wrapper_GLinkiOS__NCSDKDidLoadCallback_m7_90_indirect;
+extern const methodPointerType* native_delegate_wrapper_GLinkiOS__NCSDKDidUnLoadCallback_m7_91_indirect;
+extern const methodPointerType* native_delegate_wrapper_GLinkiOS__NCSDKJoinedCafeCallback_m7_92_indirect;
+extern const methodPointerType* native_delegate_wrapper_GLinkiOS__NCSDKPostedArticleAtMenuCallback_m7_93_indirect;
+extern const methodPointerType* native_delegate_wrapper_GLinkiOS__NCSDKPostedCommentAtArticleCallback_m7_94_indirect;
+extern const methodPointerType* native_delegate_wrapper_GLinkiOS__NCSDKWidgetPostAriticleWithImageCallback_m7_95_indirect;
+extern const methodPointerType* native_delegate_wrapper_GLinkiOS__NCSDKDidVoteAtArticleCallback_m7_96_indirect;
+extern const methodPointerType * g_PInvokeWrapperPointers[7] = 
+{
+	(methodPointerType*)&native_delegate_wrapper_GLinkiOS__NCSDKDidLoadCallback_m7_90_indirect,
+	(methodPointerType*)&native_delegate_wrapper_GLinkiOS__NCSDKDidUnLoadCallback_m7_91_indirect,
+	(methodPointerType*)&native_delegate_wrapper_GLinkiOS__NCSDKJoinedCafeCallback_m7_92_indirect,
+	(methodPointerType*)&native_delegate_wrapper_GLinkiOS__NCSDKPostedArticleAtMenuCallback_m7_93_indirect,
+	(methodPointerType*)&native_delegate_wrapper_GLinkiOS__NCSDKPostedCommentAtArticleCallback_m7_94_indirect,
+	(methodPointerType*)&native_delegate_wrapper_GLinkiOS__NCSDKWidgetPostAriticleWithImageCallback_m7_95_indirect,
+	(methodPointerType*)&native_delegate_wrapper_GLinkiOS__NCSDKDidVoteAtArticleCallback_m7_96_indirect,
+};

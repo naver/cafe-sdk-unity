@@ -1,0 +1,8 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="SampleBehaviour">
+			<method name="OnClickScreenShotButton"/>
+			<method name="OnClickGlinkButton"/>
+		</type>
+	</assembly>
+</linker>
