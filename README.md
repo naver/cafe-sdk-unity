@@ -7,13 +7,13 @@ Cafe SDK에 대하여 자세히 알고싶으시면 [네이버 CafeSDK 공식카�
 
 
 
-v.1.7.4
+v.2.1.0
 -------------
- - Unity Package 1.7.4 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
+ - Unity Package 2.1.0 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
 
- NaverCafeSDK For Android 1.7.2
+ NaverCafeSDK For Android 2.1.0
  
- NaverCafeSDK For iOS 1.7.1
+ NaverCafeSDK For iOS 2.1.0
 
 
 폴더 구조
@@ -38,13 +38,16 @@ README.md   | readme 파일
 5. [google gson](http://mvnrepository.com/artifact/com.google.code.gson/gson)  (2.3.1 사용 중)
 6. [glide](http://mvnrepository.com/artifact/com.github.bumptech.glide/glide)  (3.6.1 사용 중)
 7. [otto](http://mvnrepository.com/artifact/com.squareup/otto)  (1.3.8 사용 중)
+8. hmac (2.3.1 사용중)
 
 
 [iOS]
 
 1. [네이버 아이디 로그인-4.0.7](https://nid.naver.com/devcenter/docs.nhn?menu=IOS)
-2. [AFNetworking](https://github.com/AFNetworking/AFNetworking)(UIImageView+AFNetworking)
-<br>1.x ~ 2.x 모두 사용 가능하며 2.6.3에서 테스트 진행했습니다.
+2. [AFNetworking](https://github.com/AFNetworking/AFNetworking)
+<br>2.x 사용 가능하며 2.6.3에서 테스트 진행했습니다.
+3. [SDWebImage-3.8.2](https://github.com/rs/SDWebImage)
+4. [FLAnimatedImage-1.0.12](https://github.com/Flipboard/FLAnimatedImage)
 
 라이선스
 -------------
