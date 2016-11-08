@@ -1,10 +1,10 @@
 #import <UIKit/UIKit.h>
 #import "UnityAppController.h"
 #import <NaverCafeSDK/NCSDKManager.h>
+#import <NaverCafeSDK/NCSDKStatistics.h>
 
 typedef void (*GLSDKDidLoadDelegate)();
 typedef void (*GLSDKDidUnLoadDelegate)();
-
 typedef void (*GLSDKJoinedCafeDelegate)();
 typedef void (*GLSDKPostedArticleAtMenuDelegate)(NSInteger menuId, NSInteger imageCount, NSInteger videoCount);
 typedef void (*GLSDKPostedCommentAtArticleDelegate)(NSInteger articleId);
@@ -47,6 +47,7 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
     
     [[NCSDKManager getSharedInstance] setParentViewController:_mainViewcontroller];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
+    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
 }
 - (void)executeGlink{
     [self setGLRootViewController];
@@ -128,6 +129,16 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
                                                      cafeId:cafeId];
 }
 
+- (void)setGLinkGlobalInfoWithNeoIdConsumerKey:(NSString *)neoIdConsumerKey
+                               andGlobalCafeId:(NSInteger)globalCafeId
+                                     andCafeId:(NSString *)language{
+    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:neoIdConsumerKey
+                                             globalCafeId:globalCafeId];
+    
+    [[NCSDKManager getSharedInstance] setCountry:language];
+}
+
+
 - (void)executeShowMessageToast:(NSString *)message {
     [[NCSDKManager getSharedInstance] showToast:message];
 }
@@ -146,6 +157,26 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
 
 - (void)stopWidget {
     [[NCSDKManager getSharedInstance] stopWidget];
+}
+
+- (NSString *)currentCountry {
+    return [[NCSDKManager getSharedInstance] currentCountry];
+}
+
+- (void)sendNewUser:(NSString *)gameUserId andMarket:(NSString *)market {
+    [NCSDKStatistics sendNewUser:gameUserId andMarket:market];
+}
+
+- (void)sendPayUser:(NSString *)gameUserId andPay:(double)pay andProductCode:(NSString *)productCode andCurrency:(NSString *)currency andMarket:(NSString *)market {
+    [NCSDKStatistics sendPayUser:gameUserId andPay:pay andProductCode:productCode andCurrency:currency andMarket:market];
+}
+
+- (void)sendPageVisit:(NSString *)gameUserId {
+    [NCSDKStatistics sendPageVisit:gameUserId];
+}
+
+- (void)setCafeLangCode:(NSString *)code {
+    [[NCSDKManager getSharedInstance] setCountry:code];
 }
 
 #pragma mark - NCSDKDelegate
@@ -171,6 +202,7 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
         self.glSDKPostedArticleAtMenuDelegate(menuId, imageCount, videoCount);
     }
 }
+    
 - (void)ncSDKPostedCommentAtArticle:(NSInteger)articleId {
     if (self.glSDKPostedCommentAtArticleDelegate) {
         self.glSDKPostedCommentAtArticleDelegate(articleId);
@@ -211,12 +243,24 @@ NSString* CreateNSString (const char* string) {
     }
 }
 extern "C" {
-    
+    char* CreateNSStrintToChar (const char* string)
+    {
+        if (string == NULL)
+            return NULL;
+        char* res = (char*) malloc (strlen(string) + 1 );
+        strcpy (res, string);
+        return res;
+    }
+
     GLinkViewController *vc = [[GLinkViewController alloc] init];
     
     void _InitGLink(const char* NaverLoginClientId, const char* NaverLoginClientSecret, int cafeId ) {
         [vc setGLinkInfoWithNaverLoginClientId:CreateNSString(NaverLoginClientId)andNaverLoginClientSecret:CreateNSString(NaverLoginClientSecret)
                                      andCafeId:cafeId];
+    }
+    
+    void _InitGLinkForGlobal(const char* neoIdConsumerKey, int globalCafeId, const char* language) {
+        [vc setGLinkGlobalInfoWithNeoIdConsumerKey:CreateNSString(neoIdConsumerKey) andGlobalCafeId:globalCafeId andCafeId:CreateNSString(language)];
     }
     
     void _ExecuteMain(){
@@ -327,5 +371,25 @@ extern "C" {
     
     void _SetShowWidgetWhenUnloadSDK(BOOL useWidget) {
         [vc setShowWidgetWhenUnloadSDK:useWidget];
+    }
+    
+    const char* _GetCafeLangCode() {
+        return CreateNSStrintToChar([[vc currentCountry] UTF8String]);
+    }
+
+    void _SendNewUser(const char* gameUserId, const char* market) {
+        [vc sendNewUser:CreateNSString(gameUserId) andMarket:CreateNSString(market)];
+    }
+    
+    void _SendPayUser(const char *gameUserId, double pay, const char *productCode, const char *currency, const char *market) {
+        [vc sendPayUser:CreateNSString(gameUserId) andPay:pay andProductCode:CreateNSString(productCode) andCurrency:CreateNSString(currency) andMarket:CreateNSString(market)];
+    }
+    
+    void _SendPageVisit(const char* gameUserId) {
+        [vc sendPageVisit:CreateNSString(gameUserId)];
+    }
+    
+    void _SetCafeLangCode(const char* code) {
+        [vc setCafeLangCode:CreateNSString(code)];
     }
 }

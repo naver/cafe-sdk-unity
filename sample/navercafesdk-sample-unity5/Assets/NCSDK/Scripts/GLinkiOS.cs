@@ -11,7 +11,6 @@ using UnityEngine;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
-
 using System;
 using AOT;
 using System.Runtime.InteropServices;
@@ -21,7 +20,10 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	#if UNITY_IPHONE
 	[DllImport("__Internal")]
 	public static extern void _InitGLink(string consumerKey, string consumerSecret, int cafeId);
-	
+
+	[DllImport("__Internal")]
+	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int globalCafeId, string language);
+
 	[DllImport("__Internal")]
 	public static extern void _ExecuteMain();
 	
@@ -53,6 +55,9 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public static extern void _SyncGameUserId(string gameUserId);
 		
 	[DllImport("__Internal")]
+	public static extern string _GetCafeLangCode();
+	
+	[DllImport("__Internal")]
 	private static extern void _ShowMessageToast(string message);
 	
 	[DllImport("__Internal")]
@@ -81,7 +86,10 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	private static extern void _SetUseWidgetVideoRecord(bool useVideoRecord);
 	[DllImport("__Internal")]
 	private static extern void _SetShowWidgetWhenUnloadSDK(bool useWidget);
-	
+
+	[DllImport("__Internal")]
+	private static extern void _SetCafeLangCode(string code);
+
 	// imsi
 	[DllImport("__Internal")]
 	private static extern void _ExecuteCaptureScreenshopAndPostArticle();
@@ -95,38 +103,38 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	delegate void NCSDKDidLoadDelegate();
 	[MonoPInvokeCallback(typeof(NCSDKDidLoadDelegate))]
 	public static void _NCSDKDidLoadCallback () {
-		_ShowMessageToast ("Did Load sdk");
+//		_ShowMessageToast ("Did Load sdk");
 	}
 	
 	delegate void NCSDKDidUnLoadDelegate();
 	[MonoPInvokeCallback(typeof(NCSDKDidUnLoadDelegate))]
 	public static void _NCSDKDidUnLoadCallback () {
-		_ShowMessageToast ("Did UnLoad sdk");
+//		_ShowMessageToast ("Did UnLoad sdk");
 	}
 	
 	delegate void NCSDKJoinedCafeDelegate();
 	[MonoPInvokeCallback(typeof(NCSDKJoinedCafeDelegate))]
 	public static void _NCSDKJoinedCafeCallback () {
-		_ShowMessageToast ("Joined Cafe");
+//		_ShowMessageToast ("Joined Cafe");
 	}
 
 	delegate void NCSDKPostedArticleAtMenuDelegate(int menuId, int imageCount, int videoCount);
 	[MonoPInvokeCallback(typeof(NCSDKPostedArticleAtMenuDelegate))]
 	public static void _NCSDKPostedArticleAtMenuCallback (int menuId, int imageCount, int videoCount) {
-		String message = String.Format ("Posted Article at {0} image : {1} video : {2}", menuId, imageCount, videoCount);
-		_ShowMessageToast (message);
+//		String message = String.Format ("Posted Article at {0} image : {1} video : {2}", menuId, imageCount, videoCount);
+//		_ShowMessageToast (message);
 	}
 
 	delegate void NCSDKPostedCommentAtArticleDelegate(int articleId);
 	[MonoPInvokeCallback(typeof(NCSDKPostedCommentAtArticleDelegate))]
 	public static void _NCSDKPostedCommentAtArticleCallback (int articleId) {
-		_ShowMessageToast ("Posted Comment at " + articleId);
+//		_ShowMessageToast ("Posted Comment at " + articleId);
 	}
 
 	delegate void NCSDKWidgetPostAriticleWithImageDelegate();
 	[MonoPInvokeCallback(typeof(NCSDKWidgetPostAriticleWithImageDelegate))]
 	public static void _NCSDKWidgetPostAriticleWithImageCallback () {
-		_ShowMessageToast ("Post Article With Image" );
+//		_ShowMessageToast ("Post Article With Image" );
 		
 		string name = "CafeSdkController";
 		GameObject obj = GameObject.Find (name);
@@ -141,7 +149,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	delegate void NCSDKDidVoteAtArticleDelegate(int articleId);
 	[MonoPInvokeCallback(typeof(NCSDKDidVoteAtArticleDelegate))]
 	public static void _NCSDKDidVoteAtArticleCallback (int articleId) {
-		_ShowMessageToast ("Did Vote at " + articleId);
+//		_ShowMessageToast ("Did Vote at " + articleId);
 	}
 	
 	
@@ -170,7 +178,8 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public GLinkiOS() {
 		#if UNITY_IPHONE
 		_InitGLink(GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
-		
+//		_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.GlobalCafeId, GLinkConfig.Language);
+
 		//set callback funcs
 		_SetSDKDidLoadDelegate(_NCSDKDidLoadCallback);
 		_SetSDKDidUnLoadDelegate(_NCSDKDidUnLoadCallback);
@@ -184,6 +193,9 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	
 	public void executeHome() {
+		GLinkStatistics.sharedInstance().sendNewUser("rasbow",GLinkStatistics.kMarketGoogle);
+		GLinkStatistics.sharedInstance().sendPayUser("rasbow", 1.1111, "productCode1", GLinkStatistics.kCurrencyDollar, GLinkStatistics.kMarketGoogle);
+
 		#if UNITY_IPHONE 
 		_ExecuteMain ();
 		#endif
@@ -269,6 +281,20 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
 		#if UNITY_IPHONE 
 		_SetShowWidgetWhenUnloadSDK(useWidget);		
+		#endif
+	}
+
+	public string getCafeLangCode () {
+		string code = null;
+		#if UNITY_IPHONE 
+		code = _GetCafeLangCode();
+		#endif
+		return code;
+	}
+
+	public void setCafeLangCode (string cafeLangCode) {
+		#if UNITY_IPHONE 
+		_SetCafeLangCode(cafeLangCode);
 		#endif
 	}
 }

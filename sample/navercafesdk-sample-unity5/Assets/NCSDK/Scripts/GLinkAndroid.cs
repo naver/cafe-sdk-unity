@@ -22,7 +22,7 @@ public class GLinkAndroid : IGLink {
 		public OnClickAppSchemeBannerListener () : base("com.naver.glink.android.sdk.Glink$OnClickAppSchemeBannerListener") { /* empty. */ }
 
 		void onClickAppSchemeBanner (string appScheme) {
-			showToast ("tapped:" + appScheme);
+//			showToast ("tapped:" + appScheme);
 		}
 	}
 
@@ -30,7 +30,7 @@ public class GLinkAndroid : IGLink {
 		public OnSdkStartedListener () : base("com.naver.glink.android.sdk.Glink$OnSdkStartedListener") { /* empty. */ }
 
 		void onSdkStarted () {
-			showToast ("sdk start.");
+//			showToast ("sdk start.");
 		}
 	}
 
@@ -38,7 +38,7 @@ public class GLinkAndroid : IGLink {
 		public OnSdkStoppedListener () : base("com.naver.glink.android.sdk.Glink$OnSdkStoppedListener") { /* empty. */ }
 
 		void onSdkStopped () {
-			showToast ("sdk stop.");
+//			showToast ("sdk stop.");
 		}
 	}
 
@@ -46,7 +46,7 @@ public class GLinkAndroid : IGLink {
 		public OnLoggedInListener () : base("com.naver.glink.android.sdk.Glink$OnLoggedInListener") { /* empty. */ }
 
 		void onLoggedIn (bool success) {
-			showToast ("logged in:" + success);
+//			showToast ("logged in:" + success);
 		} 
 	}
 
@@ -54,7 +54,7 @@ public class GLinkAndroid : IGLink {
 		public OnJoinedListener () : base("com.naver.glink.android.sdk.Glink$OnJoinedListener") { /* empty. */ }
 
 		void onJoined() {
-			showToast ("카페에 가입하였습니다. (from listener)");
+//			showToast ("카페에 가입하였습니다. (from listener)");
 		}
 	}
 
@@ -62,8 +62,8 @@ public class GLinkAndroid : IGLink {
 		public OnPostedArticleListener () : base("com.naver.glink.android.sdk.Glink$OnPostedArticleListener") { /* empty. */ }
 
 		void onPostedArticle(int menuId, int imageCount, int videoCount) {
-			String message = String.Format ("게시글이 작성되었습니다. (from listener, 메뉴: {0})", menuId);
-			showToast (message);
+//			String message = String.Format ("게시글이 작성되었습니다. (from listener, 메뉴: {0})", menuId);
+//			showToast (message);
 		}
 	}
 
@@ -71,8 +71,8 @@ public class GLinkAndroid : IGLink {
 		public OnPostedCommentListener () : base("com.naver.glink.android.sdk.Glink$OnPostedCommentListener") { /* empty. */ }
 
 		void onPostedComment(int articleId) {
-			String message = String.Format ("댓글이 작성되었습니다. (from listener, 게시글: {0})", articleId);
-			showToast (message);
+//			String message = String.Format ("댓글이 작성되었습니다. (from listener, 게시글: {0})", articleId);
+//			showToast (message);
 		}
 	}
 
@@ -106,8 +106,8 @@ public class GLinkAndroid : IGLink {
 		public OnVotedListener () : base("com.naver.glink.android.sdk.Glink$OnVotedListener") { /* empty. */ }
 
 		void onVoted(int articleId) {
-			String message = String.Format ("on voted. (from listener, 게시글: {0})", articleId);
-			showToast (message);
+//			String message = String.Format ("on voted. (from listener, 게시글: {0})", articleId);
+//			showToast (message);
 		}
 	}
 
@@ -124,7 +124,8 @@ public class GLinkAndroid : IGLink {
 		#if UNITY_ANDROID
 		currentActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
 		glinkClass = new AndroidJavaClass ("com.naver.glink.android.sdk.Glink");
-		glinkClass.CallStatic ("init", GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
+		glinkClass.CallStatic ("init", currentActivity, GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
+		//glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.GlobalCafeId, GLinkLanguage.ENGLISH);
 
 		// 앱스킴 listener 사용 하려면 아래 주석을 풀어 주세요.
 		// glinkClass.CallStatic ("setOnClickAppSchemeBannerListener", new OnClickAppSchemeBannerListener ());
@@ -241,6 +242,21 @@ public class GLinkAndroid : IGLink {
 	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
 		#if UNITY_ANDROID 
 		glinkClass.CallStatic ("showWidgetWhenUnloadSdk", currentActivity, useWidget);
+		#endif
+	}
+
+	public string getCafeLangCode () {
+		string code = null;
+		#if UNITY_ANDROID 
+		code = glinkClass.CallStatic<string> ("getCafeLangCode");
+		#endif
+
+		return code;
+	}
+
+	public void setCafeLangCode (string cafeLangCode) {
+		#if UNITY_ANDROID 
+		glinkClass.CallStatic ("setCafeLangCode", cafeLangCode);
 		#endif
 	}
 }

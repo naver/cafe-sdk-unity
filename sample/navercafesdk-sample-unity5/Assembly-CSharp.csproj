@@ -49,21 +49,17 @@
      <Compile Include="Assets\NCSDK\Scripts\GLink.cs" />
      <Compile Include="Assets\NCSDK\Scripts\GLinkAndroid.cs" />
      <Compile Include="Assets\NCSDK\Scripts\GLinkConfig.cs" />
+     <Compile Include="Assets\NCSDK\Scripts\GLinkLanguage.cs" />
+     <Compile Include="Assets\NCSDK\Scripts\GLinkStatistics.cs" />
      <Compile Include="Assets\NCSDK\Scripts\GLinkiOS.cs" />
      <Compile Include="Assets\NCSDK\Scripts\IGLink.cs" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\NCSDK\Plugins\iOS\License_CafeSDK_iOS.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>/Applications/Unity_5/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity_5/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
