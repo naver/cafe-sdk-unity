@@ -193,6 +193,9 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	
 	public void executeHome() {
+		GLinkStatistics.sharedInstance().sendNewUser("rasbow",GLinkStatistics.kMarketGoogle);
+		GLinkStatistics.sharedInstance().sendPayUser("rasbow", 1.1111, "productCode1", GLinkStatistics.kCurrencyDollar, GLinkStatistics.kMarketGoogle);
+
 		#if UNITY_IPHONE 
 		_ExecuteMain ();
 		#endif
