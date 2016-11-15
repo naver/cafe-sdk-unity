@@ -7,11 +7,11 @@ Cafe SDK에 대하여 자세히 알고싶으시면 [네이버 CafeSDK 공식카�
 
 
 
-v.2.1.0
+v.2.1.1
 -------------
- - Unity Package 2.1.0 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
+ - Unity Package 2.1.1 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
 
- NaverCafeSDK For Android 2.1.0
+ NaverCafeSDK For Android 2.1.1
  
  NaverCafeSDK For iOS 2.1.0
 
