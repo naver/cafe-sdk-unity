@@ -1,0 +1,1520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02EA4D0CBD907CC7BC7C9F2B /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 034545E78B9191F7A29ECFF7 /* SDWebImageCompat.m */; };
+		03F528631B447098000F4FB8 /* Il2CppOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03F528621B447098000F4FB8 /* Il2CppOptions.cpp */; };
+		06F947DA836DAF16D4B36827 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B044DFA905E75AFA05663C3 /* SDWebImageDecoder.m */; };
+		08B24F76137BFDFA00FBA309 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B24F75137BFDFA00FBA309 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0B7C4CEDB86E9B4D41A3332C /* Il2CppGenericMethodDefinitions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30B949558B52BA3C57627802 /* Il2CppGenericMethodDefinitions.cpp */; };
+		0F5C4D4C9BD347A3495A876C /* NCSDKUnityManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1A04E8B9A073B326344B2D5 /* NCSDKUnityManager.mm */; };
+		107B401CB0900B5F12B265F2 /* Bulk_Generics_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E214AE4913FFA9281604ED9 /* Bulk_Generics_2.cpp */; };
+		11A7491CA4D1CE79B37557F2 /* settings.map in Resources */ = {isa = PBXBuildFile; fileRef = 57144F259F1A62267F930845 /* settings.map */; };
+		1207406F80BCCB014D08E8A9 /* Bulk_System.Core_0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A94AE1B46DDDA6F97D54C0 /* Bulk_System.Core_0.cpp */; };
+		14494C6F9F595E3062665226 /* Bulk_Generics_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC13449D88149994C6A3F2AF /* Bulk_Generics_1.cpp */; };
+		1859EA9B19214E7B0022C3D3 /* MetalHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1859EA9A19214E7B0022C3D3 /* MetalHelper.mm */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		2203486485FD0BCB6BFC4253 /* Bulk_mscorlib_4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 461A406E997F42328090D401 /* Bulk_mscorlib_4.cpp */; };
+		227E4E0A8F4C8E1597DC989D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 285B47D89A29AF21F8217C30 /* UIImageView+WebCache.m */; };
+		25734809A5F25BA2F4908777 /* NaverCafeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0C43439F8FD00A988B3F00 /* NaverCafeSDK.framework */; };
+		276F4A2ABFCF20490E63AAE7 /* Il2CppMetadataRegistration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03374D3EB00195021ED88629 /* Il2CppMetadataRegistration.cpp */; };
+		28D64D17BD9D0417329BD30C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CA47FCAB9061220C378EB2 /* UIView+WebCacheOperation.m */; };
+		2DCE49B4A99933BF91D6054D /* Il2CppGenericMethodTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 723348EA8121EC4425280712 /* Il2CppGenericMethodTable.cpp */; };
+		2EFC4C2393093B53CA590C24 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D4BD5A780A13BCC975D29 /* AFSecurityPolicy.m */; };
+		317B46C7864F43A597170B7A /* Il2CppCompilerCalculateTypeValuesTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47C94F439FF387C3B51E6B44 /* Il2CppCompilerCalculateTypeValuesTable.cpp */; };
+		318E47CE8C82AE8CB3AF7708 /* global-metadata.dat in Resources */ = {isa = PBXBuildFile; fileRef = 49434ADF9B30953D7688C1DD /* global-metadata.dat */; };
+		38FA4218BE7DBF66B2309ADC /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B864926B9354D290D24C3A3 /* UIImageView+AFNetworking.m */; };
+		3CEA48519088B9E394AA7F52 /* Bulk_Generics_0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF3E4A85809292FB83ECA702 /* Bulk_Generics_0.cpp */; };
+		42C94FAD822A6BF8F1015FA1 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = AE284161823B52A3175C5555 /* SDWebImageDownloader.m */; };
+		436D4D1F8E982DAE1F982602 /* Il2CppMetadataUsage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA4FBCAD7440AA2C562DC3 /* Il2CppMetadataUsage.cpp */; };
+		4941409385127B490813FE5C /* Il2CppGenericMethodPointerTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D53C48F98F8850FECBA6671A /* Il2CppGenericMethodPointerTable.cpp */; };
+		4B3844128624799E0BBDCEB1 /* Il2CppInvokerTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 710142C9A51FD81522EAE35E /* Il2CppInvokerTable.cpp */; };
+		53BD4C7CAFE8EB4E7E8D2C88 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B4F158D94B33D740AF539 /* UIImage+WebP.m */; };
+		5623C57617FDCB0800090B9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		5623C57717FDCB0800090B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830B5C100E5ED4C100C7819F /* UIKit.framework */; };
+		5623C57D17FDCB0900090B9E = {isa = PBXBuildFile; fileRef = 5623C57B17FDCB0900090B9E /* InfoPlist.strings */; };
+		5623C57F17FDCB0900090B9E /* Unity_iPhone_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5623C57E17FDCB0900090B9E /* Unity_iPhone_Tests.m */; };
+		56624338A81658DD20D29E4A /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E743E09FDC7D9C41AC0BD7 /* AFURLRequestSerialization.m */; };
+		5682F4B20F3B34FF007A219C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5682F4B10F3B34FF007A219C /* MediaPlayer.framework */; };
+		5692F3DD0FA9D8E500EBA2F1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5692F3DC0FA9D8E500EBA2F1 /* CoreLocation.framework */; };
+		56B7959B1442E0F20026B3DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B7959A1442E0F20026B3DD /* CoreGraphics.framework */; };
+		56B7960F1442E1770026B3DD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B795C11442E1100026B3DD /* CoreMotion.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		56BCBA390FCF049A0030C3B2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BCBA380FCF049A0030C3B2 /* SystemConfiguration.framework */; };
+		56C56C9817D6015200616839 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C56C9717D6015100616839 /* Images.xcassets */; };
+		56DBF99D15E3CDC9007A4A8D /* iPhone_Sensors.mm in Sources */ = {isa = PBXBuildFile; fileRef = 56DBF99C15E3CDC9007A4A8D /* iPhone_Sensors.mm */; };
+		56FD43960ED4745200FE3770 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FD43950ED4745200FE3770 /* CFNetwork.framework */; };
+		590F4747BDA9AEDD8BE1E52B /* Bulk_Assembly-CSharp_0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 590E4F0C9202E1FA5A1CCEC1 /* Bulk_Assembly-CSharp_0.cpp */; };
+		5FBD464FA305D48D831EC6CF /* libiPhone-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D20F47B0B8C6DB534953758E /* libiPhone-lib.a */; };
+		63B3486D9A275667CBCCBE13 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1346688B4B9EAE4B86BA35 /* SDWebImageDownloaderOperation.m */; };
+		649241898CBDDCD950CF9A7F /* Il2CppAttributes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CB24C5187F34DB4A9ED7765 /* Il2CppAttributes.cpp */; };
+		67414078B3E7B949833019A7 /* Bulk_mscorlib_3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CFB44F2896AEAF79B2ADE45 /* Bulk_mscorlib_3.cpp */; };
+		68B44FF5949F66BF6FDFE1E3 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C324992922E69DC4847A218 /* AFHTTPRequestOperationManager.m */; };
+		69A543B59DD9402644C6EC2C /* DefaultWsdlHelpGenerator.aspx in Resources */ = {isa = PBXBuildFile; fileRef = 808F4813A4F1EF047400C804 /* DefaultWsdlHelpGenerator.aspx */; };
+		6DF6407E8C54B45F60597014 /* NaverCafeSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E0EE4F46AFDE6E481702FC5E /* NaverCafeSDK.bundle */; };
+		77A545A1933831DF1CF0A5EA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B064A2CA87B0BF7F3264B48 /* AFHTTPSessionManager.m */; };
+		7A6F45C5A2BC505C43A91342 /* browscap.ini in Resources */ = {isa = PBXBuildFile; fileRef = F6EC44ED8E2E0177E401E713 /* browscap.ini */; };
+		7B304F0ABD60C6CE5621F7AB /* NLoginThirdPartyOAuth20InAppBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5494D3EAAC702DCBFAC7633 /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */; };
+		7C6C417EBA5818926D27F59B /* Bulk_mscorlib_0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51BE4332B1548E2ACE2BE1E8 /* Bulk_mscorlib_0.cpp */; };
+		7DFD4308A67120FED591F9D4 /* Il2CppCodeRegistration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22A34385B71155A181A5F43E /* Il2CppCodeRegistration.cpp */; };
+		7ED3454D91F89A6C98654139 /* LaunchScreen-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85E0468D95B41FD13E9F70D5 /* LaunchScreen-iPad.xib */; };
+		7F36C11113C5C673007FBDD9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F36C10E13C5C673007FBDD9 /* CoreMedia.framework */; };
+		7F36C11213C5C673007FBDD9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F36C10F13C5C673007FBDD9 /* CoreVideo.framework */; };
+		7F36C11313C5C673007FBDD9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F36C11013C5C673007FBDD9 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		820846CCBF9A4A2CF00F4ABC /* Il2CppGenericClassTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEE84B89BA61213ED572775A /* Il2CppGenericClassTable.cpp */; };
+		830B5C110E5ED4C100C7819F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830B5C100E5ED4C100C7819F /* UIKit.framework */; };
+		8358D1B80ED1CC3700E3A684 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358D1B70ED1CC3700E3A684 /* AudioToolbox.framework */; };
+		83B256E20E62FEA000468741 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B256E10E62FEA000468741 /* OpenGLES.framework */; };
+		83B2570B0E62FF8A00468741 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B2570A0E62FF8A00468741 /* QuartzCore.framework */; };
+		83B2574C0E63022200468741 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B2574B0E63022200468741 /* OpenAL.framework */; };
+		83B2574F0E63025400468741 /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B2574E0E63025400468741 /* libiconv.2.dylib */; };
+		864E4424A1E875BDE9C28AC6 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FA4CECB928DA7376516DC1 /* SDWebImagePrefetcher.m */; };
+		8A07E1061715A5AB000EDC6F /* iAD.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A07E1051715A5AB000EDC6F /* iAD.mm */; };
+		8A0FED491649699200E9727D /* EAGLContextHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A0FED481649699200E9727D /* EAGLContextHelper.mm */; };
+		8A142DC61636943E00DD87CA /* Keyboard.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A142DC51636943E00DD87CA /* Keyboard.mm */; };
+		8A16150C1A8E4362006FA788 /* MPVideoPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A16150B1A8E4362006FA788 /* MPVideoPlayer.mm */; };
+		8A1FFFAD16512A9000DD0934 /* GlesHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A1FFFAC16512A9000DD0934 /* GlesHelper.mm */; };
+		8A21AED41622F59300AF8007 /* UnityViewControllerBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A21AED31622F59300AF8007 /* UnityViewControllerBase.mm */; };
+		8A25E6D218D767E20006A227 /* Filesystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A25E6D118D767E20006A227 /* Filesystem.mm */; };
+		8A2AA93516E0978D001FB470 /* CMVideoSampling.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A2AA93416E0978D001FB470 /* CMVideoSampling.mm */; };
+		8A367F5B16A6D36F0012ED11 /* CVTextureCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A367F5A16A6D36F0012ED11 /* CVTextureCache.mm */; };
+		8A3EDDC81615B7C1001839E9 /* SplashScreen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EDDC71615B7C1001839E9 /* SplashScreen.mm */; };
+		8A4815C117A28E7F003FBFD5 /* UnityAppController+ViewHandling.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4815C017A287D2003FBFD5 /* UnityAppController+ViewHandling.mm */; };
+		8A5C1492174E662D0006EB36 /* RenderPluginDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C1491174E662D0006EB36 /* RenderPluginDelegate.mm */; };
+		8A5E0B9116849D1800CBB6FE /* DisplayManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A5E0B9016849D1800CBB6FE /* DisplayManager.mm */; };
+		8A6137141A10BCA200059EDF /* ObjCRuntime.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A6137131A10BCA200059EDF /* ObjCRuntime.mm */; };
+		8A6720A519EEB905006C92E0 /* InternalProfiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A6720A319EEB905006C92E0 /* InternalProfiler.cpp */; };
+		8A7057D1171EA29600A1332D /* iAD_Scripting.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A7057D0171EA29600A1332D /* iAD_Scripting.mm */; };
+		8A851BA716FB2F6D00E911DB /* UnityView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A851BA616FB2F6D00E911DB /* UnityView.mm */; };
+		8A851BAA16FB3AD000E911DB /* UnityAppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A851BA916FB3AD000E911DB /* UnityAppController.mm */; };
+		8A8D90DA1A274A7800456C4E /* UnityAppController+UnityInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D90D91A274A7800456C4E /* UnityAppController+UnityInterface.mm */; };
+		8A9FCB131617295F00C05364 /* ActivityIndicator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A9FCB121617295F00C05364 /* ActivityIndicator.mm */; };
+		8AA568AE1827DD79004969C7 /* WWWConnection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AA568AD1827DD79004969C7 /* WWWConnection.mm */; };
+		8AA5D80217ABE9AF007B9910 /* UnityAppController+Rendering.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5D80117ABE9AF007B9910 /* UnityAppController+Rendering.mm */; };
+		8AB3CB3E16D390BB00697AD5 /* VideoPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AB3CB3D16D390BB00697AD5 /* VideoPlayer.mm */; };
+		8AC71EC419E7FBA90027502F /* OrientationSupport.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AC71EC319E7FBA90027502F /* OrientationSupport.mm */; };
+		8AC74A9519B47FEF00019D38 /* AVCapture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74A9419B47FEF00019D38 /* AVCapture.mm */; };
+		8ACB801C177081D4005D0019 /* DeviceSettings.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB801B177081D4005D0019 /* DeviceSettings.mm */; };
+		8ADCE38B19C87177006F04F6 /* CameraCapture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCE38A19C87177006F04F6 /* CameraCapture.mm */; };
+		8AF7755D1799329100341121 /* LifeCycleListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A292A9817992CE100409BA4 /* LifeCycleListener.mm */; };
+		8AF7756017997D2700341121 /* AppDelegateListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7755F17997D1300341121 /* AppDelegateListener.mm */; };
+		8B63444AA9A0A089EE028994 /* Il2CppTypeDefinitions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC1E454F8CB4FB15F081196A /* Il2CppTypeDefinitions.cpp */; };
+		8F2943979734B76CA89151C1 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D4C10A320FCAE10BB2993 /* AFURLResponseSerialization.m */; };
+		9112449E9D17537E6D43850D /* libNaverLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 961E4945ADAE0E3E4488C3AA /* libNaverLogin.a */; };
+		917440C0987D217066005E99 /* Il2CppMarshalingFunctionsTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1086451580153A9118058A1F /* Il2CppMarshalingFunctionsTable.cpp */; };
+		92214D4E97F4BC416EFD55CB /* Bulk_System_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C43F1B70924A15B70AC67 /* Bulk_System_1.cpp */; };
+		999475201A7BC3AE00178130 /* UnityAdsUnityWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9994751F1A7BC3AE00178130 /* UnityAdsUnityWrapper.mm */; };
+		A00041478979EC8B0E916C93 /* machine.config in Resources */ = {isa = PBXBuildFile; fileRef = 6ED14161A0ECAF11C983FC79 /* machine.config */; };
+		A1204F50A312622CB9CC6F08 /* config in Resources */ = {isa = PBXBuildFile; fileRef = F7854D7B816E45E74B54E75E /* config */; };
+		A176444E95221A6B43D94206 /* Bulk_Mono.Security_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9EF4B2F99B626A1535D7662 /* Bulk_Mono.Security_1.cpp */; };
+		A24F4768AAC80109A1E7423E /* Il2CppDelegateWrappersManagedToNativeTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36904BC2A6E24BEBC292B6D7 /* Il2CppDelegateWrappersManagedToNativeTable.cpp */; };
+		A2C548DB8F37DA3F1A06565E /* Il2CppMethodPointerTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45FE40938799DD8F401FB24B /* Il2CppMethodPointerTable.cpp */; };
+		A31849408EA70376765B7AE5 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BB438E91336A87BCA67DCC /* SDImageCache.m */; };
+		A43C488497213669EF4F9AA0 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63024F4693946140AD6C0123 /* AFHTTPRequestOperation.m */; };
+		A55648FD9299D7FD846CFA9E /* LaunchScreen-iPhoneLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B446CA93CDB0BF10109CAD /* LaunchScreen-iPhoneLandscape.png */; };
+		A7AA4293AA4BC5C3F3772488 /* machine.config in Resources */ = {isa = PBXBuildFile; fileRef = 85B348CDA273BED9EAA1C446 /* machine.config */; };
+		A7AD42C2A2597DC205646874 /* Bulk_mscorlib_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F25049B4A3DDB2B8288850DD /* Bulk_mscorlib_1.cpp */; };
+		AA31BF971B55660D0013FB1B /* Data in Resources */ = {isa = PBXBuildFile; fileRef = AA31BF961B55660D0013FB1B /* Data */; };
+		AA5D99871AFAD3C800B27605 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5D99861AFAD3C800B27605 /* CoreText.framework */; };
+		AAB8487D8212A1E7C63283EC /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DC4C06A3A7831B9E895A48 /* FLAnimatedImage.m */; };
+		AAC3E38D1A68945900F6174A /* RegisterFeatures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAC3E38B1A68945900F6174A /* RegisterFeatures.cpp */; };
+		AAFE69D219F187C200638316 /* UnityViewControllerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAFE69D119F187C200638316 /* UnityViewControllerListener.mm */; };
+		ABCF42AEBC3790D8AB166105 /* LaunchScreen-iPhonePortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 22794DB5A535A99966540B4B /* LaunchScreen-iPhonePortrait.png */; };
+		ACA743C987551BDC07C1A1DF /* LaunchScreen-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 82064FB98615D1D974A695D9 /* LaunchScreen-iPad.png */; };
+		AD3044F58A2949BCA57483AF /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF149259C877BF967BA9B01 /* AFURLSessionManager.m */; };
+		B31245E4AF49F0133F2FA5C9 /* GenericMethods0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25524CCEA4D1B7C9A86FCAA6 /* GenericMethods0.cpp */; };
+		B3F34FF898EF3DCDA882E521 /* Bulk_Generics_3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65A94EF38AFFF9BD91D6D23D /* Bulk_Generics_3.cpp */; };
+		B4014BDFBD1533079FF5A19E /* Bulk_UnityEngine_0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DE04ACD91D4E68786929B9D /* Bulk_UnityEngine_0.cpp */; };
+		B76A4A7B9257FDF5D29181C0 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F58A41708567BF2400FB6463 /* SDWebImageManager.m */; };
+		B8F048D5A364A674A1387CA5 /* web.config in Resources */ = {isa = PBXBuildFile; fileRef = 5A7A4743B9946E63ADBC9AF2 /* web.config */; };
+		BA684F9B8617A3F7CC0BD7A1 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DA4ABDA789C158561B9912 /* UIImageView+HighlightedWebCache.m */; };
+		BC6D41AF85E3F26E6FC742EC /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EB4CA095A8D60C8D2B5908 /* AFNetworkReachabilityManager.m */; };
+		BE764F1798FDDDE55DCE878F /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9C4DB0963F146054882063 /* NSData+ImageContentType.m */; };
+		BFD24344BDABEFED620345A5 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A084037811057ED18761B94 /* UIImage+GIF.m */; };
+		C0A64492824D612BF31EB3F4 /* Bulk_mscorlib_6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4A419CB5BD8796C389EFD8 /* Bulk_mscorlib_6.cpp */; };
+		C29C42DCBDB184264647A6C9 /* Bulk_UnityEngine_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B5C422D848A2FDC5BEC97DF /* Bulk_UnityEngine_1.cpp */; };
+		C4014286AA351913AB02BF91 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51FA439B8CA9A432B7A7C47A /* config.xml */; };
+		C69A40F1AB876BBFE8ED6970 /* Bulk_Mono.Security_0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4EE245D880EB22F710FEBECD /* Bulk_Mono.Security_0.cpp */; };
+		CB7140D5A5FD360E929ED5CF /* UnityClassRegistration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 629C4B25B849E1F092ECDFA8 /* UnityClassRegistration.cpp */; };
+		D2C54A348E10C672CAE8DDAF /* Compat.browser in Resources */ = {isa = PBXBuildFile; fileRef = 86DD4C1181F2B73BDF96E6DE /* Compat.browser */; };
+		D5D2473B9BF423C849C165B6 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EB76498BA798FEFF9CAF6B30 /* UIButton+WebCache.m */; };
+		D60F4DF4A7DC13A9BD1DFA35 /* Il2CppPInvokerWrapperTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F71415E8A99559F48A3F181 /* Il2CppPInvokerWrapperTable.cpp */; };
+		D82DCFC30E8000A5005D6AD8 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D82DCFBB0E8000A5005D6AD8 /* main.mm */; };
+		D8A1C7280E80637F000160D3 /* RegisterMonoModules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A1C7240E80637F000160D3 /* RegisterMonoModules.cpp */; };
+		E7A24F7985889BC91D900578 /* Bulk_System_0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ADA48BD8DA39599E3BD470E /* Bulk_System_0.cpp */; };
+		E89A4776A3A8D76FAC8BB403 /* Bulk_mscorlib_5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD4F68B6FFE75BBDAB78A5 /* Bulk_mscorlib_5.cpp */; };
+		EB3E4F1CA2E0314A198B6C62 /* Il2CppGenericInstDefinitions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E45E4A73B686CDA52C1B2 /* Il2CppGenericInstDefinitions.cpp */; };
+		ED194C17A370D2720487DA64 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 201849FDA222BEBBEF6FCEB3 /* AFURLConnectionOperation.m */; };
+		EE4B400EAA3F891EE1DAB23F /* Bulk_mscorlib_7.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5CC4C0D85C6FB5E0C545147 /* Bulk_mscorlib_7.cpp */; };
+		F1564CFAAE00E8601336F5F4 /* Il2CppMethodReferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856D49FAA10202D521119487 /* Il2CppMethodReferences.cpp */; };
+		F4564611BB1DEBAA763C2DF1 /* NaverAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E8784E06803F36FB66D77517 /* NaverAuth.bundle */; };
+		F52747BE9B601849EB4DF71E /* UnityICallRegistration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5234496FBEDAC8F7E2BDED62 /* UnityICallRegistration.cpp */; };
+		F5FE4112914C3B7E3A69C5BA /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC64D259BF452D1C68D029E /* UIImage+MultiFormat.m */; };
+		F7CE490AB43155119265B1FF /* Bulk_mscorlib_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5C6416CBB275FE399790005 /* Bulk_mscorlib_2.cpp */; };
+		F7E647989DE740047BB8BB4D /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97184946AAAC2BC831060F17 /* FLAnimatedImageView.m */; };
+		FC0B20A21B7A4F0B00FDFC55 /* OnDemandResources.mm in Sources */ = {isa = PBXBuildFile; fileRef = FC0B20A11B7A4F0B00FDFC55 /* OnDemandResources.mm */; };
+		FC1D4960BE5B27709507A82E /* DefaultWsdlHelpGenerator.aspx in Resources */ = {isa = PBXBuildFile; fileRef = 689740EDB7DDFC88F874DC78 /* DefaultWsdlHelpGenerator.aspx */; };
+		FC85CCBB16C3ED8000BAF7C7 /* CrashReporter.mm in Sources */ = {isa = PBXBuildFile; fileRef = FC85CCB916C3ED8000BAF7C7 /* CrashReporter.mm */; };
+		FD25414698A17A35420398F2 /* LaunchScreen-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E40E481188F59A083573A29E /* LaunchScreen-iPhone.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5623C58117FDCB0900090B9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D6058900D05DD3D006BFB54;
+			remoteInfo = "Unity-iPhone";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		83D0C1FD0E6C8D7700EBCE5D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03374D3EB00195021ED88629 /* Il2CppMetadataRegistration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppMetadataRegistration.cpp; path = Classes/Native/Il2CppMetadataRegistration.cpp; sourceTree = SOURCE_ROOT; };
+		034545E78B9191F7A29ECFF7 /* SDWebImageCompat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImageCompat.m"; sourceTree = SOURCE_ROOT; };
+		03F528621B447098000F4FB8 /* Il2CppOptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Il2CppOptions.cpp; sourceTree = "<group>"; };
+		04A94AE1B46DDDA6F97D54C0 /* Bulk_System.Core_0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_System.Core_0.cpp; path = Classes/Native/Bulk_System.Core_0.cpp; sourceTree = SOURCE_ROOT; };
+		05704D6B9074AE387F586D35 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImageDownloader.h"; sourceTree = SOURCE_ROOT; };
+		071A448789F24F39A84FDF11 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFSecurityPolicy.h"; sourceTree = SOURCE_ROOT; };
+		08B24F75137BFDFA00FBA309 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		0B8440E687694B27219C7AE5 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImageDownloaderOperation.h"; sourceTree = SOURCE_ROOT; };
+		0BE3485CBED936FBCE036080 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFURLConnectionOperation.h"; sourceTree = SOURCE_ROOT; };
+		0BF8449E866C7A39471431B3 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIImage+MultiFormat.h"; sourceTree = SOURCE_ROOT; };
+		0D7C43F1B70924A15B70AC67 /* Bulk_System_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_System_1.cpp; path = Classes/Native/Bulk_System_1.cpp; sourceTree = SOURCE_ROOT; };
+		0DE04ACD91D4E68786929B9D /* Bulk_UnityEngine_0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_UnityEngine_0.cpp; path = Classes/Native/Bulk_UnityEngine_0.cpp; sourceTree = SOURCE_ROOT; };
+		1086451580153A9118058A1F /* Il2CppMarshalingFunctionsTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppMarshalingFunctionsTable.cpp; path = Classes/Native/Il2CppMarshalingFunctionsTable.cpp; sourceTree = SOURCE_ROOT; };
+		1859EA9A19214E7B0022C3D3 /* MetalHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MetalHelper.mm; sourceTree = "<group>"; };
+		1B044DFA905E75AFA05663C3 /* SDWebImageDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDecoder.m; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImageDecoder.m"; sourceTree = SOURCE_ROOT; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* Unity-Target-New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Unity-Target-New.app"; path = ProductName.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		201849FDA222BEBBEF6FCEB3 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFURLConnectionOperation.m"; sourceTree = SOURCE_ROOT; };
+		22794DB5A535A99966540B4B /* LaunchScreen-iPhonePortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchScreen-iPhonePortrait.png"; sourceTree = SOURCE_ROOT; };
+		22A34385B71155A181A5F43E /* Il2CppCodeRegistration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppCodeRegistration.cpp; path = Classes/Native/Il2CppCodeRegistration.cpp; sourceTree = SOURCE_ROOT; };
+		25524CCEA4D1B7C9A86FCAA6 /* GenericMethods0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GenericMethods0.cpp; path = Classes/Native/GenericMethods0.cpp; sourceTree = SOURCE_ROOT; };
+		285B47D89A29AF21F8217C30 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIImageView+WebCache.m"; sourceTree = SOURCE_ROOT; };
+		2C3E45E4A73B686CDA52C1B2 /* Il2CppGenericInstDefinitions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppGenericInstDefinitions.cpp; path = Classes/Native/Il2CppGenericInstDefinitions.cpp; sourceTree = SOURCE_ROOT; };
+		2C7B41BFA65CA3C1C6B28405 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperationManager.h; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFHTTPRequestOperationManager.h"; sourceTree = SOURCE_ROOT; };
+		2CB24C5187F34DB4A9ED7765 /* Il2CppAttributes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppAttributes.cpp; path = Classes/Native/Il2CppAttributes.cpp; sourceTree = SOURCE_ROOT; };
+		30B949558B52BA3C57627802 /* Il2CppGenericMethodDefinitions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppGenericMethodDefinitions.cpp; path = Classes/Native/Il2CppGenericMethodDefinitions.cpp; sourceTree = SOURCE_ROOT; };
+		361C4E25BF0968209895A502 /* AFURLSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFURLSessionManager.h"; sourceTree = SOURCE_ROOT; };
+		36904BC2A6E24BEBC292B6D7 /* Il2CppDelegateWrappersManagedToNativeTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppDelegateWrappersManagedToNativeTable.cpp; path = Classes/Native/Il2CppDelegateWrappersManagedToNativeTable.cpp; sourceTree = SOURCE_ROOT; };
+		415244A0B517C79B6D3A6143 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIImageView+WebCache.h"; sourceTree = SOURCE_ROOT; };
+		45E84BC98D051C000DE7E5B4 /* UIImage+WebP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIImage+WebP.h"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIImage+WebP.h"; sourceTree = SOURCE_ROOT; };
+		45FE40938799DD8F401FB24B /* Il2CppMethodPointerTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppMethodPointerTable.cpp; path = Classes/Native/Il2CppMethodPointerTable.cpp; sourceTree = SOURCE_ROOT; };
+		461A406E997F42328090D401 /* Bulk_mscorlib_4.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_mscorlib_4.cpp; path = Classes/Native/Bulk_mscorlib_4.cpp; sourceTree = SOURCE_ROOT; };
+		47C94F439FF387C3B51E6B44 /* Il2CppCompilerCalculateTypeValuesTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppCompilerCalculateTypeValuesTable.cpp; path = Classes/Native/Il2CppCompilerCalculateTypeValuesTable.cpp; sourceTree = SOURCE_ROOT; };
+		49434ADF9B30953D7688C1DD /* global-metadata.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = "global-metadata.dat"; path = "Classes/Native/Data/Metadata/global-metadata.dat"; sourceTree = SOURCE_ROOT; };
+		4A084037811057ED18761B94 /* UIImage+GIF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIImage+GIF.m"; sourceTree = SOURCE_ROOT; };
+		4ADA48BD8DA39599E3BD470E /* Bulk_System_0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_System_0.cpp; path = Classes/Native/Bulk_System_0.cpp; sourceTree = SOURCE_ROOT; };
+		4BBA4FBCAD7440AA2C562DC3 /* Il2CppMetadataUsage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppMetadataUsage.cpp; path = Classes/Native/Il2CppMetadataUsage.cpp; sourceTree = SOURCE_ROOT; };
+		4EE245D880EB22F710FEBECD /* Bulk_Mono.Security_0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_Mono.Security_0.cpp; path = Classes/Native/Bulk_Mono.Security_0.cpp; sourceTree = SOURCE_ROOT; };
+		51B446CA93CDB0BF10109CAD /* LaunchScreen-iPhoneLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchScreen-iPhoneLandscape.png"; sourceTree = SOURCE_ROOT; };
+		51BE4332B1548E2ACE2BE1E8 /* Bulk_mscorlib_0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_mscorlib_0.cpp; path = Classes/Native/Bulk_mscorlib_0.cpp; sourceTree = SOURCE_ROOT; };
+		51FA439B8CA9A432B7A7C47A /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = file; name = config.xml; path = Classes/Native/Data/etc/mono/mconfig/config.xml; sourceTree = SOURCE_ROOT; };
+		5234496FBEDAC8F7E2BDED62 /* UnityICallRegistration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = UnityICallRegistration.cpp; path = Classes/Native/UnityICallRegistration.cpp; sourceTree = SOURCE_ROOT; };
+		5623C57317FDCB0800090B9E /* Unity-iPhone Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Unity-iPhone Tests.octest"; path = ProductName.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5623C57A17FDCB0900090B9E /* Unity-iPhone Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unity-iPhone Tests-Info.plist"; sourceTree = "<group>"; };
+		5623C57C17FDCB0900090B9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5623C57E17FDCB0900090B9E /* Unity_iPhone_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Unity_iPhone_Tests.m; sourceTree = "<group>"; };
+		5623C58017FDCB0900090B9E /* Unity-iPhone Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unity-iPhone Tests-Prefix.pch"; sourceTree = "<group>"; };
+		5682F4B10F3B34FF007A219C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		5692F3DC0FA9D8E500EBA2F1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		56B7959A1442E0F20026B3DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		56B795C11442E1100026B3DD /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		56BCBA380FCF049A0030C3B2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		56C56C9717D6015100616839 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Unity-iPhone/Images.xcassets"; sourceTree = "<group>"; };
+		56DBF99C15E3CDC9007A4A8D /* iPhone_Sensors.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iPhone_Sensors.mm; sourceTree = "<group>"; };
+		56DBF99E15E3CE85007A4A8D /* iPhone_Sensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Sensors.h; sourceTree = "<group>"; };
+		56EB4CA095A8D60C8D2B5908 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFNetworkReachabilityManager.m"; sourceTree = SOURCE_ROOT; };
+		56FD43950ED4745200FE3770 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		57144F259F1A62267F930845 /* settings.map */ = {isa = PBXFileReference; lastKnownFileType = file; name = settings.map; path = Classes/Native/Data/etc/mono/2.0/settings.map; sourceTree = SOURCE_ROOT; };
+		590E4F0C9202E1FA5A1CCEC1 /* Bulk_Assembly-CSharp_0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Bulk_Assembly-CSharp_0.cpp"; path = "Classes/Native/Bulk_Assembly-CSharp_0.cpp"; sourceTree = SOURCE_ROOT; };
+		5A0C43439F8FD00A988B3F00 /* NaverCafeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NaverCafeSDK.framework; path = Frameworks/NCSDK/Plugins/iOS/NaverCafeSDK.framework; sourceTree = SOURCE_ROOT; };
+		5A7A4743B9946E63ADBC9AF2 /* web.config */ = {isa = PBXFileReference; lastKnownFileType = file; name = web.config; path = Classes/Native/Data/etc/mono/2.0/web.config; sourceTree = SOURCE_ROOT; };
+		5CFB44F2896AEAF79B2ADE45 /* Bulk_mscorlib_3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_mscorlib_3.cpp; path = Classes/Native/Bulk_mscorlib_3.cpp; sourceTree = SOURCE_ROOT; };
+		629C4B25B849E1F092ECDFA8 /* UnityClassRegistration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = UnityClassRegistration.cpp; path = Classes/Native/UnityClassRegistration.cpp; sourceTree = SOURCE_ROOT; };
+		63024F4693946140AD6C0123 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFHTTPRequestOperation.m"; sourceTree = SOURCE_ROOT; };
+		638B4F158D94B33D740AF539 /* UIImage+WebP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIImage+WebP.m"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIImage+WebP.m"; sourceTree = SOURCE_ROOT; };
+		65A94EF38AFFF9BD91D6D23D /* Bulk_Generics_3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_Generics_3.cpp; path = Classes/Native/Bulk_Generics_3.cpp; sourceTree = SOURCE_ROOT; };
+		689740EDB7DDFC88F874DC78 /* DefaultWsdlHelpGenerator.aspx */ = {isa = PBXFileReference; lastKnownFileType = file; name = DefaultWsdlHelpGenerator.aspx; path = Classes/Native/Data/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx; sourceTree = SOURCE_ROOT; };
+		696C48049C272E0E73D99588 /* NaverThirdPartyConstantsForApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NaverThirdPartyConstantsForApp.h; path = Libraries/NCSDK/Plugins/iOS/NaverAuth/NaverThirdPartyConstantsForApp.h; sourceTree = SOURCE_ROOT; };
+		69CA47FCAB9061220C378EB2 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIView+WebCacheOperation.m"; sourceTree = SOURCE_ROOT; };
+		6B5C422D848A2FDC5BEC97DF /* Bulk_UnityEngine_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_UnityEngine_1.cpp; path = Classes/Native/Bulk_UnityEngine_1.cpp; sourceTree = SOURCE_ROOT; };
+		6C324992922E69DC4847A218 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFHTTPRequestOperationManager.m"; sourceTree = SOURCE_ROOT; };
+		6D1346688B4B9EAE4B86BA35 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImageDownloaderOperation.m"; sourceTree = SOURCE_ROOT; };
+		6ED14161A0ECAF11C983FC79 /* machine.config */ = {isa = PBXFileReference; lastKnownFileType = file; name = machine.config; path = Classes/Native/Data/etc/mono/1.0/machine.config; sourceTree = SOURCE_ROOT; };
+		710142C9A51FD81522EAE35E /* Il2CppInvokerTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppInvokerTable.cpp; path = Classes/Native/Il2CppInvokerTable.cpp; sourceTree = SOURCE_ROOT; };
+		723348EA8121EC4425280712 /* Il2CppGenericMethodTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppGenericMethodTable.cpp; path = Classes/Native/Il2CppGenericMethodTable.cpp; sourceTree = SOURCE_ROOT; };
+		775D4DFA80ED4426BA19875F /* SDWebImageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImageManager.h"; sourceTree = SOURCE_ROOT; };
+		795C4C24B805C5379C6627B5 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFURLRequestSerialization.h"; sourceTree = SOURCE_ROOT; };
+		7ABD42E6BE7931CD1D069BDC /* NaverThirdPartyLoginConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NaverThirdPartyLoginConnection.h; path = Libraries/NCSDK/Plugins/iOS/NaverAuth/NaverThirdPartyLoginConnection.h; sourceTree = SOURCE_ROOT; };
+		7B064A2CA87B0BF7F3264B48 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFHTTPSessionManager.m"; sourceTree = SOURCE_ROOT; };
+		7BA4464597B3EBB5ECE8E87E /* NLoginThirdPartyOAuth20InAppBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NLoginThirdPartyOAuth20InAppBrowserViewController.h; path = Libraries/NCSDK/Plugins/iOS/NaverAuth/NLoginThirdPartyOAuth20InAppBrowserViewController.h; sourceTree = SOURCE_ROOT; };
+		7C0A417C94249ED7AD068E7E /* NSData+ImageContentType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/NSData+ImageContentType.h"; sourceTree = SOURCE_ROOT; };
+		7E214AE4913FFA9281604ED9 /* Bulk_Generics_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_Generics_2.cpp; path = Classes/Native/Bulk_Generics_2.cpp; sourceTree = SOURCE_ROOT; };
+		7F36C10E13C5C673007FBDD9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		7F36C10F13C5C673007FBDD9 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		7F36C11013C5C673007FBDD9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7FA24435994C0E8FEA89CD0A /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFHTTPSessionManager.h"; sourceTree = SOURCE_ROOT; };
+		808F4813A4F1EF047400C804 /* DefaultWsdlHelpGenerator.aspx */ = {isa = PBXFileReference; lastKnownFileType = file; name = DefaultWsdlHelpGenerator.aspx; path = Classes/Native/Data/etc/mono/1.0/DefaultWsdlHelpGenerator.aspx; sourceTree = SOURCE_ROOT; };
+		82064FB98615D1D974A695D9 /* LaunchScreen-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchScreen-iPad.png"; sourceTree = SOURCE_ROOT; };
+		830B5C100E5ED4C100C7819F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8358D1B70ED1CC3700E3A684 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		83B256E10E62FEA000468741 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		83B2570A0E62FF8A00468741 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		83B2574B0E63022200468741 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		83B2574E0E63025400468741 /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = usr/lib/libiconv.2.dylib; sourceTree = SDKROOT; };
+		856D49FAA10202D521119487 /* Il2CppMethodReferences.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppMethodReferences.cpp; path = Classes/Native/Il2CppMethodReferences.cpp; sourceTree = SOURCE_ROOT; };
+		85B348CDA273BED9EAA1C446 /* machine.config */ = {isa = PBXFileReference; lastKnownFileType = file; name = machine.config; path = Classes/Native/Data/etc/mono/2.0/machine.config; sourceTree = SOURCE_ROOT; };
+		85E0468D95B41FD13E9F70D5 /* LaunchScreen-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "LaunchScreen-iPad.xib"; sourceTree = SOURCE_ROOT; };
+		86DD4C1181F2B73BDF96E6DE /* Compat.browser */ = {isa = PBXFileReference; lastKnownFileType = file; name = Compat.browser; path = Classes/Native/Data/etc/mono/2.0/Browsers/Compat.browser; sourceTree = SOURCE_ROOT; };
+		89DA4ABDA789C158561B9912 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIImageView+HighlightedWebCache.m"; sourceTree = SOURCE_ROOT; };
+		8A07E1041715A5AB000EDC6F /* iAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAD.h; sourceTree = "<group>"; };
+		8A07E1051715A5AB000EDC6F /* iAD.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iAD.mm; sourceTree = "<group>"; };
+		8A0FED471649699200E9727D /* EAGLContextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLContextHelper.h; sourceTree = "<group>"; };
+		8A0FED481649699200E9727D /* EAGLContextHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLContextHelper.mm; sourceTree = "<group>"; };
+		8A142DC41636943E00DD87CA /* Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keyboard.h; sourceTree = "<group>"; };
+		8A142DC51636943E00DD87CA /* Keyboard.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Keyboard.mm; sourceTree = "<group>"; };
+		8A16150B1A8E4362006FA788 /* MPVideoPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MPVideoPlayer.mm; sourceTree = "<group>"; };
+		8A1FFFAB16512A9000DD0934 /* GlesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlesHelper.h; sourceTree = "<group>"; };
+		8A1FFFAC16512A9000DD0934 /* GlesHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GlesHelper.mm; sourceTree = "<group>"; };
+		8A2142FBB94382E5086055CE /* UIImage+GIF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIImage+GIF.h"; sourceTree = SOURCE_ROOT; };
+		8A21AED21622F59300AF8007 /* UnityViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityViewControllerBase.h; sourceTree = "<group>"; };
+		8A21AED31622F59300AF8007 /* UnityViewControllerBase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UnityViewControllerBase.mm; sourceTree = "<group>"; };
+		8A25E6D118D767E20006A227 /* Filesystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Filesystem.mm; sourceTree = "<group>"; };
+		8A292A9717992CE100409BA4 /* LifeCycleListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LifeCycleListener.h; sourceTree = "<group>"; };
+		8A292A9817992CE100409BA4 /* LifeCycleListener.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LifeCycleListener.mm; sourceTree = "<group>"; };
+		8A2AA93316E0978D001FB470 /* CMVideoSampling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMVideoSampling.h; sourceTree = "<group>"; };
+		8A2AA93416E0978D001FB470 /* CMVideoSampling.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CMVideoSampling.mm; sourceTree = "<group>"; };
+		8A367F5916A6D36F0012ED11 /* CVTextureCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVTextureCache.h; sourceTree = "<group>"; };
+		8A367F5A16A6D36F0012ED11 /* CVTextureCache.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CVTextureCache.mm; sourceTree = "<group>"; };
+		8A3EDDC61615B7C1001839E9 /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
+		8A3EDDC71615B7C1001839E9 /* SplashScreen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SplashScreen.mm; sourceTree = "<group>"; };
+		8A4815BF17A287D2003FBFD5 /* UnityAppController+ViewHandling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnityAppController+ViewHandling.h"; sourceTree = "<group>"; };
+		8A4815C017A287D2003FBFD5 /* UnityAppController+ViewHandling.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "UnityAppController+ViewHandling.mm"; sourceTree = "<group>"; };
+		8A5C1490174E662D0006EB36 /* RenderPluginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderPluginDelegate.h; sourceTree = "<group>"; };
+		8A5C1491174E662D0006EB36 /* RenderPluginDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RenderPluginDelegate.mm; sourceTree = "<group>"; };
+		8A5E0B8F16849D1800CBB6FE /* DisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayManager.h; sourceTree = "<group>"; };
+		8A5E0B9016849D1800CBB6FE /* DisplayManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DisplayManager.mm; sourceTree = "<group>"; };
+		8A6137121A10B57700059EDF /* ObjCRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCRuntime.h; sourceTree = "<group>"; };
+		8A6137131A10BCA200059EDF /* ObjCRuntime.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjCRuntime.mm; sourceTree = "<group>"; };
+		8A6720A319EEB905006C92E0 /* InternalProfiler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InternalProfiler.cpp; sourceTree = "<group>"; };
+		8A6720A419EEB905006C92E0 /* InternalProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternalProfiler.h; sourceTree = "<group>"; };
+		8A6720A619EFAF25006C92E0 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		8A7057D0171EA29600A1332D /* iAD_Scripting.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iAD_Scripting.mm; sourceTree = "<group>"; };
+		8A851BA516FB2F6D00E911DB /* UnityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityView.h; sourceTree = "<group>"; };
+		8A851BA616FB2F6D00E911DB /* UnityView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UnityView.mm; sourceTree = "<group>"; };
+		8A851BA816FB3AD000E911DB /* UnityAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityAppController.h; sourceTree = "<group>"; };
+		8A851BA916FB3AD000E911DB /* UnityAppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UnityAppController.mm; sourceTree = "<group>"; };
+		8A851BAB16FC875E00E911DB /* UnityInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityInterface.h; sourceTree = "<group>"; };
+		8A8D90D81A274A7800456C4E /* UnityAppController+UnityInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UnityAppController+UnityInterface.h"; sourceTree = "<group>"; };
+		8A8D90D91A274A7800456C4E /* UnityAppController+UnityInterface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UnityAppController+UnityInterface.mm"; sourceTree = "<group>"; };
+		8A90541019EE8843003D1039 /* UnityForwardDecls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityForwardDecls.h; sourceTree = "<group>"; };
+		8A9FCB111617295F00C05364 /* ActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicator.h; sourceTree = "<group>"; };
+		8A9FCB121617295F00C05364 /* ActivityIndicator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ActivityIndicator.mm; sourceTree = "<group>"; };
+		8AA108C01948732900D0538B /* UnityRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityRendering.h; sourceTree = "<group>"; };
+		8AA568AC1827DD79004969C7 /* WWWConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWWConnection.h; sourceTree = "<group>"; };
+		8AA568AD1827DD79004969C7 /* WWWConnection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WWWConnection.mm; sourceTree = "<group>"; };
+		8AA5D80017ABE9AF007B9910 /* UnityAppController+Rendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UnityAppController+Rendering.h"; sourceTree = "<group>"; };
+		8AA5D80117ABE9AF007B9910 /* UnityAppController+Rendering.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UnityAppController+Rendering.mm"; sourceTree = "<group>"; };
+		8AA6ADDB17818CFD00A1C5F1 /* UnityTrampolineConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnityTrampolineConfigure.h; sourceTree = "<group>"; };
+		8AB3CB3C16D390BA00697AD5 /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
+		8AB3CB3D16D390BB00697AD5 /* VideoPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoPlayer.mm; sourceTree = "<group>"; };
+		8ABDBCE019CAFCF700A842FF /* AVCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCapture.h; sourceTree = "<group>"; };
+		8AC71EC219E7FBA90027502F /* OrientationSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrientationSupport.h; sourceTree = "<group>"; };
+		8AC71EC319E7FBA90027502F /* OrientationSupport.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OrientationSupport.mm; sourceTree = "<group>"; };
+		8AC74A9419B47FEF00019D38 /* AVCapture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AVCapture.mm; sourceTree = "<group>"; };
+		8ACB801B177081D4005D0019 /* DeviceSettings.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DeviceSettings.mm; sourceTree = "<group>"; };
+		8ACB801D177081F7005D0019 /* Preprocessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preprocessor.h; sourceTree = "<group>"; };
+		8ADCE38919C87177006F04F6 /* CameraCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraCapture.h; sourceTree = "<group>"; };
+		8ADCE38A19C87177006F04F6 /* CameraCapture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CameraCapture.mm; sourceTree = "<group>"; };
+		8AECDC781950835600CB29E8 /* UnityMetalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityMetalSupport.h; sourceTree = "<group>"; };
+		8AF7755E17997D1300341121 /* AppDelegateListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegateListener.h; sourceTree = "<group>"; };
+		8AF7755F17997D1300341121 /* AppDelegateListener.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegateListener.mm; sourceTree = "<group>"; };
+		8AFD4F68B6FFE75BBDAB78A5 /* Bulk_mscorlib_5.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_mscorlib_5.cpp; path = Classes/Native/Bulk_mscorlib_5.cpp; sourceTree = SOURCE_ROOT; };
+		8B864926B9354D290D24C3A3 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/UIImageView+AFNetworking.m"; sourceTree = SOURCE_ROOT; };
+		8BC64D259BF452D1C68D029E /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIImage+MultiFormat.m"; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961E4945ADAE0E3E4488C3AA /* libNaverLogin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNaverLogin.a; path = Libraries/NCSDK/Plugins/iOS/NaverAuth/libNaverLogin.a; sourceTree = SOURCE_ROOT; };
+		97184946AAAC2BC831060F17 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImageView.m; path = "Libraries/NCSDK/Plugins/iOS/FLAnimatedImage-1.0.12/FLAnimatedImageView.m"; sourceTree = SOURCE_ROOT; };
+		9994751E1A7BC3AE00178130 /* UnityAdsUnityWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnityAdsUnityWrapper.h; path = UnityAds/UnityAdsUnityWrapper.h; sourceTree = "<group>"; };
+		9994751F1A7BC3AE00178130 /* UnityAdsUnityWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = UnityAdsUnityWrapper.mm; path = UnityAds/UnityAdsUnityWrapper.mm; sourceTree = "<group>"; };
+		999475381A80DBC300178130 /* UnityAdsConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnityAdsConfig.h; path = UnityAds/UnityAdsConfig.h; sourceTree = "<group>"; };
+		9E9C4DB0963F146054882063 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/NSData+ImageContentType.m"; sourceTree = SOURCE_ROOT; };
+		9F71415E8A99559F48A3F181 /* Il2CppPInvokerWrapperTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppPInvokerWrapperTable.cpp; path = Classes/Native/Il2CppPInvokerWrapperTable.cpp; sourceTree = SOURCE_ROOT; };
+		A9EF4B2F99B626A1535D7662 /* Bulk_Mono.Security_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_Mono.Security_1.cpp; path = Classes/Native/Bulk_Mono.Security_1.cpp; sourceTree = SOURCE_ROOT; };
+		AA31BF961B55660D0013FB1B /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		AA5D99861AFAD3C800B27605 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		AAC3E38B1A68945900F6174A /* RegisterFeatures.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegisterFeatures.cpp; sourceTree = "<group>"; };
+		AAC3E38C1A68945900F6174A /* RegisterFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterFeatures.h; sourceTree = "<group>"; };
+		AAFE69D019F187C200638316 /* UnityViewControllerListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityViewControllerListener.h; sourceTree = "<group>"; };
+		AAFE69D119F187C200638316 /* UnityViewControllerListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UnityViewControllerListener.mm; sourceTree = "<group>"; };
+		AE284161823B52A3175C5555 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImageDownloader.m"; sourceTree = SOURCE_ROOT; };
+		AEE84B89BA61213ED572775A /* Il2CppGenericClassTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppGenericClassTable.cpp; path = Classes/Native/Il2CppGenericClassTable.cpp; sourceTree = SOURCE_ROOT; };
+		B3334102803EAE55F331E567 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImageView.h; path = "Libraries/NCSDK/Plugins/iOS/FLAnimatedImage-1.0.12/FLAnimatedImageView.h"; sourceTree = SOURCE_ROOT; };
+		B6C844A9A1C413E2B3E1767A /* FLAnimatedImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = "Libraries/NCSDK/Plugins/iOS/FLAnimatedImage-1.0.12/FLAnimatedImage.h"; sourceTree = SOURCE_ROOT; };
+		B8E743E09FDC7D9C41AC0BD7 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFURLRequestSerialization.m"; sourceTree = SOURCE_ROOT; };
+		B92D4C10A320FCAE10BB2993 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFURLResponseSerialization.m"; sourceTree = SOURCE_ROOT; };
+		BBF149259C877BF967BA9B01 /* AFURLSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFURLSessionManager.m"; sourceTree = SOURCE_ROOT; };
+		BC1E454F8CB4FB15F081196A /* Il2CppTypeDefinitions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppTypeDefinitions.cpp; path = Classes/Native/Il2CppTypeDefinitions.cpp; sourceTree = SOURCE_ROOT; };
+		BD2E4352BE9324793CD90DB6 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIView+WebCacheOperation.h"; sourceTree = SOURCE_ROOT; };
+		C0BB438E91336A87BCA67DCC /* SDImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDImageCache.m"; sourceTree = SOURCE_ROOT; };
+		C138412C9EB0A3B72B674826 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImagePrefetcher.h"; sourceTree = SOURCE_ROOT; };
+		C3FA4CECB928DA7376516DC1 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImagePrefetcher.m"; sourceTree = SOURCE_ROOT; };
+		C4714D64A846DCD16478C1FC /* SDImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDImageCache.h"; sourceTree = SOURCE_ROOT; };
+		C5C6416CBB275FE399790005 /* Bulk_mscorlib_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_mscorlib_2.cpp; path = Classes/Native/Bulk_mscorlib_2.cpp; sourceTree = SOURCE_ROOT; };
+		C6724FB4AF2DA3C36184CC56 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFHTTPRequestOperation.h"; sourceTree = SOURCE_ROOT; };
+		C75B409F9EE83A39B5D77CE5 /* AFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFNetworking.h"; sourceTree = SOURCE_ROOT; };
+		C7E44D5FBE4215452E2CD5CA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFNetworkReachabilityManager.h"; sourceTree = SOURCE_ROOT; };
+		CB9547B8954A1F4CC7137E8A /* UIButton+WebCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIButton+WebCache.h"; sourceTree = SOURCE_ROOT; };
+		D20F47B0B8C6DB534953758E /* libiPhone-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libiPhone-lib.a"; path = "Libraries/libiPhone-lib.a"; sourceTree = SOURCE_ROOT; };
+		D53C48F98F8850FECBA6671A /* Il2CppGenericMethodPointerTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppGenericMethodPointerTable.cpp; path = Classes/Native/Il2CppGenericMethodPointerTable.cpp; sourceTree = SOURCE_ROOT; };
+		D5494D3EAAC702DCBFAC7633 /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NLoginThirdPartyOAuth20InAppBrowserViewController.m; path = Libraries/NCSDK/Plugins/iOS/NaverAuth/NLoginThirdPartyOAuth20InAppBrowserViewController.m; sourceTree = SOURCE_ROOT; };
+		D5CC4C0D85C6FB5E0C545147 /* Bulk_mscorlib_7.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_mscorlib_7.cpp; path = Classes/Native/Bulk_mscorlib_7.cpp; sourceTree = SOURCE_ROOT; };
+		D82DCFBB0E8000A5005D6AD8 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = Classes/main.mm; sourceTree = SOURCE_ROOT; };
+		D8A1C7240E80637F000160D3 /* RegisterMonoModules.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RegisterMonoModules.cpp; path = Libraries/RegisterMonoModules.cpp; sourceTree = SOURCE_ROOT; };
+		D8A1C7250E80637F000160D3 /* RegisterMonoModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterMonoModules.h; path = Libraries/RegisterMonoModules.h; sourceTree = SOURCE_ROOT; };
+		D96D479FBAC4142F551334C6 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/UIImageView+AFNetworking.h"; sourceTree = SOURCE_ROOT; };
+		DC13449D88149994C6A3F2AF /* Bulk_Generics_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_Generics_1.cpp; path = Classes/Native/Bulk_Generics_1.cpp; sourceTree = SOURCE_ROOT; };
+		DF3E4A85809292FB83ECA702 /* Bulk_Generics_0.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_Generics_0.cpp; path = Classes/Native/Bulk_Generics_0.cpp; sourceTree = SOURCE_ROOT; };
+		DF90450CB72401305334A107 /* SDWebImageDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDWebImageDecoder.h; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImageDecoder.h"; sourceTree = SOURCE_ROOT; };
+		E0DF45688C01F637D019D7F6 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIImageView+HighlightedWebCache.h"; sourceTree = SOURCE_ROOT; };
+		E0EE4F46AFDE6E481702FC5E /* NaverCafeSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NaverCafeSDK.bundle; path = Frameworks/NCSDK/Plugins/iOS/NaverCafeSDK.bundle; sourceTree = SOURCE_ROOT; };
+		E40E481188F59A083573A29E /* LaunchScreen-iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "LaunchScreen-iPhone.xib"; sourceTree = SOURCE_ROOT; };
+		E5DC4C06A3A7831B9E895A48 /* FLAnimatedImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImage.m; path = "Libraries/NCSDK/Plugins/iOS/FLAnimatedImage-1.0.12/FLAnimatedImage.m"; sourceTree = SOURCE_ROOT; };
+		E8784E06803F36FB66D77517 /* NaverAuth.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NaverAuth.bundle; path = Frameworks/NCSDK/Plugins/iOS/NaverAuth/NaverAuth.bundle; sourceTree = SOURCE_ROOT; };
+		EB76498BA798FEFF9CAF6B30 /* UIButton+WebCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/UIButton+WebCache.m"; sourceTree = SOURCE_ROOT; };
+		EBBC4A0AB4C4E00190FD7361 /* SDWebImageCompat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImageCompat.h"; sourceTree = SOURCE_ROOT; };
+		ED9C4449804EE2F15BB07E1A /* SDWebImageOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImageOperation.h"; sourceTree = SOURCE_ROOT; };
+		EF4A419CB5BD8796C389EFD8 /* Bulk_mscorlib_6.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_mscorlib_6.cpp; path = Classes/Native/Bulk_mscorlib_6.cpp; sourceTree = SOURCE_ROOT; };
+		F00D4BD5A780A13BCC975D29 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFSecurityPolicy.m"; sourceTree = SOURCE_ROOT; };
+		F1A04E8B9A073B326344B2D5 /* NCSDKUnityManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = NCSDKUnityManager.mm; path = Libraries/NCSDK/Plugins/iOS/NCSDKUnityManager.mm; sourceTree = SOURCE_ROOT; };
+		F1C34A9DABC0077199DFD082 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = "Libraries/NCSDK/Plugins/iOS/AFNetworking-2.6.3/AFURLResponseSerialization.h"; sourceTree = SOURCE_ROOT; };
+		F25049B4A3DDB2B8288850DD /* Bulk_mscorlib_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Bulk_mscorlib_1.cpp; path = Classes/Native/Bulk_mscorlib_1.cpp; sourceTree = SOURCE_ROOT; };
+		F58A41708567BF2400FB6463 /* SDWebImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = "Libraries/NCSDK/Plugins/iOS/SDWebImage-3.8.2/SDWebImageManager.m"; sourceTree = SOURCE_ROOT; };
+		F6EC44ED8E2E0177E401E713 /* browscap.ini */ = {isa = PBXFileReference; lastKnownFileType = file; name = browscap.ini; path = Classes/Native/Data/etc/mono/browscap.ini; sourceTree = SOURCE_ROOT; };
+		F7854D7B816E45E74B54E75E /* config */ = {isa = PBXFileReference; lastKnownFileType = file; name = config; path = Classes/Native/Data/etc/mono/config; sourceTree = SOURCE_ROOT; };
+		FC0B20A11B7A4F0B00FDFC55 /* OnDemandResources.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OnDemandResources.mm; sourceTree = "<group>"; };
+		FC3D7EBE16D2621600D1BD0D /* CrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashReporter.h; sourceTree = "<group>"; };
+		FC85CCB916C3ED8000BAF7C7 /* CrashReporter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CrashReporter.mm; sourceTree = "<group>"; };
+		FC85CCBA16C3ED8000BAF7C7 /* PLCrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCrashReporter.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5D99871AFAD3C800B27605 /* CoreText.framework in Frameworks */,
+				8358D1B80ED1CC3700E3A684 /* AudioToolbox.framework in Frameworks */,
+				7F36C11313C5C673007FBDD9 /* AVFoundation.framework in Frameworks */,
+				56FD43960ED4745200FE3770 /* CFNetwork.framework in Frameworks */,
+				56B7959B1442E0F20026B3DD /* CoreGraphics.framework in Frameworks */,
+				5692F3DD0FA9D8E500EBA2F1 /* CoreLocation.framework in Frameworks */,
+				7F36C11113C5C673007FBDD9 /* CoreMedia.framework in Frameworks */,
+				56B7960F1442E1770026B3DD /* CoreMotion.framework in Frameworks */,
+				7F36C11213C5C673007FBDD9 /* CoreVideo.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				08B24F76137BFDFA00FBA309 /* iAd.framework in Frameworks */,
+				5682F4B20F3B34FF007A219C /* MediaPlayer.framework in Frameworks */,
+				83B2574C0E63022200468741 /* OpenAL.framework in Frameworks */,
+				83B256E20E62FEA000468741 /* OpenGLES.framework in Frameworks */,
+				83B2570B0E62FF8A00468741 /* QuartzCore.framework in Frameworks */,
+				56BCBA390FCF049A0030C3B2 /* SystemConfiguration.framework in Frameworks */,
+				830B5C110E5ED4C100C7819F /* UIKit.framework in Frameworks */,
+				83B2574F0E63025400468741 /* libiconv.2.dylib in Frameworks */,
+				9112449E9D17537E6D43850D /* libNaverLogin.a in Frameworks */,
+				25734809A5F25BA2F4908777 /* NaverCafeSDK.framework in Frameworks */,
+				5FBD464FA305D48D831EC6CF /* libiPhone-lib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5623C57017FDCB0800090B9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5623C57717FDCB0800090B9E /* UIKit.framework in Frameworks */,
+				5623C57617FDCB0800090B9E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Unity-Target-New.app */,
+				5623C57317FDCB0800090B9E /* Unity-iPhone Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FD34B19B7DF4352467A6C32 /* NaverAuth */ = {
+			isa = PBXGroup;
+			children = (
+				E8784E06803F36FB66D77517 /* NaverAuth.bundle */,
+			);
+			path = NaverAuth;
+			sourceTree = "<group>";
+		};
+		28D246FEA48393DC18AD29EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				772F40F08614D070A5969AB4 /* SDWebImage-3.8.2 */,
+				AA2C46F0B4F3F7672EA30B10 /* NaverAuth */,
+				662149F99E715EBC8DBAF4DA /* AFNetworking-2.6.3 */,
+				29554EC285928AB9F864C6D9 /* FLAnimatedImage-1.0.12 */,
+				F1A04E8B9A073B326344B2D5 /* NCSDKUnityManager.mm */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		290346C5AABA807152D8B039 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				28D246FEA48393DC18AD29EF /* iOS */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		29554EC285928AB9F864C6D9 /* FLAnimatedImage-1.0.12 */ = {
+			isa = PBXGroup;
+			children = (
+				B6C844A9A1C413E2B3E1767A /* FLAnimatedImage.h */,
+				B3334102803EAE55F331E567 /* FLAnimatedImageView.h */,
+				E5DC4C06A3A7831B9E895A48 /* FLAnimatedImage.m */,
+				97184946AAAC2BC831060F17 /* FLAnimatedImageView.m */,
+			);
+			path = "FLAnimatedImage-1.0.12";
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				AA31BF961B55660D0013FB1B /* Data */,
+				56C56C9717D6015100616839 /* Images.xcassets */,
+				D82DCFB50E8000A5005D6AD8 /* Classes */,
+				5623C57817FDCB0800090B9E /* Unity-iPhone Tests */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				D8A1C7220E80637F000160D3 /* Libraries */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				83B2574E0E63025400468741 /* libiconv.2.dylib */,
+				E40E481188F59A083573A29E /* LaunchScreen-iPhone.xib */,
+				85E0468D95B41FD13E9F70D5 /* LaunchScreen-iPad.xib */,
+				22794DB5A535A99966540B4B /* LaunchScreen-iPhonePortrait.png */,
+				51B446CA93CDB0BF10109CAD /* LaunchScreen-iPhoneLandscape.png */,
+				82064FB98615D1D974A695D9 /* LaunchScreen-iPad.png */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA5D99861AFAD3C800B27605 /* CoreText.framework */,
+				8358D1B70ED1CC3700E3A684 /* AudioToolbox.framework */,
+				7F36C11013C5C673007FBDD9 /* AVFoundation.framework */,
+				56FD43950ED4745200FE3770 /* CFNetwork.framework */,
+				56B7959A1442E0F20026B3DD /* CoreGraphics.framework */,
+				5692F3DC0FA9D8E500EBA2F1 /* CoreLocation.framework */,
+				7F36C10E13C5C673007FBDD9 /* CoreMedia.framework */,
+				56B795C11442E1100026B3DD /* CoreMotion.framework */,
+				7F36C10F13C5C673007FBDD9 /* CoreVideo.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				08B24F75137BFDFA00FBA309 /* iAd.framework */,
+				5682F4B10F3B34FF007A219C /* MediaPlayer.framework */,
+				83B2574B0E63022200468741 /* OpenAL.framework */,
+				83B256E10E62FEA000468741 /* OpenGLES.framework */,
+				83B2570A0E62FF8A00468741 /* QuartzCore.framework */,
+				56BCBA380FCF049A0030C3B2 /* SystemConfiguration.framework */,
+				830B5C100E5ED4C100C7819F /* UIKit.framework */,
+				6BE24EFA9745F70482D7A0EE /* NCSDK */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DE04059924527E51FE86F62 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EA804FC8A24C7EB27DF78A6B /* Metadata */,
+				95334B3287726731738A4CB2 /* etc */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		45484A07B2B109B54007ABB3 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				A2554C25A9302D25D7021F2E /* iOS */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		4D644D38B21A91D58D3E6FE4 /* mconfig */ = {
+			isa = PBXGroup;
+			children = (
+				51FA439B8CA9A432B7A7C47A /* config.xml */,
+			);
+			path = mconfig;
+			sourceTree = "<group>";
+		};
+		5623C57817FDCB0800090B9E /* Unity-iPhone Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5623C57E17FDCB0900090B9E /* Unity_iPhone_Tests.m */,
+				5623C57917FDCB0800090B9E /* Supporting Files */,
+			);
+			path = "Unity-iPhone Tests";
+			sourceTree = "<group>";
+		};
+		5623C57917FDCB0800090B9E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5623C57A17FDCB0900090B9E /* Unity-iPhone Tests-Info.plist */,
+				5623C57B17FDCB0900090B9E /* InfoPlist.strings */,
+				5623C58017FDCB0900090B9E /* Unity-iPhone Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		591F4C6F9DF3DDAAC9758C12 /* 1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				808F4813A4F1EF047400C804 /* DefaultWsdlHelpGenerator.aspx */,
+				6ED14161A0ECAF11C983FC79 /* machine.config */,
+			);
+			path = 1.0;
+			sourceTree = "<group>";
+		};
+		662149F99E715EBC8DBAF4DA /* AFNetworking-2.6.3 */ = {
+			isa = PBXGroup;
+			children = (
+				361C4E25BF0968209895A502 /* AFURLSessionManager.h */,
+				2C7B41BFA65CA3C1C6B28405 /* AFHTTPRequestOperationManager.h */,
+				56EB4CA095A8D60C8D2B5908 /* AFNetworkReachabilityManager.m */,
+				F00D4BD5A780A13BCC975D29 /* AFSecurityPolicy.m */,
+				7FA24435994C0E8FEA89CD0A /* AFHTTPSessionManager.h */,
+				B8E743E09FDC7D9C41AC0BD7 /* AFURLRequestSerialization.m */,
+				C75B409F9EE83A39B5D77CE5 /* AFNetworking.h */,
+				D96D479FBAC4142F551334C6 /* UIImageView+AFNetworking.h */,
+				6C324992922E69DC4847A218 /* AFHTTPRequestOperationManager.m */,
+				63024F4693946140AD6C0123 /* AFHTTPRequestOperation.m */,
+				C6724FB4AF2DA3C36184CC56 /* AFHTTPRequestOperation.h */,
+				795C4C24B805C5379C6627B5 /* AFURLRequestSerialization.h */,
+				7B064A2CA87B0BF7F3264B48 /* AFHTTPSessionManager.m */,
+				0BE3485CBED936FBCE036080 /* AFURLConnectionOperation.h */,
+				B92D4C10A320FCAE10BB2993 /* AFURLResponseSerialization.m */,
+				201849FDA222BEBBEF6FCEB3 /* AFURLConnectionOperation.m */,
+				071A448789F24F39A84FDF11 /* AFSecurityPolicy.h */,
+				8B864926B9354D290D24C3A3 /* UIImageView+AFNetworking.m */,
+				BBF149259C877BF967BA9B01 /* AFURLSessionManager.m */,
+				F1C34A9DABC0077199DFD082 /* AFURLResponseSerialization.h */,
+				C7E44D5FBE4215452E2CD5CA /* AFNetworkReachabilityManager.h */,
+			);
+			path = "AFNetworking-2.6.3";
+			sourceTree = "<group>";
+		};
+		6BE24EFA9745F70482D7A0EE /* NCSDK */ = {
+			isa = PBXGroup;
+			children = (
+				45484A07B2B109B54007ABB3 /* Plugins */,
+			);
+			path = NCSDK;
+			sourceTree = "<group>";
+		};
+		6D514DC2AF70CCF41DC6BADA /* Browsers */ = {
+			isa = PBXGroup;
+			children = (
+				86DD4C1181F2B73BDF96E6DE /* Compat.browser */,
+			);
+			path = Browsers;
+			sourceTree = "<group>";
+		};
+		739940CBB3195AA7D0D6C91A /* 2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				689740EDB7DDFC88F874DC78 /* DefaultWsdlHelpGenerator.aspx */,
+				85B348CDA273BED9EAA1C446 /* machine.config */,
+				57144F259F1A62267F930845 /* settings.map */,
+				5A7A4743B9946E63ADBC9AF2 /* web.config */,
+				6D514DC2AF70CCF41DC6BADA /* Browsers */,
+			);
+			path = 2.0;
+			sourceTree = "<group>";
+		};
+		772F40F08614D070A5969AB4 /* SDWebImage-3.8.2 */ = {
+			isa = PBXGroup;
+			children = (
+				05704D6B9074AE387F586D35 /* SDWebImageDownloader.h */,
+				C0BB438E91336A87BCA67DCC /* SDImageCache.m */,
+				F58A41708567BF2400FB6463 /* SDWebImageManager.m */,
+				DF90450CB72401305334A107 /* SDWebImageDecoder.h */,
+				1B044DFA905E75AFA05663C3 /* SDWebImageDecoder.m */,
+				775D4DFA80ED4426BA19875F /* SDWebImageManager.h */,
+				6D1346688B4B9EAE4B86BA35 /* SDWebImageDownloaderOperation.m */,
+				285B47D89A29AF21F8217C30 /* UIImageView+WebCache.m */,
+				69CA47FCAB9061220C378EB2 /* UIView+WebCacheOperation.m */,
+				8A2142FBB94382E5086055CE /* UIImage+GIF.h */,
+				7C0A417C94249ED7AD068E7E /* NSData+ImageContentType.h */,
+				0BF8449E866C7A39471431B3 /* UIImage+MultiFormat.h */,
+				0B8440E687694B27219C7AE5 /* SDWebImageDownloaderOperation.h */,
+				638B4F158D94B33D740AF539 /* UIImage+WebP.m */,
+				AE284161823B52A3175C5555 /* SDWebImageDownloader.m */,
+				C3FA4CECB928DA7376516DC1 /* SDWebImagePrefetcher.m */,
+				CB9547B8954A1F4CC7137E8A /* UIButton+WebCache.h */,
+				45E84BC98D051C000DE7E5B4 /* UIImage+WebP.h */,
+				89DA4ABDA789C158561B9912 /* UIImageView+HighlightedWebCache.m */,
+				C4714D64A846DCD16478C1FC /* SDImageCache.h */,
+				E0DF45688C01F637D019D7F6 /* UIImageView+HighlightedWebCache.h */,
+				C138412C9EB0A3B72B674826 /* SDWebImagePrefetcher.h */,
+				4A084037811057ED18761B94 /* UIImage+GIF.m */,
+				415244A0B517C79B6D3A6143 /* UIImageView+WebCache.h */,
+				ED9C4449804EE2F15BB07E1A /* SDWebImageOperation.h */,
+				8BC64D259BF452D1C68D029E /* UIImage+MultiFormat.m */,
+				BD2E4352BE9324793CD90DB6 /* UIView+WebCacheOperation.h */,
+				EBBC4A0AB4C4E00190FD7361 /* SDWebImageCompat.h */,
+				034545E78B9191F7A29ECFF7 /* SDWebImageCompat.m */,
+				9E9C4DB0963F146054882063 /* NSData+ImageContentType.m */,
+				EB76498BA798FEFF9CAF6B30 /* UIButton+WebCache.m */,
+			);
+			path = "SDWebImage-3.8.2";
+			sourceTree = "<group>";
+		};
+		7FE1460CA3C4C3D3C4927FE2 /* NCSDK */ = {
+			isa = PBXGroup;
+			children = (
+				290346C5AABA807152D8B039 /* Plugins */,
+			);
+			path = NCSDK;
+			sourceTree = "<group>";
+		};
+		8A3EDDC51615B7C1001839E9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8A9FCB111617295F00C05364 /* ActivityIndicator.h */,
+				8A9FCB121617295F00C05364 /* ActivityIndicator.mm */,
+				8A7057D0171EA29600A1332D /* iAD_Scripting.mm */,
+				8A07E1041715A5AB000EDC6F /* iAD.h */,
+				8A07E1051715A5AB000EDC6F /* iAD.mm */,
+				8A142DC41636943E00DD87CA /* Keyboard.h */,
+				8A142DC51636943E00DD87CA /* Keyboard.mm */,
+				8AC71EC219E7FBA90027502F /* OrientationSupport.h */,
+				8AC71EC319E7FBA90027502F /* OrientationSupport.mm */,
+				8A3EDDC61615B7C1001839E9 /* SplashScreen.h */,
+				8A3EDDC71615B7C1001839E9 /* SplashScreen.mm */,
+				8A4815BF17A287D2003FBFD5 /* UnityAppController+ViewHandling.h */,
+				8A4815C017A287D2003FBFD5 /* UnityAppController+ViewHandling.mm */,
+				8A851BA516FB2F6D00E911DB /* UnityView.h */,
+				8A851BA616FB2F6D00E911DB /* UnityView.mm */,
+				8A21AED21622F59300AF8007 /* UnityViewControllerBase.h */,
+				8A21AED31622F59300AF8007 /* UnityViewControllerBase.mm */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8A5C148F174E662D0006EB36 /* PluginBase */ = {
+			isa = PBXGroup;
+			children = (
+				8AF7755E17997D1300341121 /* AppDelegateListener.h */,
+				8AF7755F17997D1300341121 /* AppDelegateListener.mm */,
+				8A292A9717992CE100409BA4 /* LifeCycleListener.h */,
+				8A292A9817992CE100409BA4 /* LifeCycleListener.mm */,
+				8A5C1490174E662D0006EB36 /* RenderPluginDelegate.h */,
+				8A5C1491174E662D0006EB36 /* RenderPluginDelegate.mm */,
+				AAFE69D019F187C200638316 /* UnityViewControllerListener.h */,
+				AAFE69D119F187C200638316 /* UnityViewControllerListener.mm */,
+			);
+			path = PluginBase;
+			sourceTree = "<group>";
+		};
+		8AF18FE316490981007B4420 /* Unity */ = {
+			isa = PBXGroup;
+			children = (
+				FC0B20A11B7A4F0B00FDFC55 /* OnDemandResources.mm */,
+				8ABDBCE019CAFCF700A842FF /* AVCapture.h */,
+				8AC74A9419B47FEF00019D38 /* AVCapture.mm */,
+				8ADCE38919C87177006F04F6 /* CameraCapture.h */,
+				8ADCE38A19C87177006F04F6 /* CameraCapture.mm */,
+				8A2AA93316E0978D001FB470 /* CMVideoSampling.h */,
+				8A2AA93416E0978D001FB470 /* CMVideoSampling.mm */,
+				8A367F5916A6D36F0012ED11 /* CVTextureCache.h */,
+				8A367F5A16A6D36F0012ED11 /* CVTextureCache.mm */,
+				8ACB801B177081D4005D0019 /* DeviceSettings.mm */,
+				8A5E0B8F16849D1800CBB6FE /* DisplayManager.h */,
+				8A5E0B9016849D1800CBB6FE /* DisplayManager.mm */,
+				8A0FED471649699200E9727D /* EAGLContextHelper.h */,
+				8A0FED481649699200E9727D /* EAGLContextHelper.mm */,
+				8A25E6D118D767E20006A227 /* Filesystem.mm */,
+				8A1FFFAB16512A9000DD0934 /* GlesHelper.h */,
+				8A1FFFAC16512A9000DD0934 /* GlesHelper.mm */,
+				8A6720A319EEB905006C92E0 /* InternalProfiler.cpp */,
+				8A6720A419EEB905006C92E0 /* InternalProfiler.h */,
+				1859EA9A19214E7B0022C3D3 /* MetalHelper.mm */,
+				8A16150B1A8E4362006FA788 /* MPVideoPlayer.mm */,
+				8A6137121A10B57700059EDF /* ObjCRuntime.h */,
+				8A6137131A10BCA200059EDF /* ObjCRuntime.mm */,
+				8A90541019EE8843003D1039 /* UnityForwardDecls.h */,
+				8A851BAB16FC875E00E911DB /* UnityInterface.h */,
+				8AECDC781950835600CB29E8 /* UnityMetalSupport.h */,
+				8AA108C01948732900D0538B /* UnityRendering.h */,
+				8AB3CB3C16D390BA00697AD5 /* VideoPlayer.h */,
+				8AB3CB3D16D390BB00697AD5 /* VideoPlayer.mm */,
+				8AA568AC1827DD79004969C7 /* WWWConnection.h */,
+				8AA568AD1827DD79004969C7 /* WWWConnection.mm */,
+			);
+			path = Unity;
+			sourceTree = "<group>";
+		};
+		95334B3287726731738A4CB2 /* etc */ = {
+			isa = PBXGroup;
+			children = (
+				BBD94EE19C8468E2C1B7A611 /* mono */,
+			);
+			path = etc;
+			sourceTree = "<group>";
+		};
+		999475211A7BC3B100178130 /* UnityAds */ = {
+			isa = PBXGroup;
+			children = (
+				999475381A80DBC300178130 /* UnityAdsConfig.h */,
+				9994751E1A7BC3AE00178130 /* UnityAdsUnityWrapper.h */,
+				9994751F1A7BC3AE00178130 /* UnityAdsUnityWrapper.mm */,
+			);
+			name = UnityAds;
+			sourceTree = "<group>";
+		};
+		A1CC4945B864586300AA196A /* Native */ = {
+			isa = PBXGroup;
+			children = (
+				590E4F0C9202E1FA5A1CCEC1 /* Bulk_Assembly-CSharp_0.cpp */,
+				DF3E4A85809292FB83ECA702 /* Bulk_Generics_0.cpp */,
+				DC13449D88149994C6A3F2AF /* Bulk_Generics_1.cpp */,
+				7E214AE4913FFA9281604ED9 /* Bulk_Generics_2.cpp */,
+				65A94EF38AFFF9BD91D6D23D /* Bulk_Generics_3.cpp */,
+				4EE245D880EB22F710FEBECD /* Bulk_Mono.Security_0.cpp */,
+				A9EF4B2F99B626A1535D7662 /* Bulk_Mono.Security_1.cpp */,
+				04A94AE1B46DDDA6F97D54C0 /* Bulk_System.Core_0.cpp */,
+				4ADA48BD8DA39599E3BD470E /* Bulk_System_0.cpp */,
+				0D7C43F1B70924A15B70AC67 /* Bulk_System_1.cpp */,
+				0DE04ACD91D4E68786929B9D /* Bulk_UnityEngine_0.cpp */,
+				6B5C422D848A2FDC5BEC97DF /* Bulk_UnityEngine_1.cpp */,
+				51BE4332B1548E2ACE2BE1E8 /* Bulk_mscorlib_0.cpp */,
+				F25049B4A3DDB2B8288850DD /* Bulk_mscorlib_1.cpp */,
+				C5C6416CBB275FE399790005 /* Bulk_mscorlib_2.cpp */,
+				5CFB44F2896AEAF79B2ADE45 /* Bulk_mscorlib_3.cpp */,
+				461A406E997F42328090D401 /* Bulk_mscorlib_4.cpp */,
+				8AFD4F68B6FFE75BBDAB78A5 /* Bulk_mscorlib_5.cpp */,
+				EF4A419CB5BD8796C389EFD8 /* Bulk_mscorlib_6.cpp */,
+				D5CC4C0D85C6FB5E0C545147 /* Bulk_mscorlib_7.cpp */,
+				25524CCEA4D1B7C9A86FCAA6 /* GenericMethods0.cpp */,
+				2CB24C5187F34DB4A9ED7765 /* Il2CppAttributes.cpp */,
+				22A34385B71155A181A5F43E /* Il2CppCodeRegistration.cpp */,
+				47C94F439FF387C3B51E6B44 /* Il2CppCompilerCalculateTypeValuesTable.cpp */,
+				36904BC2A6E24BEBC292B6D7 /* Il2CppDelegateWrappersManagedToNativeTable.cpp */,
+				AEE84B89BA61213ED572775A /* Il2CppGenericClassTable.cpp */,
+				2C3E45E4A73B686CDA52C1B2 /* Il2CppGenericInstDefinitions.cpp */,
+				30B949558B52BA3C57627802 /* Il2CppGenericMethodDefinitions.cpp */,
+				D53C48F98F8850FECBA6671A /* Il2CppGenericMethodPointerTable.cpp */,
+				723348EA8121EC4425280712 /* Il2CppGenericMethodTable.cpp */,
+				710142C9A51FD81522EAE35E /* Il2CppInvokerTable.cpp */,
+				1086451580153A9118058A1F /* Il2CppMarshalingFunctionsTable.cpp */,
+				03374D3EB00195021ED88629 /* Il2CppMetadataRegistration.cpp */,
+				4BBA4FBCAD7440AA2C562DC3 /* Il2CppMetadataUsage.cpp */,
+				45FE40938799DD8F401FB24B /* Il2CppMethodPointerTable.cpp */,
+				856D49FAA10202D521119487 /* Il2CppMethodReferences.cpp */,
+				9F71415E8A99559F48A3F181 /* Il2CppPInvokerWrapperTable.cpp */,
+				BC1E454F8CB4FB15F081196A /* Il2CppTypeDefinitions.cpp */,
+				629C4B25B849E1F092ECDFA8 /* UnityClassRegistration.cpp */,
+				5234496FBEDAC8F7E2BDED62 /* UnityICallRegistration.cpp */,
+				3DE04059924527E51FE86F62 /* Data */,
+			);
+			path = Native;
+			sourceTree = "<group>";
+		};
+		A2554C25A9302D25D7021F2E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1FD34B19B7DF4352467A6C32 /* NaverAuth */,
+				5A0C43439F8FD00A988B3F00 /* NaverCafeSDK.framework */,
+				E0EE4F46AFDE6E481702FC5E /* NaverCafeSDK.bundle */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		AA2C46F0B4F3F7672EA30B10 /* NaverAuth */ = {
+			isa = PBXGroup;
+			children = (
+				7ABD42E6BE7931CD1D069BDC /* NaverThirdPartyLoginConnection.h */,
+				696C48049C272E0E73D99588 /* NaverThirdPartyConstantsForApp.h */,
+				D5494D3EAAC702DCBFAC7633 /* NLoginThirdPartyOAuth20InAppBrowserViewController.m */,
+				7BA4464597B3EBB5ECE8E87E /* NLoginThirdPartyOAuth20InAppBrowserViewController.h */,
+				961E4945ADAE0E3E4488C3AA /* libNaverLogin.a */,
+			);
+			path = NaverAuth;
+			sourceTree = "<group>";
+		};
+		BBD94EE19C8468E2C1B7A611 /* mono */ = {
+			isa = PBXGroup;
+			children = (
+				F6EC44ED8E2E0177E401E713 /* browscap.ini */,
+				F7854D7B816E45E74B54E75E /* config */,
+				591F4C6F9DF3DDAAC9758C12 /* 1.0 */,
+				739940CBB3195AA7D0D6C91A /* 2.0 */,
+				4D644D38B21A91D58D3E6FE4 /* mconfig */,
+			);
+			path = mono;
+			sourceTree = "<group>";
+		};
+		D82DCFB50E8000A5005D6AD8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				999475211A7BC3B100178130 /* UnityAds */,
+				8A5C148F174E662D0006EB36 /* PluginBase */,
+				8A3EDDC51615B7C1001839E9 /* UI */,
+				8AF18FE316490981007B4420 /* Unity */,
+				FC3D7EBE16D2621600D1BD0D /* CrashReporter.h */,
+				FC85CCB916C3ED8000BAF7C7 /* CrashReporter.mm */,
+				56DBF99E15E3CE85007A4A8D /* iPhone_Sensors.h */,
+				56DBF99C15E3CDC9007A4A8D /* iPhone_Sensors.mm */,
+				D82DCFBB0E8000A5005D6AD8 /* main.mm */,
+				FC85CCBA16C3ED8000BAF7C7 /* PLCrashReporter.h */,
+				8A6720A619EFAF25006C92E0 /* Prefix.pch */,
+				8ACB801D177081F7005D0019 /* Preprocessor.h */,
+				8A851BA816FB3AD000E911DB /* UnityAppController.h */,
+				8A851BA916FB3AD000E911DB /* UnityAppController.mm */,
+				8AA5D80017ABE9AF007B9910 /* UnityAppController+Rendering.h */,
+				8AA5D80117ABE9AF007B9910 /* UnityAppController+Rendering.mm */,
+				8A8D90D81A274A7800456C4E /* UnityAppController+UnityInterface.h */,
+				8A8D90D91A274A7800456C4E /* UnityAppController+UnityInterface.mm */,
+				8AA6ADDB17818CFD00A1C5F1 /* UnityTrampolineConfigure.h */,
+				A1CC4945B864586300AA196A /* Native */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		D8A1C7220E80637F000160D3 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				AAC3E38B1A68945900F6174A /* RegisterFeatures.cpp */,
+				AAC3E38C1A68945900F6174A /* RegisterFeatures.h */,
+				D8A1C7240E80637F000160D3 /* RegisterMonoModules.cpp */,
+				D8A1C7250E80637F000160D3 /* RegisterMonoModules.h */,
+				03F528621B447098000F4FB8 /* Il2CppOptions.cpp */,
+				7FE1460CA3C4C3D3C4927FE2 /* NCSDK */,
+				D20F47B0B8C6DB534953758E /* libiPhone-lib.a */,
+			);
+			path = Libraries;
+			sourceTree = SOURCE_ROOT;
+		};
+		EA804FC8A24C7EB27DF78A6B /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				49434ADF9B30953D7688C1DD /* global-metadata.dat */,
+			);
+			path = Metadata;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Unity-iPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Unity-iPhone" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				83D0C1FD0E6C8D7700EBCE5D /* CopyFiles */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				033966F41B18B03000ECD701 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Unity-iPhone";
+			productName = "iPhone-target";
+			productReference = 1D6058910D05DD3D006BFB54 /* Unity-Target-New.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5623C57217FDCB0800090B9E /* Unity-iPhone Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5623C58517FDCB0900090B9E /* Build configuration list for PBXNativeTarget "Unity-iPhone Tests" */;
+			buildPhases = (
+				5623C56F17FDCB0800090B9E /* Sources */,
+				5623C57017FDCB0800090B9E /* Frameworks */,
+				5623C57117FDCB0800090B9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5623C58217FDCB0900090B9E /* PBXTargetDependency */,
+			);
+			name = "Unity-iPhone Tests";
+			productName = "Unity-iPhone Tests";
+			productReference = 5623C57317FDCB0800090B9E /* Unity-iPhone Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = K9UP278937;
+						ProvisioningStyle = Automatic;
+					};
+					5623C57217FDCB0800090B9E = {
+						TestTargetID = 1D6058900D05DD3D006BFB54;
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Unity-iPhone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Unity-iPhone */,
+				5623C57217FDCB0800090B9E /* Unity-iPhone Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA31BF971B55660D0013FB1B /* Data in Resources */,
+				56C56C9817D6015200616839 /* Images.xcassets in Resources */,
+				F4564611BB1DEBAA763C2DF1 /* NaverAuth.bundle in Resources */,
+				6DF6407E8C54B45F60597014 /* NaverCafeSDK.bundle in Resources */,
+				FD25414698A17A35420398F2 /* LaunchScreen-iPhone.xib in Resources */,
+				7ED3454D91F89A6C98654139 /* LaunchScreen-iPad.xib in Resources */,
+				318E47CE8C82AE8CB3AF7708 /* global-metadata.dat in Resources */,
+				7A6F45C5A2BC505C43A91342 /* browscap.ini in Resources */,
+				A1204F50A312622CB9CC6F08 /* config in Resources */,
+				69A543B59DD9402644C6EC2C /* DefaultWsdlHelpGenerator.aspx in Resources */,
+				A00041478979EC8B0E916C93 /* machine.config in Resources */,
+				FC1D4960BE5B27709507A82E /* DefaultWsdlHelpGenerator.aspx in Resources */,
+				A7AA4293AA4BC5C3F3772488 /* machine.config in Resources */,
+				11A7491CA4D1CE79B37557F2 /* settings.map in Resources */,
+				B8F048D5A364A674A1387CA5 /* web.config in Resources */,
+				D2C54A348E10C672CAE8DDAF /* Compat.browser in Resources */,
+				C4014286AA351913AB02BF91 /* config.xml in Resources */,
+				ABCF42AEBC3790D8AB166105 /* LaunchScreen-iPhonePortrait.png in Resources */,
+				A55648FD9299D7FD846CFA9E /* LaunchScreen-iPhoneLandscape.png in Resources */,
+				ACA743C987551BDC07C1A1DF /* LaunchScreen-iPad.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5623C57117FDCB0800090B9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5623C57D17FDCB0900090B9E,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		033966F41B18B03000ECD701 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PROJECT_DIR/MapFileParser.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82DCFC30E8000A5005D6AD8 /* main.mm in Sources */,
+				D8A1C7280E80637F000160D3 /* RegisterMonoModules.cpp in Sources */,
+				8AA568AE1827DD79004969C7 /* WWWConnection.mm in Sources */,
+				56DBF99D15E3CDC9007A4A8D /* iPhone_Sensors.mm in Sources */,
+				8A3EDDC81615B7C1001839E9 /* SplashScreen.mm in Sources */,
+				8AC71EC419E7FBA90027502F /* OrientationSupport.mm in Sources */,
+				8A9FCB131617295F00C05364 /* ActivityIndicator.mm in Sources */,
+				8A8D90DA1A274A7800456C4E /* UnityAppController+UnityInterface.mm in Sources */,
+				8AA5D80217ABE9AF007B9910 /* UnityAppController+Rendering.mm in Sources */,
+				8A21AED41622F59300AF8007 /* UnityViewControllerBase.mm in Sources */,
+				8A142DC61636943E00DD87CA /* Keyboard.mm in Sources */,
+				8A0FED491649699200E9727D /* EAGLContextHelper.mm in Sources */,
+				AAFE69D219F187C200638316 /* UnityViewControllerListener.mm in Sources */,
+				8A1FFFAD16512A9000DD0934 /* GlesHelper.mm in Sources */,
+				8A5E0B9116849D1800CBB6FE /* DisplayManager.mm in Sources */,
+				8A367F5B16A6D36F0012ED11 /* CVTextureCache.mm in Sources */,
+				1859EA9B19214E7B0022C3D3 /* MetalHelper.mm in Sources */,
+				8A16150C1A8E4362006FA788 /* MPVideoPlayer.mm in Sources */,
+				FC85CCBB16C3ED8000BAF7C7 /* CrashReporter.mm in Sources */,
+				8AB3CB3E16D390BB00697AD5 /* VideoPlayer.mm in Sources */,
+				8A2AA93516E0978D001FB470 /* CMVideoSampling.mm in Sources */,
+				8A851BA716FB2F6D00E911DB /* UnityView.mm in Sources */,
+				8A851BAA16FB3AD000E911DB /* UnityAppController.mm in Sources */,
+				8AC74A9519B47FEF00019D38 /* AVCapture.mm in Sources */,
+				8A6720A519EEB905006C92E0 /* InternalProfiler.cpp in Sources */,
+				8A6137141A10BCA200059EDF /* ObjCRuntime.mm in Sources */,
+				8ADCE38B19C87177006F04F6 /* CameraCapture.mm in Sources */,
+				8A4815C117A28E7F003FBFD5 /* UnityAppController+ViewHandling.mm in Sources */,
+				8A07E1061715A5AB000EDC6F /* iAD.mm in Sources */,
+				8A7057D1171EA29600A1332D /* iAD_Scripting.mm in Sources */,
+				8A25E6D218D767E20006A227 /* Filesystem.mm in Sources */,
+				999475201A7BC3AE00178130 /* UnityAdsUnityWrapper.mm in Sources */,
+				8AF7755D1799329100341121 /* LifeCycleListener.mm in Sources */,
+				8A5C1492174E662D0006EB36 /* RenderPluginDelegate.mm in Sources */,
+				8AF7756017997D2700341121 /* AppDelegateListener.mm in Sources */,
+				FC0B20A21B7A4F0B00FDFC55 /* OnDemandResources.mm in Sources */,
+				AAC3E38D1A68945900F6174A /* RegisterFeatures.cpp in Sources */,
+				8ACB801C177081D4005D0019 /* DeviceSettings.mm in Sources */,
+				03F528631B447098000F4FB8 /* Il2CppOptions.cpp in Sources */,
+				A31849408EA70376765B7AE5 /* SDImageCache.m in Sources */,
+				B76A4A7B9257FDF5D29181C0 /* SDWebImageManager.m in Sources */,
+				BC6D41AF85E3F26E6FC742EC /* AFNetworkReachabilityManager.m in Sources */,
+				06F947DA836DAF16D4B36827 /* SDWebImageDecoder.m in Sources */,
+				2EFC4C2393093B53CA590C24 /* AFSecurityPolicy.m in Sources */,
+				56624338A81658DD20D29E4A /* AFURLRequestSerialization.m in Sources */,
+				63B3486D9A275667CBCCBE13 /* SDWebImageDownloaderOperation.m in Sources */,
+				7B304F0ABD60C6CE5621F7AB /* NLoginThirdPartyOAuth20InAppBrowserViewController.m in Sources */,
+				227E4E0A8F4C8E1597DC989D /* UIImageView+WebCache.m in Sources */,
+				28D64D17BD9D0417329BD30C /* UIView+WebCacheOperation.m in Sources */,
+				68B44FF5949F66BF6FDFE1E3 /* AFHTTPRequestOperationManager.m in Sources */,
+				A43C488497213669EF4F9AA0 /* AFHTTPRequestOperation.m in Sources */,
+				AAB8487D8212A1E7C63283EC /* FLAnimatedImage.m in Sources */,
+				0F5C4D4C9BD347A3495A876C /* NCSDKUnityManager.mm in Sources */,
+				53BD4C7CAFE8EB4E7E8D2C88 /* UIImage+WebP.m in Sources */,
+				42C94FAD822A6BF8F1015FA1 /* SDWebImageDownloader.m in Sources */,
+				864E4424A1E875BDE9C28AC6 /* SDWebImagePrefetcher.m in Sources */,
+				77A545A1933831DF1CF0A5EA /* AFHTTPSessionManager.m in Sources */,
+				BA684F9B8617A3F7CC0BD7A1 /* UIImageView+HighlightedWebCache.m in Sources */,
+				F7E647989DE740047BB8BB4D /* FLAnimatedImageView.m in Sources */,
+				8F2943979734B76CA89151C1 /* AFURLResponseSerialization.m in Sources */,
+				ED194C17A370D2720487DA64 /* AFURLConnectionOperation.m in Sources */,
+				38FA4218BE7DBF66B2309ADC /* UIImageView+AFNetworking.m in Sources */,
+				BFD24344BDABEFED620345A5 /* UIImage+GIF.m in Sources */,
+				AD3044F58A2949BCA57483AF /* AFURLSessionManager.m in Sources */,
+				F5FE4112914C3B7E3A69C5BA /* UIImage+MultiFormat.m in Sources */,
+				02EA4D0CBD907CC7BC7C9F2B /* SDWebImageCompat.m in Sources */,
+				BE764F1798FDDDE55DCE878F /* NSData+ImageContentType.m in Sources */,
+				D5D2473B9BF423C849C165B6 /* UIButton+WebCache.m in Sources */,
+				590F4747BDA9AEDD8BE1E52B /* Bulk_Assembly-CSharp_0.cpp in Sources */,
+				3CEA48519088B9E394AA7F52 /* Bulk_Generics_0.cpp in Sources */,
+				14494C6F9F595E3062665226 /* Bulk_Generics_1.cpp in Sources */,
+				107B401CB0900B5F12B265F2 /* Bulk_Generics_2.cpp in Sources */,
+				B3F34FF898EF3DCDA882E521 /* Bulk_Generics_3.cpp in Sources */,
+				C69A40F1AB876BBFE8ED6970 /* Bulk_Mono.Security_0.cpp in Sources */,
+				A176444E95221A6B43D94206 /* Bulk_Mono.Security_1.cpp in Sources */,
+				1207406F80BCCB014D08E8A9 /* Bulk_System.Core_0.cpp in Sources */,
+				E7A24F7985889BC91D900578 /* Bulk_System_0.cpp in Sources */,
+				92214D4E97F4BC416EFD55CB /* Bulk_System_1.cpp in Sources */,
+				B4014BDFBD1533079FF5A19E /* Bulk_UnityEngine_0.cpp in Sources */,
+				C29C42DCBDB184264647A6C9 /* Bulk_UnityEngine_1.cpp in Sources */,
+				7C6C417EBA5818926D27F59B /* Bulk_mscorlib_0.cpp in Sources */,
+				A7AD42C2A2597DC205646874 /* Bulk_mscorlib_1.cpp in Sources */,
+				F7CE490AB43155119265B1FF /* Bulk_mscorlib_2.cpp in Sources */,
+				67414078B3E7B949833019A7 /* Bulk_mscorlib_3.cpp in Sources */,
+				2203486485FD0BCB6BFC4253 /* Bulk_mscorlib_4.cpp in Sources */,
+				E89A4776A3A8D76FAC8BB403 /* Bulk_mscorlib_5.cpp in Sources */,
+				C0A64492824D612BF31EB3F4 /* Bulk_mscorlib_6.cpp in Sources */,
+				EE4B400EAA3F891EE1DAB23F /* Bulk_mscorlib_7.cpp in Sources */,
+				B31245E4AF49F0133F2FA5C9 /* GenericMethods0.cpp in Sources */,
+				649241898CBDDCD950CF9A7F /* Il2CppAttributes.cpp in Sources */,
+				7DFD4308A67120FED591F9D4 /* Il2CppCodeRegistration.cpp in Sources */,
+				317B46C7864F43A597170B7A /* Il2CppCompilerCalculateTypeValuesTable.cpp in Sources */,
+				A24F4768AAC80109A1E7423E /* Il2CppDelegateWrappersManagedToNativeTable.cpp in Sources */,
+				820846CCBF9A4A2CF00F4ABC /* Il2CppGenericClassTable.cpp in Sources */,
+				EB3E4F1CA2E0314A198B6C62 /* Il2CppGenericInstDefinitions.cpp in Sources */,
+				0B7C4CEDB86E9B4D41A3332C /* Il2CppGenericMethodDefinitions.cpp in Sources */,
+				4941409385127B490813FE5C /* Il2CppGenericMethodPointerTable.cpp in Sources */,
+				2DCE49B4A99933BF91D6054D /* Il2CppGenericMethodTable.cpp in Sources */,
+				4B3844128624799E0BBDCEB1 /* Il2CppInvokerTable.cpp in Sources */,
+				917440C0987D217066005E99 /* Il2CppMarshalingFunctionsTable.cpp in Sources */,
+				276F4A2ABFCF20490E63AAE7 /* Il2CppMetadataRegistration.cpp in Sources */,
+				436D4D1F8E982DAE1F982602 /* Il2CppMetadataUsage.cpp in Sources */,
+				A2C548DB8F37DA3F1A06565E /* Il2CppMethodPointerTable.cpp in Sources */,
+				F1564CFAAE00E8601336F5F4 /* Il2CppMethodReferences.cpp in Sources */,
+				D60F4DF4A7DC13A9BD1DFA35 /* Il2CppPInvokerWrapperTable.cpp in Sources */,
+				8B63444AA9A0A089EE028994 /* Il2CppTypeDefinitions.cpp in Sources */,
+				CB7140D5A5FD360E929ED5CF /* UnityClassRegistration.cpp in Sources */,
+				F52747BE9B601849EB4DF71E /* UnityICallRegistration.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5623C56F17FDCB0800090B9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5623C57F17FDCB0900090B9E /* Unity_iPhone_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5623C58217FDCB0900090B9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D6058900D05DD3D006BFB54 /* Unity-iPhone */;
+			targetProxy = 5623C58117FDCB0900090B9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5623C57B17FDCB0900090B9E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5623C57C17FDCB0900090B9E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "armv7 arm64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/NCSDK/Plugins/iOS",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/Prefix.pch;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Classes\"",
+					"\"$(SRCROOT)\"",
+					"$(SRCROOT)/Classes/Native",
+					"$(SRCROOT)/Libraries/bdwgc/include",
+					"$(SRCROOT)/Libraries/libil2cpp/include",
+				);
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_GENERATE_MAP_FILE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Libraries\"",
+					"$(SRCROOT)/Libraries/NCSDK/Plugins/iOS/NaverAuth",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DINIT_SCRIPTING_BACKEND=1";
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreMotion,
+					"-weak-lSystem",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.naver.glink;
+				PRODUCT_NAME = ProductName;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = (
+					iphoneos,
+					iphonesimulator,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				UNITY_RUNTIME_VERSION = 5.2.3f1;
+				UNITY_SCRIPTING_BACKEND = il2cpp;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "armv7 arm64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = K9UP278937;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/NCSDK/Plugins/iOS",
+				);
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Classes\"",
+					"\"$(SRCROOT)\"",
+					"$(SRCROOT)/Classes/Native",
+					"$(SRCROOT)/Libraries/bdwgc/include",
+					"$(SRCROOT)/Libraries/libil2cpp/include",
+				);
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_GENERATE_MAP_FILE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Libraries\"",
+					"$(SRCROOT)/Libraries/NCSDK/Plugins/iOS/NaverAuth",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DINIT_SCRIPTING_BACKEND=1";
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreMotion,
+					"-weak-lSystem",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.naver.glink;
+				PRODUCT_NAME = ProductName;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = (
+					iphoneos,
+					iphonesimulator,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				UNITY_RUNTIME_VERSION = 5.2.3f1;
+				UNITY_SCRIPTING_BACKEND = il2cpp;
+			};
+			name = Release;
+		};
+		5623C58317FDCB0900090B9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "armv7 arm64";
+				BUNDLE_LOADER = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/$(PRODUCT_NAME).app/$(PRODUCT_NAME)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/NCSDK/Plugins/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Unity-iPhone Tests/Unity-iPhone Tests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Unity-iPhone Tests/Unity-iPhone Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_GENERATE_MAP_FILE = YES;
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Libraries/NCSDK/Plugins/iOS/NaverAuth";
+				PRODUCT_NAME = ProductName;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = (
+					iphoneos,
+					iphonesimulator,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				UNITY_RUNTIME_VERSION = 5.2.3f1;
+				UNITY_SCRIPTING_BACKEND = il2cpp;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		5623C58417FDCB0900090B9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "armv7 arm64";
+				BUNDLE_LOADER = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/$(PRODUCT_NAME).app/$(PRODUCT_NAME)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/NCSDK/Plugins/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Unity-iPhone Tests/Unity-iPhone Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Unity-iPhone Tests/Unity-iPhone Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_GENERATE_MAP_FILE = YES;
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Libraries/NCSDK/Plugins/iOS/NaverAuth";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = ProductName;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = (
+					iphoneos,
+					iphonesimulator,
+				);
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				UNITY_RUNTIME_VERSION = 5.2.3f1;
+				UNITY_SCRIPTING_BACKEND = il2cpp;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv7;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = (
+					iphoneos,
+					iphonesimulator,
+				);
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv7;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = (
+					iphoneos,
+					iphonesimulator,
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Unity-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058950D05DD3E006BFB54 /* Release */,
+				1D6058940D05DD3E006BFB54 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5623C58517FDCB0900090B9E /* Build configuration list for PBXNativeTarget "Unity-iPhone Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5623C58317FDCB0900090B9E /* Release */,
+				5623C58417FDCB0900090B9E /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Unity-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF5008A954540054247B /* Release */,
+				C01FCF4F08A954540054247B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
