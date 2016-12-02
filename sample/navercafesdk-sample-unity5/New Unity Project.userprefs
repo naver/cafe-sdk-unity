@@ -1,6 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NCSDK/Scripts/GLinkiOS.cs">
+    <Files>
+      <File FileName="../oss_unity_package/Assets/NCSDK/Scripts/IGLink.cs" Line="51" Column="30" />
+      <File FileName="../oss_unity_package/Assets/NCSDK/Scripts/GLinkiOS.cs" Line="1" Column="1" />
+      <File FileName="../oss_unity_package/Assets/NCSDK/Scripts/GLinkAndroid.cs" Line="1" Column="1" />
+      <File FileName="../oss_unity_package/Assets/NCSDK/Scripts/GLinkConfig.cs" Line="1" Column="1" />
+      <File FileName="../oss_unity_package/Assets/NCSDK/Scripts/GLinkLanguage.cs" Line="1" Column="1" />
+      <File FileName="Assets/NCSDK/Scripts/GLinkiOS.cs" Line="196" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
