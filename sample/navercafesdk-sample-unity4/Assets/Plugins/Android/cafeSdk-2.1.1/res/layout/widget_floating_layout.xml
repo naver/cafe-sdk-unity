@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.naver.glink.android.sdk.ui.floating.WidgetFloatingLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+  <TextView
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/btremove"
+      android:layout_width="wrap_content" android:layout_height="wrap_content"
+      android:background="@drawable/gl_btn_default_big_normal"/>
+
+</com.naver.glink.android.sdk.ui.floating.WidgetFloatingLayout>

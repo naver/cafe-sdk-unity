@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white1">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      android:layout_marginTop="23dp"
+      android:layout_marginLeft="21dp"
+      android:layout_marginBottom="8dp"
+      android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/gl_icon_option_quality"
+          android:gravity="center"
+      />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/record_quality"
+          android:layout_marginLeft="9dp"
+          android:textSize="14dp"
+          android:textStyle="bold"
+          android:textColor="@color/black1"
+          android:gravity="center"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp">
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:background="@color/gray1"
+          android:layout_centerInParent="true"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="25dp"
+          android:layout_alignParentTop="true"
+          android:layout_marginBottom="22dp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_quality_low"
+            android:textSize="12dp"
+            android:textColor="@color/black1"
+            android:gravity="top"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_quality_std"
+            android:textSize="12dp"
+            android:textColor="@color/black1"
+            android:gravity="center"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_quality_high"
+            android:textSize="12dp"
+            android:textColor="@color/black1"
+            android:gravity="right"/>
+
+      </LinearLayout>
+
+
+      <RadioGroup
+          android:id="@+id/setting_quality_radio_group"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:orientation="horizontal"
+          android:checkedButton="@+id/rb_quality_std">
+
+
+        <RadioButton
+            android:id="@+id/rb_quality_low"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/widget_record_setting_radio"
+            android:button="@null"
+            android:textColor="@color/black1"
+            android:textSize="11dp"
+            android:layout_gravity="center"/>
+
+        <RadioButton
+            android:id="@+id/rb_quality_std"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/widget_record_setting_radio"
+            android:button="@null"
+            android:textColor="@drawable/widget_record_setting_radio_text"
+            android:textSize="11dp"
+            android:layout_gravity="bottom"
+            android:paddingTop="14dp"
+            android:gravity="top"/>
+
+
+        <RadioButton
+            android:id="@+id/rb_quality_high"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableRight="@drawable/widget_record_setting_radio"
+            android:button="@null"
+            android:textColor="@color/black1"
+            android:textSize="11dp"
+            android:layout_gravity="center"/>
+      </RadioGroup>
+
+
+    </RelativeLayout>
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      android:layout_marginLeft="21dp"
+      android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/gl_icon_option_size"
+          android:gravity="center"
+      />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/record_size"
+          android:layout_marginLeft="9dp"
+          android:textSize="14dp"
+          android:textStyle="bold"
+          android:textColor="@color/black1"
+          android:gravity="center"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp">
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:background="@color/gray1"
+          android:layout_centerInParent="true"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="25dp"
+          android:layout_alignParentTop="true"
+          android:layout_marginBottom="22dp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_size_360"
+            android:textSize="12dp"
+            android:textColor="@color/black1"
+            android:gravity="top"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_size_480"
+            android:textSize="12dp"
+            android:textColor="@color/black1"
+            android:gravity="center"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record_size_720"
+            android:textSize="12dp"
+            android:textColor="@color/black1"
+            android:gravity="right"/>
+
+      </LinearLayout>
+
+
+      <RadioGroup
+          android:id="@+id/setting_resolution_radio_group"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:orientation="horizontal"
+          android:checkedButton="@+id/rb_resolution_480">
+
+
+        <RadioButton
+            android:id="@+id/rb_resolution_360"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/widget_record_setting_radio"
+            android:button="@null"
+            android:textColor="@color/black1"
+            android:textSize="11dp"
+            android:layout_gravity="center"/>
+
+        <RadioButton
+            android:id="@+id/rb_resolution_480"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/widget_record_setting_radio"
+            android:button="@null"
+            android:textColor="@drawable/widget_record_setting_radio_text"
+            android:textSize="11dp"
+            android:layout_gravity="bottom"
+            android:paddingTop="14dp"
+            android:gravity="top"/>
+
+
+        <RadioButton
+            android:id="@+id/rb_resolution_720"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableRight="@drawable/widget_record_setting_radio"
+            android:button="@null"
+            android:textColor="@color/black1"
+            android:textSize="11dp"
+            android:layout_gravity="center"/>
+      </RadioGroup>
+
+
+    </RelativeLayout>
+
+
+  </LinearLayout>
+
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginBottom="24dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+      <TextView
+          android:id="@+id/record_setting_ok"
+          android:layout_width="64dp"
+          android:layout_height="28dp"
+          android:layout_marginRight="10dp"
+          android:text="@string/confirm"
+          android:textSize="12dp"
+          android:textColor="@color/white1"
+          android:gravity="center"
+          android:layout_centerInParent="true"
+          android:background="@drawable/widget_record_setting_button"/>
+
+      <TextView
+          android:id="@+id/record_setting_cancel"
+          android:layout_width="64dp"
+          android:layout_height="28dp"
+          android:text="@string/cancel"
+          android:textSize="12dp"
+          android:textColor="@color/white1"
+          android:gravity="center"
+          android:layout_centerInParent="true"
+          android:background="@drawable/widget_record_setting_button_cancel"/>
+
+    </LinearLayout>
+
+  </RelativeLayout>
+
+
+</LinearLayout>

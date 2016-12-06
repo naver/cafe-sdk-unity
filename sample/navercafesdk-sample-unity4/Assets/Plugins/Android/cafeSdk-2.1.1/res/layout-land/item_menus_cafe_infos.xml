@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white2"
+    android:orientation="vertical">
+
+  <ImageView
+      android:id="@+id/cafe_background_img"
+      android:layout_width="match_parent"
+      android:scaleType="centerCrop"
+      android:layout_height="88dp"/>
+
+  <View
+      android:id="@+id/cafe_background_img_dimmed"
+      android:layout_width="match_parent"
+      android:layout_height="88dp"
+      android:background="@color/black2_opacity_20"/>
+
+  <FrameLayout
+      android:id="@+id/thumbnail_image"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_marginTop="48dp"
+      android:layout_marginLeft="22dp">
+
+    <ImageView
+        android:id="@+id/cafe_icon_img"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/cafe_icon_img_stroke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gl_ls_icon_cafeimgst"
+        android:layout_gravity="center"/>
+  </FrameLayout>
+
+  <TextView
+      android:id="@+id/cafe_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="22dp"
+      android:layout_marginRight="22dp"
+      android:layout_marginTop="0dp"
+      android:maxLines="2"
+      android:ellipsize="end"
+      android:textSize="24dp"
+      android:textColor="@color/black2"
+      android:textStyle="bold"
+      android:layout_below="@+id/thumbnail_image"/>
+
+  <TextView
+      android:id="@+id/cafe_member_count"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="22dp"
+      android:layout_marginTop="9dp"
+      android:maxLines="2"
+      android:ellipsize="end"
+      android:textSize="12dp"
+      android:textColor="@color/gray4"
+      android:layout_below="@+id/cafe_name"
+      android:text="@string/member_count_format"/>
+
+  <TextView
+      android:id="@+id/channels_button"
+      android:layout_width="wrap_content"
+      android:layout_height="22dp"
+      android:layout_marginLeft="22dp"
+      android:layout_marginRight="22dp"
+      android:layout_marginBottom="23dp"
+      android:minWidth="90dp"
+      android:background="@drawable/gl_menu_language_selector_background"
+      android:drawableRight="@drawable/gl_ls_icon_lgpulldown_normal"
+      android:drawablePadding="4dp"
+      android:gravity="start|center_vertical"
+      android:textColor="@color/black2"
+      android:textSize="11dp"
+      android:maxLines="1"
+      android:layout_marginTop="3dp"
+      android:layout_alignParentBottom="true"
+      android:paddingLeft="5dp"
+      android:paddingRight="5dp"/>
+</RelativeLayout>

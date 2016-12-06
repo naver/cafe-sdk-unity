@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+    <!-- 주의: width를 0dp로 세팅하면, 텍스트가 변경 되었을 때 width가 잘못 계산된다. -->
+    <TextView
+        android:id="@+id/writer_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:textColor="@color/black2"
+        android:textSize="11dp"
+        android:maxLines="1"
+        tools:ignore="InefficientWeight"/>
+
+    <TextView
+        android:id="@+id/write_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:drawableLeft="@drawable/oval_gray"
+        android:drawablePadding="6dp"
+        android:textColor="@color/gray4"
+        android:textSize="11dp"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="6dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/like_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:drawablePadding="3dp"
+        android:textColor="@color/gray4"
+        android:textSize="11dp"/>
+
+    <TextView
+        android:id="@+id/comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/gl_icon_comment_small"
+        android:drawablePadding="3dp"
+        android:textColor="@color/gray4"
+        android:textSize="11dp"/>
+  </LinearLayout>
+</LinearLayout>

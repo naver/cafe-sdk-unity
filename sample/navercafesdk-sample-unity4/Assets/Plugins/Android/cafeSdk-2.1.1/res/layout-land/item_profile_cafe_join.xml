@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:baselineAligned="false"
+      android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_weight="1"
+        android:background="@color/white2"
+        android:orientation="vertical">
+
+      <ImageView
+          android:id="@+id/cafe_background_img"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/green1"/>
+
+      <FrameLayout
+          android:id="@+id/thumbnail_image"
+          android:layout_width="62dp"
+          android:layout_height="62dp"
+          android:layout_marginTop="23dp"
+          android:layout_marginLeft="22dp">
+
+
+        <ImageView
+            android:id="@+id/cafe_icon_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+        />
+
+        <ImageView
+            android:id="@+id/cafe_icon_img_stroke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gl_ls_icon_cafeimgst"
+            android:layout_gravity="center"/>
+      </FrameLayout>
+
+      <TextView
+          android:id="@+id/cafe_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="22dp"
+          android:layout_marginRight="22dp"
+          android:layout_below="@+id/thumbnail_image"
+          android:textSize="15dp"
+          android:textStyle="bold"
+          android:maxLines="2"
+          android:textColor="@color/white1"/>
+
+      <TextView
+          android:id="@+id/cafe_url"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:layout_marginLeft="22dp"
+          android:layout_marginRight="22dp"
+          android:layout_below="@+id/cafe_name"
+          android:textSize="10dp"
+          android:textColor="@color/white1"/>
+
+      <View
+          android:id="@+id/cafe_info_line"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_marginTop="12dp"
+          android:layout_marginLeft="22dp"
+          android:layout_marginRight="22dp"
+          android:background="@color/white1"
+          android:layout_below="@+id/cafe_url"/>
+
+
+      <TextView
+          android:id="@+id/cafe_info"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:layout_marginLeft="22dp"
+          android:layout_marginRight="22dp"
+          android:layout_below="@+id/cafe_info_line"
+          android:textSize="12dp"
+          android:textColor="@color/white1"
+          android:ellipsize="end"
+          android:maxLines="3"/>
+
+      <TextView
+          android:id="@+id/btn_logout"
+          android:layout_width="wrap_content"
+          android:layout_height="22dp"
+          android:layout_marginLeft="22dp"
+          android:layout_marginRight="22dp"
+          android:layout_marginBottom="23dp"
+          android:minWidth="88dp"
+          android:background="@drawable/gl_profile_cafe_join_logout"
+          android:drawablePadding="4dp"
+          android:gravity="center"
+          android:textColor="@color/white1"
+          android:textSize="12dp"
+          android:singleLine="true"
+          android:layout_marginTop="3dp"
+          android:layout_alignParentBottom="true"
+          android:paddingLeft="5dp"
+          android:paddingRight="5dp"
+          android:text="@string/profile_logout"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingTop="21dp"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:background="@color/white1">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/nick_name_header"
+          android:textColor="@color/black2"
+          android:textStyle="bold"
+          android:textSize="16dp"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:orientation="horizontal"
+              android:background="@drawable/gl_img_nickname_input">
+
+            <EditText
+                android:id="@+id/nickname"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:textColor="@color/black2"
+                android:textColorHint="#80999999"
+                android:paddingLeft="12dp"
+                android:singleLine="true"
+                android:textSize="16dp"
+                android:imeOptions="flagNoExtractUi"/>
+
+            <TextView
+                android:id="@+id/nickname_deletion"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/gl_btn_cancel"/>
+          </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/join"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/gl_btn_confirm1"
+            android:gravity="center"
+            android:layout_marginTop="6dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:textColor="@color/white1"
+            android:textSize="16dp"
+            android:text="@string/nick_name_join"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/valid_check_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/gray4"
+              android:textSize="11dp"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="bottom">
+
+          <RelativeLayout
+              android:id="@+id/agree_layout"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_centerVertical="true">
+
+            <CheckBox
+                android:id="@+id/agree_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="3dp"
+                android:button="@drawable/gl_ls_icon_check"/>
+
+            <TextView
+                android:id="@+id/agree_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/agree_check"
+                android:layout_centerVertical="true"
+                android:textSize="13dp"
+                android:textColor="@color/gray4"
+                android:text="@string/nick_name_join_agree"/>
+          </RelativeLayout>
+        </RelativeLayout>
+
+      </LinearLayout>
+
+      <ImageView
+          android:id="@+id/copyright"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:visibility="gone"/>
+    </LinearLayout>
+
+
+  </LinearLayout>
+
+
+</FrameLayout>
+
+
+    <!-- <LinearLayout
+         android:id="@+id/game_user_layout"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="6dp"
+         android:gravity="center_vertical"
+         android:orientation="horizontal">
+
+       <TextView
+           android:id="@+id/game_user_field_name"
+           android:layout_width="wrap_content"
+           android:layout_height="18dp"
+           android:layout_weight="1"
+           android:layout_marginRight="8dp"
+           android:paddingLeft="9dp"
+           android:paddingRight="9dp"
+           android:gravity="center_vertical"
+           android:background="@drawable/gl_img_boardname"
+           android:ellipsize="end"
+           android:textSize="10dp"
+           android:textColor="@color/gray4"
+           android:text="33"
+           android:singleLine="true"/>
+
+       <TextView
+           android:id="@+id/game_user_id"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="12dp"
+           android:text="22"
+           android:textColor="@color/gray4"/>
+     </LinearLayout> -->
