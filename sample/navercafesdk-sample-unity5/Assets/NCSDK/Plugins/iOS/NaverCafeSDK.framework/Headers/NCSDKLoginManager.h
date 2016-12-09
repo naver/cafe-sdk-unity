@@ -15,7 +15,6 @@
 @property (nonatomic, weak) UIViewController *rootViewController;
 
 + (NCSDKLoginManager *)getSharedInstance;
-+ (void)resetSharedInstance;
 - (void)initLoginManager;
 
 #pragma mark -

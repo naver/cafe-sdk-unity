@@ -130,12 +130,13 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
 }
 
 - (void)setGLinkGlobalInfoWithNeoIdConsumerKey:(NSString *)neoIdConsumerKey
-                               andGlobalCafeId:(NSInteger)globalCafeId
-                                     andCafeId:(NSString *)language{
-    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:neoIdConsumerKey
-                                             globalCafeId:globalCafeId];
+                                andCommunityId:(NSInteger)communityId
+                                andChannelCode:(NSString *)channelCode{
     
-    [[NCSDKManager getSharedInstance] setCountry:language];
+    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:neoIdConsumerKey
+                                              communityId:communityId];
+    
+    [[NCSDKManager getSharedInstance] setChannelCode:channelCode];
 }
 
 
@@ -159,8 +160,8 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
     [[NCSDKManager getSharedInstance] stopWidget];
 }
 
-- (NSString *)currentCountry {
-    return [[NCSDKManager getSharedInstance] currentCountry];
+- (NSString *)currentChannelCode {
+    return [[NCSDKManager getSharedInstance] currentChannelCode];
 }
 
 - (void)sendNewUser:(NSString *)gameUserId andMarket:(NSString *)market {
@@ -175,8 +176,8 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
     [NCSDKStatistics sendPageVisit:gameUserId];
 }
 
-- (void)setCafeLangCode:(NSString *)code {
-    [[NCSDKManager getSharedInstance] setCountry:code];
+- (void)setChannelCode:(NSString *)code {
+    [[NCSDKManager getSharedInstance] setChannelCode:code];
 }
 
 #pragma mark - NCSDKDelegate
@@ -259,8 +260,8 @@ extern "C" {
                                      andCafeId:cafeId];
     }
     
-    void _InitGLinkForGlobal(const char* neoIdConsumerKey, int globalCafeId, const char* language) {
-        [vc setGLinkGlobalInfoWithNeoIdConsumerKey:CreateNSString(neoIdConsumerKey) andGlobalCafeId:globalCafeId andCafeId:CreateNSString(language)];
+    void _InitGLinkForGlobal(const char* neoIdConsumerKey, int communityId, const char* channelCode) {
+        [vc setGLinkGlobalInfoWithNeoIdConsumerKey:CreateNSString(neoIdConsumerKey) andCommunityId:communityId andChannelCode:CreateNSString(channelCode)];
     }
     
     void _ExecuteMain(){
@@ -373,8 +374,8 @@ extern "C" {
         [vc setShowWidgetWhenUnloadSDK:useWidget];
     }
     
-    const char* _GetCafeLangCode() {
-        return CreateNSStrintToChar([[vc currentCountry] UTF8String]);
+    const char* _GetCurrentChannelCode() {
+        return CreateNSStrintToChar([[vc currentChannelCode] UTF8String]);
     }
 
     void _SendNewUser(const char* gameUserId, const char* market) {
@@ -389,7 +390,7 @@ extern "C" {
         [vc sendPageVisit:CreateNSString(gameUserId)];
     }
     
-    void _SetCafeLangCode(const char* code) {
-        [vc setCafeLangCode:CreateNSString(code)];
+    void _SetChannelCode(const char* code) {
+        [vc setChannelCode:CreateNSString(code)];
     }
 }

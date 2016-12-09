@@ -14,9 +14,9 @@ typedef NS_ENUM(NSUInteger, GLColorDefine) {
     kGLColorGray1 = 0xCCCCCC,
     kGLColorGray3 = 0xAFB4BA,
     kGLColorGray4 = 0x999999,
-    kGLColorBlack1 = 0x44484E,
+    kGLColorBlack1 = 0x44484E,//default theme background color
     kGLColorBlack2 = 0x000000,
-    kGLColorGreen1 = 0x00c73c,
+    kGLColorGreen1 = 0x00c73c,//default theme forward color
     kGLColorBlue2 = 0x2E65D9,
     kGLColorGray5 = 0xF3F3F3,
     kGLColorGray6 = 0xEBEBEB,

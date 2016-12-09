@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "NCSDKLanguage.h"
 
+typedef NS_ENUM(NSUInteger, GLXButtonType) {
+    kGLXButtonTypeMinimize = 0,
+    kGLXButtonTypeClose = 1,
+};
 typedef NS_ENUM(NSUInteger, GLArticlePostType) {
     kGLArticlePostTypeImage = 1,
     kGLArticlePostTypeVideo = 2,
@@ -29,43 +33,53 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 @property (nonatomic, weak) id<NCSDKManagerDelegate> ncSDKDelegate;
 @property (nonatomic, weak) id parentViewController;
 @property (nonatomic, assign) BOOL orientationIsLandscape;
+@property (nonatomic, assign) GLXButtonType xButtonType;
 
 #pragma mark - Widget property
 @property (nonatomic, assign) BOOL showWidgetWhenUnloadSDK;
-@property (nonatomic, assign) BOOL useWidgetVideoRecord;
+@property (nonatomic, assign) BOOL useWidgetVideoRecord NS_AVAILABLE_IOS(9_0);
 
 #pragma mark - class
 + (NCSDKManager *)getSharedInstance;
-+ (void)clearSharedInstance;
 
 #pragma mark - setting
 /*
- (국내) 네이버 카페 실행정보 설정
- 1. 네아로 ClientId
- 2. 네아로 ClientSecret
- 3. 카페 ID 세팅
+ NaverCafe
+ naverLoginClientId : Naver ID Login ClientId
+ naverLoginClientSecret : Naver ID Login ClientSecret
+ cafeId : NaverCafe ID
  */
 - (void)setNaverLoginClientId:(NSString *)naverLoginClientId
        naverLoginClientSecret:(NSString *)naverLoginClientSecret
                        cafeId:(NSInteger)cafeId;
 
 /*
- (해외) PLUG 실행전
-  1. neoId ConsumerKey 
-  2. 카페 ID
+ PLUG
+ neoIdConsumerKey : neoId ConsumerKey
+ plugId : Plug ID
  */
 - (void)setNeoIdConsumerKey:(NSString *)neoIdConsumerKey
-                 globalCafeId:(NSInteger)cafeId;
+                communityId:(NSInteger)communityId;
 
 /*
-    국가 설정
+ SDK Theme Color
+ themeColorCSSString : CSSColorString : #FFFFFF
  */
-- (void)setCountry:(NSString *)aCountry;
-- (NSString *)currentCountry;
+- (void)setThemeColor:(NSString *)themeColorCSSString;
+- (void)setThemeColor:(NSString *)themeColorCSSString andTabBackgroundColor:(NSString *)backgroundCSSString;
+
+/*
+ Channel
+ channelCode : NCSDKLanguage.h
+ */
+- (void)setChannelCode:(NSString *)channelCode;
+- (NSString *)currentChannelCode;
+
+/*
+ synchronize Game User ID with Login ID
+ */
 - (void)syncGameUserId:(NSString *)gameUserId;
-
 - (void)disableTransparentSlider:(BOOL)disable;
-
 #pragma mark - Start SDK function
 /*
  Start SDK
@@ -120,10 +134,14 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 
 
 #pragma mark - private function
++ (void)willCloseSharedInstance;
++ (void)willMinimizeSharedInstance;
 - (id)navercafeRootViewController;
 - (void)dismissViewController:(id)viewController;
 - (void)dismissTopViewController;
 - (void)presentViewController:(id)viewController;
+
+#pragma mark - test function
 - (void)showToast:(NSString *)str;
 - (void)presentEtc;
 @end
