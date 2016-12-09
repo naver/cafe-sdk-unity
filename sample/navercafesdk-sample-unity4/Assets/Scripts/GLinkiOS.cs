@@ -22,7 +22,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public static extern void _InitGLink(string consumerKey, string consumerSecret, int cafeId);
 
 	[DllImport("__Internal")]
-	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int globalCafeId, string language);
+	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int communityId, string language);
 
 	[DllImport("__Internal")]
 	public static extern void _ExecuteMain();
@@ -55,7 +55,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public static extern void _SyncGameUserId(string gameUserId);
 		
 	[DllImport("__Internal")]
-	public static extern string _GetCafeLangCode();
+	public static extern string _GetCurrentChannelCode();
 	
 	[DllImport("__Internal")]
 	private static extern void _ShowMessageToast(string message);
@@ -86,7 +86,10 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	private static extern void _SetUseWidgetVideoRecord(bool useVideoRecord);
 	[DllImport("__Internal")]
 	private static extern void _SetShowWidgetWhenUnloadSDK(bool useWidget);
-	
+
+	[DllImport("__Internal")]
+	private static extern void _SetChannelCode(string channelCode);
+
 	// imsi
 	[DllImport("__Internal")]
 	private static extern void _ExecuteCaptureScreenshopAndPostArticle();
@@ -175,7 +178,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public GLinkiOS() {
 		#if UNITY_IPHONE
 		_InitGLink(GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
-//		_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.GlobalCafeId, GLinkConfig.Language);
+//		_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId, GLinkConfig.Language);
 
 		//set callback funcs
 		_SetSDKDidLoadDelegate(_NCSDKDidLoadCallback);
@@ -278,15 +281,17 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		#endif
 	}
 
-	public string getCafeLangCode () {
+	public string getCurrentChannelCode () {
 		string code = null;
 		#if UNITY_IPHONE 
-		code = _GetCafeLangCode();
+		code = _GetCurrentChannelCode();
 		#endif
 		return code;
 	}
 
-	public void setCafeLangCode (string cafeLangCode) {
-
+	public void setChannelCode (string channelCode) {
+		#if UNITY_IPHONE 
+		_SetChannelCode(channelCode);
+		#endif
 	}
 }

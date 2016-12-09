@@ -125,7 +125,7 @@ public class GLinkAndroid : IGLink {
 		currentActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
 		glinkClass = new AndroidJavaClass ("com.naver.glink.android.sdk.Glink");
 		glinkClass.CallStatic ("init", currentActivity, GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
-		//glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.GlobalCafeId, GLinkLanguage.ENGLISH);
+		glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId, GLinkLanguage.ENGLISH);
 
 		// 앱스킴 listener 사용 하려면 아래 주석을 풀어 주세요.
 		// glinkClass.CallStatic ("setOnClickAppSchemeBannerListener", new OnClickAppSchemeBannerListener ());
@@ -245,18 +245,18 @@ public class GLinkAndroid : IGLink {
 		#endif
 	}
 
-	public string getCafeLangCode () {
+	public string getCurrentChannelCode () {
 		string code = null;
 		#if UNITY_ANDROID 
-		code = glinkClass.CallStatic<string> ("getCafeLangCode");
+		code = glinkClass.CallStatic<string> ("getChannelCode");
 		#endif
 
 		return code;
 	}
 
-	public void setCafeLangCode (string cafeLangCode) {
+	public void setChannelCode (string channelCode) {
 		#if UNITY_ANDROID 
-		glinkClass.CallStatic ("setCafeLangCode", cafeLangCode);
+		glinkClass.CallStatic ("setChannelCode", channelCode);
 		#endif
 	}
 }

@@ -47,10 +47,8 @@ public interface IGLink
 	void setShowWidgetWhenUnloadSDK (bool useWidget);
 	 
 	void executeMore ();
-
-	//Global cafe의 language code 정보를 받아온다
-	string getCafeLangCode ();
-
-	//Global cafe의 language code 정보를 입력한다
-	void setCafeLangCode (string cafeLangCode);
+	
+	string getCurrentChannelCode ();
+	
+	void setChannelCode (string channelCode);
 }

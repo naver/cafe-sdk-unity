@@ -5,6 +5,6 @@
 	public const int CafeId = 28290504;
 
 	public const string NeoIdConsumerKey = "IHCd_HmSiMcXOMC37xZ8";
-	public const int GlobalCafeId = 1013329;
+	public const int CommunityId = 1013329;
 	public const string Language = GLinkLanguage.ENGLISH;
 }
