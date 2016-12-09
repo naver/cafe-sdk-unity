@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/NCSDK/Sample/NCSDK_Sample_Scene.unity
-  isLoaded: 1
-  isActive: 1
