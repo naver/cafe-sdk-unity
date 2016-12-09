@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rel_videocontrols"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@color/black2_opacity_10">
+
+  <ImageButton
+      android:id="@+id/vcv_img_play"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:layout_centerInParent="true"
+      android:background="@drawable/gl_ls_icon_end_play_normal"/>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:layout_alignParentBottom="true">
+
+    <ImageButton
+        android:id="@+id/vcv_img_fullscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/gl_ls_icon_fullplay_normal"/>
+
+
+    <TextView
+        android:id="@+id/vcv_txt_elapsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/vcv_txt_divider"
+        android:text="00:00"
+        android:textSize="14dp"
+        android:textColor="@color/green1"/>
+
+    <TextView
+        android:id="@+id/vcv_txt_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/vcv_txt_total"
+        android:text=" / "
+        android:textSize="14dp"
+        android:textColor="@color/white1"/>
+
+    <TextView
+        android:id="@+id/vcv_txt_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/vcv_img_fullscreen"
+        android:text="00:00"
+        android:textSize="14dp"
+        android:textColor="@color/white1"/>
+
+    <SeekBar
+        android:id="@+id/vcv_seekbar"
+        android:theme="@android:style/Theme.Holo.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:layout_toLeftOf="@+id/vcv_txt_elapsed"
+        android:indeterminateDrawable="@null"
+        android:progressDrawable="@drawable/seekbar_video_background"
+        android:thumb="@null"
+        android:maxHeight="13dp"
+        android:minHeight="13dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:thumbOffset="10dp"/>
+
+
+  </RelativeLayout>
+
+
+</RelativeLayout>

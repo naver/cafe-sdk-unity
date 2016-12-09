@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white1"
+    android:orientation="vertical">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="0dp"
+        android:paddingRight="16dp"
+        android:orientation="horizontal">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:text="@string/edit"
+          android:textSize="14dp"
+          android:textStyle="bold"
+          android:textColor="@color/black2"/>
+
+
+      <LinearLayout
+          android:id="@+id/btn_logout"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentRight="true"
+          android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="3dp"
+            android:drawableLeft="@drawable/gl_ls_blt_popup_logout"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/profile_logout"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:textColor="@color/black2"/>
+
+      </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray10"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal">
+
+      <RelativeLayout
+          android:id="@+id/profile_image_layout"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/profile_image_stroke"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/gl_thumb_personal_profile_stroke"/>
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/gl_thumb_personal_profile_stroke"/>
+
+        <ImageView
+            android:id="@+id/profile_setting_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/gl_btn_personal_profile_setting_camera"/>
+
+      </RelativeLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="32dp"
+          android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/white3">
+
+          <EditText
+              android:id="@+id/nickname"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:background="@color/white3"
+              android:gravity="center_vertical"
+              android:textColor="@color/black2"
+              android:textColorHint="#80999999"
+              android:paddingLeft="12dp"
+              android:singleLine="true"
+              android:textSize="16dp"
+              android:imeOptions="flagNoExtractUi"/>
+
+          <TextView
+              android:id="@+id/nickname_deletion"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_marginRight="12dp"
+              android:layout_marginLeft="12dp"
+              android:background="@color/white3"
+              android:drawableLeft="@drawable/gl_btn_cancel"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/valid_check_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/nick_name_validate"
+            android:textSize="12dp"/>
+
+      </LinearLayout>
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+    <TextView
+        android:id="@+id/btn_close_modify"
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:text="@string/cancel"
+        android:textColor="@color/gray7"
+        android:layout_weight="1"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:background="@drawable/gl_green_selector"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray9"/>
+    <TextView
+        android:id="@+id/btn_confirm"
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:text="@string/confirm"
+        android:textColor="@drawable/gl_btn_profile_modify_ok"
+        android:layout_weight="1"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:background="@drawable/gl_green_selector"/>
+
+
+  </LinearLayout>
+</LinearLayout>

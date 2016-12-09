@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <uk.co.senab.photoview.HackyViewPager
+        android:id="@+id/full_image_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/full_image_top_layout"
+      android:layout_width="match_parent"
+      android:layout_height="44dp"
+      android:layout_alignParentTop="true"
+      android:background="#36000000">
+    <TextView
+        android:id="@+id/full_image_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/gl_btn_viewerpage"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:textSize="16dp"/>
+
+      <RelativeLayout
+          android:id="@+id/full_image_close"
+          android:layout_width="40dp"
+          android:layout_height="match_parent"
+          android:layout_alignParentLeft="true"
+          android:layout_centerInParent="true">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="14dp"
+              android:background="@drawable/gl_btn_viewerclose"
+              android:layout_alignParentLeft="true"
+              android:layout_centerInParent="true"/>
+      </RelativeLayout>
+
+  </RelativeLayout>
+</RelativeLayout>

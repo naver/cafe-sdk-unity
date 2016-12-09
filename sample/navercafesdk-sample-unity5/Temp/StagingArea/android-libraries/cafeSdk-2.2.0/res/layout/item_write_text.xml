@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:hint="@string/save_error_contents"
+    android:paddingBottom="24dp"
+    android:paddingRight="14dp"
+    android:paddingLeft="11dp"
+    android:paddingTop="20dp"
+    android:textColor="@color/black2"
+    android:textColorHint="#c5c5cd"
+    android:textSize="16dp"
+    android:imeOptions="flagNoExtractUi"/>
