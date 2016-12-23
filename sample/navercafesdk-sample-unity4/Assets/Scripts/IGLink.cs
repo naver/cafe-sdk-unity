@@ -51,4 +51,10 @@ public interface IGLink
 	string getCurrentChannelCode ();
 	
 	void setChannelCode (string channelCode);
+
+	void setThemeColor(string themeColorCSSString);
+
+	void setThemeColor(string themeColorCSSString, string backgroundCSSString);
+
+	void setXButtonType(GLXButtonType xButtonType);
 }

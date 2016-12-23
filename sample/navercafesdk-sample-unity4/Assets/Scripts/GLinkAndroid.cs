@@ -259,4 +259,23 @@ public class GLinkAndroid : IGLink {
 		glinkClass.CallStatic ("setChannelCode", channelCode);
 		#endif
 	}
+
+	public void setThemeColor(string themeColorCSSString) {
+		#if UNITY_ANDROID 
+		glinkClass.CallStatic("setThemeColor", themeColorCSSString);
+		#endif
+	}
+
+	public void setThemeColor(string themeColorCSSString, string backgroundCSSString) {
+		#if UNITY_ANDROID 
+		glinkClass.CallStatic ("setThemeColor", themeColorCSSString, backgroundCSSString);
+		#endif
+	}
+
+	public void setXButtonType(GLXButtonType xButtonType) {
+		#if UNITY_ANDROID 
+		bool isClose = xButtonType == GLXButtonType.kGLXButtonTypeClose ? true : false;
+		glinkClass.CallStatic("setXButtonTypeClose", currentActivity, isClose);
+		#endif
+	}
 }
