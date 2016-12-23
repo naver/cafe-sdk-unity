@@ -90,10 +90,19 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	[DllImport("__Internal")]
 	private static extern void _SetChannelCode(string channelCode);
 
-	// imsi
 	[DllImport("__Internal")]
 	private static extern void _ExecuteCaptureScreenshopAndPostArticle();
 	
+	[DllImport("__Internal")]
+	private static extern void _SetThemeColor(string themeColorCSSString);
+
+	[DllImport("__Internal")]
+	private static extern void _SetThemeColor(string themeColorCSSString, string backgroundCSSString);
+
+	[DllImport("__Internal")]
+	private static extern void _SetXButtonType(GLXButtonType xButtonType);
+
+
 	[DllImport("__Internal")]
 	public static extern void _ExecuteEtc();
 	
@@ -292,6 +301,24 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public void setChannelCode (string channelCode) {
 		#if UNITY_IPHONE 
 		_SetChannelCode(channelCode);
+		#endif
+	}
+
+	public void setThemeColor(string themeColorCSSString) {
+		#if UNITY_IPHONE 
+		_SetThemeColor(themeColorCSSString);
+		#endif
+	}
+
+	public void setThemeColor(string themeColorCSSString, string backgroundCSSString) {
+		#if UNITY_IPHONE 
+		_SetThemeColor(themeColorCSSString, backgroundCSSString);
+		#endif
+	}
+
+	public void setXButtonType(GLXButtonType xButtonType) {
+		#if UNITY_IPHONE 
+		_SetXButtonType(xButtonType);
 		#endif
 	}
 }
