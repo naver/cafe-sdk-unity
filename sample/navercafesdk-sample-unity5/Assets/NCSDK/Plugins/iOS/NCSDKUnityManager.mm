@@ -180,6 +180,18 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
     [[NCSDKManager getSharedInstance] setChannelCode:code];
 }
 
+- (void)setThemeColor:(NSString *)themeColorCSSString andTabBackgroundColor:(NSString *)backgroundCSSString {
+    if (backgroundCSSString.length == 0) {
+        backgroundCSSString = @"#44484e";
+    }
+    
+    [[NCSDKManager getSharedInstance] setThemeColor:themeColorCSSString andTabBackgroundColor:backgroundCSSString];
+}
+
+- (void)setXButtonType:(NSInteger)type {
+    [[NCSDKManager getSharedInstance] setXButtonType:(GLXButtonType)type];
+}
+
 #pragma mark - NCSDKDelegate
 - (void)ncSDKViewDidLoad {
     if (self.glSDKDidLoadDelegate) {
@@ -203,7 +215,7 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
         self.glSDKPostedArticleAtMenuDelegate(menuId, imageCount, videoCount);
     }
 }
-    
+
 - (void)ncSDKPostedCommentAtArticle:(NSInteger)articleId {
     if (self.glSDKPostedCommentAtArticleDelegate) {
         self.glSDKPostedCommentAtArticleDelegate(articleId);
@@ -252,12 +264,13 @@ extern "C" {
         strcpy (res, string);
         return res;
     }
-
+    
     GLinkViewController *vc = [[GLinkViewController alloc] init];
     
     void _InitGLink(const char* NaverLoginClientId, const char* NaverLoginClientSecret, int cafeId ) {
         [vc setGLinkInfoWithNaverLoginClientId:CreateNSString(NaverLoginClientId)andNaverLoginClientSecret:CreateNSString(NaverLoginClientSecret)
                                      andCafeId:cafeId];
+        
     }
     
     void _InitGLinkForGlobal(const char* neoIdConsumerKey, int communityId, const char* channelCode) {
@@ -377,7 +390,7 @@ extern "C" {
     const char* _GetCurrentChannelCode() {
         return CreateNSStrintToChar([[vc currentChannelCode] UTF8String]);
     }
-
+    
     void _SendNewUser(const char* gameUserId, const char* market) {
         [vc sendNewUser:CreateNSString(gameUserId) andMarket:CreateNSString(market)];
     }
@@ -392,5 +405,13 @@ extern "C" {
     
     void _SetChannelCode(const char* code) {
         [vc setChannelCode:CreateNSString(code)];
+    }
+    
+    void _SetThemeColor(const char* themeColorCSSString, const char* backgroundCSSString) {
+        [vc setThemeColor:CreateNSString(themeColorCSSString) andTabBackgroundColor:CreateNSString(backgroundCSSString)];
+    }
+    
+    void _SetXButtonType(int xButtonType) {
+        [vc setXButtonType:xButtonType];
     }
 }

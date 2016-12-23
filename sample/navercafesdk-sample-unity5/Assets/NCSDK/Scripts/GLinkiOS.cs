@@ -94,9 +94,6 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	private static extern void _ExecuteCaptureScreenshopAndPostArticle();
 	
 	[DllImport("__Internal")]
-	private static extern void _SetThemeColor(string themeColorCSSString);
-
-	[DllImport("__Internal")]
 	private static extern void _SetThemeColor(string themeColorCSSString, string backgroundCSSString);
 
 	[DllImport("__Internal")]
@@ -306,7 +303,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 
 	public void setThemeColor(string themeColorCSSString) {
 		#if UNITY_IPHONE 
-		_SetThemeColor(themeColorCSSString);
+		_SetThemeColor(themeColorCSSString, "");
 		#endif
 	}
 
