@@ -89,9 +89,6 @@ public class GLinkiOS : MonoBehaviour, IGLink
 
 	[DllImport("__Internal")]
 	private static extern void _SetChannelCode(string channelCode);
-
-	[DllImport("__Internal")]
-	private static extern void _ExecuteCaptureScreenshopAndPostArticle();
 	
 	[DllImport("__Internal")]
 	private static extern void _SetThemeColor(string themeColorCSSString, string backgroundCSSString);
@@ -146,38 +143,17 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		GameObject obj = GameObject.Find (name);
 		if (obj == null) {
 			obj = new GameObject ("CafeSdkController");
-			obj.AddComponent<GLinkiOS> ();
+			obj.AddComponent<SampleBehaviour> ();
 		}
 		
-		_ExecuteCaptureScreenshopAndPostArticle ();
+		SampleBehaviour behaviour = obj.GetComponent<SampleBehaviour> ();
+		behaviour.OnClickScreenShotButton ();
 	}
 	
 	delegate void NCSDKDidVoteAtArticleDelegate(int articleId);
 	[MonoPInvokeCallback(typeof(NCSDKDidVoteAtArticleDelegate))]
 	public static void _NCSDKDidVoteAtArticleCallback (int articleId) {
 //		_ShowMessageToast ("Did Vote at " + articleId);
-	}
-	
-	
-	IEnumerator CoFunction () {
-		yield return new WaitForEndOfFrame();
-	}
-	
-	public void executeCaptureScreenshopAndPostArticle(string dummy) {
-		// For iOS , For Widget
-		// Game ScreenShot Code
-		StartCoroutine (this.CoFunction ());
-		
-		Texture2D image = new Texture2D (Screen.width, Screen.height, TextureFormat.RGB24, false);
-		image.ReadPixels (new Rect (0, 0, Screen.width, Screen.height), 0, 0, true);
-		image.Apply ();
-		
-		byte[] bytes = image.EncodeToPNG();
-		string path = Application.persistentDataPath + "/GLShareImage.png";
-		File.WriteAllBytes(path, bytes);		
-		
-		GLink.sharedInstance().executeArticlePostWithImage(5, "", "", path);
-		
 	}
 	#endif
 	

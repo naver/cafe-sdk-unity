@@ -240,10 +240,6 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
     [self executeArticleWithMenuId:0 subject:@"" content:@""];
 }
 
-- (void)ncWidgetPostArticleWithImageByUnity {
-    UnitySendMessage("CafeSdkController", "executeCaptureScreenshopAndPostArticle", "capture");
-}
-
 @end
 
 // Converts C style string to NSString
@@ -270,7 +266,7 @@ extern "C" {
     void _InitGLink(const char* NaverLoginClientId, const char* NaverLoginClientSecret, int cafeId ) {
         [vc setGLinkInfoWithNaverLoginClientId:CreateNSString(NaverLoginClientId)andNaverLoginClientSecret:CreateNSString(NaverLoginClientSecret)
                                      andCafeId:cafeId];
-        
+//        [vc setChannelCode:@"ko"];
     }
     
     void _InitGLinkForGlobal(const char* neoIdConsumerKey, int communityId, const char* channelCode) {
@@ -362,9 +358,6 @@ extern "C" {
         
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
         
-    }
-    void _ExecuteCaptureScreenshopAndPostArticle() {
-        [vc ncWidgetPostArticleWithImageByUnity];
     }
     
     void _SetSDKDidVoteAtArticleDelegate(GLSDKDidVoteAtArticleDelegate glSDKDidVoteAtArticleDelegate) {
