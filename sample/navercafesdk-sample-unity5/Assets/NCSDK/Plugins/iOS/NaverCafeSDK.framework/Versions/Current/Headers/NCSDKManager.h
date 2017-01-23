@@ -9,10 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "NCSDKLanguage.h"
 
-typedef NS_ENUM(NSUInteger, GLXButtonType) {
-    kGLXButtonTypeMinimize = 0,
-    kGLXButtonTypeClose = 1,
-};
 typedef NS_ENUM(NSUInteger, GLArticlePostType) {
     kGLArticlePostTypeImage = 1,
     kGLArticlePostTypeVideo = 2,
@@ -33,7 +29,6 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 @property (nonatomic, weak) id<NCSDKManagerDelegate> ncSDKDelegate;
 @property (nonatomic, weak) id parentViewController;
 @property (nonatomic, assign) BOOL orientationIsLandscape;
-@property (nonatomic, assign) GLXButtonType xButtonType;
 
 #pragma mark - Widget property
 @property (nonatomic, assign) BOOL showWidgetWhenUnloadSDK;
@@ -104,22 +99,12 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 /*
  Start With Article Post
  */
-- (void)presentArticlePostViewControllerWithMenuId:(NSInteger)menuId
-                                           subject:(NSString *)subject
-                                           content:(NSString *)content;
+- (void)presentArticlePostViewController;
 /*
  Start With Article Post
  */
 - (void)presentArticlePostViewControllerWithType:(GLArticlePostType)type
-                                          menuId:(NSInteger)menuId
-                                         subject:(NSString *)subject
-                                         content:(NSString *)content
                                         filePath:(NSString *)filePath;
-
-/*
- Start With Article List
- */
-- (void)presentArticleListViewControllerWithMenuId:(NSInteger)menuId;
 
 #pragma mark - Widget function
 /*
@@ -130,7 +115,10 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
  End Widget
  */
 - (void)stopWidget;
-
+/*
+ Widget Start Position
+*/
+- (void)setWidgetStartPosition:(BOOL)isLeft andY:(NSInteger)y;
 
 
 #pragma mark - private function

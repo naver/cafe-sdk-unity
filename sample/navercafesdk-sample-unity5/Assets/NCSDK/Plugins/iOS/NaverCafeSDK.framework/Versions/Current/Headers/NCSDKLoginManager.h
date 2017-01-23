@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol NCSDKLoginManagerDelegate;
+
 @interface NCSDKLoginManager : NSObject
 /*
  로그인 웹뷰를 띄울 ViewController
  */
+@property (nonatomic, weak) id<NCSDKLoginManagerDelegate> ncSDKLoginManagerDelegate;
 @property (nonatomic, weak) UIViewController *rootViewController;
 
 + (NCSDKLoginManager *)getSharedInstance;
@@ -93,4 +96,19 @@
  URLScheme
  */
 - (void)setNaverLoginURLScheme:(NSString *)urlScheme;
+
+/*
+ Naver Id Login Interface
+ */
+- (void)naverIdInitWithClientId:(NSString *)clientId andSecretId:(NSString *)secrectId;
+- (void)naverIdLogin;
+- (void)naverIdLogout;
+- (BOOL)isNaverIdLogin;
+- (void)getNaverIdProfile;
+@end
+
+@protocol NCSDKLoginManagerDelegate <NSObject>
+@optional
+- (void)ncSDKLogin;
+- (void)ncSDKGetProfile:(NSString *)result;
 @end

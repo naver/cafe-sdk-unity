@@ -2,6 +2,7 @@
 #import "UnityAppController.h"
 #import <NaverCafeSDK/NCSDKManager.h>
 #import <NaverCafeSDK/NCSDKStatistics.h>
+#import <NaverCafeSDK/NCSDKLoginManager.h>
 
 typedef void (*GLSDKDidLoadDelegate)();
 typedef void (*GLSDKDidUnLoadDelegate)();
@@ -10,8 +11,10 @@ typedef void (*GLSDKPostedArticleAtMenuDelegate)(NSInteger menuId, NSInteger ima
 typedef void (*GLSDKPostedCommentAtArticleDelegate)(NSInteger articleId);
 typedef void (*GLSDKWidgetPostAriticleWithImageDelegate)();
 typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
+typedef void (*GLNaverIdLoginDelelgate)();
+typedef void (*GLNaverIdGetProfileDelegate)(NSString *profileResult);
 
-@interface GLinkViewController : UIViewController <NCSDKManagerDelegate>
+@interface GLinkViewController : UIViewController <NCSDKManagerDelegate, NCSDKLoginManagerDelegate>
 @property (nonatomic, strong) UIView *mainView;
 @property (nonatomic, strong) UIViewController *mainViewcontroller;
 
@@ -22,6 +25,8 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
 @property (nonatomic, assign) GLSDKPostedCommentAtArticleDelegate glSDKPostedCommentAtArticleDelegate;
 @property (nonatomic, assign) GLSDKWidgetPostAriticleWithImageDelegate glSDKWidgetPostAriticleWithImageDelegate;
 @property (nonatomic, assign) GLSDKDidVoteAtArticleDelegate glSDKDidVoteAtArticleDelegate;
+@property (nonatomic, assign) GLNaverIdLoginDelelgate glNaverIdLoginDelelgate;
+@property (nonatomic, assign) GLNaverIdGetProfileDelegate glNaverIdGetProfileDelegate;
 
 - (void)executeGlink;
 
@@ -74,7 +79,7 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
     [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:4];
 }
 
-- (void)executeArticle:(NSUInteger)articleId  {
+- (void)executeArticleWithArticleId:(NSUInteger)articleId  {
     [self setGLRootViewController];
     [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:articleId];
 }
@@ -83,36 +88,20 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
     [[NCSDKManager getSharedInstance] syncGameUserId:gameUserId];
 }
 
-- (void)executeArticleWithMenuId:(NSInteger)menuId
-                         subject:(NSString *)subject
-                         content:(NSString *)content {
+- (void)executeArticle {
     [self setGLRootViewController];
-    [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithMenuId:menuId
-                                                                         subject:subject
-                                                                         content:content];
+    [[NCSDKManager getSharedInstance] presentArticlePostViewController];
 }
 
-- (void)executeArticleForImageWithMenuId:(NSInteger)menuId
-                                 subject:(NSString *)subject
-                                 content:(NSString *)content
-                                filePath:(NSString *)filePath {
+- (void)executeArticleForImageWithFilePath:(NSString *)filePath {
     [self setGLRootViewController];
     [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeImage
-                                                                        menuId:menuId
-                                                                       subject:subject
-                                                                       content:content
                                                                       filePath:filePath];
 }
 
-- (void)executeArticleForVideoWithMenuId:(NSInteger)menuId
-                                 subject:(NSString *)subject
-                                 content:(NSString *)content
-                                filePath:(NSString *)filePath {
+- (void)executeArticleForVideoWithFilePath:(NSString *)filePath {
     [self setGLRootViewController];
     [[NCSDKManager getSharedInstance] presentArticlePostViewControllerWithType:kGLArticlePostTypeVideo
-                                                                        menuId:menuId
-                                                                       subject:subject
-                                                                       content:content
                                                                       filePath:filePath];
 }
 
@@ -188,8 +177,33 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
     [[NCSDKManager getSharedInstance] setThemeColor:themeColorCSSString andTabBackgroundColor:backgroundCSSString];
 }
 
-- (void)setXButtonType:(NSInteger)type {
-    [[NCSDKManager getSharedInstance] setXButtonType:(GLXButtonType)type];
+- (void)initNaverIdLoginWithClientId:(NSString *)clientId andCleitnSecret:(NSString *)clientSecret {
+    NSLog(@"%@ %@",clientId, clientSecret);
+    [[NCSDKLoginManager getSharedInstance] naverIdInitWithClientId:clientId andSecretId:clientSecret];
+}
+
+- (void)naverIdLogin {
+    [self setGLRootViewController];
+    [[NCSDKLoginManager getSharedInstance] setNcSDKLoginManagerDelegate:self];
+    [[NCSDKLoginManager getSharedInstance] setIsNaverAppOauthEnable:NO];
+    [[NCSDKLoginManager getSharedInstance] setIsInAppOauthEnable:YES];
+    [[NCSDKLoginManager getSharedInstance] naverIdLogin];
+}
+
+- (void)naverIdLogout {
+    [[NCSDKLoginManager getSharedInstance] naverIdLogout];
+}
+
+- (BOOL)isNaverIdLogin {
+    return [[NCSDKLoginManager getSharedInstance] isNaverIdLogin];
+}
+
+- (void)getNaverIdProfile {
+    [[NCSDKLoginManager getSharedInstance] getNaverIdProfile];
+}
+
+- (void)setWidgetStartPosition:(BOOL)isLeft andY:(NSInteger)y {
+    [[NCSDKManager getSharedInstance] setWidgetStartPosition:isLeft andY:y];
 }
 
 #pragma mark - NCSDKDelegate
@@ -237,7 +251,20 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
 }
 
 - (void)ncSDKWidgetSuccessVideoRecord {
-    [self executeArticleWithMenuId:0 subject:@"" content:@""];
+    [self executeArticle];
+}
+
+#pragma mark - Naver Login
+- (void)ncSDKLogin {
+    if (self.glNaverIdLoginDelelgate) {
+        self.glNaverIdLoginDelelgate();
+    }
+}
+
+- (void)ncSDKGetProfile:(NSString *)result {
+    if (self.glNaverIdGetProfileDelegate) {
+        self.glNaverIdGetProfileDelegate(result);
+    }
 }
 
 @end
@@ -266,7 +293,7 @@ extern "C" {
     void _InitGLink(const char* NaverLoginClientId, const char* NaverLoginClientSecret, int cafeId ) {
         [vc setGLinkInfoWithNaverLoginClientId:CreateNSString(NaverLoginClientId)andNaverLoginClientSecret:CreateNSString(NaverLoginClientSecret)
                                      andCafeId:cafeId];
-//        [vc setChannelCode:@"ko"];
+        //        [vc setChannelCode:@"ko"];
     }
     
     void _InitGLinkForGlobal(const char* neoIdConsumerKey, int communityId, const char* channelCode) {
@@ -294,31 +321,23 @@ extern "C" {
     }
     
     void _ExecuteArticle(int articleId) {
-        [vc executeArticle:articleId];
+        [vc executeArticleWithArticleId:articleId];
     }
     
     void _SyncGameUserId(const char* gameUserId) {
         [vc syncGameUserId:CreateNSString(gameUserId)];
     }
     
-    void _ExecuteArticlePost(int menuId, const char* subject, const char* content) {
-        [vc executeArticleWithMenuId:menuId
-                             subject:CreateNSString(subject)
-                             content:CreateNSString(content)];
+    void _ExecuteArticlePost() {
+        [vc executeArticle];
     }
     
-    void _ExecuteArticlePostWithImage(int menuId, const char* subject, const char* content, const char* filePath) {
-        [vc executeArticleForImageWithMenuId:menuId
-                                     subject:CreateNSString(subject)
-                                     content:CreateNSString(content)
-                                    filePath:CreateNSString(filePath)];
+    void _ExecuteArticlePostWithImage(const char* filePath) {
+        [vc executeArticleForImageWithFilePath:CreateNSString(filePath)];
     }
     
-    void _ExecuteArticlePostWithVideo(int menuId, const char* subject, const char* content, const char* filePath) {
-        [vc executeArticleForVideoWithMenuId:menuId
-                                     subject:CreateNSString(subject)
-                                     content:CreateNSString(content)
-                                    filePath:CreateNSString(filePath)];
+    void _ExecuteArticlePostWithVideo(const char* filePath) {
+        [vc executeArticleForVideoWithFilePath:CreateNSString(filePath)];
         
     }
     
@@ -404,7 +423,35 @@ extern "C" {
         [vc setThemeColor:CreateNSString(themeColorCSSString) andTabBackgroundColor:CreateNSString(backgroundCSSString)];
     }
     
-    void _SetXButtonType(int xButtonType) {
-        [vc setXButtonType:xButtonType];
+    void _InitNaverLogin(const char* clientId, const char* clientSecret) {
+        [vc initNaverIdLoginWithClientId:CreateNSString(clientId) andCleitnSecret:CreateNSString(clientSecret)];
+    }
+    
+    void _Login() {
+        [vc naverIdLogin];
+    }
+    
+    void _Logout() {
+        [vc naverIdLogout];
+    }
+    
+    bool _IsLogin() {
+        return [vc isNaverIdLogin];
+    }
+    
+    void _GetProfile() {
+        [vc getNaverIdProfile];
+    }
+    
+    void _SetNaverIdLoginCallback(GLNaverIdLoginDelelgate glNaverIdLoginDelelgate) {
+        vc.glNaverIdLoginDelelgate = glNaverIdLoginDelelgate;
+    }
+    
+    void _SetNaverIdGetProfileDelegate(GLNaverIdGetProfileDelegate glNaverIdGetProfileDelegate) {
+        vc.glNaverIdGetProfileDelegate = glNaverIdGetProfileDelegate;
+    }
+    
+    void _SetWidgetStartPosition(BOOL isLeft, int positionY) {
+        [vc setWidgetStartPosition:isLeft andY:positionY];
     }
 }

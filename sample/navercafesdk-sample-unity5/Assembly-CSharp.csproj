@@ -48,9 +48,9 @@
      <Compile Include="Assets\NCSDK\Sample\SampleBehaviour.cs" />
      <Compile Include="Assets\NCSDK\Scripts\GLink.cs" />
      <Compile Include="Assets\NCSDK\Scripts\GLinkAndroid.cs" />
-     <Compile Include="Assets\NCSDK\Scripts\GLinkCommonDefine.cs" />
      <Compile Include="Assets\NCSDK\Scripts\GLinkConfig.cs" />
      <Compile Include="Assets\NCSDK\Scripts\GLinkLanguage.cs" />
+     <Compile Include="Assets\NCSDK\Scripts\GLinkNaverId.cs" />
      <Compile Include="Assets\NCSDK\Scripts\GLinkStatistics.cs" />
      <Compile Include="Assets\NCSDK\Scripts\GLinkiOS.cs" />
      <Compile Include="Assets\NCSDK\Scripts\IGLink.cs" />

@@ -6,11 +6,15 @@ using System.IO;
 
 public class SampleBehaviour : MonoBehaviour {
 	public void OnClickGlinkButton () {
+		// GLinkNaverId.sharedInstance().init("197CymaStozo7X5r2qR5", "evCgKH1kJL");
+		// GLinkNaverId.sharedInstance().login();		
+		GLink.sharedInstance().setWidgetStartPosition(false, 60);
 		GLink.sharedInstance().executeHome ();
 	}
 	
 	public void OnClickScreenShotButton () {
-		StartCoroutine (SaveScreenShot ());
+		GLinkNaverId.sharedInstance().getProfile();
+		// StartCoroutine (SaveScreenShot ());
 	}
 
 	// http://wiki.unity3d.com/index.php/ScreenCapture
@@ -36,7 +40,7 @@ public class SampleBehaviour : MonoBehaviour {
 		//Tell unity to delete the texture, by default it seems to keep hold of it and memory crashes will occur after too many screenshots.
 		DestroyObject(texture);
 
-		GLink.sharedInstance().executeArticlePostWithImage(-1, "", "", filePath);
+		GLink.sharedInstance().executeArticlePostWithImage(filePath);
 	}
 }
 

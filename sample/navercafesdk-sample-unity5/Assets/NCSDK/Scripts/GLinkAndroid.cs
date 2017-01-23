@@ -125,7 +125,7 @@ public class GLinkAndroid : IGLink {
 		currentActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
 		glinkClass = new AndroidJavaClass ("com.naver.glink.android.sdk.Glink");
 		glinkClass.CallStatic ("init", currentActivity, GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
-		glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId, GLinkConfig.Language);
+		glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
 
 		// 앱스킴 listener 사용 하려면 아래 주석을 풀어 주세요.
 		// glinkClass.CallStatic ("setOnClickAppSchemeBannerListener", new OnClickAppSchemeBannerListener ());
@@ -191,21 +191,21 @@ public class GLinkAndroid : IGLink {
 		#endif
 	}
 
-	public void executeArticlePost(int menuId, string subject, string content) {
+	public void executeArticlePost() {
 		#if UNITY_ANDROID
-		glinkClass.CallStatic ("startWrite", currentActivity, menuId, subject, content);
+		glinkClass.CallStatic ("startWrite", currentActivity);
 		#endif
 	}
 
-	public void executeArticlePostWithImage(int menuId, string subject, string content, string filePath) {
+	public void executeArticlePostWithImage(string filePath) {
 		#if UNITY_ANDROID
-		glinkClass.CallStatic ("startImageWrite", currentActivity, menuId, subject, content, "file://" + filePath);
+		glinkClass.CallStatic ("startImageWrite", currentActivity, "file://" + filePath);
 		#endif 
 	}
 
-	public void executeArticlePostWithVideo(int menuId, string subject, string content, string filePath) {
+	public void executeArticlePostWithVideo(string filePath) {
 		#if UNITY_ANDROID
-		glinkClass.CallStatic ("startVideoWrite", currentActivity, menuId, subject, content, "file://" + filePath);
+		glinkClass.CallStatic ("startVideoWrite", currentActivity, "file://" + filePath);
 		#endif
 	}
 
@@ -272,10 +272,7 @@ public class GLinkAndroid : IGLink {
 		#endif
 	}
 
-	public void setXButtonType(GLXButtonType xButtonType) {
-		#if UNITY_ANDROID 
-		bool isClose = xButtonType == GLXButtonType.kGLXButtonTypeClose ? true : false;
-		glinkClass.CallStatic("setXButtonTypeClose", currentActivity, isClose);
-		#endif
+	public void setWidgetStartPosition(bool isLeft, int positionY) {
+
 	}
 }

@@ -22,19 +22,19 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public static extern void _InitGLink(string consumerKey, string consumerSecret, int cafeId);
 
 	[DllImport("__Internal")]
-	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int communityId, string language);
+	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int communityId);
 
 	[DllImport("__Internal")]
 	public static extern void _ExecuteMain();
 	
 	[DllImport("__Internal")]
-	public static extern void _ExecuteArticlePost(int menuId, string subject, string content);
+	public static extern void _ExecuteArticlePost();
 	
 	[DllImport("__Internal")]
-	public static extern void _ExecuteArticlePostWithImage(int menuId, string subject, string content, string filePath);
+	public static extern void _ExecuteArticlePostWithImage(string filePath);
 	
 	[DllImport("__Internal")]
-	public static extern void _ExecuteArticlePostWithVideo(int menuId, string subject, string content, string filePath);
+	public static extern void _ExecuteArticlePostWithVideo(string filePath);
 	
 	[DllImport("__Internal")]
 	public static extern void _ExecuteNotice();
@@ -92,11 +92,10 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	[DllImport("__Internal")]
 	private static extern void _SetThemeColor(string themeColorCSSString, string backgroundCSSString);
-
+	
 	[DllImport("__Internal")]
-	private static extern void _SetXButtonType(GLXButtonType xButtonType);
-
-
+	private static extern void _SetWidgetStartPosition(bool isLeft, int positionY);
+	
 	[DllImport("__Internal")]
 	public static extern void _ExecuteEtc();
 	
@@ -160,7 +159,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public GLinkiOS() {
 		#if UNITY_IPHONE
 		_InitGLink(GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
-//		_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId, GLinkConfig.Language);
+		_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
 
 		//set callback funcs
 		_SetSDKDidLoadDelegate(_NCSDKDidLoadCallback);
@@ -210,21 +209,21 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		#endif
 	}
 	
-	public void executeArticlePost(int menuId, string subject, string content) {
+	public void executeArticlePost() {
 		#if UNITY_IPHONE
-		_ExecuteArticlePost(menuId, subject, content);
+		_ExecuteArticlePost();
 		#endif
 	}
 	
-	public void executeArticlePostWithImage(int menuId, string subject, string content, string filePath) {
+	public void executeArticlePostWithImage(string filePath) {
 		#if UNITY_IPHONE
-		_ExecuteArticlePostWithImage(menuId, subject, content, filePath);
+		_ExecuteArticlePostWithImage(filePath);
 		#endif
 	}
 	
-	public void executeArticlePostWithVideo(int menuId, string subject, string content, string filePath) {
+	public void executeArticlePostWithVideo(string filePath) {
 		#if UNITY_IPHONE
-		_ExecuteArticlePostWithVideo(menuId, subject, content, filePath);
+		_ExecuteArticlePostWithVideo(filePath);
 		#endif
 	}
 	
@@ -289,9 +288,9 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		#endif
 	}
 
-	public void setXButtonType(GLXButtonType xButtonType) {
-		#if UNITY_IPHONE 
-		_SetXButtonType(xButtonType);
+	public void setWidgetStartPosition(bool isLeft, int positionY) {
+		#if UNITY_IPHONE
+		_SetWidgetStartPosition(isLeft, positionY);
 		#endif
 	}
 }

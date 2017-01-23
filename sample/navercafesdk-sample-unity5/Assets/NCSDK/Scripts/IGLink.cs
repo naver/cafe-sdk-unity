@@ -30,11 +30,11 @@ public interface IGLink
 	// 특정 게시글로 바로 시작.
 	void executeArticle (int articleId);
 	
-	void executeArticlePost (int menuId, string subject, string content);
+	void executeArticlePost ();
 	
-	void executeArticlePostWithImage (int menuId, string subject, string content, string filePath);
+	void executeArticlePostWithImage (string filePath);
 	
-	void executeArticlePostWithVideo (int menuId, string subject, string content, string filePath);
+	void executeArticlePostWithVideo (string filePath);
 	
 	void syncGameUserId (string gameUserId);
 	
@@ -56,5 +56,5 @@ public interface IGLink
 
 	void setThemeColor(string themeColorCSSString, string backgroundCSSString);
 
-	void setXButtonType(GLXButtonType xButtonType);
+	void setWidgetStartPosition(bool isLeft, int positionY);
 }
