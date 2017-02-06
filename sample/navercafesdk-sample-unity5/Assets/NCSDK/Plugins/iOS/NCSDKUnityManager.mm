@@ -142,6 +142,7 @@ typedef void (*GLNaverIdGetProfileDelegate)(NSString *profileResult);
 }
 
 - (void)startWidget {
+    [self setGLRootViewController];
     [[NCSDKManager getSharedInstance] startWidget];
 }
 
