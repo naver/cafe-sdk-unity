@@ -44,6 +44,8 @@ public interface IGLink
 	
 	void setUseWidgetVideoRecord (bool useVideoRecord);
 		 
+	void setShowWidgetWhenUnloadSDK (bool useWidget);
+
 	void executeMore ();
 	
 	string getCurrentChannelCode ();

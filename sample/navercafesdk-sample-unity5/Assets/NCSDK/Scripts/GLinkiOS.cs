@@ -65,26 +65,37 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKDidLoadDelegate(NCSDKDidLoadDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKDidUnLoadDelegate(NCSDKDidUnLoadDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKJoinedCafeDelegate(NCSDKJoinedCafeDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKPostedArticleAtMenuDelegate(NCSDKPostedArticleAtMenuDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKPostedCommentAtArticleDelegate(NCSDKPostedCommentAtArticleDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKWidgetPostAriticleWithImageCallback(NCSDKWidgetPostAriticleWithImageDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKDidVoteAtArticleDelegate(NCSDKDidVoteAtArticleDelegate callback);
 	
 	[DllImport("__Internal")]
 	private static extern void _StartWidget();
+
 	[DllImport("__Internal")]
 	private static extern void _StopWidget();
+
 	[DllImport("__Internal")]
 	private static extern void _SetUseWidgetVideoRecord(bool useVideoRecord);
 	
+	[DllImport("__Internal")]
+	private static extern void _SetShowWidgetWhenUnloadSDK(bool useWidget);
+
 	[DllImport("__Internal")]
 	private static extern void _SetChannelCode(string channelCode);
 	
@@ -253,7 +264,13 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		_SetUseWidgetVideoRecord(useVideoRecord);
 		#endif
 	}
-	
+		
+	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
+		#if UNITY_IPHONE 
+		_SetShowWidgetWhenUnloadSDK(useWidget);		
+		#endif
+	}
+
 	public string getCurrentChannelCode () {
 		string code = null;
 		#if UNITY_IPHONE 
