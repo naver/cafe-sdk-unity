@@ -84,9 +84,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	private static extern void _StopWidget();
 	[DllImport("__Internal")]
 	private static extern void _SetUseWidgetVideoRecord(bool useVideoRecord);
-	[DllImport("__Internal")]
-	private static extern void _SetShowWidgetWhenUnloadSDK(bool useWidget);
-
+	
 	[DllImport("__Internal")]
 	private static extern void _SetChannelCode(string channelCode);
 	
@@ -256,12 +254,6 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		#endif
 	}
 	
-	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
-		#if UNITY_IPHONE 
-		_SetShowWidgetWhenUnloadSDK(useWidget);		
-		#endif
-	}
-
 	public string getCurrentChannelCode () {
 		string code = null;
 		#if UNITY_IPHONE 

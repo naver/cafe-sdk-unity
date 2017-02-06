@@ -137,10 +137,6 @@ typedef void (*GLNaverIdGetProfileDelegate)(NSString *profileResult);
     [[NCSDKManager getSharedInstance] setUseWidgetVideoRecord:useVideo];
 }
 
-- (void)setShowWidgetWhenUnloadSDK:(BOOL)useWidget {
-    [[NCSDKManager getSharedInstance] setShowWidgetWhenUnloadSDK:useWidget];
-}
-
 - (void)startWidget {
     [self setGLRootViewController];
     [[NCSDKManager getSharedInstance] startWidget];
@@ -394,10 +390,6 @@ extern "C" {
     
     void _SetUseWidgetVideoRecord(BOOL useVideo) {
         [vc setUseWidgetVideoRecord:useVideo];
-    }
-    
-    void _SetShowWidgetWhenUnloadSDK(BOOL useWidget) {
-        [vc setShowWidgetWhenUnloadSDK:useWidget];
     }
     
     const char* _GetCurrentChannelCode() {

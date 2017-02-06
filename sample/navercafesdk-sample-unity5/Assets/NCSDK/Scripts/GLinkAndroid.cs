@@ -239,12 +239,6 @@ public class GLinkAndroid : IGLink {
 		#endif
 	}
 	
-	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
-		#if UNITY_ANDROID 
-		glinkClass.CallStatic ("showWidgetWhenUnloadSdk", currentActivity, useWidget);
-		#endif
-	}
-
 	public string getCurrentChannelCode () {
 		string code = null;
 		#if UNITY_ANDROID 
