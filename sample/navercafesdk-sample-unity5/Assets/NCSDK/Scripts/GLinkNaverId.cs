@@ -81,15 +81,21 @@ public class GLinkNaverIdiOS : IGLinkNaverId {
 	}
 
 	public void init(string clientId, string clientSecret) {
-		_InitNaverLogin(clientId, clientSecret);
+		#if UNITY_IPHONE
+			_InitNaverLogin(clientId, clientSecret);
+		#endif
 	}
 
 	public void login() {
-		_Login();
+		#if UNITY_IPHONE
+			_Login();
+		#endif
 	}
 
 	public void logout() {
-		_Logout();
+		#if UNITY_IPHONE
+			_Logout();
+		#endif
 	}
 
 	public bool isLogin() {
@@ -101,29 +107,73 @@ public class GLinkNaverIdiOS : IGLinkNaverId {
 	}
 
 	public void getProfile() {
-		_GetProfile();
+		#if UNITY_IPHONE
+			_GetProfile();
+		#endif
 	}
 }
 
 
 public class GLinkNaverIdAndroid : IGLinkNaverId {
-	public void init(string clientId, string clientSecret) {
 
+	#if UNITY_ANDROID
+	AndroidJavaClass delegateClass = null;
+	AndroidJavaObject currentActivity = null;
+
+	class OnLoggedInListener : AndroidJavaProxy {
+		public OnLoggedInListener () : base("com.naver.glink.android.sdk.Glink$OnLoggedInListener") { /* empty. */ }
+
+		void onLoggedIn (bool success) {
+			// TODO: login callback.
+		}
+	}
+
+	class OnGetProfileListener : AndroidJavaProxy {
+		public OnGetProfileListener () : base("com.naver.glink.android.sdk.NaverIdLogin$OnGetProfileListener") { /* empty. */ }
+
+		void onResult(string jsonString) {
+			// TODO: get profile callback.
+		}
+	}
+	#endif
+
+	public GLinkNaverIdAndroid () {
+		#if UNITY_ANDROID
+		delegateClass = new AndroidJavaClass ("com.naver.glink.android.sdk.NaverIdLogin");
+		currentActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
+		#endif
+	}
+
+	public void init(string clientId, string clientSecret) {
+		#if UNITY_ANDROID
+		AndroidJavaClass glinkClass = new AndroidJavaClass ("com.naver.glink.android.sdk.Glink");
+		glinkClass.CallStatic ("init", currentActivity, clientId, clientSecret, -1);
+		#endif
 	}
 
 	public void login() {
-
+		#if UNITY_ANDROID
+		delegateClass.CallStatic ("login", currentActivity, new OnLoggedInListener());
+		#endif
 	}
 
 	public void logout() {
-		
+		#if UNITY_ANDROID
+		delegateClass.CallStatic ("logout", currentActivity);
+		#endif
 	}
 
 	public bool isLogin() {
-		return true;
+		#if UNITY_ANDROID 
+		return delegateClass.CallStatic<bool> ("isLogin", currentActivity);
+		#elif
+		return false;
+		#endif
 	}
 
 	public void getProfile() {
-		
+		#if UNITY_ANDROID
+		delegateClass.CallStatic ("getProfile", currentActivity, new OnGetProfileListener());
+		#endif
 	}
 }

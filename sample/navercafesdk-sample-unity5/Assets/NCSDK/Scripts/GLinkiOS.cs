@@ -94,7 +94,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	private static extern void _SetThemeColor(string themeColorCSSString, string backgroundCSSString);
 	
 	[DllImport("__Internal")]
-	private static extern void _SetWidgetStartPosition(bool isLeft, int positionY);
+	private static extern void _SetWidgetStartPosition(bool isLeft, int heightPercentage);
 	
 	[DllImport("__Internal")]
 	public static extern void _ExecuteEtc();
@@ -288,9 +288,9 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		#endif
 	}
 
-	public void setWidgetStartPosition(bool isLeft, int positionY) {
+	public void setWidgetStartPosition(bool isLeft, int heightPercentage) {
 		#if UNITY_IPHONE
-		_SetWidgetStartPosition(isLeft, positionY);
+		_SetWidgetStartPosition(isLeft, heightPercentage);
 		#endif
 	}
 }
