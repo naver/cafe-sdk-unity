@@ -56,5 +56,5 @@ public interface IGLink
 
 	void setThemeColor(string themeColorCSSString, string backgroundCSSString);
 
-	void setWidgetStartPosition(bool isLeft, int positionY);
+	void setWidgetStartPosition(bool isLeft, int heightPercentage);
 }
