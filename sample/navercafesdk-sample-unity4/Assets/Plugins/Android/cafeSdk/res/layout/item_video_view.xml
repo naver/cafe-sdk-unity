@@ -104,7 +104,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textSize="16dp"
-        android:text="@string/unable_load_videos"
         android:textColor="@color/white1"
         android:textStyle="bold"/>
   </LinearLayout>

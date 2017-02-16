@@ -43,7 +43,6 @@
           android:layout_marginTop="16dp"
           android:textSize="16dp"
           android:textColor="@color/white1"
-          android:text="@string/network_error"
           android:textStyle="bold"/>
 
       <Button
