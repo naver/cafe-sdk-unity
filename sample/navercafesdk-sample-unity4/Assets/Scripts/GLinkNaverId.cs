@@ -63,7 +63,7 @@ public class GLinkNaverIdiOS : IGLinkNaverId {
 	delegate void NaverIdLoginDelelgate();
 	[MonoPInvokeCallback(typeof(NaverIdLoginDelelgate))]
 	public static void _NaverIdLoginCallback () {
-		
+		Debug.Log("Naver Login Success");
 	}
 
 	delegate void NaverIdGetProfileDelegate(string result);
@@ -165,9 +165,9 @@ public class GLinkNaverIdAndroid : IGLinkNaverId {
 	public bool isLogin() {
 		#if UNITY_ANDROID 
 		return delegateClass.CallStatic<bool> ("isLogin", currentActivity);
-		#elif
-		return false;
 		#endif
+
+		return false;
 	}
 
 	public void getProfile() {

@@ -1,6 +1,5 @@
 //
-//  GLContainer.h
-//  glink_sdk
+//  NCSDKManager.h
 //
 //  Created by Gyeonghwan on 2015. 10. 5..
 //  Copyright (c) 2015년 Naver. All rights reserved.
@@ -122,9 +121,8 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 
 
 #pragma mark - private function
-+ (void)willCloseSharedInstance;
-+ (void)willMinimizeSharedInstance;
-- (id)navercafeRootViewController;
+- (void)sdkWillClose;
+- (id)sdkRootViewController;
 - (void)dismissViewController:(id)viewController;
 - (void)dismissTopViewController;
 - (void)presentViewController:(id)viewController;

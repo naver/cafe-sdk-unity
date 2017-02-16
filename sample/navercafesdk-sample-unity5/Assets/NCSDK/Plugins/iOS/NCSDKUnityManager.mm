@@ -2,7 +2,7 @@
 #import "UnityAppController.h"
 #import <NaverCafeSDK/NCSDKManager.h>
 #import <NaverCafeSDK/NCSDKStatistics.h>
-#import <NaverCafeSDK/NCSDKLoginManager.h>
+#import <NaverCafeSDK/NCNaverLoginManager.h>
 
 typedef void (*GLSDKDidLoadDelegate)();
 typedef void (*GLSDKDidUnLoadDelegate)();
@@ -14,7 +14,7 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
 typedef void (*GLNaverIdLoginDelelgate)();
 typedef void (*GLNaverIdGetProfileDelegate)(NSString *profileResult);
 
-@interface GLinkViewController : UIViewController <NCSDKManagerDelegate, NCSDKLoginManagerDelegate>
+@interface GLinkViewController : UIViewController <NCSDKManagerDelegate, NCNaverLoginManagerDelegate>
 @property (nonatomic, strong) UIView *mainView;
 @property (nonatomic, strong) UIViewController *mainViewcontroller;
 
@@ -179,28 +179,25 @@ typedef void (*GLNaverIdGetProfileDelegate)(NSString *profileResult);
 }
 
 - (void)initNaverIdLoginWithClientId:(NSString *)clientId andCleitnSecret:(NSString *)clientSecret {
-    NSLog(@"%@ %@",clientId, clientSecret);
-    [[NCSDKLoginManager getSharedInstance] naverIdInitWithClientId:clientId andSecretId:clientSecret];
+    [[NCNaverLoginManager getSharedInstance] naverIdInitWithClientId:clientId andSecretId:clientSecret];
 }
 
 - (void)naverIdLogin {
     [self setGLRootViewController];
-    [[NCSDKLoginManager getSharedInstance] setNcSDKLoginManagerDelegate:self];
-    [[NCSDKLoginManager getSharedInstance] setIsNaverAppOauthEnable:NO];
-    [[NCSDKLoginManager getSharedInstance] setIsInAppOauthEnable:YES];
-    [[NCSDKLoginManager getSharedInstance] naverIdLogin];
+    [[NCNaverLoginManager getSharedInstance] setNcNaverLoginManagerDelegate:self];
+    [[NCNaverLoginManager getSharedInstance] naverIdLogin];
 }
 
 - (void)naverIdLogout {
-    [[NCSDKLoginManager getSharedInstance] naverIdLogout];
+    [[NCNaverLoginManager getSharedInstance] naverIdLogout];
 }
 
 - (BOOL)isNaverIdLogin {
-    return [[NCSDKLoginManager getSharedInstance] isNaverIdLogin];
+    return [[NCNaverLoginManager getSharedInstance] isNaverIdLogin];
 }
 
 - (void)getNaverIdProfile {
-    [[NCSDKLoginManager getSharedInstance] getNaverIdProfile];
+    [[NCNaverLoginManager getSharedInstance] getNaverIdProfile];
 }
 
 - (void)setWidgetStartPosition:(BOOL)isLeft andY:(NSInteger)y {
@@ -256,7 +253,7 @@ typedef void (*GLNaverIdGetProfileDelegate)(NSString *profileResult);
 }
 
 #pragma mark - Naver Login
-- (void)ncSDKLogin {
+- (void)ncSDKLoginCallback {
     if (self.glNaverIdLoginDelelgate) {
         self.glNaverIdLoginDelelgate();
     }
@@ -399,7 +396,7 @@ extern "C" {
     void _SetShowWidgetWhenUnloadSDK(BOOL useWidget) {
         [vc setShowWidgetWhenUnloadSDK:useWidget];
     }
-
+    
     const char* _GetCurrentChannelCode() {
         return CreateNSStrintToChar([[vc currentChannelCode] UTF8String]);
     }
