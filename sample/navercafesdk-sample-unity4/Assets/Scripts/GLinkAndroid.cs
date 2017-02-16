@@ -22,7 +22,7 @@ public class GLinkAndroid : IGLink {
 		public OnClickAppSchemeBannerListener () : base("com.naver.glink.android.sdk.Glink$OnClickAppSchemeBannerListener") { /* empty. */ }
 
 		void onClickAppSchemeBanner (string appScheme) {
-//			showToast ("tapped:" + appScheme);
+			showToast ("tapped:" + appScheme);
 		}
 	}
 
@@ -30,7 +30,7 @@ public class GLinkAndroid : IGLink {
 		public OnSdkStartedListener () : base("com.naver.glink.android.sdk.Glink$OnSdkStartedListener") { /* empty. */ }
 
 		void onSdkStarted () {
-//			showToast ("sdk start.");
+			showToast ("sdk start.");
 		}
 	}
 
@@ -38,7 +38,7 @@ public class GLinkAndroid : IGLink {
 		public OnSdkStoppedListener () : base("com.naver.glink.android.sdk.Glink$OnSdkStoppedListener") { /* empty. */ }
 
 		void onSdkStopped () {
-//			showToast ("sdk stop.");
+			showToast ("sdk stop.");
 		}
 	}
 
@@ -54,7 +54,7 @@ public class GLinkAndroid : IGLink {
 		public OnJoinedListener () : base("com.naver.glink.android.sdk.Glink$OnJoinedListener") { /* empty. */ }
 
 		void onJoined() {
-//			showToast ("카페에 가입하였습니다. (from listener)");
+			showToast ("카페에 가입하였습니다. (from listener)");
 		}
 	}
 
@@ -62,8 +62,8 @@ public class GLinkAndroid : IGLink {
 		public OnPostedArticleListener () : base("com.naver.glink.android.sdk.Glink$OnPostedArticleListener") { /* empty. */ }
 
 		void onPostedArticle(int menuId, int imageCount, int videoCount) {
-//			String message = String.Format ("게시글이 작성되었습니다. (from listener, 메뉴: {0})", menuId);
-//			showToast (message);
+			String message = String.Format ("게시글이 작성되었습니다. (from listener, 메뉴: {0})", menuId);
+			showToast (message);
 		}
 	}
 
@@ -71,8 +71,8 @@ public class GLinkAndroid : IGLink {
 		public OnPostedCommentListener () : base("com.naver.glink.android.sdk.Glink$OnPostedCommentListener") { /* empty. */ }
 
 		void onPostedComment(int articleId) {
-//			String message = String.Format ("댓글이 작성되었습니다. (from listener, 게시글: {0})", articleId);
-//			showToast (message);
+			String message = String.Format ("댓글이 작성되었습니다. (from listener, 게시글: {0})", articleId);
+			showToast (message);
 		}
 	}
 
@@ -98,7 +98,7 @@ public class GLinkAndroid : IGLink {
 
 		void onRecordFinished(String uri) {
 			GLinkAndroid glink = (GLinkAndroid) GLink.sharedInstance ();
-			glink.executeArticlePostWithVideo (-1, "", "", uri);
+			glink.executeArticlePostWithVideo (uri);
 		}
 	}
 
@@ -106,17 +106,17 @@ public class GLinkAndroid : IGLink {
 		public OnVotedListener () : base("com.naver.glink.android.sdk.Glink$OnVotedListener") { /* empty. */ }
 
 		void onVoted(int articleId) {
-//			String message = String.Format ("on voted. (from listener, 게시글: {0})", articleId);
-//			showToast (message);
+			String message = String.Format ("on voted. (from listener, 게시글: {0})", articleId);
+			showToast (message);
 		}
 	}
 
 	static void showToast(string message) {
-		var activity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
-		activity.Call ("runOnUiThread", new AndroidJavaRunnable (() => {
-			AndroidJavaObject toast = new AndroidJavaClass ("android.widget.Toast").CallStatic<AndroidJavaObject>("makeText", activity, message, 1);
-			toast.Call ("show");
-		}));
+//		var activity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
+//		activity.Call ("runOnUiThread", new AndroidJavaRunnable (() => {
+//			AndroidJavaObject toast = new AndroidJavaClass ("android.widget.Toast").CallStatic<AndroidJavaObject>("makeText", activity, message, 1);
+//			toast.Call ("show");
+//		}));
 	}
 	#endif
 
@@ -125,7 +125,7 @@ public class GLinkAndroid : IGLink {
 		currentActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
 		glinkClass = new AndroidJavaClass ("com.naver.glink.android.sdk.Glink");
 		glinkClass.CallStatic ("init", currentActivity, GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
-		glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId, GLinkConfig.Language);
+		glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
 
 		// 앱스킴 listener 사용 하려면 아래 주석을 풀어 주세요.
 		// glinkClass.CallStatic ("setOnClickAppSchemeBannerListener", new OnClickAppSchemeBannerListener ());
@@ -191,21 +191,21 @@ public class GLinkAndroid : IGLink {
 		#endif
 	}
 
-	public void executeArticlePost(int menuId, string subject, string content) {
+	public void executeArticlePost() {
 		#if UNITY_ANDROID
-		glinkClass.CallStatic ("startWrite", currentActivity, menuId, subject, content);
+		glinkClass.CallStatic ("startWrite", currentActivity);
 		#endif
 	}
 
-	public void executeArticlePostWithImage(int menuId, string subject, string content, string filePath) {
+	public void executeArticlePostWithImage(string filePath) {
 		#if UNITY_ANDROID
-		glinkClass.CallStatic ("startImageWrite", currentActivity, menuId, subject, content, "file://" + filePath);
+		glinkClass.CallStatic ("startImageWrite", currentActivity, "file://" + filePath);
 		#endif 
 	}
 
-	public void executeArticlePostWithVideo(int menuId, string subject, string content, string filePath) {
+	public void executeArticlePostWithVideo(string filePath) {
 		#if UNITY_ANDROID
-		glinkClass.CallStatic ("startVideoWrite", currentActivity, menuId, subject, content, "file://" + filePath);
+		glinkClass.CallStatic ("startVideoWrite", currentActivity, "file://" + filePath);
 		#endif
 	}
 
@@ -238,7 +238,7 @@ public class GLinkAndroid : IGLink {
 		glinkClass.CallStatic ("setUseVideoRecord", currentActivity, useVideoRecord);
 		#endif
 	}
-	
+
 	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
 		#if UNITY_ANDROID 
 		glinkClass.CallStatic ("showWidgetWhenUnloadSdk", currentActivity, useWidget);
@@ -272,10 +272,9 @@ public class GLinkAndroid : IGLink {
 		#endif
 	}
 
-	public void setXButtonType(GLXButtonType xButtonType) {
+	public void setWidgetStartPosition(bool isLeft, int heightPercentage) {
 		#if UNITY_ANDROID 
-		bool isClose = xButtonType == GLXButtonType.kGLXButtonTypeClose ? true : false;
-		glinkClass.CallStatic("setXButtonTypeClose", currentActivity, isClose);
+		glinkClass.CallStatic ("setWidgetStartPosition", currentActivity, isLeft, heightPercentage);
 		#endif
 	}
 }

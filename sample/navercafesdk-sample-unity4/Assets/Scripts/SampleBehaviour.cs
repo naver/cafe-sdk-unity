@@ -36,7 +36,7 @@ public class SampleBehaviour : MonoBehaviour {
 		//Tell unity to delete the texture, by default it seems to keep hold of it and memory crashes will occur after too many screenshots.
 		DestroyObject(texture);
 
-		GLink.sharedInstance().executeArticlePostWithImage(10, "스크린샷!!", "제 점수는요~", filePath);
+		GLink.sharedInstance().executeArticlePostWithImage(filePath);
 	}
 }
 

@@ -22,19 +22,19 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public static extern void _InitGLink(string consumerKey, string consumerSecret, int cafeId);
 
 	[DllImport("__Internal")]
-	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int communityId, string language);
+	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int communityId);
 
 	[DllImport("__Internal")]
 	public static extern void _ExecuteMain();
 	
 	[DllImport("__Internal")]
-	public static extern void _ExecuteArticlePost(int menuId, string subject, string content);
+	public static extern void _ExecuteArticlePost();
 	
 	[DllImport("__Internal")]
-	public static extern void _ExecuteArticlePostWithImage(int menuId, string subject, string content, string filePath);
+	public static extern void _ExecuteArticlePostWithImage(string filePath);
 	
 	[DllImport("__Internal")]
-	public static extern void _ExecuteArticlePostWithVideo(int menuId, string subject, string content, string filePath);
+	public static extern void _ExecuteArticlePostWithVideo(string filePath);
 	
 	[DllImport("__Internal")]
 	public static extern void _ExecuteNotice();
@@ -65,41 +65,46 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKDidLoadDelegate(NCSDKDidLoadDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKDidUnLoadDelegate(NCSDKDidUnLoadDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKJoinedCafeDelegate(NCSDKJoinedCafeDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKPostedArticleAtMenuDelegate(NCSDKPostedArticleAtMenuDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKPostedCommentAtArticleDelegate(NCSDKPostedCommentAtArticleDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKWidgetPostAriticleWithImageCallback(NCSDKWidgetPostAriticleWithImageDelegate callback);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKDidVoteAtArticleDelegate(NCSDKDidVoteAtArticleDelegate callback);
 	
 	[DllImport("__Internal")]
 	private static extern void _StartWidget();
+
 	[DllImport("__Internal")]
 	private static extern void _StopWidget();
+
 	[DllImport("__Internal")]
 	private static extern void _SetUseWidgetVideoRecord(bool useVideoRecord);
+	
 	[DllImport("__Internal")]
 	private static extern void _SetShowWidgetWhenUnloadSDK(bool useWidget);
 
 	[DllImport("__Internal")]
 	private static extern void _SetChannelCode(string channelCode);
-
-	[DllImport("__Internal")]
-	private static extern void _ExecuteCaptureScreenshopAndPostArticle();
 	
 	[DllImport("__Internal")]
 	private static extern void _SetThemeColor(string themeColorCSSString, string backgroundCSSString);
-
+	
 	[DllImport("__Internal")]
-	private static extern void _SetXButtonType(GLXButtonType xButtonType);
-
-
+	private static extern void _SetWidgetStartPosition(bool isLeft, int heightPercentage);
+	
 	[DllImport("__Internal")]
 	public static extern void _ExecuteEtc();
 	
@@ -146,10 +151,11 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		GameObject obj = GameObject.Find (name);
 		if (obj == null) {
 			obj = new GameObject ("CafeSdkController");
-			obj.AddComponent<GLinkiOS> ();
+			obj.AddComponent<SampleBehaviour> ();
 		}
 		
-		_ExecuteCaptureScreenshopAndPostArticle ();
+		SampleBehaviour behaviour = obj.GetComponent<SampleBehaviour> ();
+		behaviour.OnClickScreenShotButton ();
 	}
 	
 	delegate void NCSDKDidVoteAtArticleDelegate(int articleId);
@@ -157,34 +163,12 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public static void _NCSDKDidVoteAtArticleCallback (int articleId) {
 //		_ShowMessageToast ("Did Vote at " + articleId);
 	}
-	
-	
-	IEnumerator CoFunction () {
-		yield return new WaitForEndOfFrame();
-	}
-	
-	public void executeCaptureScreenshopAndPostArticle(string dummy) {
-		// For iOS , For Widget
-		// Game ScreenShot Code
-		StartCoroutine (this.CoFunction ());
-		
-		Texture2D image = new Texture2D (Screen.width, Screen.height, TextureFormat.RGB24, false);
-		image.ReadPixels (new Rect (0, 0, Screen.width, Screen.height), 0, 0, true);
-		image.Apply ();
-		
-		byte[] bytes = image.EncodeToPNG();
-		string path = Application.persistentDataPath + "/GLShareImage.png";
-		File.WriteAllBytes(path, bytes);		
-		
-		GLink.sharedInstance().executeArticlePostWithImage(5, "", "", path);
-		
-	}
 	#endif
 	
 	public GLinkiOS() {
 		#if UNITY_IPHONE
 		_InitGLink(GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
-//		_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId, GLinkConfig.Language);
+		_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
 
 		//set callback funcs
 		_SetSDKDidLoadDelegate(_NCSDKDidLoadCallback);
@@ -234,21 +218,21 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		#endif
 	}
 	
-	public void executeArticlePost(int menuId, string subject, string content) {
+	public void executeArticlePost() {
 		#if UNITY_IPHONE
-		_ExecuteArticlePost(menuId, subject, content);
+		_ExecuteArticlePost();
 		#endif
 	}
 	
-	public void executeArticlePostWithImage(int menuId, string subject, string content, string filePath) {
+	public void executeArticlePostWithImage(string filePath) {
 		#if UNITY_IPHONE
-		_ExecuteArticlePostWithImage(menuId, subject, content, filePath);
+		_ExecuteArticlePostWithImage(filePath);
 		#endif
 	}
 	
-	public void executeArticlePostWithVideo(int menuId, string subject, string content, string filePath) {
+	public void executeArticlePostWithVideo(string filePath) {
 		#if UNITY_IPHONE
-		_ExecuteArticlePostWithVideo(menuId, subject, content, filePath);
+		_ExecuteArticlePostWithVideo(filePath);
 		#endif
 	}
 	
@@ -280,7 +264,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		_SetUseWidgetVideoRecord(useVideoRecord);
 		#endif
 	}
-	
+		
 	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
 		#if UNITY_IPHONE 
 		_SetShowWidgetWhenUnloadSDK(useWidget);		
@@ -313,9 +297,9 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		#endif
 	}
 
-	public void setXButtonType(GLXButtonType xButtonType) {
-		#if UNITY_IPHONE 
-		_SetXButtonType(xButtonType);
+	public void setWidgetStartPosition(bool isLeft, int heightPercentage) {
+		#if UNITY_IPHONE
+		_SetWidgetStartPosition(isLeft, heightPercentage);
 		#endif
 	}
 }

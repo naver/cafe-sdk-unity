@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <include
+        android:id="@+id/thumbnail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        layout="@layout/item_articles_article_thumbnail"/>
+
+    <TextView
+        android:id="@+id/subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="12dp"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="10dp"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/error_or_loading_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:background="@color/white3"
+      android:orientation="vertical"
+      android:clickable="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gl_ls_icon_defaultimg"/>
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="13dp"
+        android:textColor="#7e7e7e"
+        android:text="Deleted"/>
+  </LinearLayout>
+</FrameLayout>

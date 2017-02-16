@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="22dp"
+    android:paddingTop="14dp"
+    android:paddingRight="22dp"
+    android:orientation="vertical">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="12dp"
+      android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/writer_profile"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp">
+
+      <ImageView
+          android:id="@+id/writer_profile_image"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_alignParentRight="true"
+          android:src="@drawable/gl_icon_profile"/>
+
+      <ImageView
+          android:id="@+id/writer_profile_image_stroke"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_alignParentRight="true"
+          android:src="@drawable/gl_thumb_personal_profile_stroke"/>
+
+      <ImageView
+          android:id="@+id/staff_image"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/writer_profile_image"
+          android:layout_alignRight="@+id/writer_profile_image"
+          android:src="@drawable/gl_ls_icon_master_small"/>
+    </RelativeLayout>
+
+    <ViewStub
+        android:id="@+id/etc_items"
+        android:inflatedId="@+id/etc_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/writer_profile"
+        android:layout="@layout/item_article_comment_etc_items"/>
+
+    <TextView
+        android:id="@+id/contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/writer_profile"
+        android:layout_below="@+id/etc_items"
+        android:textColor="@color/gray7"
+        android:textIsSelectable="true"
+        android:textSize="13dp"
+        android:autoLink="web"/>
+
+    <TextView
+        android:id="@+id/more_replies"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="19dp"
+        android:layout_toRightOf="@+id/writer_profile"
+        android:layout_below="@+id/contents"
+        android:paddingLeft="19dp"
+        android:background="@drawable/more_replies_background"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/gl_ls_icon_replyviews"
+        android:drawablePadding="9dp"
+        android:textColor="@color/black2"
+        android:textStyle="bold"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/reply"
+        android:layout_width="@dimen/comment_reply_width"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:background="@drawable/reply_background"
+        android:textColor="@color/gray7"
+        android:textSize="11dp"
+        android:text="@string/reply"/>
+  </RelativeLayout>
+
+  <View
+      android:id="@+id/comment_divider"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginTop="12dp"
+      android:background="@color/black2_opacity_5"/>
+</LinearLayout>
