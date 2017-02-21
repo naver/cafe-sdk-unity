@@ -151,11 +151,11 @@ GLink.sharedInstance().setUseWidgetVideoRecord(true);
 
 ```
 
-v.2.2.0
+v.2.3.1
 -------------
-- Unity Package 2.3.0 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
+- Unity Package 2.3.1 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
 
-NaverCafeSDK For Android 2.3.0
+NaverCafeSDK For Android 2.3.1
 
 NaverCafeSDK For iOS 2.3.0
 
