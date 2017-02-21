@@ -201,7 +201,7 @@
     <string name="not_supported_os_version">An in-app community is available only in Android 4.1 or later.</string>
     <string name="photo_album">Photo Albums</string>
     <string name="photo_upload_error">Uploading a photo failed.</string>
-    <string name="plug_sdk_version" translatable="false">2.3.0</string>
+    <string name="plug_sdk_version" translatable="false">2.3.1</string>
     <string name="profile_become_member">By logging in, you become a member of this Cafe.</string>
     <string name="profile_cafe_information">A community for every mobile game around the world, NAVER Cafe</string>
     <string name="profile_logout">Log Out</string>
