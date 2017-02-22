@@ -22,7 +22,7 @@ PLUG SDK는 모바일 게임에서 이탈하지 않고 커뮤니케이션이 가
 - [Android GitHub](https://github.com/naver/cafe-sdk-android)
 
 
-## 프로젝트 설정
+## 1. 프로젝트 설정
  적용하려는 유니티 게임프로젝트에 Unity Package 를 Import 한다.
 
 ### PLUG 실행버튼 생성
@@ -31,31 +31,31 @@ PLUG SDK는 모바일 게임에서 이탈하지 않고 커뮤니케이션이 가
  ( 개발 편의를 위한 버튼으로 직접생성해도 무방하다.)
 
 
-## Initialize
+## 2. Initialize
 
-### 한국 채널(네이버 카페)
+### 2-1. 한국 채널(네이버 카페) - 글로벌 채널만 사용하는 경우 세팅하지 않는다.
 
-[네이버 아이디로 로그인](https://developers.naver.com/products/login/api)에 애플리케이션을 등록하고 받은 ClientId, ClientSecret 값을 세팅한다.
+[네이버 아이디로 로그인 애플리케이션 등록](https://developers.naver.com/apps/#/register?api=nvlogin)에서 받은 ClientId, ClientSecret 값을 세팅한다.
 
 [네이버 카페를 개설](http://section.cafe.naver.com/)하고 얻은 카페 ID를 세팅한다.
 
-[네이버 아이디로 로그인](https://developers.naver.com/products/login/api)에 애플리케이션 설정에 등록한 iOS URL Scheme을 세팅한다.
+[네이버 아이디로 로그인 어플리케이션](https://developers.naver.com/apps/#/myapps) 설정에 등록한 URL Scheme을 세팅한다.
 
 NCSDK / Scripts / GLinkConfig.cs 에서 발급받은 정보들을 세팅한다.
 
 국내카페만 이용할 경우 
 
- NaverLoginClientId
- NaverLoginClientSecret
- CafeId
+- NaverLoginClientId
+- NaverLoginClientSecret
+- CafeId
 
 3개의 정보만 필요하다.
- 
+
 #### Android
  NCSDK / Script / GlinkAndroid.cs 에서
 
 ```objective-c
-glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId, GLinkLanguage.ENGLISH);
+glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
 ```
 
  항목이 있으면 주석처리한다.
@@ -65,7 +65,7 @@ glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerK
  NCSDK / Script / GlinkiOS.cs 에서
 
 ```objective-c
-_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId, GLinkConfig.Language);
+_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
 ```
 
  항목이 있으면 주석처리한다.
@@ -73,25 +73,27 @@ _InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId, GLink
 
 
 
-### 글로벌 채널 
-[제휴 신청](https://github.com/naver/cafe-sdk-ios/wiki/%5B%ED%95%9C%5D%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EC%B9%B4%ED%8E%98%20%EC%82%AC%EC%9A%A9)을 통해 받은 ConsumerKey, communityId 값을 세팅한다.
+### 2-2. 글로벌 채널 - 한국 채널만 사용하는 경우 세팅하지 않는다.
+개설된 커뮤니티에 매니저 권한으로 접속한 후, [setting > Communities > In-App Community Setting](http://g.cafe.naver.com/plugsample/manage/consumer)으로 진입하여 '커뮤니티 ID 및 Consumer Key, Consumer Secret'를 발급받는다.
+
+![](https://plug.gitbooks.io/plug-sdk-android/content/assets/wiki-plug-setting.png)
 
 NCSDK / Scripts / GLinkConfig.cs 에서 발급받은 정보들을 세팅한다.
 
 글로벌 채널을 이용할 경우  
 
-NeoIdConsumerKey
-CommunityId
-Language
+- NeoIdConsumerKey
+- CommunityId
 
-3개의 정보에 대해 입력한다.
+
+2개의 정보에 대해 입력한다.
 
 
 #### Android
 NCSDK / Script / GlinkAndroid.cs 에서
 
 ```objective-c
-glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId, GLinkLanguage.ENGLISH);
+glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
 ```
 
 항목을 주석해체한다.
@@ -101,14 +103,14 @@ glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerK
 NCSDK / Script / GlinkiOS.cs 에서
 
 ```objective-c
-_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId, GLinkConfig.Language);
+_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
 ```
 
 항목을 주석해체한다.
 
 
 
-### GLink.cs
+### 3. GLink.cs
 [상세 가이드](https://github.com/naver/cafe-sdk-unity/wiki)에서 자세한 내용을 확인 할 수 있다.
 
 #### executeHome()
@@ -126,30 +128,51 @@ PLUG 글쓰기 화면을 실행한다.
 게시판 ID 를 파라메터로 넘긴다.
 
 ```objective-c
-GLink.sharedInstance().executeArticlePost(1, "Subject", "Content");
+GLink.sharedInstance().executeArticlePost("Content");
 
 ```
 
-#### executeArticlePostWithImage
 
-이미지를 첨부한 상태로 PLUG 글쓰기 화면을 실행한다.
-첨부될 이미지의 path를 파라메터로 넘긴다.
 
+### 4. iOS 추가설정
+#### 4-1. 세로모드
+ NCSDK / Plugins / iOS / NCSDKUnityManager.mm 에서 
+ NCSDKManager.setOrientationIsLandscape()을 NO 로 설정한다.
+ 
 ```objective-c
-GLink.sharedInstance().executeArticlePostWithImage(1, "Subject", "Content", filePath);
+- (void)setGLRootViewController {
+    _mainViewcontroller = UnityGetGLViewController();
+    
+    [[NCSDKManager getSharedInstance] setParentViewController:_mainViewcontroller];
+    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
+    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:NO];
+}
 
 ```
 
+#### 4-2. bundle Import
+Unity 5.4.0f3 이상 버전에는 iOS Build 시 bundle 파일이 링크가 걸리지 않는 것으로 설정되어 있습니다.
+NaverCafeSDK.bundle, NaverAuth.bundle 을 아래와 같이 Select for plugin 에서 iOS 부분을 체크하셔야 합니다.
 
-#### setUseWidgetVideoRecord
+![](http://cafeptthumb3.phinf.naver.net/MjAxNjA5MjFfMTcw/MDAxNDc0NDM1ODY2NjMy.f6PEBXPB6yrmhY0HFRf0ans0jLaE4-kO9RqLmPCd1bcg.4LyBxzBvuulvTM8GZgDJH1-Mc9N9uR7Vzaf6CLaDlokg.PNG.cafesdksupport/12.png?type=w740)
+![](http://cafeptthumb2.phinf.naver.net/MjAxNjA5MjFfNjgg/MDAxNDc0NDM1ODY2ODA1.9ks28hm-J0Vws9UxNyw0VuNJXRj6LtlHjcpQQC7FIBEg.58cYn1IJ7HlreiT-9dczAnWNhyJAQemYF_H5HojizBEg.PNG.cafesdksupport/13.png?type=w740)
 
-PLUG 위젯에 녹화 버튼 노출 여부를 설정한다. (iOS 9.0 이상)
 
 
-```objective-c
-GLink.sharedInstance().setUseWidgetVideoRecord(true);
+#### 4-3. (XCode) Build Settings > Other Linker Flags에 -ObjC 옵션을 추가한다.
+ 
+#### 4-2. (XCode) Build Phases > Link Binary With Libraries에 다음 라이브러리를 추가한다.
+- MobileCoreServices.framework (Required)
+- SystemConfiguration.framework (Required)
+- MediaPlayer.framework (Required)
+- AVFoundation.framework (Required)
+- CoreMedia.framework (Required)
+- AssetsLibrary.framework (Required)
+- Security.framework (Required)
+- ImageIO.framework (Required)
+- QuartzCore.framework (Required)
+- ReplayKit.framework (Optional)
 
-```
 
 v.2.3.1
 -------------
@@ -171,7 +194,7 @@ LICENSE     | 라이선스 파일
 README.md   | readme 파일
 
 
-의존 라이브러리
+의존 라이브러리 - 샘플 프로젝트에 포함되어 있다.
 -------------
 [Android]
 
