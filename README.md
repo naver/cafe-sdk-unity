@@ -174,13 +174,13 @@ NaverCafeSDK.bundle, NaverAuth.bundle 을 아래와 같이 Select for plugin 에
 - ReplayKit.framework (Optional)
 
 
-v.2.3.1
+v.2.3.2
 -------------
 - Unity Package 2.3.1 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
 
-NaverCafeSDK For Android 2.3.1
+NaverCafeSDK For Android 2.3.2
 
-NaverCafeSDK For iOS 2.3.0
+NaverCafeSDK For iOS 2.3.1
 
 
 폴더 구조

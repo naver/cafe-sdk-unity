@@ -121,7 +121,7 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 
 
 #pragma mark - private function
-- (void)sdkWillClose;
+- (void)sdkWillCloseWithWidget:(BOOL)widget;
 - (id)sdkRootViewController;
 - (void)dismissViewController:(id)viewController;
 - (void)dismissTopViewController;
