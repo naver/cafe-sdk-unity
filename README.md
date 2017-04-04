@@ -1,144 +1,135 @@
 # PLUG SDK
 
-![http://static.naver.net/m/cafe/glink/promotion/cafe_sdk_open/img_intro1_20151111.png](http://static.naver.net/m/cafe/glink/promotion/cafe_sdk_open/img_intro1_20151111.png)
+PLUG SDK는 모바일 게임 사용자가 게임 도중 게임을 벗어나지 않고 게임의 커뮤니티와 소통할 수 있도록 제공되는 인앱 커뮤니티 라이브러리입니다. 간단한 조작으로 프로젝트에 PLUG SDK를 추가할 수 있습니다.
 
-PLUG SDK는 모바일 게임에서 이탈하지 않고 커뮤니케이션이 가능한 IN-GAME COMMUNITY 라이브러리 입니다. 간단한 조작으로 프로젝트에 PLUG SDK를 추가 할 수 있습니다.
+이미 많은 게임에 적용돼 검증된 PLUG SDK를 사용하면 손쉽게 커뮤니케이션 기능을 게임 안에 넣을 수 있습니다.
+ 
+![PLUG SDK](http://static.naver.net/m/cafe/glink/promotion/cafe_sdk_open/img_intro1_20151111.png)
 
-이미 많은 게임에 적용되어 검증되어 있는 PLUG SDK는 손쉽게 커뮤니케이션 기능을 게임 안에 넣을 수 있습니다.
+## How To Get Started 
 
-# How To Get Started
-- 최신 버전을 [다운로드](https://github.com/naver/cafe-sdk-unity/archive/master.zip)하면 샘플 프로젝트를 실행할 수 있다.
-- 한국 채널인 네이버 카페를 사용하기 위해 [제휴 신청](https://github.com/naver/cafe-sdk-ios/wiki/%5B%ED%95%9C%5D-%EC%84%A0%ED%96%89-%EC%9E%91%EC%97%85)이 필요하다.
-- 글로벌 채널을 사용하기 위해 [제휴 신청](https://github.com/naver/cafe-sdk-ios/wiki/%5B%ED%95%9C%5D%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EB%84%A4%EC%9D%B4%EB%B2%84%20%EC%B9%B4%ED%8E%98%20%EC%82%AC%EC%9A%A9)이 필요하다.
-- 프로젝트에 적용하기 위한 [위키 가이드](https://github.com/naver/cafe-sdk-unity/wiki)가 작성 되어 있다.
+### 제휴 신청
 
-# Communication
-- [개발 문의 사항](http://cafe.naver.com/ArticleList.nhn?search.clubid=28285034&search.menuid=13&search.boardtype=L)에 있는 질문과 답변이 적용하는데 도움이 될 수 있다.
-- 문의 사항이 있는 경우 [카페](http://cafe.naver.com/navercafesdk) 혹은 [e-mail](dl_navercafesdk@navercorp.com)을 사용한다.
+PLUG SDK를 앱에 적용하려면 PLUG SDK 제휴를 신청해야 합니다. 제휴 양식을 작성해 PLUG 제휴 담당자에게 메일로 제휴를 신청합니다.
 
+- [제휴 양식 다운로드](https://github.com/naver/cafe-sdk-android/raw/master/guide/alliance/%EB%84%A4%EC%9D%B4%EB%B2%84%EC%B9%B4%ED%8E%98SDK_%EC%A0%9C%ED%9C%B4%EC%96%91%EC%8B%9D_%EA%B2%8C%EC%9E%84%EC%82%AC%EB%AA%85_%EA%B2%8C%EC%9E%84%EB%AA%85_ver.2.0.0.xlsx)
+- PLUG 제휴 담당자 메일 주소: <a href="mailto:dl_naverplugpartner@navercorp.com">dl_naverplugpartner@navercorp.com</a>
 
-# Usages
-- [iOS GitHub](https://github.com/naver/cafe-sdk-ios)
-- [Android GitHub](https://github.com/naver/cafe-sdk-android)
+제휴 신청이 완료되면 PC의 카페 관리 페이지에서 네이버 PLUG SDK 콘텐츠를 관리할 수 있습니다. 
 
+### 적용 가이드
 
-## 1. 프로젝트 설정
- 적용하려는 유니티 게임프로젝트에 Unity Package 를 Import 한다.
+- [PLUG 적용 가이드](https://github.com/naver/cafe-sdk-unity/wiki)
+- [최신 버전 및 샘플 프로젝트 다운로드](https://github.com/naver/cafe-sdk-unity/archive/master.zip)
 
-### PLUG 실행버튼 생성
- NCSDK / Sample / NCSDK.Prefabs 을 원하는 Scene 에 Drag & Drop 한다.
- PLUG 실행버튼이 생성되며 SampleBehaviour.cs 에 샘플코드가 작성되어 있다.
- ( 개발 편의를 위한 버튼으로 직접생성해도 무방하다.)
+## Communication 
+개발과 관련된 문의 사항은 PLUG 공식 카페를 사용합니다.
 
+- [PLUG 공식 카페](http://cafe.naver.com/navercafesdk)
+- [PLUG 공식 카페의 개발 문의 게시판](http://cafe.naver.com/ArticleList.nhn?search.clubid=28285034&search.menuid=13&search.boardtype=L)
 
-## 2. Initialize
+## Usages 
 
-### 2-1. 한국 채널(네이버 카페) - 글로벌 채널만 사용하는 경우 세팅하지 않는다.
+### 1. 프로젝트 설정
 
-[네이버 아이디로 로그인 애플리케이션 등록](https://developers.naver.com/apps/#/register?api=nvlogin)에서 받은 ClientId, ClientSecret 값을 세팅한다.
+PLUG SDK를 사용하려면 Unity에서 다음과 같이 개발 환경을 설정합니다.
 
-[네이버 카페를 개설](http://section.cafe.naver.com/)하고 얻은 카페 ID를 세팅한다.
+1. Unity의 **Asset > Import package** 메뉴를 클릭해 적용하려는 Unity 게임 프로젝트에 PLUG SDK 패키지를 불러옵니다. Unity Package 2.3.1 에는 다음과 같은 PLUG SDK를 포함하고 있습니다.  
+    - NaverCafeSDK For Android 2.3.1
+    - NaverCafeSDK For iOS 2.3.0
+2. **NCSDK** 폴더의 **Sample** 폴더에 있는 **NCSDK.Prefabs**를 원하는 신으로 끌어다 놓아 PLUG SDK 실행 버튼을 생성합니다.
 
-[네이버 아이디로 로그인 어플리케이션](https://developers.naver.com/apps/#/myapps) 설정에 등록한 URL Scheme을 세팅한다.
+PLUG SDK 실행 버튼은 개발 편의를 위해 PLUG SDK가 기본으로 제공하는 버튼으로 직접 생성해도 됩니다. **SampleBehaviour.cs** 파일에 샘플 코드가 작성되어 있습니다. 
 
-NCSDK / Scripts / GLinkConfig.cs 에서 발급받은 정보들을 세팅한다.
+> 운영체제별 PLUG SDK에 관한 자세한 내용은 GitHub 저장소를 참고합니다.
+> - [Android용 PLUG SDK의 GitHub 저장소](https://github.com/naver/cafe-sdk-android)
+> - [iOS용 PLUG SDK의 GitHub 저장소](https://github.com/naver/cafe-sdk-ios)
 
-국내카페만 이용할 경우 
+### 2. 초기화
 
-- NaverLoginClientId
-- NaverLoginClientSecret
-- CafeId
+PLUG SDK가 지원하는 언어에 따라 다음과 같이 PLUG SDK를 초기화합니다.
 
-3개의 정보만 필요하다.
+#### 2.1 PLUG SDK 초기화(한국어만 지원 - 네이버 카페)
 
-#### Android
- NCSDK / Script / GlinkAndroid.cs 에서
+한국어만 지원하는 PLUG SDK를 초기화할 때는 초기화 정보를 설정하고, 스크립트 파일에서 외국어 지원과 관련된 항목을 주석으로 처리합니다.
 
-```objective-c
-glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
-```
+**NCSDK** 폴더의 **Scripts** 폴더에 있는 **GLinkConfig.cs** 파일에 다음과 초기화 정보를 설정합니다.
 
- 항목이 있으면 주석처리한다.
+- NaverLoginClientId: [네이버 아이디로 로그인 개발자 센터](https://developers.naver.com/apps/#/register?api=nvlogin)에서 애플리케이션을 등록하고 받은 클라이언트 아이디
+- NaverLoginClientSecret: [네이버 아이디로 로그인 개발자 센터](https://developers.naver.com/apps/#/register?api=nvlogin)에서 애플리케이션을 등록하고 받은 클라이언트 시크릿
+- CafeId: [네이버 카페](http://section.cafe.naver.com/)에서 카페를 개설하고 받은 카페 ID
 
+**NCSDK** 폴더의 **Script** 폴더에 있는 운영체제별 스크립트 파일에서 외국어 지원과 관련된 항목을 주석으로 처리합니다.
 
-#### iOS
- NCSDK / Script / GlinkiOS.cs 에서
-
-```objective-c
-_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
-```
-
- 항목이 있으면 주석처리한다.
-
-
-
-
-### 2-2. 글로벌 채널 - 한국 채널만 사용하는 경우 세팅하지 않는다.
-개설된 커뮤니티에 매니저 권한으로 접속한 후, [setting > Communities > In-App Community Setting](http://g.cafe.naver.com/plugsample/manage/consumer)으로 진입하여 '커뮤니티 ID 및 Consumer Key, Consumer Secret'를 발급받는다.
-
-![](https://plug.gitbooks.io/plug-sdk-android/content/assets/wiki-plug-setting.png)
-
-NCSDK / Scripts / GLinkConfig.cs 에서 발급받은 정보들을 세팅한다.
-
-글로벌 채널을 이용할 경우  
-
-- NeoIdConsumerKey
-- CommunityId
-
-
-2개의 정보에 대해 입력한다.
-
-
-#### Android
-NCSDK / Script / GlinkAndroid.cs 에서
+Android용 스크립트 파일인 **GlinkAndroid.cs** 파일에서 다음 항목을 주석으로 처리합니다.
 
 ```objective-c
 glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
 ```
 
-항목을 주석해체한다.
+iOS용 스크립트 파일인 **GlinkiOS.cs** 파일에서 다음 항목을 주석으로 처리합니다.
 
+```objective-c
+_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
+```
+#### 2.2 PLUG SDK 초기화(외국어만 지원)
 
-#### iOS
-NCSDK / Script / GlinkiOS.cs 에서
+외국어만 지원하는 PLUG SDK를 초기화할 때는 초기화 정보를 설정하고, 스크립트 파일에서 주석으로 처리된 외국어 지원 관련된 항목의 주석을 해제합니다.
+
+**NCSDK** 폴더의 **Scripts** 폴더에 있는 **GLinkConfig.cs** 파일에 다음과 같은 초기화 정보를 설정합니다.
+
+- NeoIdConsumerKey: 커뮤니티를 개설하고 받은 컨슈머 키(Consumer Key)
+- CommunityId: 커뮤니티를 개설하고 받은 커뮤니티 ID(Community ID)
+
+**NCSDK** 폴더의 **Script** 폴더에 있는 운영체제별 스크립트 파일에서 주석으로 처리된 외국어 지원 항목의 주석을 해제합니다.
+
+Android용 스크립트 파일인 **GlinkAndroid.cs** 파일에서 다음 항목의 주석을 해제합니다.
+
+```objective-c
+glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
+```
+
+iOS용 스크립트 파일인 **GlinkiOS.cs** 파일에서 다음 항목의 주석을 해제합니다.
 
 ```objective-c
 _InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
 ```
 
-항목을 주석해체한다.
+> **커뮤니티 ID와 컨슈머 키 확인**  
+> 커뮤니티를 개설하고 받은 커뮤니티 ID와 컨슈머 키를 확인하려면 [커뮤니티 관리 페이지](http://g.cafe.naver.com/plugsample/manage/consumer)에 매니저 권한으로 접근하십시오.  
+> 커뮤니티 관리 페이지에서 **Settings > Communities > In-App Community Settings** 메뉴를 선택하면 커뮤니티 ID와 컨슈머 키를 확인할 수 있습니다.  
+> ![In-App Community Settings](https://plug.gitbooks.io/plug-sdk-android/content/assets/wiki-plug-setting.png)
 
+### 3. PLUG SDK 시작
 
+초기화가 완료되면 PLUG SDK를 실행합니다. 
 
-### 3. GLink.cs
-[상세 가이드](https://github.com/naver/cafe-sdk-unity/wiki)에서 자세한 내용을 확인 할 수 있다.
+> **GLink.cs 파일**  
+> GLink.cs 파일은 PLUG SDK를 제어하는 메서드가 있는 스크립트 파일입니다. Unity용 PLUG SDK에서 사용할 수 있는 메서드에 관한 자세한 내용은 [PLUG SDK 상세 가이드](https://github.com/naver/cafe-sdk-unity/wiki)를 참고하십시오.
 
-#### executeHome()
+#### 3.1 executeHome() 메서드
 
-PLUG를 실행한다.
+executeHome() 메서드 PLUG를 시작하는 메서드입니다.
 
 ```objective-c
 GLink.sharedInstance().executeHome();
-
 ```
 
-#### executeArticlePost
+#### 3.2 executeArticlePost() 메서드
 
-PLUG 글쓰기 화면을 실행한다.
-게시판 ID 를 파라메터로 넘긴다.
+executeArticlePost() 메서드는 게시판 글쓰기 화면을 연는 메서드입니다. 게시판 ID를 파라메터로 전달합니다.
 
 ```objective-c
 GLink.sharedInstance().executeArticlePost("Content");
-
 ```
 
-
-
 ### 4. iOS 추가설정
-#### 4-1. 세로모드
- NCSDK / Plugins / iOS / NCSDKUnityManager.mm 에서 
- NCSDKManager.setOrientationIsLandscape()을 NO 로 설정한다.
- 
+
+iOS용 게임을 개발할 때에는 다음과 같은 사항을 추가로 설정해야 합니다.
+#### 4.1 세로 모드 설정
+
+세로 모드로 진행하는 게임을 개발할 때는 **NCSDK/Plugins/iOS** 폴더에 있는 **NCSDKUnityManager.mm** 파일에서 NCSDKManager.setOrientationIsLandscape 속성을 `NO`로 설정합니다.
+
 ```objective-c
 - (void)setGLRootViewController {
     _mainViewcontroller = UnityGetGLViewController();
@@ -150,77 +141,76 @@ GLink.sharedInstance().executeArticlePost("Content");
 
 ```
 
-#### 4-2. bundle Import
-Unity 5.4.0f3 이상 버전에는 iOS Build 시 bundle 파일이 링크가 걸리지 않는 것으로 설정되어 있습니다.
-NaverCafeSDK.bundle, NaverAuth.bundle 을 아래와 같이 Select for plugin 에서 iOS 부분을 체크하셔야 합니다.
+#### 4.2 .bundle 파일 링크
 
-![](http://cafeptthumb3.phinf.naver.net/MjAxNjA5MjFfMTcw/MDAxNDc0NDM1ODY2NjMy.f6PEBXPB6yrmhY0HFRf0ans0jLaE4-kO9RqLmPCd1bcg.4LyBxzBvuulvTM8GZgDJH1-Mc9N9uR7Vzaf6CLaDlokg.PNG.cafesdksupport/12.png?type=w740)
-![](http://cafeptthumb2.phinf.naver.net/MjAxNjA5MjFfNjgg/MDAxNDc0NDM1ODY2ODA1.9ks28hm-J0Vws9UxNyw0VuNJXRj6LtlHjcpQQC7FIBEg.58cYn1IJ7HlreiT-9dczAnWNhyJAQemYF_H5HojizBEg.PNG.cafesdksupport/13.png?type=w740)
-
-
-
-#### 4-3. (XCode) Build Settings > Other Linker Flags에 -ObjC 옵션을 추가한다.
+Unity 5.4.0f3 버전 이상에서는 iOS용 애플리케이션을 빌드할 때 .bundle 파일이 링크되지 않도록 설정돼 있습니다.
+**NaverAuth.bundle** 파일과 **NaverCafeSDK.bundle** 파일을 링크하도록 다음과 같이 **Select for plugin**에서 **iOS**를 선택해야 합니다.
  
-#### 4-2. (XCode) Build Phases > Link Binary With Libraries에 다음 라이브러리를 추가한다.
-- MobileCoreServices.framework (Required)
-- SystemConfiguration.framework (Required)
-- MediaPlayer.framework (Required)
-- AVFoundation.framework (Required)
-- CoreMedia.framework (Required)
-- AssetsLibrary.framework (Required)
-- Security.framework (Required)
-- ImageIO.framework (Required)
-- QuartzCore.framework (Required)
-- ReplayKit.framework (Optional)
+![NaverAuth.bundle 파일을 위한 설정](http://cafeptthumb3.phinf.naver.net/MjAxNjA5MjFfMTcw/MDAxNDc0NDM1ODY2NjMy.f6PEBXPB6yrmhY0HFRf0ans0jLaE4-kO9RqLmPCd1bcg.4LyBxzBvuulvTM8GZgDJH1-Mc9N9uR7Vzaf6CLaDlokg.PNG.cafesdksupport/12.png?type=w740)
+![NaverCafeSDK.bundle 파일을 위한 설정](http://cafeptthumb2.phinf.naver.net/MjAxNjA5MjFfNjgg/MDAxNDc0NDM1ODY2ODA1.9ks28hm-J0Vws9UxNyw0VuNJXRj6LtlHjcpQQC7FIBEg.58cYn1IJ7HlreiT-9dczAnWNhyJAQemYF_H5HojizBEg.PNG.cafesdksupport/13.png?type=w740)
 
+#### 4.3 Xcode 설정
 
-v.2.3.2
--------------
-- Unity Package 2.3.1 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
+XCode에서 다음과 같이 개발 환경을 설정합니다.
 
-NaverCafeSDK For Android 2.3.2
+1. **Build Settings**의 **Other Linker Flags**에 **-ObjC** 옵션을 추가합니다.
+2. **Build Phases**의 **Link Binary With Libraries**에 다음 라이브러리를 추가합니다. 추가한 라이브러리의 **Status**는 **Required**로 설정합니다.
+    - MobileCoreServices.framework
+    - SystemConfiguration.framework
+    - MediaPlayer.framework
+    - AVFoundation.framework
+    - CoreMedia.framework
+    - AssetsLibrary.framework
+    - Security.framework
+    - ImageIO.framework
+    - QuartzCore.framework
+    - ReplayKit.framework(라이브러리의 **Status**를 **Optional**로 설정합니다)
 
-NaverCafeSDK For iOS 2.3.1
+## Files and Folders
 
+|폴더 및 파일 이름	|설명|
+|---|---|
+|guide/	|PLUG SDK 적용 가이드가 있는 폴더|
+|lib/	|Unity용 PLUG SDK 라이브러리 파일이 있는 폴더|
+|sample/	|샘플 프로젝트가 있는 폴더|
+|LICENSE	|라이선스 파일| 
+|README.md	|리드미 파일|
 
-폴더 구조
--------------
+## Dependent Libraries
 
-file      | 설명 		
----			| ---		
-guide/			| 가이드 문서 및 CafeSDK 설명
-lib/		 	| NaverCafeSDK 유니티용 패키지
-LICENSE     | 라이선스 파일
-README.md   | readme 파일
+PLUG SDK를 사용하려면 다음 라이브러리를 프로젝트에 추가해 함께 빌드해야 합니다. 라이브러리는 샘플 프로젝트에 포함돼 있습니다.
 
+### Android용 라이브러리
 
-의존 라이브러리 - 샘플 프로젝트에 포함되어 있다.
--------------
-[Android]
-
+- Android Support Library v4
 - [네이버 아이디 로그인](https://nid.naver.com/devcenter/docs.nhn?menu=Android)
-- android support library v4
-- [naver volleyer](http://mvnrepository.com/artifact/com.navercorp.volleyextensions/volleyer)   (2.0.1 사용 중)
-- [volley](http://mvnrepository.com/artifact/com.mcxiaoke.volley/library/) (1.0.2사용 중)
-- [google gson](http://mvnrepository.com/artifact/com.google.code.gson/gson)  (2.3.1 사용 중)
-- [glide](http://mvnrepository.com/artifact/com.github.bumptech.glide/glide)  (3.6.1 사용 중)
-- [otto](http://mvnrepository.com/artifact/com.squareup/otto)  (1.3.8 사용 중)
-- hmac (2.3.1 사용중)
+- [NAVER Volleyer](http://mvnrepository.com/artifact/com.navercorp.volleyextensions/volleyer)(2.0.1 버전 사용 중)
+- [Volley](http://mvnrepository.com/artifact/com.mcxiaoke.volley/library/)(1.0.2 버전 사용 중)
+- [Google Gson](http://mvnrepository.com/artifact/com.google.code.gson/gson)(2.3.1 버전 사용 중)
+- [Glide](http://mvnrepository.com/artifact/com.github.bumptech.glide/glide)(3.6.1 버전 사용 중)
+- [Otto](http://mvnrepository.com/artifact/com.squareup/otto)(1.3.8 버전 사용 중)
+- hmac(2.3.1 버전 사용중)
 
+### iOS용 라이브러리
 
-[iOS]
+- [네이버 아이디 로그인](https://nid.naver.com/devcenter/docs.nhn?menu=IOS)(4.0.7 버전)
+- [AFNetworking](https://github.com/AFNetworking/AFNetworking)(3.1.0 버전 )
 
-- [네이버 아이디 로그인-4.0.7](https://nid.naver.com/devcenter/docs.nhn?menu=IOS)
-- [AFNetworking](https://github.com/AFNetworking/AFNetworking)
-<br>2.x, 3.x 사용 가능하며 3.1.0에서 테스트 진행했습니다.
-- [SDWebImage-3.8.2](https://github.com/rs/SDWebImage)
-- [FLAnimatedImage-1.0.12](https://github.com/Flipboard/FLAnimatedImage)
-- ApiGateway-1.5.0
+> AFNetworking 2.x 버전과 3.x 버전 모두 사용할 수 있습니다. PLUG SDK 테스트는 AFNetworking 3.1.0 버전으로 진행했습니다.
 
-라이선스
--------------
+- [SDWebImage](https://github.com/rs/SDWebImage)(3.8.2 버전)
+- [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)(1.0.12 버전)
+- ApiGateway-1.5.0 
+
+## License 
+
+PLUG SDK의 저작권은 네이버(주)에 있습니다.
+
+```
 NAVER Cafe SDK for Unity
 
-Copyright 2015 NAVER Corp. All rights reserved.
+Copyright 2015 NAVER Corp.
+All rights reserved.
 
 Unauthorized use, modification and redistribution of this software are strongly prohibited.
+```
