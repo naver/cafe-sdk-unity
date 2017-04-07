@@ -2,7 +2,7 @@
 
 The PLUG SDK is a dedicated in-app community library for mobile games, which lets mobile gamers use community features without leaving games while they are playing. It is easy to apply the PLUG SDK to your project.
 
-As a proven SDK, which has been used in many online games, this lets you simply and quickly add community features in your game.
+As a proven SDK, which has been used in many mobile games, this lets you simply and quickly add community features in your game.
  
 ![PLUG SDK](http://static.naver.net/m/cafe/glink/promotion/cafe_sdk_open/img_intro1_20151111.png)
 
