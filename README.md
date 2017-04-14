@@ -199,7 +199,8 @@ README.md   | readme 파일
 [Android]
 
 - [네이버 아이디 로그인](https://nid.naver.com/devcenter/docs.nhn?menu=Android)
-- android support library v4
+- Android Support Library v4
+- Android Support Custom Tabs
 - [naver volleyer](http://mvnrepository.com/artifact/com.navercorp.volleyextensions/volleyer)   (2.0.1 사용 중)
 - [volley](http://mvnrepository.com/artifact/com.mcxiaoke.volley/library/) (1.0.2사용 중)
 - [google gson](http://mvnrepository.com/artifact/com.google.code.gson/gson)  (2.3.1 사용 중)
