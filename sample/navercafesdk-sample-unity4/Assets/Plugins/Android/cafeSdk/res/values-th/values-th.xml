@@ -43,6 +43,8 @@
     <string name="error_no_article_like">ไม่มีโพสต์ที่คุณชอบ</string>
     <string name="error_no_article_wirte">ไม่มีโพสต์ที่คุณเขียน</string>
     <string name="exist_prohibit_word_nickname_message">มีคำต้องห้ามรวมอยู่ด้วย</string>
+    <string name="image_editor_crop">Crop</string>
+    <string name="image_editor_rotate">Rotation</string>
     <string name="image_permission_setting_message">คุณไม่ได้รับอนุญาตให้แนบไฟล์รูปภาพ\nกรุณาตรวจสอบสิทธิ์การบันทึกในเกมซึ่งสามารถเข้าถึงได้จาก [ตั้งค่า > แอพ]</string>
     <string name="image_upload_fail_message">การอัพโหลดรูปภาพล้มเหลว</string>
     <string name="internet_not_connected_error">ไม่ได้เชื่อมต่อกับอินเตอร์เน็ต\nกรุณาตรวจสอบสถานะเครือข่ายไร้สายของคุณ</string>
@@ -51,6 +53,8 @@
     <string name="like_article_count_txt">ชอบแล้ว</string>
     <string name="logout_complete_message">คุณได้ออกจากระบบแล้ว</string>
     <string name="logout_confirm_message">ต้องการออกจากระบบหรือไม่?</string>
+    <string name="media_delete_message">Deleted</string>
+    <string name="media_viewer_move_post">View post</string>
     <string name="member_count_format">สมาชิก %1$,d คน</string>
     <string name="menu_change_channel">ต้องการเปลี่ยนภาษาหรือไม่?\nการเปลี่ยนภาษาจะทำให้คอนเท้นท์ภายในเปลี่ยนแปลงด้วย</string>
     <string name="modify_complete_message">ได้รับการปรับปรุงแล้ว</string>
@@ -75,10 +79,21 @@
     <string name="not_configured_event_menu_id">เมนูกิจกรรมยังไม่ได้รับการตั้งค่า</string>
     <string name="not_configured_notice_menu_id">เมนูแจ้งเตือนยังไม่ได้รับการตั้งค่า</string>
     <string name="not_supported_os_version">คอมมิวนิตี้ในแอพสามารถใช้งานได้เฉพาะบนแอนดรอยด์ 4.1 หรือสูงกว่าเท่านั้น</string>
+    <string name="permission_record">[ตัวเลือก]\nจำเป็นต้องอนุญาตไมโครโฟนเพื่อบันทึกเสียงภายนอก
+    \nกรุณาอนุญาตไมโครโฟนของเกมที่ [ตั้งค่า>แอพ]
+  </string>
+    <string name="permission_storage">จำเป็นต้องอนุญาตบันทึกเพื่อแนบไฟล์รูปภาพหรือวิดีโอ</string>
+    <string name="permission_storage_record">[จำเป็น]\nสิทธิ์การบันทึก :
+    อนุญาตให้บันทึกวิดีโอที่บันทึก\n[ตัวเลือก]\nไมโครโฟน :
+    อนุญาตให้บันทึกเสียงด้วยไมโครโฟนในขณะบันทึกวิดีโอ
+  </string>
     <string name="photo_album">อัลบั้มรูปภาพ</string>
     <string name="photo_upload_error">การอัพโหลดรูปภาพล้มเหลว</string>
+    <string name="plug_bottom_channel">Channel</string>
+    <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">เมื่อเข้าสู่ระบบ คุณจะเป็นสมาชิกของคาเฟ่นี้โดยอัตโนมัติ</string>
     <string name="profile_cafe_information">คอมมิวนิตี้สำหรับโมบายเกมจากทั่วโลก NAVER Cafe</string>
+    <string name="profile_login">Log in</string>
     <string name="profile_logout">ออกจากระบบ</string>
     <string name="profile_plug_information">คอมมิวนิตี้สำหรับโมบายเกมจากทั่วโลก PLUG</string>
     <string name="profile_string">โปรไฟล์ของฉัน</string>
@@ -95,7 +110,7 @@
     <string name="record_size_360">360p</string>
     <string name="record_size_480">480p</string>
     <string name="record_size_720">720p</string>
-    <string name="replies_more_view">ดู %d ตอบกลับ</string>
+    <string name="replies_more_view">ดู %d ตอบกลับ</string>
     <string name="reply">ตอบกลับ</string>
     <string name="require_join_message">คุณได้รับการร้องขอให้เข้าร่วมคอมมิวนิตี้</string>
     <string name="require_login_message">กรุณาเข้าสู่ระบบ</string>

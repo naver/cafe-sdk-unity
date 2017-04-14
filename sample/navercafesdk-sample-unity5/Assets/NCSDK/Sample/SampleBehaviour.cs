@@ -5,16 +5,14 @@ using System.Text.RegularExpressions;
 using System.IO;
 
 public class SampleBehaviour : MonoBehaviour {
+	
 	public void OnClickGlinkButton () {
-		// GLinkNaverId.sharedInstance().init("197CymaStozo7X5r2qR5", "evCgKH1kJL");
-		// GLinkNaverId.sharedInstance().login();		
 		GLink.sharedInstance().setWidgetStartPosition(false, 60);
 		GLink.sharedInstance().executeHome ();
 	}
 	
 	public void OnClickScreenShotButton () {
-		GLinkNaverId.sharedInstance().getProfile();
-		// StartCoroutine (SaveScreenShot ());
+		StartCoroutine (SaveScreenShot ());
 	}
 
 	// http://wiki.unity3d.com/index.php/ScreenCapture

@@ -54,6 +54,6 @@
         android:layout_gravity="center_horizontal"
         android:textSize="13dp"
         android:textColor="#7e7e7e"
-        android:text="Deleted"/>
+        android:text="@string/media_delete_message"/>
   </LinearLayout>
 </FrameLayout>

@@ -9,21 +9,21 @@
       android:orientation="vertical">
 
     <RelativeLayout
-          android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/green1"
         android:layout_weight="11">
 
-        <ImageView
-            android:id="@+id/cafe_background_img"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"/>
+      <ImageView
+          android:id="@+id/cafe_background_img"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scaleType="centerCrop"/>
 
       <LinearLayout
           android:id="@+id/cafe_info_layout"
           android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+          android:layout_height="wrap_content"
           android:orientation="horizontal">
 
         <FrameLayout
@@ -65,18 +65,6 @@
               android:textSize="15dp"
               android:textStyle="bold"
               android:maxLines="2"
-              android:text="title"
-              android:textColor="@color/white1"/>
-
-          <TextView
-              android:id="@+id/cafe_url"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="4dp"
-              android:layout_marginLeft="1dp"
-              android:layout_marginRight="22dp"
-              android:textSize="10dp"
-              android:text="url"
               android:textColor="@color/white1"/>
         </LinearLayout>
 
@@ -84,17 +72,16 @@
 
 
       <TextView
-            android:id="@+id/cafe_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+          android:id="@+id/cafe_info"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
           android:layout_marginTop="17dp"
-            android:layout_marginLeft="22dp"
-            android:layout_marginRight="22dp"
+          android:layout_marginLeft="22dp"
+          android:layout_marginRight="22dp"
           android:layout_below="@+id/cafe_info_layout"
-            android:textSize="12dp"
-            android:textColor="@color/white1"
-            android:ellipsize="end"
-          android:text="info\ndd\n33\n33"
+          android:textSize="12dp"
+          android:textColor="@color/white1"
+          android:ellipsize="end"
           android:maxLines="3"/>
 
 
@@ -102,7 +89,7 @@
 
     <RelativeLayout
         android:background="@color/white1"
-          android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="6">
 
@@ -143,7 +130,7 @@
           android:layout_marginBottom="120dp"
           android:layout_marginLeft="23dp"
           android:layout_marginRight="20dp"
-          android:text="Log in"
+          android:text="@string/profile_login"
           android:textStyle="bold"
           android:textColor="@color/white1"
           android:textSize="15dp"
@@ -151,16 +138,42 @@
           android:layout_alignParentBottom="true"/>
 
 
-      <ImageView
-          android:id="@+id/copyright"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="4dp"
-          android:layout_marginLeft="22dp"
-          android:layout_marginRight="22dp"
-          android:layout_marginBottom="22dp"
-          android:layout_alignParentRight="true"
-          android:layout_alignParentBottom="true"/>
+      <RelativeLayout
+          android:id="@+id/menu_link_layout"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:background="@color/black2_opacity_10"/>
+        <ImageView
+            android:id="@+id/menu_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/gl_ls_icon_link"/>
+
+        <TextView
+            android:id="@+id/menu_link_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="4dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/menu_link"
+            android:textColor="@color/black1"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="11dp"/>
+
+      </RelativeLayout>
     </RelativeLayout>
 
   </LinearLayout>

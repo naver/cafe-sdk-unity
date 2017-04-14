@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gl_img_plate"
-    tools:context=".ui.articles.ArticlesFragment">
+    tools:context=".ui.articles.ArticlesFragmentView">
 
   <RelativeLayout
       android:layout_width="match_parent"
@@ -29,29 +29,15 @@
             android:id="@android:id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:cacheColorHint="@android:color/transparent"
+            android:scrollbarThumbVertical="@color/black2_opacity_20"
+            android:scrollbarSize="4dp"
             android:divider="@null"
             android:dividerHeight="0dp"
             android:listSelector="@drawable/gl_list_selector"
-            android:cacheColorHint="@android:color/transparent"
-            android:theme="@android:style/Theme.Holo.Light"
             android:choiceMode="singleChoice"/>
       </android.support.v4.widget.SwipeRefreshLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@android:id/empty"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clickable="true"
-        android:orientation="vertical">
-
-      <include android:id="@+id/empty_header_for_portrait" layout="@layout/item_articles_header"/>
-
-      <include
-          android:layout_width="match_parent"
-          android:layout_height="0dp"
-          android:layout_weight="1"
-          layout="@layout/item_empty"/>
     </LinearLayout>
 
     <TextView

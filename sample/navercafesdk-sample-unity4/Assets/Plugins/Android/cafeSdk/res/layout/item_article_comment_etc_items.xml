@@ -30,23 +30,14 @@
         android:textSize="11dp"/>
 
     <TextView
-        android:id="@+id/edit"
+        android:id="@+id/reply"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:paddingLeft="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:drawableLeft="@drawable/line_gray"
+        android:drawablePadding="8dp"
         android:textColor="#4a90e2"
         android:textSize="11dp"
-        android:text="@string/edit"/>
-
-    <TextView
-        android:id="@+id/delete"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:paddingLeft="6dp"
-        android:drawableLeft="@drawable/oval_gray"
-        android:drawablePadding="6dp"
-        android:textColor="#4a90e2"
-        android:textSize="11dp"
-        android:text="@string/delete"/>
+        android:text="@string/reply"/>
   </LinearLayout>
 </LinearLayout>

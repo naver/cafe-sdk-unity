@@ -92,12 +92,4 @@
         android:layout_marginRight="24dp"
         android:layout="@layout/item_media_viewer_article_details"/>
   </RelativeLayout>
-
-  <ImageView
-      android:id="@+id/show_anim_view"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_centerInParent="true"
-      android:visibility="gone"
-      android:scaleType="centerCrop"/>
 </RelativeLayout>

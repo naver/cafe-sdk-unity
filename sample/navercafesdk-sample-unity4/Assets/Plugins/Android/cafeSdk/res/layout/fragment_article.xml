@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.article.ArticleFragment">
+    tools:context=".ui.article.ArticleFragmentView">
 
   <RelativeLayout
       android:layout_width="match_parent"
@@ -19,14 +19,14 @@
           android:id="@android:id/list"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
-          android:background="@color/white2"
-          android:divider="@null"
-          android:dividerHeight="0dp"
+          android:theme="@android:style/Theme.Holo.Light"
           android:cacheColorHint="@android:color/transparent"
           android:scrollbarThumbVertical="@color/black2_opacity_20"
           android:scrollbarSize="4dp"
-          android:theme="@android:style/Theme.Holo.Light"
-          android:listSelector="#00000000"/>
+          android:divider="@null"
+          android:dividerHeight="0dp"
+          android:listSelector="@android:color/transparent"
+          android:background="@color/white2"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
     <TextView

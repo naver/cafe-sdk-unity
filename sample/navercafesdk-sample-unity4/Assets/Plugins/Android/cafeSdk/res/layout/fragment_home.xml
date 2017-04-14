@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gl_img_plate"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragmentView">
 
   <RelativeLayout
       android:id="@+id/full_banners_layout"
@@ -53,10 +53,12 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:divider="@null"
-        android:dividerHeight="0dp"
         android:theme="@android:style/Theme.Holo.Light"
-        android:cacheColorHint="@android:color/transparent"/>
+        android:cacheColorHint="@android:color/transparent"
+        android:scrollbarThumbVertical="@color/black2_opacity_20"
+        android:scrollbarSize="4dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
   </LinearLayout>
 
   <include layout="@layout/view_fragment_error"/>

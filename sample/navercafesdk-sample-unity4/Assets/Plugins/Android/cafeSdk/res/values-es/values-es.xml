@@ -45,6 +45,8 @@
     <string name="error_no_article_like">No te ha gustado ninguna publicación.</string>
     <string name="error_no_article_wirte">No has escrito ninguna publicación.</string>
     <string name="exist_prohibit_word_nickname_message">Las palabras prohibidas están incluidas.</string>
+    <string name="image_editor_crop">Crop</string>
+    <string name="image_editor_rotate">Rotation</string>
     <string name="image_permission_setting_message">No tienes permiso para adjuntar una imagen.\nPor favor, comprueba tu permiso para guardar en el juego, al cual puedes acceder desde [Ajustes > App].</string>
     <string name="image_upload_fail_message">Error al subir una imagen.</string>
     <string name="internet_not_connected_error">No está conectado a Internet.\nPor favor, comprueba el estado de tu red inalámbrica.</string>
@@ -53,6 +55,8 @@
     <string name="like_article_count_txt">Me gusta</string>
     <string name="logout_complete_message">Has cerrado la sesión.</string>
     <string name="logout_confirm_message">¿Vas a cerrar la sesión?</string>
+    <string name="media_delete_message">Deleted</string>
+    <string name="media_viewer_move_post">View post</string>
     <string name="member_count_format">Miembros %1$,d</string>
     <string name="menu_change_channel">¿Quieres cambiar el idioma?\nAl cambiar el idioma, se cambiará también el contenido.</string>
     <string name="modify_complete_message">Ha sido modificado.</string>
@@ -77,10 +81,22 @@
     <string name="not_configured_event_menu_id">El menú de Eventos no ha sido establecido.</string>
     <string name="not_configured_notice_menu_id">El menú de Avisos no ha sido establecido.</string>
     <string name="not_supported_os_version">La comunidad de la app solo está disponible para Android 4.1 o una versión superior.</string>
+    <string name="permission_record">[Opsional]\nIzin untuk microphone diperlukan untuk merekam suara
+    eksternal. \nSilakan setujui izin untuk microphone game di [Pengaturan>App].
+  </string>
+    <string name="permission_storage">Izin untuk menyimpan diperlukan untuk melampirkan file foto atau
+    video.
+  </string>
+    <string name="permission_storage_record">[Wajib]\nIzin menyimpan: untuk menyimpan video yang telah
+    direkam.\n[Opsional]\nMikrofon: untuk merekam suara dengan microphone ketika menyimpan video.
+  </string>
     <string name="photo_album">Álbumes de Fotos</string>
     <string name="photo_upload_error">Error al subir una foto.</string>
+    <string name="plug_bottom_channel">Channel</string>
+    <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">Al iniciar sesión, te convertirás en un miembro de este Cafe.</string>
     <string name="profile_cafe_information">Una comunidad para todos los juegos para móviles del mundo, NAVER Café</string>
+    <string name="profile_login">Log in</string>
     <string name="profile_logout">Cerrar la Sesión</string>
     <string name="profile_plug_information">Una comunidad para todos los juegos para móviles del mundo, PLUG</string>
     <string name="profile_string">Mi Perfil</string>

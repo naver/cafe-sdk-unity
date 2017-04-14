@@ -36,5 +36,5 @@
       android:gravity="center"
       android:textColor="#979797"
       android:textSize="12dp"
-      android:text="View post"/>
+      android:text="@string/media_viewer_move_post"/>
 </LinearLayout>

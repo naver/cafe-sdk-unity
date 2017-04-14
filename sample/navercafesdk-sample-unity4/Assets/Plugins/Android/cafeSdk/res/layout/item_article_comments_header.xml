@@ -3,9 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="22dp"
-    android:paddingRight="22dp"
-    android:paddingBottom="13dp"
     android:background="@color/white2"
     android:orientation="vertical">
 
@@ -13,7 +10,9 @@
       android:id="@+id/comments_text"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="22dp"
+      android:layout_marginTop="23dp"
+      android:layout_marginLeft="21dp"
+      android:layout_marginBottom="11dp"
       android:textColor="@color/black2"
       android:textSize="15dp"
       android:textStyle="bold"
@@ -23,16 +22,15 @@
       android:id="@+id/comments_more"
       android:layout_width="match_parent"
       android:layout_height="40dp"
-      android:layout_marginTop="12dp"
       android:gravity="center"
       android:background="@drawable/more_replies_background"
-      android:textColor="@color/gray7"
-      android:textSize="15dp"/>
+      android:textColor="@android:color/black"
+      android:textSize="13dp"/>
 
   <View
       android:id="@+id/comments_header_divider"
       android:layout_width="match_parent"
-      android:layout_height="1dp"
+      android:layout_height="0.5dp"
       android:layout_marginTop="12dp"
-      android:background="@color/black2_opacity_5"/>
+      android:background="@color/gray9"/>
 </LinearLayout>

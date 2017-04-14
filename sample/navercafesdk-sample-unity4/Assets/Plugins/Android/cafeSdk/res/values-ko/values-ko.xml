@@ -43,6 +43,8 @@
     <string name="error_no_article_like">좋아요를 누른 글이 없습니다.</string>
     <string name="error_no_article_wirte">작성한 글이 없습니다.</string>
     <string name="exist_prohibit_word_nickname_message">금칙어가 포함되어 있습니다.</string>
+    <string name="image_editor_crop">Crop</string>
+    <string name="image_editor_rotate">Rotation</string>
     <string name="image_permission_setting_message">권한이 없어 사진을 첨부할 수 없습니다.\n[설정 > 앱]의 해당 게임에서 저장 권한을 확인해 주세요.</string>
     <string name="image_upload_fail_message">사진을 업로드할 수 없습니다.</string>
     <string name="internet_not_connected_error">인터넷에 연결되어 있지 않습니다.\n무선 인터넷 연결 상태를 확인해 주세요.</string>
@@ -51,6 +53,8 @@
     <string name="like_article_count_txt">좋아요</string>
     <string name="logout_complete_message">로그아웃 되었습니다.</string>
     <string name="logout_confirm_message">로그아웃하시겠습니까?</string>
+    <string name="media_delete_message">Deleted</string>
+    <string name="media_viewer_move_post">View post</string>
     <string name="member_count_format">회원수 %1$,d명</string>
     <string name="menu_change_channel">선택한 채널로 변경하시겠습니까?\n채널을 변경하면 콘텐츠도 함께 변경됩니다.</string>
     <string name="modify_complete_message">수정되었습니다.</string>
@@ -75,10 +79,20 @@
     <string name="not_configured_event_menu_id">이벤트 메뉴가 설정되지 않았습니다.</string>
     <string name="not_configured_notice_menu_id">공지 사항 메뉴가 설정되지 않았습니다.</string>
     <string name="not_supported_os_version">인앱 커뮤니티는 Android 4.1버전 이상에서만 사용할 수 있습니다.</string>
+    <string name="permission_record">[선택적 권한]\n외부 소리를 녹음하기 위해서는 마이크 권한이 필요합니다. \n[설정>앱]에서 게임의 마이크 권한을
+    허용해주세요.
+  </string>
+    <string name="permission_storage">사진 또는 동영상 파일을 첨부하기 위한 저장 권한 허용이 필요합니다.</string>
+    <string name="permission_storage_record">[필수적 권한]\n저장 권한 : 녹화된 동영상을 저장하기 위한 권한입니다.\n[선택적 권한]\n마이크
+    : 동영상 저장 시 마이크로 소리를 녹음하기 위한 권한입니다.
+  </string>
     <string name="photo_album">사진 앨범</string>
     <string name="photo_upload_error">사진을 등록할 수 없습니다.</string>
+    <string name="plug_bottom_channel">Channel</string>
+    <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">로그인하면 자동으로 이 카페의 멤버가 됩니다.</string>
     <string name="profile_cafe_information">세상의 모든 모바일 게임을 위한 커뮤니티, 네이버 카페</string>
+    <string name="profile_login">Log in</string>
     <string name="profile_logout">로그아웃</string>
     <string name="profile_plug_information">세상의 모든 모바일 게임을 위한 커뮤니티, 플러그</string>
     <string name="profile_string">내 프로필</string>
@@ -95,7 +109,7 @@
     <string name="record_size_360">360p</string>
     <string name="record_size_480">480p</string>
     <string name="record_size_720">720p</string>
-    <string name="replies_more_view">이전 답글 %d개 보기</string>
+    <string name="replies_more_view">답글 %d개 보기</string>
     <string name="reply">답글</string>
     <string name="require_join_message">커뮤니티에 가입해 주세요.</string>
     <string name="require_login_message">로그인해 주세요.</string>

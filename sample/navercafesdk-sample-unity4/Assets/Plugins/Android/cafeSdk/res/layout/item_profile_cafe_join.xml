@@ -4,284 +4,275 @@
     android:layout_height="match_parent">
 
 
-
-    <LinearLayout
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-      <RelativeLayout
+        android:background="@color/green1"
+        android:layout_weight="11">
+
+      <ImageView
+          android:id="@+id/cafe_background_img"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
-          android:background="@color/green1"
-          android:layout_weight="11">
+          android:scaleType="centerCrop"/>
 
-        <ImageView
-            android:id="@+id/cafe_background_img"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"/>
-
-        <LinearLayout
-            android:id="@+id/cafe_info_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-          <FrameLayout
-              android:id="@+id/thumbnail_image"
-              android:layout_width="62dp"
-              android:layout_height="62dp"
-              android:layout_marginTop="23dp"
-              android:layout_marginLeft="22dp">
-
-
-            <ImageView
-                android:id="@+id/cafe_icon_img"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-            />
-
-            <ImageView
-                android:id="@+id/cafe_icon_img_stroke"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/gl_ls_icon_cafeimgst"
-                android:layout_gravity="center"/>
-          </FrameLayout>
-
-          <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_marginLeft="13dp"
-              android:gravity="center_vertical"
-              android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/cafe_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="22dp"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:maxLines="2"
-                android:text="title"
-                android:textColor="@color/white1"/>
-
-            <TextView
-                android:id="@+id/cafe_url"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="22dp"
-                android:textSize="10dp"
-                android:text="url"
-                android:textColor="@color/white1"/>
-          </LinearLayout>
-
-        </LinearLayout>
-
-
-        <TextView
-            android:id="@+id/cafe_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
-            android:layout_marginLeft="22dp"
-            android:layout_marginRight="22dp"
-            android:layout_below="@+id/cafe_info_layout"
-            android:textSize="12dp"
-            android:textColor="@color/white1"
-            android:ellipsize="end"
-            android:text="info\ndd\n33\n33"
-            android:maxLines="3"/>
-
-
-      </RelativeLayout>
-
-
-      <RelativeLayout
+      <LinearLayout
+          android:id="@+id/cafe_info_layout"
           android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:background="@color/white1"
-          android:layout_weight="6">
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
 
-        <LinearLayout
-            android:id="@+id/join_edit_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="31dp"
-            android:baselineAligned="false"
-            android:orientation="vertical"
-            android:paddingLeft="22dp"
-            android:paddingRight="22dp"
-            android:background="@color/white1">
+        <FrameLayout
+            android:id="@+id/thumbnail_image"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginLeft="22dp">
 
-          <TextView
+
+          <ImageView
+              android:id="@+id/cafe_icon_img"
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              android:layout_gravity="center"
+          />
+
+          <ImageView
+              android:id="@+id/cafe_icon_img_stroke"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="@string/nick_name_header"
-              android:textColor="@color/black2"
+              android:src="@drawable/gl_ls_icon_cafeimgst"
+              android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+          <TextView
+              android:id="@+id/cafe_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:layout_marginRight="22dp"
+              android:textSize="15dp"
               android:textStyle="bold"
-              android:textSize="16dp"/>
+              android:maxLines="2"
+              android:textColor="@color/white1"/>
+
+          <TextView
+              android:id="@+id/cafe_url"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp"
+              android:layout_marginLeft="1dp"
+              android:layout_marginRight="22dp"
+              android:textSize="10dp"
+              android:textColor="@color/white1"/>
+        </LinearLayout>
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/cafe_info"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="17dp"
+          android:layout_marginLeft="22dp"
+          android:layout_marginRight="22dp"
+          android:layout_below="@+id/cafe_info_layout"
+          android:textSize="12dp"
+          android:textColor="@color/white1"
+          android:ellipsize="end"
+          android:maxLines="3"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white1"
+        android:layout_weight="6">
+
+      <LinearLayout
+          android:id="@+id/join_edit_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingTop="31dp"
+          android:baselineAligned="false"
+          android:orientation="vertical"
+          android:paddingLeft="22dp"
+          android:paddingRight="22dp"
+          android:background="@color/white1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nick_name_header"
+            android:textColor="@color/black2"
+            android:textStyle="bold"
+            android:textSize="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
           <LinearLayout
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+              android:layout_height="wrap_content"
+              android:layout_marginTop="7dp"
+              android:gravity="center"
+              android:baselineAligned="false"
+              android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:gravity="center"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/gl_img_nickname_input">
 
-              <LinearLayout
+              <EditText
+                  android:id="@+id/nickname"
                   android:layout_width="0dp"
                   android:layout_height="match_parent"
                   android:layout_weight="1"
-                  android:orientation="horizontal"
-                  android:background="@drawable/gl_img_nickname_input">
-
-                <EditText
-                    android:id="@+id/nickname"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:gravity="center_vertical"
-                    android:textColor="@color/black2"
-                    android:textColorHint="#80999999"
-                    android:paddingLeft="12dp"
-                    android:singleLine="true"
-                    android:textSize="16dp"
-                    android:imeOptions="flagNoExtractUi"/>
-
-                <TextView
-                    android:id="@+id/nickname_deletion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:background="@android:color/transparent"
-                    android:drawableLeft="@drawable/gl_btn_cancel"/>
-              </LinearLayout>
-
-            </LinearLayout>
-
-
-            <Button
-                android:id="@+id/join"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:background="@drawable/gl_btn_confirm1"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="18dp"
-                android:paddingRight="18dp"
-                android:textColor="@color/white1"
-                android:textSize="16dp"
-                android:text="@string/nick_name_join"/>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:orientation="horizontal">
+                  android:background="@android:color/transparent"
+                  android:gravity="center_vertical"
+                  android:textColor="@color/black2"
+                  android:textColorHint="#80999999"
+                  android:paddingLeft="12dp"
+                  android:singleLine="true"
+                  android:textSize="16dp"
+                  android:imeOptions="flagNoExtractUi"/>
 
               <TextView
-                  android:id="@+id/valid_check_text"
+                  android:id="@+id/nickname_deletion"
                   android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:textColor="@color/gray4"
-                  android:textSize="11dp"/>
+                  android:layout_height="match_parent"
+                  android:layout_marginRight="12dp"
+                  android:layout_marginLeft="12dp"
+                  android:background="@android:color/transparent"
+                  android:drawableLeft="@drawable/gl_btn_cancel"/>
             </LinearLayout>
-
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="37dp"
-                android:gravity="bottom">
-
-              <RelativeLayout
-                  android:id="@+id/agree_layout"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_alignParentLeft="true"
-                  android:layout_centerVertical="true">
-
-                <CheckBox
-                    android:id="@+id/agree_check"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginRight="3dp"
-                    android:button="@drawable/gl_ls_icon_check"/>
-
-                <TextView
-                    android:id="@+id/agree_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/agree_check"
-                    android:layout_centerVertical="true"
-                    android:textSize="13dp"
-                    android:textColor="@color/gray4"
-                    android:text="@string/nick_name_join_agree"/>
-              </RelativeLayout>
-            </RelativeLayout>
 
           </LinearLayout>
 
+
+          <Button
+              android:id="@+id/join"
+              android:layout_width="match_parent"
+              android:layout_height="36dp"
+              android:background="@drawable/gl_btn_confirm1"
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:paddingLeft="18dp"
+              android:paddingRight="18dp"
+              android:textColor="@color/white1"
+              android:textSize="16dp"
+              android:text="@string/nick_name_join"/>
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="6dp"
+              android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/valid_check_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray4"
+                android:textSize="11dp"/>
+          </LinearLayout>
+
+
+          <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_marginTop="37dp"
+              android:gravity="bottom">
+
+            <RelativeLayout
+                android:id="@+id/agree_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true">
+
+              <CheckBox
+                  android:id="@+id/agree_check"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="3dp"
+                  android:button="@drawable/gl_ls_icon_check"/>
+
+              <TextView
+                  android:id="@+id/agree_text"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_toRightOf="@+id/agree_check"
+                  android:layout_centerVertical="true"
+                  android:textSize="13dp"
+                  android:textColor="@color/gray4"
+                  android:text="@string/nick_name_join_agree"/>
+            </RelativeLayout>
+          </RelativeLayout>
+
         </LinearLayout>
 
-        <View
-            android:id="@+id/cafe_join_line"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/join_edit_layout"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="22dp"
-            android:layout_marginRight="22dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/white3"/>
+      </LinearLayout>
 
-        <TextView
-            android:id="@+id/btn_logout"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_below="@+id/cafe_join_line"
-            android:layout_marginLeft="22dp"
-            android:layout_marginRight="22dp"
-            android:minWidth="72dp"
-            android:background="@drawable/gl_profile_modify_logout"
-            android:drawablePadding="4dp"
-            android:gravity="center"
-            android:textColor="@color/gray4"
-            android:textSize="16dp"
-            android:singleLine="true"
-            android:layout_marginTop="3dp"
-            android:text="@string/profile_logout"/>
+      <View
+          android:id="@+id/cafe_join_line"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_below="@+id/join_edit_layout"
+          android:layout_marginTop="12dp"
+          android:layout_marginLeft="22dp"
+          android:layout_marginRight="22dp"
+          android:layout_marginBottom="16dp"
+          android:background="@color/white3"/>
 
-        <ImageView
-            android:id="@+id/copyright"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="22dp"
-            android:layout_marginRight="22dp"
-            android:layout_marginBottom="22dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"/>
-      </RelativeLayout>
+      <TextView
+          android:id="@+id/btn_logout"
+          android:layout_width="match_parent"
+          android:layout_height="36dp"
+          android:layout_below="@+id/cafe_join_line"
+          android:layout_marginLeft="22dp"
+          android:layout_marginRight="22dp"
+          android:minWidth="72dp"
+          android:background="@drawable/gl_profile_modify_logout"
+          android:drawablePadding="4dp"
+          android:gravity="center"
+          android:textColor="@color/gray4"
+          android:textSize="16dp"
+          android:singleLine="true"
+          android:layout_marginTop="3dp"
+          android:text="@string/profile_logout"/>
+
+      <ImageView
+          android:id="@+id/copyright"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:layout_marginLeft="22dp"
+          android:layout_marginRight="22dp"
+          android:layout_marginBottom="22dp"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
 
 
-    </LinearLayout>
+  </LinearLayout>
 
 </FrameLayout>

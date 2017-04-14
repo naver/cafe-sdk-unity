@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gl_img_plate"
-    tools:context="com.naver.glink.android.sdk.ui.MenusFragment">
+    tools:context="com.naver.glink.android.sdk.ui.MenusFragmentView">
 
   <LinearLayout
       android:layout_width="match_parent"
@@ -13,24 +13,25 @@
       android:baselineAligned="false"
       android:orientation="horizontal">
 
-    <FrameLayout
+    <include
+        android:id="@+id/cafe_infos"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1">
-
-      <include layout="@layout/item_menus_cafe_infos"/>
-    </FrameLayout>
+        android:layout_weight="1"
+        android:visibility="gone"
+        layout="@layout/item_menus_cafe_infos"/>
 
     <ListView
         android:id="@+id/menus_list_view"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:divider="@null"
-        android:dividerHeight="0dp"
-        android:listSelector="@drawable/gl_list_selector"
         android:theme="@android:style/Theme.Holo.Light"
-        android:cacheColorHint="@android:color/transparent"/>
+        android:cacheColorHint="@android:color/transparent"
+        android:scrollbarThumbVertical="@color/black2_opacity_20"
+        android:scrollbarSize="4dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
   </LinearLayout>
 
   <include layout="@layout/view_fragment_error"/>

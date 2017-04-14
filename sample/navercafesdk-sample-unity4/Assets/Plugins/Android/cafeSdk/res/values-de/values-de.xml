@@ -43,6 +43,8 @@
     <string name="error_no_article_like">Keine Post, denen Sie ein Like gegeben haben.</string>
     <string name="error_no_article_wirte">Keine Posts, die Sie geschrieben haben.</string>
     <string name="exist_prohibit_word_nickname_message">Enthält unerlaubte Wörter.</string>
+    <string name="image_editor_crop">Crop</string>
+    <string name="image_editor_rotate">Rotation</string>
     <string name="image_permission_setting_message">Ihnen fehlt die Erlaubnis, ein Bild anzuhängen.\nPrüfen Sie ihre Erlaubnis, in der App zu speichern, unter [Einstellungen > App].</string>
     <string name="image_upload_fail_message">Upload eines Bilds fehlgeschlagen.</string>
     <string name="internet_not_connected_error">Keine Internetverbindung vorhanden.\nBitte prüfen Sie den Status Ihres Drahtlosnetzwerks.</string>
@@ -51,6 +53,8 @@
     <string name="like_article_count_txt">Like abgegeben</string>
     <string name="logout_complete_message">Sie wurden abgemeldet.</string>
     <string name="logout_confirm_message">Möchten Sie sich abmelden?</string>
+    <string name="media_delete_message">Deleted</string>
+    <string name="media_viewer_move_post">View post</string>
     <string name="member_count_format">Mitglieder %1$,d</string>
     <string name="menu_change_channel">Möchtest du die Sprache ändern?\nDurch Ändern der Sprache werden auch Spielinhalte geändert.</string>
     <string name="modify_complete_message">Es wurde verändert.</string>
@@ -75,10 +79,24 @@
     <string name="not_configured_event_menu_id">Das Event-Menü wurde nicht festgelegt.</string>
     <string name="not_configured_notice_menu_id">Das Mitteilungen-Menü wurde nicht festgelegt.</string>
     <string name="not_supported_os_version">Eine In-App Community ist nur auf Android 4.1 oder neueren Versionen verfügbar.</string>
+    <string name="permission_record">[Optional]\nZugriff auf das Mikrofon wird bei externen
+    Tonaufnahmen benötigt. \nBitte gebe der App Zugriffserlaubnis auf das Mikrofon unter
+    [Einstellungen>App].
+  </string>
+    <string name="permission_storage">Speichererlaubnis ist zum Anhängen von Foto- und Videodateien
+    erforderlich.
+  </string>
+    <string name="permission_storage_record">[Erforderlich]\nSpeichererlaubnis: erlaubt das Speichern
+    von aufgenommenen Videos.\n[Optional]\nMikrofon: erlaubt Tonaufnahme per Mikrofon beim Speichern
+    von Videos.
+  </string>
     <string name="photo_album">Fotoalben</string>
     <string name="photo_upload_error">Upload eines Fotos fehlgeschlagen.</string>
+    <string name="plug_bottom_channel">Channel</string>
+    <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">Durch die Anmeldung wirst du zu einem Mitglied dieses Cafes.</string>
     <string name="profile_cafe_information">Eine Community für jedes Handyspiel der Welt, NAVER Cafe</string>
+    <string name="profile_login">Log in</string>
     <string name="profile_logout">Abmelden</string>
     <string name="profile_plug_information">Eine Community für jedes Handyspiel der Welt, PLUG</string>
     <string name="profile_string">Mein Profil</string>
