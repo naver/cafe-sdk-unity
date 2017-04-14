@@ -216,6 +216,28 @@ PLUG SDK를 사용하려면 다음 라이브러리를 프로젝트에 추가해 
 PLUG SDK의 저작권은 네이버(주)에 있습니다.
 
 ```
+=======
+- Android Support Library v4
+- Android Support Custom Tabs
+- [naver volleyer](http://mvnrepository.com/artifact/com.navercorp.volleyextensions/volleyer)   (2.0.1 사용 중)
+- [volley](http://mvnrepository.com/artifact/com.mcxiaoke.volley/library/) (1.0.2사용 중)
+- [google gson](http://mvnrepository.com/artifact/com.google.code.gson/gson)  (2.3.1 사용 중)
+- [glide](http://mvnrepository.com/artifact/com.github.bumptech.glide/glide)  (3.6.1 사용 중)
+- [otto](http://mvnrepository.com/artifact/com.squareup/otto)  (1.3.8 사용 중)
+- hmac (2.3.1 사용중)
+
+
+[iOS]
+
+- [네이버 아이디 로그인-4.0.7](https://nid.naver.com/devcenter/docs.nhn?menu=IOS)
+- [AFNetworking](https://github.com/AFNetworking/AFNetworking)
+<br>2.x, 3.x 사용 가능하며 3.1.0에서 테스트 진행했습니다.
+- [SDWebImage-3.8.2](https://github.com/rs/SDWebImage)
+- [FLAnimatedImage-1.0.12](https://github.com/Flipboard/FLAnimatedImage)
+- ApiGateway-1.5.0
+
+라이선스
+-------------
 NAVER Cafe SDK for Unity
 
 Copyright 2015 NAVER Corp.
