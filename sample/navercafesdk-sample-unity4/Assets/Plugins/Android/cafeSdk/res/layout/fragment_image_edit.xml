@@ -69,7 +69,7 @@
           android:drawableTop="@drawable/gl_btn_photo_rotate"
           android:gravity="center_horizontal"
           android:scaleType="center"
-          android:text="회전하기"
+          android:text="@string/image_editor_rotate"
           android:textColor="@color/white1"
           android:textSize="11sp"
           android:textStyle="bold"/>
@@ -84,7 +84,7 @@
           android:drawableTop="@drawable/gl_btn_photo_crop"
           android:gravity="center_horizontal"
           android:scaleType="center"
-          android:text="자르기"
+          android:text="@string/image_editor_crop"
           android:textColor="@color/white1"
           android:textSize="11sp"
           android:textStyle="bold"/>

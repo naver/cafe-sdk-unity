@@ -43,6 +43,8 @@
     <string name="error_no_article_like">Tidak ada post yang Anda like.</string>
     <string name="error_no_article_wirte">Tidak ada post yang Anda tulis.</string>
     <string name="exist_prohibit_word_nickname_message">Kata-kata yang dilarang termasuk.</string>
+    <string name="image_editor_crop">Crop</string>
+    <string name="image_editor_rotate">Rotation</string>
     <string name="image_permission_setting_message">Anda tidak memiliki ijin untuk melampirkan image. \nSilahkan cek ijin menyimpan Anda dalam game yang dapat diakses dari [Pengaturan > App].</string>
     <string name="image_upload_fail_message">Gagal mengupload image.</string>
     <string name="internet_not_connected_error">Tidak terhubung dengan internet.\nSilahkan cek status network wireless Anda.</string>
@@ -51,6 +53,8 @@
     <string name="like_article_count_txt">Like</string>
     <string name="logout_complete_message">Anda telah Log Out.</string>
     <string name="logout_confirm_message">Apa Anda ingin Log out?</string>
+    <string name="media_delete_message">Deleted</string>
+    <string name="media_viewer_move_post">View post</string>
     <string name="member_count_format">Member %1$,d</string>
     <string name="menu_change_channel">Apa Anda ingin mengganti bahasa?\nMengganti bahasa akan juga mengganti konten yang terdapat di dalam.</string>
     <string name="modify_complete_message">Telah diubah.</string>
@@ -75,10 +79,23 @@
     <string name="not_configured_event_menu_id">Menu Event belum diset.</string>
     <string name="not_configured_notice_menu_id">Menu Notice belum diset.</string>
     <string name="not_supported_os_version">In-app community tersedia hanya untuk Android versi 4.1 ke atas.</string>
+    <string name="permission_record">[Opcional]\nEl permiso para el micrófono es necesario para grabar
+    un audio. \nPor favor, permita el permiso para el micrófono en el juego en [Ajustes>App].
+  </string>
+    <string name="permission_storage">El permiso para guardar es necesario para adjuntar fotos o
+    videos.
+  </string>
+    <string name="permission_storage_record">[Requerido]\nPermiso para guardar: permite guardar los
+    videos grabados.\n[Opcional]\nMicrófono: permite grabar audios con el micrófono al guardar los
+    videos.
+  </string>
     <string name="photo_album">Album Foto</string>
     <string name="photo_upload_error">Gagal mengupload foto.</string>
+    <string name="plug_bottom_channel">Channel</string>
+    <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">Dengan log in, Anda akan menjadi member dari Café ini.</string>
     <string name="profile_cafe_information">NAVER Café, sebuah komunitas untuk seluruh mobile game di dunia</string>
+    <string name="profile_login">Log in</string>
     <string name="profile_logout">Log Out</string>
     <string name="profile_plug_information">PLUG, sebuah komunitas untuk seluruh mobile game di dunia</string>
     <string name="profile_string">Profile Saya</string>

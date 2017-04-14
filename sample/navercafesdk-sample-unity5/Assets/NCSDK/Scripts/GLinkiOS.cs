@@ -264,7 +264,11 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		_SetUseWidgetVideoRecord(useVideoRecord);
 		#endif
 	}
-		
+
+	public void setUseWidgetScreenShot (bool useScreenShot) {
+		// TODO:
+	}
+
 	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
 		#if UNITY_IPHONE 
 		_SetShowWidgetWhenUnloadSDK(useWidget);		

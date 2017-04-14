@@ -40,7 +40,6 @@
           android:layout_height="match_parent"
           android:paddingLeft="9dp"
           android:gravity="center_vertical|left"
-          android:text="222"
           android:textColor="@drawable/gl_article_header_text_color"
           android:textSize="13dp"/>
     </LinearLayout>
@@ -71,7 +70,6 @@
           android:layout_height="match_parent"
           android:paddingLeft="9dp"
           android:gravity="center_vertical|left"
-          android:text="222"
           android:textColor="@drawable/gl_article_header_text_color"
           android:textSize="13dp"/>
 

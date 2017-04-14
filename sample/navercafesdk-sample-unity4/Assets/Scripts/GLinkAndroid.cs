@@ -239,6 +239,12 @@ public class GLinkAndroid : IGLink {
 		#endif
 	}
 
+	public void setUseWidgetScreenShot (bool useScreenShot) {
+		#if UNITY_ANDROID 
+		glinkClass.CallStatic ("setUseScreenshot", currentActivity, useScreenShot);
+		#endif
+	}
+
 	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
 		#if UNITY_ANDROID 
 		glinkClass.CallStatic ("showWidgetWhenUnloadSdk", currentActivity, useWidget);

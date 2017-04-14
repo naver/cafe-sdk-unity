@@ -43,6 +43,8 @@
     <string name="error_no_article_like">いいねをつけた記事がありません。</string>
     <string name="error_no_article_wirte">投稿した記事がありません。</string>
     <string name="exist_prohibit_word_nickname_message">禁則文字が含まれています。</string>
+    <string name="image_editor_crop">Crop</string>
+    <string name="image_editor_rotate">Rotation</string>
     <string name="image_permission_setting_message">権限がないため写真を添付できません。\n[設定＞アプリ]にてゲームの保存権限を確認してください。</string>
     <string name="image_upload_fail_message">画像をアップロードできませんでした。</string>
     <string name="internet_not_connected_error">インターネットに接続していません。\nワイヤレスネットワーク接続の状態を確認してください。</string>
@@ -51,6 +53,8 @@
     <string name="like_article_count_txt">いいね</string>
     <string name="logout_complete_message">ログアウトしました。</string>
     <string name="logout_confirm_message">ログアウトしますか？</string>
+    <string name="media_delete_message">Deleted</string>
+    <string name="media_viewer_move_post">View post</string>
     <string name="member_count_format">会員数%1$,d名</string>
     <string name="menu_change_channel">要變更為所選頻道嗎？\n變更頻道時內容將一同變更。</string>
     <string name="modify_complete_message">修正しました。</string>
@@ -75,10 +79,20 @@
     <string name="not_configured_event_menu_id">イベントメニューが設定されていません。</string>
     <string name="not_configured_notice_menu_id">お知らせメニューが設定されていません。</string>
     <string name="not_supported_os_version">アプリ内コミュニティはAndroid 4.1以上でのみご利用いただけます。</string>
+    <string name="permission_record">
+    [選択権限]\n外部の音を録音するためにはマイクへのアクセス権限が必要です。\n[設定＞アプリ]からマイクへのアクセスを許可してください。
+  </string>
+    <string name="permission_storage">写真または動画を添付するための保存権限の許可が必要です。</string>
+    <string name="permission_storage_record">
+    [必須権限]\n保存権限：録画した動画を保存するための権限です。\n[選択権限]\nマイク：動画を保存する際、マイクで音を録音するための権限です。
+  </string>
     <string name="photo_album">写真アルバム</string>
     <string name="photo_upload_error">写真を登録できません。</string>
+    <string name="plug_bottom_channel">Channel</string>
+    <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">ログインすると自動的にこのCafeのメンバーになります。</string>
     <string name="profile_cafe_information">世界中のモバイルゲームのためのコミュニティ、NAVER Cafe</string>
+    <string name="profile_login">Log in</string>
     <string name="profile_logout">ログアウト</string>
     <string name="profile_plug_information">世界中のモバイルゲームのためのコミュニティ、PLUG</string>
     <string name="profile_string">マイプロフィール</string>
@@ -95,7 +109,7 @@
     <string name="record_size_360">360p</string>
     <string name="record_size_480">480p</string>
     <string name="record_size_720">720p</string>
-    <string name="replies_more_view">前の返信%d件を見る</string>
+    <string name="replies_more_view">返信%d件を見る</string>
     <string name="reply">返信</string>
     <string name="require_join_message">コミュニティに入会してください。</string>
     <string name="require_login_message">ログインしてください。</string>

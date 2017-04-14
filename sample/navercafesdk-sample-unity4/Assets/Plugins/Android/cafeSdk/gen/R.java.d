@@ -15,6 +15,7 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/anim/widget_half_right.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/anim/widget_record_enter.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/anim/widget_record_exit.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/alert_dialog_button_background.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/articles_article_background.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/channel_name_background.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/empty_rectangle_background.xml \
@@ -51,7 +52,12 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_ls_navi_3.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_ls_navi_4.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_ls_navi_5.xml \
-/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_menu_language_selector_background.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_ls_navi_s_cafe.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_ls_navi_s_mov.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_ls_navi_s_photo.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_ls_navi_s_post.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_ls_navi_s_profile.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_menu_language_selector_text_background.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_profile_cafe_join_logout.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/gl_profile_modify_logout.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/line_gray.xml \
@@ -63,7 +69,6 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/seekbar_control_selector.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/seekbar_progress_background.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/seekbar_video_background.xml \
-/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/tab_item_background.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/viewer_bottom_gradient.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/viewer_top_gradient.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/viewer_view_post_background.xml \
@@ -74,7 +79,6 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/widget_record_timer.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable/widget_trash_rectangle.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-land/gl_btn_profile_modify_ok.xml \
-/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-land/gl_menu_language_selector_background.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-land/menu_list_divider.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-land-xhdpi-v4/gl_img_plate.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_btn_alphacontrol_normal.png \
@@ -179,6 +183,8 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_icon_gif.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_icon_gif_bic.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_icon_lgpulldown_normal.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_icon_link.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_icon_link_white.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_icon_listlike.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_icon_listlike_pressed.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_icon_master_small.png \
@@ -197,6 +203,16 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_4_pressed.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_5_normal.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_5_pressed.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_s_cafe_n.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_s_cafe_p.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_s_mov_n.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_s_mov_p.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_s_photo_n.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_s_photo_p.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_s_post_n.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_s_post_p.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_s_profile_n.png \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_ls_navi_s_profile_p.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_scrubber_dark.9.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_scrubber_primary.9.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/gl_scrubber_video_gray.9.png \
@@ -206,7 +222,8 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/icon_likes.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/icon_posts.png \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/drawable-xhdpi-v4/icon_setting.png \
-/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/activity_video_play.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/activity_request.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/alert_dialog.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/dialog_loading.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_all_media.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_article.xml \
@@ -214,6 +231,8 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_comment.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_home.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_image_edit.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_items_dialog.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_main.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_main_banner.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_media_viewer.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_menus.xml \
@@ -221,6 +240,7 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_profile_main.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_profile_modify.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_search_articles.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_shome.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_tabs.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_web_view_article.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/fragment_write.xml \
@@ -241,14 +261,15 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_articles_article_two_line_infos.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_articles_deleted_article.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_articles_header.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_articles_notice.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_articles_search_header.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_articles_search_history.xml \
-/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_dialog_each.xml \
-/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_dialog_title.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_empty.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_empty_space.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_home_banner.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_home_main_banner.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_items_dialog_item.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_items_dialog_section.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_media_viewer_article_details.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_menus_cafe_infos.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_menus_menu.xml \
@@ -259,6 +280,7 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_profile_cafe_join.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_profile_myinfo.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_profile_pending_message.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_shome_cafe_infos.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_tab.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_video_media_viewer.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/item_video_progress.xml \
@@ -273,8 +295,6 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/view_divider_opacity_5.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/view_floating_button.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/view_fragment_error.xml \
-/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/view_glink.xml \
-/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/view_glink_low_version.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/view_home_main_banner.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/widget_dialog.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout/widget_floating_layout.xml \
@@ -291,7 +311,6 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout-land/item_profile_articles_header.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout-land/item_profile_cafe_info.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout-land/item_profile_cafe_join.xml \
-/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout-land/view_glink.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout-land/widget_dialog.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/layout-land/widget_record_setting_layout.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/values/values.xml \

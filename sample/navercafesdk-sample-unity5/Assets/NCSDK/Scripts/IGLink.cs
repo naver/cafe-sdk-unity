@@ -43,6 +43,8 @@ public interface IGLink
 	void stopWidget ();
 	
 	void setUseWidgetVideoRecord (bool useVideoRecord);
+
+	void setUseWidgetScreenShot (bool useScreenShot);
 		 
 	void setShowWidgetWhenUnloadSDK (bool useWidget);
 

@@ -69,7 +69,6 @@
               android:layout_height="wrap_content"
               android:textSize="24dp"
               android:textColor="@color/black3"
-              android:text="0"
               android:layout_toLeftOf="@+id/icon_post_go"
               android:layout_centerVertical="true"/>
 
@@ -122,7 +121,6 @@
               android:layout_height="wrap_content"
               android:textSize="24dp"
               android:textColor="@color/black3"
-              android:text="0"
               android:layout_toLeftOf="@+id/icon_comment_go"
               android:layout_centerVertical="true"/>
 
@@ -175,7 +173,6 @@
               android:layout_height="wrap_content"
               android:textSize="24dp"
               android:textColor="@color/black3"
-              android:text="0"
               android:layout_toLeftOf="@+id/icon_like_go"
               android:layout_centerVertical="true"
               android:visibility="gone"/>

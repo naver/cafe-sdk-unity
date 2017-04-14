@@ -8,6 +8,9 @@
         android:minSdkVersion="16"
         android:targetSdkVersion="23" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application>
         <activity
             android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"
@@ -21,8 +24,19 @@
             android:label="NeoId In-app"
             android:screenOrientation="sensor" />
         <activity
-            android:name="com.naver.glink.android.sdk.ui.VideoPlayActivity"
+            android:name="com.naver.glink.android.sdk.ui.parent.plugfragment.activityresult.RequestActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity android:name="com.naver.glink.android.sdk.login.neoid.PlugSchemeActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="naverplug" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

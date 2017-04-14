@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.article.WebViewArticleFragment">
+    tools:context=".ui.article.WebViewArticleFragmentView">
 
   <RelativeLayout
       android:layout_width="match_parent"
@@ -27,7 +27,9 @@
             android:id="@+id/web_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:theme="@android:style/Theme.Holo.Light"/>
+            android:theme="@android:style/Theme.Holo.Light"
+            android:scrollbarThumbVertical="@color/black2_opacity_20"
+            android:scrollbarSize="4dp"/>
       </android.support.v4.widget.SwipeRefreshLayout>
     </LinearLayout>
 
