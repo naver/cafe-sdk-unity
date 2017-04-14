@@ -11,8 +11,10 @@ typedef void (*GLSDKPostedArticleAtMenuDelegate)(NSInteger menuId, NSInteger ima
 typedef void (*GLSDKPostedCommentAtArticleDelegate)(NSInteger articleId);
 typedef void (*GLSDKWidgetPostAriticleWithImageDelegate)();
 typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
+typedef void (*GLSDKAppSchemeBannerDelegate)(const char *appScheme);
 typedef void (*GLNaverIdLoginDelelgate)();
-typedef void (*GLNaverIdGetProfileDelegate)(NSString *profileResult);
+typedef void (*GLNaverIdGetProfileDelegate)(const char *profileResult);
+
 
 @interface GLinkViewController : UIViewController <NCSDKManagerDelegate, NCNaverLoginManagerDelegate>
 @property (nonatomic, strong) UIView *mainView;
@@ -25,6 +27,7 @@ typedef void (*GLNaverIdGetProfileDelegate)(NSString *profileResult);
 @property (nonatomic, assign) GLSDKPostedCommentAtArticleDelegate glSDKPostedCommentAtArticleDelegate;
 @property (nonatomic, assign) GLSDKWidgetPostAriticleWithImageDelegate glSDKWidgetPostAriticleWithImageDelegate;
 @property (nonatomic, assign) GLSDKDidVoteAtArticleDelegate glSDKDidVoteAtArticleDelegate;
+@property (nonatomic, assign) GLSDKAppSchemeBannerDelegate glSDKAppSchemeBannerDelegate;
 @property (nonatomic, assign) GLNaverIdLoginDelelgate glNaverIdLoginDelelgate;
 @property (nonatomic, assign) GLNaverIdGetProfileDelegate glNaverIdGetProfileDelegate;
 
@@ -204,6 +207,10 @@ typedef void (*GLNaverIdGetProfileDelegate)(NSString *profileResult);
     [[NCSDKManager getSharedInstance] setWidgetStartPosition:isLeft andY:y];
 }
 
+- (void)setUseWidgetScreenShot:(BOOL)use {
+    [[NCSDKManager getSharedInstance] setUseWidgetScreenShot:use];
+}
+
 #pragma mark - NCSDKDelegate
 - (void)ncSDKViewDidLoad {
     if (self.glSDKDidLoadDelegate) {
@@ -241,6 +248,14 @@ typedef void (*GLNaverIdGetProfileDelegate)(NSString *profileResult);
     }
 }
 
+- (void)ncSDKAppSchemeBanner:(NSString *)appScheme {
+    const char* res = [appScheme UTF8String];
+    
+    if (self.glSDKAppSchemeBannerDelegate) {
+        self.glSDKAppSchemeBannerDelegate(res);
+    }
+}
+
 #pragma mark - NCWidgetDelegate
 - (void)ncSDKWidgetPostArticleWithImage {
     if (self.glSDKWidgetPostAriticleWithImageDelegate) {
@@ -260,15 +275,17 @@ typedef void (*GLNaverIdGetProfileDelegate)(NSString *profileResult);
 }
 
 - (void)ncSDKGetProfile:(NSString *)result {
+    const char* res = [result UTF8String];
+    
     if (self.glNaverIdGetProfileDelegate) {
-        self.glNaverIdGetProfileDelegate(result);
+        self.glNaverIdGetProfileDelegate(res);
     }
 }
 
 @end
 
 // Converts C style string to NSString
-NSString* CreateNSString (const char* string) {
+NSString* NCSDKCreateNSString (const char* string) {
     if (string) {
         return [NSString stringWithUTF8String:string];
     } else {
@@ -277,7 +294,7 @@ NSString* CreateNSString (const char* string) {
     }
 }
 extern "C" {
-    char* CreateNSStrintToChar (const char* string)
+    char* NCSDKCreateNSStrintToChar (const char* string)
     {
         if (string == NULL)
             return NULL;
@@ -289,13 +306,13 @@ extern "C" {
     GLinkViewController *vc = [[GLinkViewController alloc] init];
     
     void _InitGLink(const char* NaverLoginClientId, const char* NaverLoginClientSecret, int cafeId ) {
-        [vc setGLinkInfoWithNaverLoginClientId:CreateNSString(NaverLoginClientId)andNaverLoginClientSecret:CreateNSString(NaverLoginClientSecret)
+        [vc setGLinkInfoWithNaverLoginClientId:NCSDKCreateNSString(NaverLoginClientId)andNaverLoginClientSecret:NCSDKCreateNSString(NaverLoginClientSecret)
                                      andCafeId:cafeId];
         //        [vc setChannelCode:@"ko"];
     }
     
     void _InitGLinkForGlobal(const char* neoIdConsumerKey, int communityId, const char* channelCode) {
-        [vc setGLinkGlobalInfoWithNeoIdConsumerKey:CreateNSString(neoIdConsumerKey) andCommunityId:communityId andChannelCode:CreateNSString(channelCode)];
+        [vc setGLinkGlobalInfoWithNeoIdConsumerKey:NCSDKCreateNSString(neoIdConsumerKey) andCommunityId:communityId andChannelCode:NCSDKCreateNSString(channelCode)];
     }
     
     void _ExecuteMain(){
@@ -323,7 +340,7 @@ extern "C" {
     }
     
     void _SyncGameUserId(const char* gameUserId) {
-        [vc syncGameUserId:CreateNSString(gameUserId)];
+        [vc syncGameUserId:NCSDKCreateNSString(gameUserId)];
     }
     
     void _ExecuteArticlePost() {
@@ -331,11 +348,11 @@ extern "C" {
     }
     
     void _ExecuteArticlePostWithImage(const char* filePath) {
-        [vc executeArticleForImageWithFilePath:CreateNSString(filePath)];
+        [vc executeArticleForImageWithFilePath:NCSDKCreateNSString(filePath)];
     }
     
     void _ExecuteArticlePostWithVideo(const char* filePath) {
-        [vc executeArticleForVideoWithFilePath:CreateNSString(filePath)];
+        [vc executeArticleForVideoWithFilePath:NCSDKCreateNSString(filePath)];
         
     }
     
@@ -344,7 +361,7 @@ extern "C" {
     }
     
     void _ShowMessageToast(const char* message) {
-        [vc executeShowMessageToast:CreateNSString(message)];
+        [vc executeShowMessageToast:NCSDKCreateNSString(message)];
     }
     
     void _SetSDKDidLoadDelegate(GLSDKDidLoadDelegate glSDKDidLoadDelegate) {
@@ -367,7 +384,7 @@ extern "C" {
     }
     void _SaveCameraRoll(const char *fileName)
     {
-        NSString *convertFileName = CreateNSString(fileName);
+        NSString *convertFileName = NCSDKCreateNSString(fileName);
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory,convertFileName];
@@ -379,6 +396,10 @@ extern "C" {
     
     void _SetSDKDidVoteAtArticleDelegate(GLSDKDidVoteAtArticleDelegate glSDKDidVoteAtArticleDelegate) {
         vc.glSDKDidVoteAtArticleDelegate = glSDKDidVoteAtArticleDelegate;
+    }
+    
+    void _SetSDKAppSchemeBannerDelegate(GLSDKAppSchemeBannerDelegate glSDKAppSchemeBannerDelegate) {
+        vc.glSDKAppSchemeBannerDelegate = glSDKAppSchemeBannerDelegate;
     }
     
     void _StartWidget() {
@@ -398,31 +419,31 @@ extern "C" {
     }
     
     const char* _GetCurrentChannelCode() {
-        return CreateNSStrintToChar([[vc currentChannelCode] UTF8String]);
+        return NCSDKCreateNSStrintToChar([[vc currentChannelCode] UTF8String]);
     }
     
     void _SendNewUser(const char* gameUserId, const char* market) {
-        [vc sendNewUser:CreateNSString(gameUserId) andMarket:CreateNSString(market)];
+        [vc sendNewUser:NCSDKCreateNSString(gameUserId) andMarket:NCSDKCreateNSString(market)];
     }
     
     void _SendPayUser(const char *gameUserId, double pay, const char *productCode, const char *currency, const char *market) {
-        [vc sendPayUser:CreateNSString(gameUserId) andPay:pay andProductCode:CreateNSString(productCode) andCurrency:CreateNSString(currency) andMarket:CreateNSString(market)];
+        [vc sendPayUser:NCSDKCreateNSString(gameUserId) andPay:pay andProductCode:NCSDKCreateNSString(productCode) andCurrency:NCSDKCreateNSString(currency) andMarket:NCSDKCreateNSString(market)];
     }
     
     void _SendPageVisit(const char* gameUserId) {
-        [vc sendPageVisit:CreateNSString(gameUserId)];
+        [vc sendPageVisit:NCSDKCreateNSString(gameUserId)];
     }
     
     void _SetChannelCode(const char* code) {
-        [vc setChannelCode:CreateNSString(code)];
+        [vc setChannelCode:NCSDKCreateNSString(code)];
     }
     
     void _SetThemeColor(const char* themeColorCSSString, const char* backgroundCSSString) {
-        [vc setThemeColor:CreateNSString(themeColorCSSString) andTabBackgroundColor:CreateNSString(backgroundCSSString)];
+        [vc setThemeColor:NCSDKCreateNSString(themeColorCSSString) andTabBackgroundColor:NCSDKCreateNSString(backgroundCSSString)];
     }
     
     void _InitNaverLogin(const char* clientId, const char* clientSecret) {
-        [vc initNaverIdLoginWithClientId:CreateNSString(clientId) andCleitnSecret:CreateNSString(clientSecret)];
+        [vc initNaverIdLoginWithClientId:NCSDKCreateNSString(clientId) andCleitnSecret:NCSDKCreateNSString(clientSecret)];
     }
     
     void _Login() {
@@ -451,5 +472,9 @@ extern "C" {
     
     void _SetWidgetStartPosition(BOOL isLeft, int positionY) {
         [vc setWidgetStartPosition:isLeft andY:positionY];
+    }
+    
+    void _SetUseWidgetScreenShot(BOOL use) {
+        [vc setUseWidgetScreenShot:use];
     }
 }

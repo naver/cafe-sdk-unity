@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: e288a1bccd4a2426385006aee095dfbe
+guid: cc3803fbb60cd4348b6a4e6c778c4dc3
 folderAsset: yes
-timeCreated: 1487321488
+timeCreated: 1492151715
 licenseType: Pro
 PluginImporter:
   serializedVersion: 1
@@ -10,9 +10,14 @@ PluginImporter:
   isPreloaded: 0
   isOverridable: 0
   platformData:
+    Android:
+      enabled: 0
+      settings:
+        CPU: ARMv7
     Any:
       enabled: 0
       settings:
+        Exclude Android: 1
         Exclude Editor: 0
         Exclude Linux: 1
         Exclude Linux64: 1

@@ -32,6 +32,7 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 #pragma mark - Widget property
 @property (nonatomic, assign) BOOL showWidgetWhenUnloadSDK;
 @property (nonatomic, assign) BOOL useWidgetVideoRecord NS_AVAILABLE_IOS(9_0);
+@property (nonatomic, assign) BOOL useWidgetScreenShot;
 
 #pragma mark - class
 + (NCSDKManager *)getSharedInstance;
@@ -110,15 +111,16 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
  Start Widget
  */
 - (void)startWidget;
+
 /*
  End Widget
  */
 - (void)stopWidget;
+
 /*
  Widget Start Position
 */
 - (void)setWidgetStartPosition:(BOOL)isLeft andY:(NSInteger)y;
-
 
 #pragma mark - private function
 - (void)sdkWillCloseWithWidget:(BOOL)widget;
@@ -153,5 +155,10 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 
 - (void)ncSDKWidgetPostArticleWithImage;
 - (void)ncSDKWidgetSuccessVideoRecord;
+
+/*
+ App Scheme 처리
+ */
+- (void)ncSDKAppSchemeBanner:(NSString *)appScheme;
 
 @end
