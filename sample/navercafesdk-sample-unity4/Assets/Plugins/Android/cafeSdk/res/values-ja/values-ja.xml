@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_media_no_permissions">権限がありません。</string>
     <string name="already_exist_nickname_message">すでに使用中のニックネームです。</string>
     <string name="article_comments_count">コメント</string>
     <string name="article_count_txt">投稿</string>
@@ -79,15 +80,12 @@
     <string name="not_configured_event_menu_id">イベントメニューが設定されていません。</string>
     <string name="not_configured_notice_menu_id">お知らせメニューが設定されていません。</string>
     <string name="not_supported_os_version">アプリ内コミュニティはAndroid 4.1以上でのみご利用いただけます。</string>
-    <string name="permission_record">
-    [選択権限]\n外部の音を録音するためにはマイクへのアクセス権限が必要です。\n[設定＞アプリ]からマイクへのアクセスを許可してください。
-  </string>
+    <string name="permission_record">[選択権限]\n外部の音を録音するためにはマイクへのアクセス権限が必要です。\n[設定＞アプリ]からマイクへのアクセスを許可してください。</string>
     <string name="permission_storage">写真または動画を添付するための保存権限の許可が必要です。</string>
-    <string name="permission_storage_record">
-    [必須権限]\n保存権限：録画した動画を保存するための権限です。\n[選択権限]\nマイク：動画を保存する際、マイクで音を録音するための権限です。
-  </string>
+    <string name="permission_storage_record">[必須権限]\n保存権限：録画した動画を保存するための権限です。\n[選択権限]\nマイク：動画を保存する際、マイクで音を録音するための権限です。</string>
     <string name="photo_album">写真アルバム</string>
     <string name="photo_upload_error">写真を登録できません。</string>
+    <string name="pin_to_top">お知らせを上段に固定</string>
     <string name="plug_bottom_channel">Channel</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">ログインすると自動的にこのCafeのメンバーになります。</string>

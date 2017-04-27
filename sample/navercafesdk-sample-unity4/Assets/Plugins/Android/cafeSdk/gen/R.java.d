@@ -320,6 +320,7 @@
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/values-in/values-in.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/values-ja/values-ja.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/values-ko/values-ko.xml \
+/Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/values-ru/values-ru.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/values-th/values-th.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/values-zh-rCN/values-zh-rCN.xml \
 /Users/naver/dev/plug-publics/cocos2dx-public/lib/android/res/values-zh-rTW/values-zh-rTW.xml \

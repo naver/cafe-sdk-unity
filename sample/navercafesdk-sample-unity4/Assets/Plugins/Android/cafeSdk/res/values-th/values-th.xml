@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_media_no_permissions">ไม่ได้รับอนุญาต</string>
     <string name="already_exist_nickname_message">ชื่อเล่นนี้มีผู้ใช้งานแล้ว</string>
     <string name="article_comments_count">ความคิดเห็น</string>
     <string name="article_count_txt">โพสต์แล้ว</string>
@@ -79,16 +80,12 @@
     <string name="not_configured_event_menu_id">เมนูกิจกรรมยังไม่ได้รับการตั้งค่า</string>
     <string name="not_configured_notice_menu_id">เมนูแจ้งเตือนยังไม่ได้รับการตั้งค่า</string>
     <string name="not_supported_os_version">คอมมิวนิตี้ในแอพสามารถใช้งานได้เฉพาะบนแอนดรอยด์ 4.1 หรือสูงกว่าเท่านั้น</string>
-    <string name="permission_record">[ตัวเลือก]\nจำเป็นต้องอนุญาตไมโครโฟนเพื่อบันทึกเสียงภายนอก
-    \nกรุณาอนุญาตไมโครโฟนของเกมที่ [ตั้งค่า>แอพ]
-  </string>
+    <string name="permission_record">[ตัวเลือก]\nจำเป็นต้องอนุญาตไมโครโฟนเพื่อบันทึกเสียงภายนอก \nกรุณาอนุญาตไมโครโฟนของเกมที่ [ตั้งค่า>แอพ]</string>
     <string name="permission_storage">จำเป็นต้องอนุญาตบันทึกเพื่อแนบไฟล์รูปภาพหรือวิดีโอ</string>
-    <string name="permission_storage_record">[จำเป็น]\nสิทธิ์การบันทึก :
-    อนุญาตให้บันทึกวิดีโอที่บันทึก\n[ตัวเลือก]\nไมโครโฟน :
-    อนุญาตให้บันทึกเสียงด้วยไมโครโฟนในขณะบันทึกวิดีโอ
-  </string>
+    <string name="permission_storage_record">[จำเป็น]\nสิทธิ์การบันทึก : อนุญาตให้บันทึกวิดีโอที่บันทึก\n[ตัวเลือก]\nไมโครโฟน : อนุญาตให้บันทึกเสียงด้วยไมโครโฟนในขณะบันทึกวิดีโอ</string>
     <string name="photo_album">อัลบั้มรูปภาพ</string>
     <string name="photo_upload_error">การอัพโหลดรูปภาพล้มเหลว</string>
+    <string name="pin_to_top">ปักหมุด</string>
     <string name="plug_bottom_channel">Channel</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">เมื่อเข้าสู่ระบบ คุณจะเป็นสมาชิกของคาเฟ่นี้โดยอัตโนมัติ</string>

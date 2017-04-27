@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_media_no_permissions">沒有權限。</string>
     <string name="already_exist_nickname_message">已使用的暱稱。</string>
     <string name="article_comments_count">留言</string>
     <string name="article_count_txt">撰寫的文章</string>
@@ -81,11 +82,10 @@
     <string name="not_supported_os_version">僅於Android 4.1以上版本可使用App內社群。</string>
     <string name="permission_record">[選擇權限]\n為錄音外界聲音，需麥克風權限。\n請於[設定 > APP]允許遊戲麥克風權限。</string>
     <string name="permission_storage">為夾帶照片或影片檔案，需允許儲存權限。</string>
-    <string name="permission_storage_record">[必需權限]\n儲存權限 : 為儲存錄影的權限。\n[選擇權限]\n麥克風 :
-    儲存影片時，為使用麥克風錄音的權限。
-  </string>
+    <string name="permission_storage_record">[必需權限]\n儲存權限 : 為儲存錄影的權限。\n[選擇權限]\n麥克風 : 儲存影片時，為使用麥克風錄音的權限。</string>
     <string name="photo_album">相簿</string>
     <string name="photo_upload_error">無法登錄照片。</string>
+    <string name="pin_to_top">上端固定公告</string>
     <string name="plug_bottom_channel">Channel</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">若登入將自動成為本Cafe成員。</string>

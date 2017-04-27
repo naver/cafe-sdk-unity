@@ -2,6 +2,7 @@
 <resources>
     <dimen name="comment_reply_width">62dp</dimen>
     <dimen name="comment_writer_nickname_margin_right">70dp</dimen>
+    <string name="all_media_no_permissions">Ningún permiso</string>
     <string name="already_exist_nickname_message">El apodo ya está en uso.</string>
     <string name="article_comments_count">Comentarios</string>
     <string name="article_count_txt">Publicado</string>
@@ -81,17 +82,12 @@
     <string name="not_configured_event_menu_id">El menú de Eventos no ha sido establecido.</string>
     <string name="not_configured_notice_menu_id">El menú de Avisos no ha sido establecido.</string>
     <string name="not_supported_os_version">La comunidad de la app solo está disponible para Android 4.1 o una versión superior.</string>
-    <string name="permission_record">[Opsional]\nIzin untuk microphone diperlukan untuk merekam suara
-    eksternal. \nSilakan setujui izin untuk microphone game di [Pengaturan>App].
-  </string>
-    <string name="permission_storage">Izin untuk menyimpan diperlukan untuk melampirkan file foto atau
-    video.
-  </string>
-    <string name="permission_storage_record">[Wajib]\nIzin menyimpan: untuk menyimpan video yang telah
-    direkam.\n[Opsional]\nMikrofon: untuk merekam suara dengan microphone ketika menyimpan video.
-  </string>
+    <string name="permission_record">[Opsional]\nIzin untuk microphone diperlukan untuk merekam suara eksternal. \nSilakan setujui izin untuk microphone game di [Pengaturan>App].</string>
+    <string name="permission_storage">Izin untuk menyimpan diperlukan untuk melampirkan file foto atau video.</string>
+    <string name="permission_storage_record">[Wajib]\nIzin menyimpan: untuk menyimpan video yang telah direkam.\n[Opsional]\nMikrofon: untuk merekam suara dengan microphone ketika menyimpan video.</string>
     <string name="photo_album">Álbumes de Fotos</string>
     <string name="photo_upload_error">Error al subir una foto.</string>
+    <string name="pin_to_top">Anclar en la parte superior</string>
     <string name="plug_bottom_channel">Channel</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">Al iniciar sesión, te convertirás en un miembro de este Cafe.</string>

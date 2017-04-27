@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_media_no_permissions">Tidak memiliki izin</string>
     <string name="already_exist_nickname_message">Nickname telah digunakan.</string>
     <string name="article_comments_count">Komen</string>
     <string name="article_count_txt">Post yang ada</string>
@@ -79,18 +80,12 @@
     <string name="not_configured_event_menu_id">Menu Event belum diset.</string>
     <string name="not_configured_notice_menu_id">Menu Notice belum diset.</string>
     <string name="not_supported_os_version">In-app community tersedia hanya untuk Android versi 4.1 ke atas.</string>
-    <string name="permission_record">[Opcional]\nEl permiso para el micrófono es necesario para grabar
-    un audio. \nPor favor, permita el permiso para el micrófono en el juego en [Ajustes>App].
-  </string>
-    <string name="permission_storage">El permiso para guardar es necesario para adjuntar fotos o
-    videos.
-  </string>
-    <string name="permission_storage_record">[Requerido]\nPermiso para guardar: permite guardar los
-    videos grabados.\n[Opcional]\nMicrófono: permite grabar audios con el micrófono al guardar los
-    videos.
-  </string>
+    <string name="permission_record">[Opcional]\nEl permiso para el micrófono es necesario para grabar un audio. \nPor favor, permita el permiso para el micrófono en el juego en [Ajustes>App].</string>
+    <string name="permission_storage">El permiso para guardar es necesario para adjuntar fotos o videos.</string>
+    <string name="permission_storage_record">[Requerido]\nPermiso para guardar: permite guardar los videos grabados.\n[Opcional]\nMicrófono: permite grabar audios con el micrófono al guardar los videos.</string>
     <string name="photo_album">Album Foto</string>
     <string name="photo_upload_error">Gagal mengupload foto.</string>
+    <string name="pin_to_top">Sematkan ke Atas</string>
     <string name="plug_bottom_channel">Channel</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">Dengan log in, Anda akan menjadi member dari Café ini.</string>

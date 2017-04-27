@@ -117,6 +117,7 @@
     <integer name="default_title_indicator_line_position">0</integer>
     <integer name="default_underline_indicator_fade_delay">300</integer>
     <integer name="default_underline_indicator_fade_length">400</integer>
+    <string name="all_media_no_permissions">No permissions</string>
     <string name="already_exist_nickname_message">The nickname is already in use.</string>
     <string name="article_comments_count">Comments</string>
     <string name="article_count_txt">Posted</string>
@@ -204,19 +205,14 @@
     <string name="not_configured_event_menu_id">The Events menu has not been set.</string>
     <string name="not_configured_notice_menu_id">The Notices menu has not been set.</string>
     <string name="not_supported_os_version">An in-app community is available only in Android 4.1 or later.</string>
-    <string name="permission_record">[Optional]\nPermission to microphone is needed to record external
-    audio. \nPlease allow permission to microphone of the game at [Settings>App].
-  </string>
-    <string name="permission_storage">Permission to save is needed to attach photos or video files.
-  </string>
-    <string name="permission_storage_record">[Required]\nPermission to save: it allows to save
-    recorded videos.\n[Optional]\nMicrophone: it allows to record audio with microphone when saving
-    videos.
-  </string>
+    <string name="permission_record">[Optional]\nPermission to microphone is needed to record external audio. \nPlease allow permission to microphone of the game at [Settings>App].</string>
+    <string name="permission_storage">Permission to save is needed to attach photos or video files.</string>
+    <string name="permission_storage_record">[Required]\nPermission to save: it allows to save recorded videos.\n[Optional]\nMicrophone: it allows to record audio with microphone when saving videos.</string>
     <string name="photo_album">Photo Albums</string>
     <string name="photo_upload_error">Uploading a photo failed.</string>
+    <string name="pin_to_top">Pin to Top</string>
     <string name="plug_bottom_channel">Channel</string>
-    <string name="plug_sdk_version" translatable="false">2.4.2</string>
+    <string name="plug_sdk_version" translatable="false">2.4.3</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">By logging in, you become a member of this Cafe.</string>
     <string name="profile_cafe_information">A community for every mobile game around the world, NAVER Cafe</string>

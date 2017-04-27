@@ -2,6 +2,7 @@
 <resources>
     <dimen name="comment_reply_width">58dp</dimen>
     <dimen name="comment_writer_nickname_margin_right">66dp</dimen>
+    <string name="all_media_no_permissions">Aucune permission</string>
     <string name="already_exist_nickname_message">Le pseudo est déjà utilisé.</string>
     <string name="article_comments_count">Commentaires</string>
     <string name="article_count_txt">Publié</string>
@@ -81,18 +82,12 @@
     <string name="not_configured_event_menu_id">Le menu d\'événements n\'a pas été défini.</string>
     <string name="not_configured_notice_menu_id">Le menu d\'avis n\'a pas été défini.</string>
     <string name="not_supported_os_version">Une communauté dans l\'app n\'est disponible que sur Android 4.1 ou ultérieur.</string>
-    <string name="permission_record">[Facultatif]\nL\'autorisation pour le microphone est requise pour
-    enregistrer de l\'audio externe. \nVeuillez autoriser le microphone dans [Paramètres>App].
-  </string>
-    <string name="permission_storage">La permissions de sauvegardes est requise pour attacher des
-    photos ou fichiers vidéos.
-  </string>
-    <string name="permission_storage_record">[Requis]\npermissions de sauvegardes : cela permet de
-    sauvegarder les vidéos enregistrées.\n[Facultatif]\nMicrophone : Cela permet d\'enregistrer
-    l\'audio avec le microphone pendant la prise de vidéos.
-  </string>
+    <string name="permission_record">[Facultatif]\nL\'autorisation pour le microphone est requise pour enregistrer de l\'audio externe. \nVeuillez autoriser le microphone dans [Paramètres>App].</string>
+    <string name="permission_storage">La permissions de sauvegardes est requise pour attacher des photos ou fichiers vidéos.</string>
+    <string name="permission_storage_record">[Requis]\npermissions de sauvegardes : cela permet de sauvegarder les vidéos enregistrées.\n[Facultatif]\nMicrophone : Cela permet d\'enregistrer l\'audio avec le microphone pendant la prise de vidéos.</string>
     <string name="photo_album">Albums photo</string>
     <string name="photo_upload_error">Échec du téléchargement de la photo.</string>
+    <string name="pin_to_top">Épingler en haut</string>
     <string name="plug_bottom_channel">Channel</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">En vous connectant, vous devenez membre de ce Cafe.</string>

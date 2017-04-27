@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_media_no_permissions">Keine Erlaubnisse</string>
     <string name="already_exist_nickname_message">Dieser Nickname wird bereits verwendet.</string>
     <string name="article_comments_count">Kommentare</string>
     <string name="article_count_txt">Gepostet</string>
@@ -79,19 +80,12 @@
     <string name="not_configured_event_menu_id">Das Event-Menü wurde nicht festgelegt.</string>
     <string name="not_configured_notice_menu_id">Das Mitteilungen-Menü wurde nicht festgelegt.</string>
     <string name="not_supported_os_version">Eine In-App Community ist nur auf Android 4.1 oder neueren Versionen verfügbar.</string>
-    <string name="permission_record">[Optional]\nZugriff auf das Mikrofon wird bei externen
-    Tonaufnahmen benötigt. \nBitte gebe der App Zugriffserlaubnis auf das Mikrofon unter
-    [Einstellungen>App].
-  </string>
-    <string name="permission_storage">Speichererlaubnis ist zum Anhängen von Foto- und Videodateien
-    erforderlich.
-  </string>
-    <string name="permission_storage_record">[Erforderlich]\nSpeichererlaubnis: erlaubt das Speichern
-    von aufgenommenen Videos.\n[Optional]\nMikrofon: erlaubt Tonaufnahme per Mikrofon beim Speichern
-    von Videos.
-  </string>
+    <string name="permission_record">[Optional]\nZugriff auf das Mikrofon wird bei externen Tonaufnahmen benötigt. \nBitte gebe der App Zugriffserlaubnis auf das Mikrofon unter [Einstellungen>App].</string>
+    <string name="permission_storage">Speichererlaubnis ist zum Anhängen von Foto- und Videodateien erforderlich.</string>
+    <string name="permission_storage_record">[Erforderlich]\nSpeichererlaubnis: erlaubt das Speichern von aufgenommenen Videos.\n[Optional]\nMikrofon: erlaubt Tonaufnahme per Mikrofon beim Speichern von Videos.</string>
     <string name="photo_album">Fotoalben</string>
     <string name="photo_upload_error">Upload eines Fotos fehlgeschlagen.</string>
+    <string name="pin_to_top">Oben anheften</string>
     <string name="plug_bottom_channel">Channel</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">Durch die Anmeldung wirst du zu einem Mitglied dieses Cafes.</string>

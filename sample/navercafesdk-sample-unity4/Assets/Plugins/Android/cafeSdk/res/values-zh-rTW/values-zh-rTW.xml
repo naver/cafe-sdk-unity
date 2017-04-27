@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_media_no_permissions">您没有权限。</string>
     <string name="already_exist_nickname_message">已在使用的昵称。</string>
     <string name="article_comments_count">评论</string>
     <string name="article_count_txt">编写的文章</string>
@@ -81,11 +82,10 @@
     <string name="not_supported_os_version">APP内社区只使用于Android 4.1以上的版本。</string>
     <string name="permission_record">[选择权限]\n为了录制外部声音而需要麦克风权限。 \n在[设置> 应用程序]中请允许游戏使用麦克风。</string>
     <string name="permission_storage">为了在附件中添加照片和视频文件需要允许保存权限。</string>
-    <string name="permission_storage_record">
-    [必须权限]\n保存权限：为了保存录制的视频的权限。\n[选择权限]\n麦克风：在保存视频时为了用麦克风录音的权限。
-  </string>
+    <string name="permission_storage_record">[必须权限]\n保存权限：为了保存录制的视频的权限。\n[选择权限]\n麦克风：在保存视频时为了用麦克风录音的权限。</string>
     <string name="photo_album">相册</string>
     <string name="photo_upload_error">无法上传照片。</string>
+    <string name="pin_to_top">上方固定公告</string>
     <string name="plug_bottom_channel">Channel</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">登录后将自动成为此CAFE的成员。</string>

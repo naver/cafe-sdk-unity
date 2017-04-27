@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_media_no_permissions">권한이 없습니다.</string>
     <string name="already_exist_nickname_message">이미 사용 중인 별명입니다.</string>
     <string name="article_comments_count">댓글</string>
     <string name="article_count_txt">작성한 글</string>
@@ -79,15 +80,12 @@
     <string name="not_configured_event_menu_id">이벤트 메뉴가 설정되지 않았습니다.</string>
     <string name="not_configured_notice_menu_id">공지 사항 메뉴가 설정되지 않았습니다.</string>
     <string name="not_supported_os_version">인앱 커뮤니티는 Android 4.1버전 이상에서만 사용할 수 있습니다.</string>
-    <string name="permission_record">[선택적 권한]\n외부 소리를 녹음하기 위해서는 마이크 권한이 필요합니다. \n[설정>앱]에서 게임의 마이크 권한을
-    허용해주세요.
-  </string>
+    <string name="permission_record">[선택적 권한]\n외부 소리를 녹음하기 위해서는 마이크 권한이 필요합니다. \n[설정>앱]에서 게임의 마이크 권한을 허용해주세요.</string>
     <string name="permission_storage">사진 또는 동영상 파일을 첨부하기 위한 저장 권한 허용이 필요합니다.</string>
-    <string name="permission_storage_record">[필수적 권한]\n저장 권한 : 녹화된 동영상을 저장하기 위한 권한입니다.\n[선택적 권한]\n마이크
-    : 동영상 저장 시 마이크로 소리를 녹음하기 위한 권한입니다.
-  </string>
+    <string name="permission_storage_record">[필수적 권한]\n저장 권한 : 녹화된 동영상을 저장하기 위한 권한입니다.\n[선택적 권한]\n마이크 : 동영상 저장 시 마이크로 소리를 녹음하기 위한 권한입니다.</string>
     <string name="photo_album">사진 앨범</string>
     <string name="photo_upload_error">사진을 등록할 수 없습니다.</string>
+    <string name="pin_to_top">필독 공지</string>
     <string name="plug_bottom_channel">Channel</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">로그인하면 자동으로 이 카페의 멤버가 됩니다.</string>
