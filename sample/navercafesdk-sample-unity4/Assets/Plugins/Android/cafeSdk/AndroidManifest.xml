@@ -37,6 +37,11 @@
                 <data android:scheme="naverplug" />
             </intent-filter>
         </activity>
+
+        <!-- samsung 갤럭시 S8 대응 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
     </application>
 
 </manifest>
