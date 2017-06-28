@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -8,7 +8,7 @@ public class GLinkRecord {
 
 	private static IGLinkRecord glinkRecord = null;
 
-	public static IGLinkNaverId sharedInstance() 
+	public static IGLinkRecord sharedInstance() 
 	{
 		if (glinkRecord == null) {
 			#if UNITY_IOS
@@ -32,22 +32,22 @@ public interface IGLinkRecord
 public class GLinkRecordiOS : IGLinkRecord {
 	#if UNITY_IPHONE
 	[DllImport("__Internal")]
-	private static extern void startRecord();
+	private static extern void _StartRecord();
 
 	[DllImport("__Internal")]
-	private static extern void stopRecord();
+	private static extern void _StopRecord();
 
 	[DllImport("__Internal")]
 	private static extern void _SetSDKRecordStartDelegate(RecordStartDelegate callback);
 
 	[DllImport("__Internal")]
-	private static extern void _SetSDKRecordErrorDelegate(NaverIdGetProfileDelegate callback);
+	private static extern void _SetSDKRecordErrorDelegate(RecordErrorDelegate callback);
 
 	[DllImport("__Internal")]
-	private static extern void _SetSDKRecordFinishDelegate(NaverIdGetProfileDelegate callback);
+	private static extern void _SetSDKRecordFinishDelegate(RecordFinishDelegate callback);
 
 	[DllImport("__Internal")]
-	private static extern void _SetSDKRecordFinishWithPreviewDelegate(NaverIdGetProfileDelegate callback);
+	private static extern void _SetSDKRecordFinishWithPreviewDelegate(RecordFinishWithPreviewDelegate callback);
 	#endif
 
 	delegate void RecordStartDelegate();
@@ -82,9 +82,21 @@ public class GLinkRecordiOS : IGLinkRecord {
 			_SetSDKRecordFinishWithPreviewDelegate(_RecordFinishWithPreviewCallback);
 		#endif
 	}
+
+	public void startRecord() {
+		#if UNITY_IPHONE
+			_StartRecord();
+		#endif
+	}
+
+	public void stopRecord() {
+		#if UNITY_IPHONE
+			_StopRecord();
+		#endif
+	}
 }
 
-public class GLinkNaverIdAndroid : IGLinkNaverId {
+public class GLinkRecordAndroid : IGLinkRecord {
 
 	public void startRecord() {
 		#if UNITY_ANDROID 
