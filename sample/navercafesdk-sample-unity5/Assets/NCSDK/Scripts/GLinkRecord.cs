@@ -121,9 +121,7 @@ public class GLinkRecordAndroid : IGLinkRecord {
 			glink.executeArticlePostWithVideo (uri);
 		}
 	}
-
-	#endif
-
+		
 	static void showToast(string message) {
 				var activity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
 				activity.Call ("runOnUiThread", new AndroidJavaRunnable (() => {
@@ -131,6 +129,7 @@ public class GLinkRecordAndroid : IGLinkRecord {
 					toast.Call ("show");
 				}));
 	}
+	#endif
 
 	public GLinkRecordAndroid () {
 		#if UNITY_ANDROID
