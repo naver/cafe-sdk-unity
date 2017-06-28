@@ -98,15 +98,59 @@ public class GLinkRecordiOS : IGLinkRecord {
 
 public class GLinkRecordAndroid : IGLinkRecord {
 
+	#if UNITY_ANDROID
+	AndroidJavaClass delegateClass = null;
+	AndroidJavaObject currentActivity = null;
+
+	class OnRecordManagerListener : AndroidJavaProxy {
+		public OnRecordManagerListener () : base("com.naver.glink.android.sdk.PlugRecordManager$OnRecordManagerListener") { /* empty. */ }
+
+		void onStartRecord() {
+			// TODO: startRecord callback.
+			showToast ("start record");
+		}
+
+		void onErrorRecord() {
+			 //TODO: record error callback.+
+			showToast ("record error");
+		}
+
+		void onFinishRecord(string uri) {
+			//TODO: record finish callback.+
+			GLinkAndroid glink = (GLinkAndroid) GLink.sharedInstance ();
+			glink.executeArticlePostWithVideo (uri);
+		}
+	}
+
+	#endif
+
+	static void showToast(string message) {
+				var activity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
+				activity.Call ("runOnUiThread", new AndroidJavaRunnable (() => {
+					AndroidJavaObject toast = new AndroidJavaClass ("android.widget.Toast").CallStatic<AndroidJavaObject>("makeText", activity, message, 1);
+					toast.Call ("show");
+				}));
+	}
+
+	public GLinkRecordAndroid () {
+		#if UNITY_ANDROID
+		delegateClass = new AndroidJavaClass ("com.naver.glink.android.sdk.PlugRecordManager");
+		currentActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
+
+		delegateClass.CallStatic ("setOnRecordManagerListener", new OnRecordManagerListener());
+		#endif
+	}
+
+
 	public void startRecord() {
 		#if UNITY_ANDROID 
-		
+		delegateClass.CallStatic ("startRecord", currentActivity);
 		#endif
 	}
 
 	public void stopRecord() {
 		#if UNITY_ANDROID
-		
+		delegateClass.CallStatic ("stopRecord");
 		#endif
 	}
 }
