@@ -117,8 +117,8 @@ public class GLinkRecordAndroid : IGLinkRecord {
 
 		void onFinishRecord(string uri) {
 			//TODO: record finish callback.+
-			GLinkAndroid glink = (GLinkAndroid) GLink.sharedInstance ();
-			glink.executeArticlePostWithVideo (uri);
+			// GLinkAndroid glink = (GLinkAndroid) GLink.sharedInstance ();
+			// glink.executeArticlePostWithVideo (uri);
 		}
 	}
 		

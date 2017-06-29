@@ -1,8 +1,10 @@
 #import <UIKit/UIKit.h>
 #import "UnityAppController.h"
 #import <NaverCafeSDK/NCSDKManager.h>
+#import <NaverCafeSDK/NCSDKLoginManager.h>
 #import <NaverCafeSDK/NCSDKStatistics.h>
 #import <NaverCafeSDK/NCNaverLoginManager.h>
+#import <NaverCafeSDK/NCSDKRecordManager.h>
 
 typedef void (*GLSDKDidLoadDelegate)();
 typedef void (*GLSDKDidUnLoadDelegate)();
@@ -14,9 +16,12 @@ typedef void (*GLSDKDidVoteAtArticleDelegate)(NSInteger articleId);
 typedef void (*GLSDKAppSchemeBannerDelegate)(const char *appScheme);
 typedef void (*GLNaverIdLoginDelelgate)();
 typedef void (*GLNaverIdGetProfileDelegate)(const char *profileResult);
+typedef void (*GLSDKRecordStartDelegate)();
+typedef void (*GLSDKRecordErrorDelegate)(const char *errMsg);
+typedef void (*GLSDKRecordFinishDelegate)();
+typedef void (*GLSDKRecordFinishWithPreviewDelegate)();
 
-
-@interface GLinkViewController : UIViewController <NCSDKManagerDelegate, NCNaverLoginManagerDelegate>
+@interface GLinkViewController : UIViewController <NCSDKManagerDelegate, NCNaverLoginManagerDelegate, NCSDKRecordManagerDelegate>
 @property (nonatomic, strong) UIView *mainView;
 @property (nonatomic, strong) UIViewController *mainViewcontroller;
 
@@ -30,6 +35,10 @@ typedef void (*GLNaverIdGetProfileDelegate)(const char *profileResult);
 @property (nonatomic, assign) GLSDKAppSchemeBannerDelegate glSDKAppSchemeBannerDelegate;
 @property (nonatomic, assign) GLNaverIdLoginDelelgate glNaverIdLoginDelelgate;
 @property (nonatomic, assign) GLNaverIdGetProfileDelegate glNaverIdGetProfileDelegate;
+@property (nonatomic, assign) GLSDKRecordStartDelegate glSDKRecordStartDelegate;
+@property (nonatomic, assign) GLSDKRecordErrorDelegate glSDKRecordErrorDelegate;
+@property (nonatomic, assign) GLSDKRecordFinishDelegate glSDKRecordFinishDelegate;
+@property (nonatomic, assign) GLSDKRecordFinishWithPreviewDelegate glSDKRecordFinishWithPreviewDelegate;
 
 - (void)executeGlink;
 
@@ -55,7 +64,7 @@ typedef void (*GLNaverIdGetProfileDelegate)(const char *profileResult);
     
     [[NCSDKManager getSharedInstance] setParentViewController:_mainViewcontroller];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
+    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:NO];
 }
 - (void)executeGlink{
     [self setGLRootViewController];
@@ -282,6 +291,45 @@ typedef void (*GLNaverIdGetProfileDelegate)(const char *profileResult);
     }
 }
 
+
+#pragma mark - Video Record
+- (void)startRecord {
+    _mainViewcontroller = UnityGetGLViewController();
+    [[NCSDKRecordManager getSharedInstance] setNcSDKRecordDelegate:self];
+    [[NCSDKRecordManager getSharedInstance] setBaseViewController:_mainViewcontroller];
+    [[NCSDKRecordManager getSharedInstance] startRecord];
+}
+
+- (void)stopRecord {
+    [[NCSDKRecordManager getSharedInstance] stopRecord];
+}
+
+- (void)ncSDKRecordStart {
+    if (self.glSDKRecordStartDelegate) {
+        self.glSDKRecordStartDelegate();
+    }
+}
+
+- (void)ncSDKRecordError:(NSString *)msg {
+    const char* res = [msg UTF8String];
+    
+    if (self.glSDKRecordErrorDelegate) {
+        self.glSDKRecordErrorDelegate(res);
+    }
+}
+
+- (void)ncSDKRecordFinish {
+    if (self.glSDKRecordFinishDelegate) {
+        self.glSDKRecordFinishDelegate();
+    }
+}
+
+- (void)ncSDKRecordFinishWithPreview {
+    if (self.glSDKRecordFinishWithPreviewDelegate) {
+        self.glSDKRecordFinishWithPreviewDelegate();
+    }
+}
+
 @end
 
 // Converts C style string to NSString
@@ -476,5 +524,29 @@ extern "C" {
     
     void _SetUseWidgetScreenShot(BOOL use) {
         [vc setUseWidgetScreenShot:use];
+    }
+    
+    void _StartRecord() {
+        [vc startRecord];
+    }
+    
+    void _StopRecord() {
+        [vc stopRecord];
+    }
+    
+    void _SetSDKRecordStartDelegate(GLSDKRecordStartDelegate glSDKRecordStartDelegate) {
+        vc.glSDKRecordStartDelegate = glSDKRecordStartDelegate;
+    }
+    
+    void _SetSDKRecordErrorDelegate(GLSDKRecordErrorDelegate glSDKRecordErrorDelegate) {
+        vc.glSDKRecordErrorDelegate = glSDKRecordErrorDelegate;
+    }
+    
+    void _SetSDKRecordFinishDelegate(GLSDKRecordFinishDelegate glSDKRecordFinishDelegate) {
+        vc.glSDKRecordFinishDelegate = glSDKRecordFinishDelegate;
+    }
+    
+    void _SetSDKRecordFinishWithPreviewDelegate(GLSDKRecordFinishWithPreviewDelegate glSDKRecordFinishWithPreviewDelegate) {
+        vc.glSDKRecordFinishWithPreviewDelegate = glSDKRecordFinishWithPreviewDelegate;
     }
 }

@@ -17,7 +17,7 @@
 @property (nonatomic, weak) UIViewController *rootViewController;
 
 + (NCSDKLoginManager *)getSharedInstance;
-- (void)initLoginManager;
+- (void)updateNaverLoginManager;
 
 #pragma mark -
 #pragma mark Login
