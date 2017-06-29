@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
-    android:background="@drawable/gl_img_plate"
+    android:background="@android:color/white"
     tools:context=".ui.articles.SearchArticlesFragmentView">
 
   <LinearLayout
@@ -13,14 +13,13 @@
       android:layout_height="match_parent"
       android:orientation="vertical">
 
-    <include android:id="@+id/header_for_portrait" layout="@layout/item_articles_search_header"/>
-
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:theme="@android:style/Theme.Holo.Light"
+        android:background="@android:color/transparent"
         android:cacheColorHint="@android:color/transparent"
         android:scrollbarThumbVertical="@color/black2_opacity_20"
         android:scrollbarSize="4dp"
@@ -34,6 +33,7 @@
       android:id="@android:id/empty"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
+      android:background="#f8f8f8"
       android:orientation="vertical">
 
     <include layout="@layout/item_articles_search_header"/>

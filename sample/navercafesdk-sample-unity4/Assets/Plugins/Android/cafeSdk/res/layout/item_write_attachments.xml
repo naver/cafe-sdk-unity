@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="77dp"
+    android:paddingLeft="@dimen/list_item_margin"
+    android:paddingRight="@dimen/list_item_margin"
     android:paddingBottom="4dp"
-    android:paddingRight="11dp"
-    android:paddingLeft="11dp"
     android:clickable="true"
     android:baselineAligned="false"
     android:orientation="horizontal">
@@ -13,9 +13,7 @@
       android:id="@+id/attachment1"
       android:layout_width="0dp"
       android:layout_height="match_parent"
-      android:layout_weight="1"
-      android:background="@drawable/gl_img_imagethumbmov_stroke"
-      android:padding="1dp">
+      android:layout_weight="1">
 
     <ImageView
         android:id="@+id/thumbnail1"
@@ -24,7 +22,7 @@
         android:layout_centerInParent="true"
         android:background="#e9ecef"/>
 
-      <TextView
+    <TextView
         android:id="@+id/delete_attachment1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,8 +34,8 @@
 
     <ImageView
         android:id="@+id/video_icon1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="6dp"
         android:layout_marginLeft="6dp"
@@ -57,9 +55,7 @@
       android:layout_width="0dp"
       android:layout_height="match_parent"
       android:layout_marginLeft="4dp"
-      android:layout_weight="1"
-      android:background="@drawable/gl_img_imagethumbmov_stroke"
-      android:padding="1dp">
+      android:layout_weight="1">
 
     <ImageView
         android:id="@+id/thumbnail2"
@@ -68,7 +64,7 @@
         android:layout_centerInParent="true"
         android:background="#e9ecef"/>
 
-      <TextView
+    <TextView
         android:id="@+id/delete_attachment2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,8 +76,8 @@
 
     <ImageView
         android:id="@+id/video_icon2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="6dp"
         android:layout_marginLeft="6dp"
@@ -101,9 +97,7 @@
       android:layout_width="0dp"
       android:layout_height="match_parent"
       android:layout_marginLeft="4dp"
-      android:layout_weight="1"
-      android:background="@drawable/gl_img_imagethumbmov_stroke"
-      android:padding="1dp">
+      android:layout_weight="1">
 
     <ImageView
         android:id="@+id/thumbnail3"
@@ -112,7 +106,7 @@
         android:layout_centerInParent="true"
         android:background="#e9ecef"/>
 
-      <TextView
+    <TextView
         android:id="@+id/delete_attachment3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -124,8 +118,8 @@
 
     <ImageView
         android:id="@+id/video_icon3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="6dp"
         android:layout_marginLeft="6dp"
@@ -145,9 +139,7 @@
       android:layout_width="0dp"
       android:layout_height="match_parent"
       android:layout_marginLeft="4dp"
-      android:layout_weight="1"
-      android:background="@drawable/gl_img_imagethumbmov_stroke"
-      android:padding="1dp">
+      android:layout_weight="1">
 
     <ImageView
         android:id="@+id/thumbnail4"
@@ -156,7 +148,7 @@
         android:layout_centerInParent="true"
         android:background="#e9ecef"/>
 
-      <TextView
+    <TextView
         android:id="@+id/delete_attachment4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -168,8 +160,8 @@
 
     <ImageView
         android:id="@+id/video_icon4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="6dp"
         android:layout_marginLeft="6dp"

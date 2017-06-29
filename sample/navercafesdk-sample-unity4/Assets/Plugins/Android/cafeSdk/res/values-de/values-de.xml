@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_board">Alle</string>
     <string name="all_media_no_permissions">Keine Erlaubnisse</string>
     <string name="already_exist_nickname_message">Dieser Nickname wird bereits verwendet.</string>
     <string name="article_comments_count">Kommentare</string>
@@ -63,15 +64,17 @@
     <string name="movie_over_limit_size_message">Das ausgewählte Video überschreitet\ndas Dateigrößenlimit.</string>
     <string name="movie_permission_setting_message">Ihnen fehlt die Erlaubnis, ein Video anzuhängen.\nPrüfen Sie ihre Erlaubnis, in der App zu speichern, unter [Einstellungen > App].</string>
     <string name="need_login">Bitte einloggen.</string>
+    <string name="need_register_clientid">Du musst die CLIENT-ID im Verwaltungsmenü registrieren.</string>
+    <string name="need_register_partnership">Es ist erforderlich, dem Partnernetzwerk beizutreten, um In-App Communities zu verwenden.</string>
     <string name="network_error">Verbindungsherstellung aufgrund eines Netzwerkproblems fehlgeschlagen.\nBitte die Netzwerkverbindung prüfen und dann erneut versuchen.</string>
     <string name="nick_name_already_join">Sie haben bereits einen Beitritt in diese Community angefragt. Zurzeit müssen Sie auf eine Genehmigung warten.</string>
     <string name="nick_name_header">Nickname eingeben</string>
     <string name="nick_name_hint">Geben Sie Ihren Nickname ein.</string>
     <string name="nick_name_join">Beitreten</string>
     <string name="nick_name_join_agree">Sie müssen den Nutzungsbedingungen für NAVER Café zustimmen.</string>
-    <string name="nick_name_validate">Sie können höchstens 10 koreanische Zeichen oder 20 alphanumerische Zeichen eingeben.</string>
+    <string name="nick_name_validate">Sie können höchstens 20 alphanumerische Zeichen eingeben.</string>
     <string name="nickname_rule_global_message">Up to 20 characters</string>
-    <string name="nickname_rule_message">Höchstens 10 koreanische Zeichen oder 20 lateinische Buchstaben. (Alphanumerische Zeichen sind erlaubt)</string>
+    <string name="nickname_rule_message">Höchstens 20 lateinische Buchstaben. (Alphanumerische Zeichen sind erlaubt)</string>
     <string name="no_menu_setting_message">Menüs wurden nicht festgelegt.</string>
     <string name="no_permissions">Keine Erlaubnisse</string>
     <string name="no_search_results">Keine Ergebnisse gefunden</string>
@@ -96,6 +99,7 @@
     <string name="profile_string">Mein Profil</string>
     <string name="profile_visit">Besuchen</string>
     <string name="recent_article_menu">Neue Posts Einsehen</string>
+    <string name="recent_board">Kürzlich</string>
     <string name="record_error">Das Video wurde nicht erfolgreich aufgenommen.</string>
     <string name="record_permission_error">Ihnen fehlt die Erlaubnis, ein Video aufzunehmen.\nBitte prüfen Sie ihre Erlaubnis, Ihr Mikrofon zu verwenden, und speichern Sie die App unter [Einstellungen > App]</string>
     <string name="record_quality">Aufnahmequalität</string>
@@ -125,10 +129,12 @@
     <string name="select_channel_title">Kanal Wechseln</string>
     <string name="select_menu">Forum Wählen.</string>
     <string name="select_menu_button">Wählen Sie ein Forum.</string>
+    <string name="translation">Übersetzung</string>
     <string name="unable_load_images">Bilder können nicht geladen werden.</string>
     <string name="unable_load_videos">Videos können nicht geladen werden.</string>
     <string name="under_construction">Befindet sich im Aufbau</string>
     <string name="version">Aktuelle Version %s</string>
+    <string name="view_original">Original</string>
     <string name="waiting_join_apply_message">Verbindung zum Café wird hergestellt…</string>
     <string name="want_cafe_member">Möchtest du dem Cafe beitreten?</string>
     <string name="widget_button_cafe">Community</string>

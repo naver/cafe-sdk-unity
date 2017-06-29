@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_board">ทั้งหมด</string>
     <string name="all_media_no_permissions">ไม่ได้รับอนุญาต</string>
     <string name="already_exist_nickname_message">ชื่อเล่นนี้มีผู้ใช้งานแล้ว</string>
     <string name="article_comments_count">ความคิดเห็น</string>
@@ -63,15 +64,17 @@
     <string name="movie_over_limit_size_message">วิดีโอที่เลือกมีขนาดใหญ่\nเกินข้อจำกัด</string>
     <string name="movie_permission_setting_message">คุณไม่ได้รับอนุญาตให้แนบไฟล์วิดีโอ\nกรุณาตรวจสอบสิทธิ์การบันทึกในเกมซึ่งสามารถเข้าถึงได้จาก [ตั้งค่า > แอพ]</string>
     <string name="need_login">กรุณาเข้าสู่ระบบ</string>
+    <string name="need_register_clientid">คุณต้องลงทะเบียน Client ID ที่เมนูการจัดการ</string>
+    <string name="need_register_partnership">กรุณาเข้าร่วมเครือข่ายพาร์ทเนอร์ชิป เพื่อใช้คอมมิวนิตี้ในแอพ</string>
     <string name="network_error">ไม่ได้เชื่อมต่อ เนื่องจากปัญหาเครือข่ายบ\nกรุณาตรวจสอบสถานะเครือข่ายของคุณและลองใหม่อีกครั้ง</string>
     <string name="nick_name_already_join">คุณได้รับการร้องขอให้เข้าร่วมคอมมิวนิตี้นี้แล้ว ขณะนี้คุณอยู่ในขั้นตอนการอนุมัติ</string>
     <string name="nick_name_header">ใส่ชื่อเล่น</string>
     <string name="nick_name_hint">ใส่ชื่อเล่นของคุณ</string>
     <string name="nick_name_join">เข้าร่วม</string>
     <string name="nick_name_join_agree">คุณจะต้องยอมรับเงื่อนไขการไช้งาน NAVER Cafe</string>
-    <string name="nick_name_validate">คุณสามารถใส่ได้ไม่เกิน 10 ตัวอักษรภาษาเกาหลี หรือ 20 ตัวเลขผสมตัวอักษร</string>
+    <string name="nick_name_validate">คุณสามารถใส่ได้ไม่เกิน หรือ 20 ตัวเลขผสมตัวอักษร</string>
     <string name="nickname_rule_global_message">Up to 20 characters</string>
-    <string name="nickname_rule_message">สูงสุด 10 ตัวอักษรภาษาเกาหลี หรือ 20 ตัวอักษรภาษาอังกฤษ (สามารถใช้ผสมกันได้ทั้งตัวเลขและตัวอักษร)</string>
+    <string name="nickname_rule_message">สูงสุด หรือ 20 ตัวอักษรภาษาอังกฤษ (สามารถใช้ผสมกันได้ทั้งตัวเลขและตัวอักษร)</string>
     <string name="no_menu_setting_message">เมนูยังไม่ได้รับการตั้งค่า</string>
     <string name="no_permissions">ไม่ได้รับอนุญาต</string>
     <string name="no_search_results">ไม่พบผลลัพธ์</string>
@@ -96,6 +99,7 @@
     <string name="profile_string">โปรไฟล์ของฉัน</string>
     <string name="profile_visit">เยี่ยมชม</string>
     <string name="recent_article_menu">ดูโพสต์ใหม่</string>
+    <string name="recent_board">ล่าสุด</string>
     <string name="record_error">วิดีโอยังไม่ได้รับการบันทึก</string>
     <string name="record_permission_error">คุณไม่ได้รับอนุญาตให้บันทึกวิดีโอ\nกรุณาตรวจสอบสิทธิ์การใช้ไมโครโฟนและการบันทึกในเกมซึ่งสามารถเข้าถึงได้จาก [ตั้งค่า > แอพ]</string>
     <string name="record_quality">คุณภาพการบันทึก</string>
@@ -125,10 +129,12 @@
     <string name="select_channel_title">เปลี่ยนช่อง</string>
     <string name="select_menu">เลือกกระดาน</string>
     <string name="select_menu_button">เลือกกระดาน</string>
+    <string name="translation">แปล</string>
     <string name="unable_load_images">ไม่สามารถโหลดรูปภาพได้</string>
     <string name="unable_load_videos">ไม่สามารถโหลดวิดีโอได้</string>
     <string name="under_construction">อยู่ในระหว่างปรับปรุง</string>
     <string name="version">เวอร์ชั่นปัจจุบัน %s</string>
+    <string name="view_original">ต้นฉบับ</string>
     <string name="waiting_join_apply_message">กำลังเข้าร่วมคาเฟ่...</string>
     <string name="want_cafe_member">ต้องการเข้าร่วมคาเฟ่หรือไม่?</string>
     <string name="widget_button_cafe">คอมมิวนิตี้</string>

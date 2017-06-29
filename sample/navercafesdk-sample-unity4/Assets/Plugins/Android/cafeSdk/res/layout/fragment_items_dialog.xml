@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
   <LinearLayout
@@ -35,7 +36,8 @@
   <ListView
       android:id="@+id/item_dialog_list"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="0dp"
+      android:layout_weight="1"
       android:theme="@android:style/Theme.Holo.Light"
       android:cacheColorHint="@android:color/transparent"
       android:scrollbarThumbVertical="@color/black2_opacity_20"
@@ -43,4 +45,19 @@
       android:divider="@null"
       android:dividerHeight="0dp"
       android:background="@android:color/white"/>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#66ced4d4"/>
+
+  <TextView
+      android:id="@+id/dialog_close"
+      android:layout_width="match_parent"
+      android:layout_height="44dp"
+      android:gravity="center"
+      android:background="@color/white3"
+      android:textColor="@color/black4"
+      android:textSize="14dp"
+      android:text="닫기"/>
 </LinearLayout>

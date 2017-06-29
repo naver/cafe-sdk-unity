@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_board">전체 게시판</string>
     <string name="all_media_no_permissions">권한이 없습니다.</string>
     <string name="already_exist_nickname_message">이미 사용 중인 별명입니다.</string>
     <string name="article_comments_count">댓글</string>
@@ -63,6 +64,8 @@
     <string name="movie_over_limit_size_message">선택한 동영상의 용량이\n최대 업로드 용량을 초과했습니다.</string>
     <string name="movie_permission_setting_message">권한이 없어 동영상을 첨부할 수 없습니다.\n[설정 > 앱]의 해당 게임에서 저장 권한을 확인해 주세요.</string>
     <string name="need_login">로그인하세요.</string>
+    <string name="need_register_clientid">카페관리에 클라이언트 ID 등록이 필요합니다</string>
+    <string name="need_register_partnership">인앱 커뮤니티를 사용하려면 제휴를 신청해 주세요.</string>
     <string name="network_error">네트워크 문제로 연결되지 않았습니다.\n네트워크 연결을 확인한 후 다시 시도해 주세요.</string>
     <string name="nick_name_already_join">이미 가입을 신청한 커뮤니티입니다. 현재 가입 승인 절차가 진행 중입니다.</string>
     <string name="nick_name_header">별명 입력</string>
@@ -96,6 +99,7 @@
     <string name="profile_string">내 프로필</string>
     <string name="profile_visit">방문</string>
     <string name="recent_article_menu">새 글 보기</string>
+    <string name="recent_board">최근 접속한 게시판</string>
     <string name="record_error">동영상이 정상적으로 녹화되지 않았습니다.</string>
     <string name="record_permission_error">권한이 없어 영상을 녹화할 수 없습니다.\n[설정 > 앱]의 해당 게임에서 마이크 접근 권한과 저장 권한을 확인해 주세요.</string>
     <string name="record_quality">녹화 품질</string>
@@ -125,10 +129,12 @@
     <string name="select_channel_title">채널 변경</string>
     <string name="select_menu">메뉴 선택</string>
     <string name="select_menu_button">메뉴를 선택해 주세요.</string>
+    <string name="translation">번역 </string>
     <string name="unable_load_images">이미지를 불러올 수 없습니다.</string>
     <string name="unable_load_videos">동영상을 불러올 수 없습니다.</string>
     <string name="under_construction">준비 중입니다.</string>
     <string name="version">현재 버전 %s</string>
+    <string name="view_original">원문보기 </string>
     <string name="waiting_join_apply_message">가입 신청 중입니다.</string>
     <string name="want_cafe_member">회원으로 가입하시겠습니까?</string>
     <string name="widget_button_cafe">커뮤니티</string>

@@ -2,36 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingRight="11dp"
-    android:paddingLeft="11dp">
+    android:orientation="vertical">
 
-    <TextView
+  <TextView
       android:id="@+id/menus_button"
       android:layout_width="match_parent"
       android:layout_height="40dp"
-      android:background="@android:color/transparent"
+      android:layout_marginLeft="@dimen/list_item_margin"
+      android:layout_marginRight="@dimen/list_item_margin"
       android:drawableRight="@drawable/gl_btn_boardlistmenu"
-      android:gravity="start|center_vertical"
-      android:paddingRight="14dp"
-      android:textColor="@color/black2"
-      android:textSize="16dp"
       android:singleLine="true"
-      android:layout_marginTop="3dp"/>
+      android:gravity="center_vertical"
+      android:textColor="@color/black2"
+      android:textSize="15dp"/>
 
-  <include layout="@layout/view_divider_opacity_5"/>
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#66ced4d4"/>
 
   <EditText
       android:id="@+id/subject"
       android:layout_width="match_parent"
-      android:layout_height="45dp"
-      android:background="@android:color/transparent"
-      android:hint="@string/save_error_subject"
+      android:layout_height="40dp"
+      android:layout_marginLeft="@dimen/list_item_margin"
+      android:layout_marginRight="@dimen/list_item_margin"
+      android:imeOptions="flagNoFullscreen"
       android:singleLine="true"
-      android:textColor="@color/black2"
-      android:textColorHint="#c5c5cd"
-      android:textSize="16dp"
-      android:imeOptions="flagNoFullscreen"/>
+      android:background="@android:color/transparent"
+      android:textColor="#363838"
+      android:textColorHint="#a3a9a9"
+      android:textSize="15dp"
+      android:hint="@string/save_error_subject"/>
 
-  <include layout="@layout/view_divider_opacity_5"/>
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#66ced4d4"/>
 </LinearLayout>

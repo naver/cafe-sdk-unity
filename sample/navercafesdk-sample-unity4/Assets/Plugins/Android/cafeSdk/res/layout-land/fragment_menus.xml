@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gl_img_plate"
+    android:background="@android:color/white"
     tools:context="com.naver.glink.android.sdk.ui.MenusFragmentView">
 
   <LinearLayout

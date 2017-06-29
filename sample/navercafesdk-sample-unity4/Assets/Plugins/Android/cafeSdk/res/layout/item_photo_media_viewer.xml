@@ -8,11 +8,10 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
-    <ProgressBar
-        style="@android:style/Widget.Holo.ProgressBar.Large"
+    <com.naver.glink.android.sdk.ui.widget.PlugProgressbar
         android:id="@+id/full_image_progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_centerInParent="true"/>
 
     <uk.co.senab.photoview.PhotoView

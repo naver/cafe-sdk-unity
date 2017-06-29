@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="article_media_item_margin">22dp</dimen>
+    <dimen name="list_item_margin">22dp</dimen>
+</resources>

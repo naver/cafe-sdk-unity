@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gl_img_plate"
+    android:background="@android:color/white"
     tools:context=".ui.articles.ArticlesFragmentView">
 
   <RelativeLayout
@@ -15,8 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-      <include android:id="@+id/header_for_portrait" layout="@layout/item_articles_header"/>
 
       <android.support.v4.widget.SwipeRefreshLayout
           android:id="@+id/swipe_refresh_layout"

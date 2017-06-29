@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/green1"
-        android:layout_weight="11">
+        android:layout_weight="10">
 
       <ImageView
           android:id="@+id/cafe_background_img"
@@ -20,26 +20,25 @@
           android:layout_height="match_parent"
           android:scaleType="centerCrop"/>
 
-      <LinearLayout
+      <RelativeLayout
           android:id="@+id/cafe_info_layout"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_marginTop="26dp"
+          android:layout_marginRight="20dp"
+          android:layout_marginLeft="20dp"
           android:orientation="horizontal">
 
         <FrameLayout
             android:id="@+id/thumbnail_image"
+            android:layout_alignParentRight="true"
             android:layout_width="62dp"
-            android:layout_height="62dp"
-            android:layout_marginTop="23dp"
-            android:layout_marginLeft="22dp">
-
-
+            android:layout_height="62dp">
           <ImageView
               android:id="@+id/cafe_icon_img"
               android:layout_width="60dp"
               android:layout_height="60dp"
-              android:layout_gravity="center"
-          />
+              android:layout_gravity="center"/>
 
           <ImageView
               android:id="@+id/cafe_icon_img_stroke"
@@ -49,42 +48,70 @@
               android:layout_gravity="center"/>
         </FrameLayout>
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/cafe_name"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="13dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/thumbnail_image"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:textColor="@color/white1"/>
 
-          <TextView
-              android:id="@+id/cafe_name"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="10dp"
-              android:layout_marginRight="22dp"
-              android:textSize="15dp"
-              android:textStyle="bold"
-              android:maxLines="2"
-              android:textColor="@color/white1"/>
-        </LinearLayout>
+        <TextView
+            android:id="@+id/cafe_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/cafe_name"
+            android:layout_toLeftOf="@+id/thumbnail_image"
+            android:textSize="12dp"
+            android:textColor="@color/white1"
+            android:ellipsize="end"
+            android:maxLines="3"/>
+      </RelativeLayout>
 
-      </LinearLayout>
-
-
-      <TextView
-          android:id="@+id/cafe_info"
+      <RelativeLayout
+          android:id="@+id/menu_link_layout"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="17dp"
-          android:layout_marginLeft="22dp"
-          android:layout_marginRight="22dp"
-          android:layout_below="@+id/cafe_info_layout"
-          android:textSize="12dp"
-          android:textColor="@color/white1"
-          android:ellipsize="end"
-          android:maxLines="3"/>
+          android:layout_height="48dp"
+          android:layout_alignParentBottom="true">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:background="@color/white1"/>
+        <ImageView
+            android:id="@+id/menu_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/gl_ls_icon_link_white"/>
 
+        <TextView
+            android:id="@+id/menu_link_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="4dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/menu_link"
+            android:textColor="@color/white1"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="11dp"/>
+
+      </RelativeLayout>
     </RelativeLayout>
 
     <RelativeLayout
@@ -126,7 +153,7 @@
           android:id="@+id/btn_login"
           android:layout_width="match_parent"
           android:layout_height="38dp"
-          android:layout_marginTop="39dp"
+          android:layout_marginTop="24dp"
           android:layout_marginBottom="120dp"
           android:layout_marginLeft="23dp"
           android:layout_marginRight="20dp"
@@ -137,43 +164,6 @@
           android:gravity="center"
           android:layout_alignParentBottom="true"/>
 
-
-      <RelativeLayout
-          android:id="@+id/menu_link_layout"
-          android:layout_width="match_parent"
-          android:layout_height="48dp"
-          android:layout_alignParentBottom="true">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginLeft="22dp"
-            android:layout_marginRight="22dp"
-            android:background="@color/black2_opacity_10"/>
-        <ImageView
-            android:id="@+id/menu_link"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="22dp"
-            android:layout_centerInParent="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/gl_ls_icon_link"/>
-
-        <TextView
-            android:id="@+id/menu_link_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="22dp"
-            android:layout_marginRight="4dp"
-            android:layout_centerInParent="true"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/menu_link"
-            android:textColor="@color/black1"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:textSize="11dp"/>
-
-      </RelativeLayout>
     </RelativeLayout>
 
   </LinearLayout>

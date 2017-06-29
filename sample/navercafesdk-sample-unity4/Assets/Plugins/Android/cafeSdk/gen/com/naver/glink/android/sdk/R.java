@@ -4,3317 +4,1098 @@
  * aapt tool from the resource data it found.  It
  * should not be modified by hand.
  */
-
 package com.naver.glink.android.sdk;
 
 public final class R {
-    public static final class anim {
-        public static int fab_scale_down=0x7f040000;
-        public static int fab_scale_up=0x7f040001;
-        public static int fab_slide_in_from_left=0x7f040002;
-        public static int fab_slide_in_from_right=0x7f040003;
-        public static int fab_slide_out_to_left=0x7f040004;
-        public static int fab_slide_out_to_right=0x7f040005;
-        public static int record_setting_dialog_enter=0x7f040006;
-        public static int record_setting_dialog_exit=0x7f040007;
-        public static int widget_alpha_left=0x7f040008;
-        public static int widget_alpha_right=0x7f040009;
-        public static int widget_enter=0x7f04000a;
-        public static int widget_exit=0x7f04000b;
-        public static int widget_half_left=0x7f04000c;
-        public static int widget_half_right=0x7f04000d;
-        public static int widget_record_enter=0x7f04000e;
-        public static int widget_record_exit=0x7f04000f;
-    }
-    public static final class attr {
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int centered=0x7f010000;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int clipPadding=0x7f010046;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_colorDisabled=0x7f01000b;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_colorNormal=0x7f010009;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_colorPressed=0x7f01000a;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_colorRipple=0x7f01000c;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_elevationCompat=0x7f010016;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int fab_hideAnimation=0x7f010014;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_is_trash=0x7f01001d;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_label=0x7f010015;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_progress=0x7f01001b;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_progress_backgroundColor=0x7f010018;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_progress_color=0x7f010017;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_progress_indeterminate=0x7f010019;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_progress_max=0x7f01001a;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_progress_showBackground=0x7f01001c;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_shadowColor=0x7f01000e;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_shadowRadius=0x7f01000f;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_shadowXOffset=0x7f010010;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_shadowYOffset=0x7f010011;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int fab_showAnimation=0x7f010013;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fab_showShadow=0x7f01000d;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>normal</code></td><td>0</td><td></td></tr>
-<tr><td><code>mini</code></td><td>1</td><td></td></tr>
-</table>
-         */
-        public static int fab_size=0x7f010012;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fadeDelay=0x7f010052;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fadeLength=0x7f010053;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fades=0x7f010051;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int fillColor=0x7f010004;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int footerColor=0x7f010047;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int footerIndicatorHeight=0x7f01004a;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>none</code></td><td>0</td><td></td></tr>
-<tr><td><code>triangle</code></td><td>1</td><td></td></tr>
-<tr><td><code>underline</code></td><td>2</td><td></td></tr>
-</table>
-         */
-        public static int footerIndicatorStyle=0x7f010049;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int footerIndicatorUnderlinePadding=0x7f01004b;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int footerLineHeight=0x7f010048;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int footerPadding=0x7f01004c;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int gapWidth=0x7f010045;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>bottom</code></td><td>0</td><td></td></tr>
-<tr><td><code>top</code></td><td>1</td><td></td></tr>
-</table>
-         */
-        public static int linePosition=0x7f01004d;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int lineWidth=0x7f010044;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_animationDelayPerItem=0x7f010031;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_backgroundColor=0x7f010040;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_buttonSpacing=0x7f01001f;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int menu_buttonToggleAnimation=0x7f010032;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_colorNormal=0x7f01003c;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_colorPressed=0x7f01003d;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_colorRipple=0x7f01003e;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int menu_fab_hide_animation=0x7f010043;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_fab_label=0x7f010041;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int menu_fab_show_animation=0x7f010042;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>normal</code></td><td>0</td><td></td></tr>
-<tr><td><code>mini</code></td><td>1</td><td></td></tr>
-</table>
-         */
-        public static int menu_fab_size=0x7f010036;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int menu_icon=0x7f010030;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_colorNormal=0x7f01002c;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_colorPressed=0x7f01002d;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_colorRipple=0x7f01002e;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_cornerRadius=0x7f01002a;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>none</code></td><td>0</td><td></td></tr>
-<tr><td><code>start</code></td><td>1</td><td></td></tr>
-<tr><td><code>middle</code></td><td>2</td><td></td></tr>
-<tr><td><code>end</code></td><td>3</td><td></td></tr>
-<tr><td><code>marquee</code></td><td>4</td><td></td></tr>
-</table>
-         */
-        public static int menu_labels_ellipsize=0x7f010034;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int menu_labels_hideAnimation=0x7f010022;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_margin=0x7f010020;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_maxLines=0x7f010035;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_padding=0x7f010027;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_paddingBottom=0x7f010026;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_paddingLeft=0x7f010024;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_paddingRight=0x7f010025;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_paddingTop=0x7f010023;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>left</code></td><td>0</td><td></td></tr>
-<tr><td><code>right</code></td><td>1</td><td></td></tr>
-</table>
-         */
-        public static int menu_labels_position=0x7f01002f;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int menu_labels_showAnimation=0x7f010021;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_showShadow=0x7f01002b;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_singleLine=0x7f010033;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int menu_labels_style=0x7f010037;
-        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int menu_labels_textColor=0x7f010028;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_labels_textSize=0x7f010029;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>up</code></td><td>0</td><td></td></tr>
-<tr><td><code>down</code></td><td>1</td><td></td></tr>
-<tr><td><code>left</code></td><td>2</td><td></td></tr>
-<tr><td><code>right</code></td><td>3</td><td></td></tr>
-</table>
-         */
-        public static int menu_openDirection=0x7f01003f;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_shadowColor=0x7f010038;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_shadowRadius=0x7f010039;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_shadowXOffset=0x7f01003a;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_shadowYOffset=0x7f01003b;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int menu_showShadow=0x7f01001e;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int pageColor=0x7f010005;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int radius=0x7f010006;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int selectedBold=0x7f01004e;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int selectedColor=0x7f010001;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int snap=0x7f010007;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int strokeColor=0x7f010008;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int strokeWidth=0x7f010002;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int titlePadding=0x7f01004f;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int topPadding=0x7f010050;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int unselectedColor=0x7f010003;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int vpiCirclePageIndicatorStyle=0x7f010054;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int vpiIconPageIndicatorStyle=0x7f010055;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int vpiLinePageIndicatorStyle=0x7f010056;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int vpiTabPageIndicatorStyle=0x7f010058;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int vpiTitlePageIndicatorStyle=0x7f010057;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int vpiUnderlinePageIndicatorStyle=0x7f010059;
-    }
-    public static final class bool {
-        public static int default_circle_indicator_centered=0x7f070000;
-        public static int default_circle_indicator_snap=0x7f070001;
-        public static int default_line_indicator_centered=0x7f070002;
-        public static int default_title_indicator_selected_bold=0x7f070003;
-        public static int default_underline_indicator_fades=0x7f070004;
-    }
-    public static final class color {
-        public static int black1=0x7f080000;
-        public static int black1_opacity_5=0x7f080001;
-        public static int black2=0x7f080002;
-        public static int black2_opacity_10=0x7f080003;
-        public static int black2_opacity_20=0x7f080004;
-        public static int black2_opacity_5=0x7f080005;
-        public static int black2_opacity_50=0x7f080006;
-        public static int black3=0x7f080007;
-        public static int black4=0x7f080008;
-        public static int blue2=0x7f080009;
-        public static int default_circle_indicator_fill_color=0x7f08000a;
-        public static int default_circle_indicator_page_color=0x7f08000b;
-        public static int default_circle_indicator_stroke_color=0x7f08000c;
-        public static int default_line_indicator_selected_color=0x7f08000d;
-        public static int default_line_indicator_unselected_color=0x7f08000e;
-        public static int default_title_indicator_footer_color=0x7f08000f;
-        public static int default_title_indicator_selected_color=0x7f080010;
-        public static int default_title_indicator_text_color=0x7f080011;
-        public static int default_underline_indicator_selected_color=0x7f080012;
-        public static int gray1=0x7f080013;
-        public static int gray10=0x7f080014;
-        public static int gray2=0x7f080015;
-        public static int gray3=0x7f080016;
-        public static int gray4=0x7f080017;
-        public static int gray5=0x7f080018;
-        public static int gray6=0x7f080019;
-        public static int gray7=0x7f08001a;
-        public static int gray8=0x7f08001b;
-        public static int gray9=0x7f08001c;
-        public static int green1=0x7f08001d;
-        public static int green1_10=0x7f08001e;
-        public static int list_selector_color=0x7f08001f;
-        public static int red1=0x7f080020;
-        public static int refresh_progress_1=0x7f080021;
-        public static int refresh_progress_2=0x7f080022;
-        public static int refresh_progress_3=0x7f080023;
-        public static int text_divider=0x7f080024;
-        public static int viewer_bg=0x7f080025;
-        public static int white1=0x7f080026;
-        public static int white1_30p=0x7f080027;
-        public static int white2=0x7f080028;
-        public static int white3=0x7f080029;
-    }
-    public static final class dimen {
-        public static int comment_reply_width=0x7f060000;
-        public static int comment_writer_nickname_margin_right=0x7f060001;
-        public static int default_circle_indicator_radius=0x7f060002;
-        public static int default_circle_indicator_stroke_width=0x7f060003;
-        public static int default_line_indicator_gap_width=0x7f060004;
-        public static int default_line_indicator_line_width=0x7f060005;
-        public static int default_line_indicator_stroke_width=0x7f060006;
-        public static int default_title_indicator_clip_padding=0x7f060007;
-        public static int default_title_indicator_footer_indicator_height=0x7f060008;
-        public static int default_title_indicator_footer_indicator_underline_padding=0x7f060009;
-        public static int default_title_indicator_footer_line_height=0x7f06000a;
-        public static int default_title_indicator_footer_padding=0x7f06000b;
-        public static int default_title_indicator_text_size=0x7f06000c;
-        public static int default_title_indicator_title_padding=0x7f06000d;
-        public static int default_title_indicator_top_padding=0x7f06000e;
-        public static int fab_margin=0x7f06000f;
-        public static int fab_size_mini=0x7f060010;
-        public static int fab_size_normal=0x7f060011;
-        public static int glink_trash_round_size=0x7f060012;
-        public static int glink_trash_top_margine=0x7f060013;
-        public static int glink_widget_padding=0x7f060014;
-        public static int glink_widget_size_normal=0x7f060015;
-        public static int labels_text_size=0x7f060016;
-        public static int viewer_animation_speed=0x7f060017;
-        public static int widget_speed=0x7f060018;
-    }
-    public static final class drawable {
-        public static int alert_dialog_button_background=0x7f020000;
-        public static int articles_article_background=0x7f020001;
-        public static int channel_name_background=0x7f020002;
-        public static int empty_rectangle_background=0x7f020003;
-        public static int empty_rectangle_background_pressed=0x7f020004;
-        public static int floating_button_background=0x7f020005;
-        public static int gl_article_header_text_color=0x7f020006;
-        public static int gl_black_text=0x7f020007;
-        public static int gl_btn_alphacontrol_normal=0x7f020008;
-        public static int gl_btn_back=0x7f020009;
-        public static int gl_btn_boardcancel=0x7f02000a;
-        public static int gl_btn_boardcancel_dimmed=0x7f02000b;
-        public static int gl_btn_boardcancel_normal=0x7f02000c;
-        public static int gl_btn_boardcancel_pressed=0x7f02000d;
-        public static int gl_btn_boardlistmenu=0x7f02000e;
-        public static int gl_btn_boardlistmenu_dimmed=0x7f02000f;
-        public static int gl_btn_boardlistmenu_normal=0x7f020010;
-        public static int gl_btn_boardlistmenu_pressed=0x7f020011;
-        public static int gl_btn_cancel=0x7f020012;
-        public static int gl_btn_cancel_dimmed=0x7f020013;
-        public static int gl_btn_cancel_normal=0x7f020014;
-        public static int gl_btn_cancel_pressed=0x7f020015;
-        public static int gl_btn_confirm1=0x7f020016;
-        public static int gl_btn_confirm1_dimmed=0x7f020017;
-        public static int gl_btn_confirm1_normal=0x7f020018;
-        public static int gl_btn_confirm1_pressed=0x7f020019;
-        public static int gl_btn_flmov=0x7f02001a;
-        public static int gl_btn_flpic=0x7f02001b;
-        public static int gl_btn_flsearch=0x7f02001c;
-        public static int gl_btn_flwrite=0x7f02001d;
-        public static int gl_btn_imagethumbdelete=0x7f02001e;
-        public static int gl_btn_imagethumbdelete_dimmed=0x7f02001f;
-        public static int gl_btn_imagethumbdelete_normal=0x7f020020;
-        public static int gl_btn_imagethumbdelete_pressed=0x7f020021;
-        public static int gl_btn_imagethumbmov=0x7f020022;
-        public static int gl_btn_imagethumbmov_normal=0x7f020023;
-        public static int gl_btn_keypad=0x7f020024;
-        public static int gl_btn_keypad_dimmed=0x7f020025;
-        public static int gl_btn_keypad_normal=0x7f020026;
-        public static int gl_btn_keypad_pressed=0x7f020027;
-        public static int gl_btn_personal_profile_setting_camera=0x7f020028;
-        public static int gl_btn_photo_cancel=0x7f020029;
-        public static int gl_btn_photo_crop=0x7f02002a;
-        public static int gl_btn_photo_crop_normal=0x7f02002b;
-        public static int gl_btn_photo_crop_press=0x7f02002c;
-        public static int gl_btn_photo_done=0x7f02002d;
-        public static int gl_btn_photo_rotate=0x7f02002e;
-        public static int gl_btn_photo_rotation_normal=0x7f02002f;
-        public static int gl_btn_photo_rotation_press=0x7f020030;
-        public static int gl_btn_popuplistclose=0x7f020031;
-        public static int gl_btn_popuplistclose_dimmed=0x7f020032;
-        public static int gl_btn_popuplistclose_normal=0x7f020033;
-        public static int gl_btn_popuplistclose_pressed=0x7f020034;
-        public static int gl_btn_profile_modify_ok=0x7f020035;
-        public static int gl_btn_searchdelete=0x7f020036;
-        public static int gl_btn_trash=0x7f020037;
-        public static int gl_btn_viewerclose=0x7f020038;
-        public static int gl_btn_viewerpage=0x7f020039;
-        public static int gl_btn_wj_rec_play=0x7f02003a;
-        public static int gl_btn_wj_rec_play_normal=0x7f02003b;
-        public static int gl_btn_wj_rec_play_pressed=0x7f02003c;
-        public static int gl_btn_wj_rec_stop=0x7f02003d;
-        public static int gl_btn_wj_rec_stop_normal=0x7f02003e;
-        public static int gl_btn_wj_rec_stop_pressed=0x7f02003f;
-        public static int gl_green_selector=0x7f020040;
-        public static int gl_icon_capture_normal=0x7f020041;
-        public static int gl_icon_close_normal=0x7f020042;
-        public static int gl_icon_comment_small=0x7f020043;
-        public static int gl_icon_home_normal=0x7f020044;
-        public static int gl_icon_mainmov=0x7f020045;
-        public static int gl_icon_mainmov_dimmed=0x7f020046;
-        public static int gl_icon_mainmov_normal=0x7f020047;
-        public static int gl_icon_mainmov_pressed=0x7f020048;
-        public static int gl_icon_menu_new=0x7f020049;
-        public static int gl_icon_option_quality=0x7f02004a;
-        public static int gl_icon_option_size=0x7f02004b;
-        public static int gl_icon_plughome_g_104=0x7f02004c;
-        public static int gl_icon_plughome_k_104=0x7f02004d;
-        public static int gl_icon_profile=0x7f02004e;
-        public static int gl_icon_search=0x7f02004f;
-        public static int gl_icon_trash=0x7f020050;
-        public static int gl_icon_video_normal=0x7f020051;
-        public static int gl_icon_write_normal=0x7f020052;
-        public static int gl_img_cafeprofile_none=0x7f020053;
-        public static int gl_img_fullboard_gradient=0x7f020054;
-        public static int gl_img_imagethumbmov_gradient=0x7f020055;
-        public static int gl_img_imagethumbmov_stroke=0x7f020056;
-        public static int gl_img_nickname_input=0x7f020057;
-        public static int gl_img_nickname_input_normal=0x7f020058;
-        public static int gl_img_personal_profile_none=0x7f020059;
-        public static int gl_img_plate=0x7f02005a;
-        public static int gl_img_plate_shadow=0x7f02005b;
-        public static int gl_img_search=0x7f02005c;
-        public static int gl_img_searchbar=0x7f02005d;
-        public static int gl_img_searchbar_normal=0x7f02005e;
-        public static int gl_img_write_nothumbnail_mov=0x7f02005f;
-        public static int gl_img_write_nothumbnail_pic=0x7f020060;
-        public static int gl_list_selector=0x7f020061;
-        public static int gl_ls_blt_popup_logout=0x7f020062;
-        public static int gl_ls_boards_btn_move_off=0x7f020063;
-        public static int gl_ls_boards_btn_move_on=0x7f020064;
-        public static int gl_ls_btn_back=0x7f020065;
-        public static int gl_ls_btn_back_pr=0x7f020066;
-        public static int gl_ls_btn_close=0x7f020067;
-        public static int gl_ls_btn_comment=0x7f020068;
-        public static int gl_ls_btn_comment_pressed=0x7f020069;
-        public static int gl_ls_btn_comment_selector=0x7f02006a;
-        public static int gl_ls_btn_login_back=0x7f02006b;
-        public static int gl_ls_btn_minimize=0x7f02006c;
-        public static int gl_ls_btn_mov=0x7f02006d;
-        public static int gl_ls_btn_mov_pressed=0x7f02006e;
-        public static int gl_ls_btn_photo=0x7f02006f;
-        public static int gl_ls_btn_photo_pressed=0x7f020070;
-        public static int gl_ls_btn_search=0x7f020071;
-        public static int gl_ls_btn_search_pressed=0x7f020072;
-        public static int gl_ls_btn_write=0x7f020073;
-        public static int gl_ls_btn_write_pressed=0x7f020074;
-        public static int gl_ls_icon_board=0x7f020075;
-        public static int gl_ls_icon_cafeimgst=0x7f020076;
-        public static int gl_ls_icon_check=0x7f020077;
-        public static int gl_ls_icon_check_off=0x7f020078;
-        public static int gl_ls_icon_check_on=0x7f020079;
-        public static int gl_ls_icon_check_sp=0x7f02007a;
-        public static int gl_ls_icon_combined_shape=0x7f02007b;
-        public static int gl_ls_icon_defaultimg=0x7f02007c;
-        public static int gl_ls_icon_detail_comment=0x7f02007d;
-        public static int gl_ls_icon_detail_like=0x7f02007e;
-        public static int gl_ls_icon_detail_like_pressed=0x7f02007f;
-        public static int gl_ls_icon_detail_views=0x7f020080;
-        public static int gl_ls_icon_end_pause_normal=0x7f020081;
-        public static int gl_ls_icon_end_play_normal=0x7f020082;
-        public static int gl_ls_icon_fullplay_normal=0x7f020083;
-        public static int gl_ls_icon_gif=0x7f020084;
-        public static int gl_ls_icon_gif_bic=0x7f020085;
-        public static int gl_ls_icon_lgpulldown_normal=0x7f020086;
-        public static int gl_ls_icon_link=0x7f020087;
-        public static int gl_ls_icon_link_white=0x7f020088;
-        public static int gl_ls_icon_listlike=0x7f020089;
-        public static int gl_ls_icon_listlike_pressed=0x7f02008a;
-        public static int gl_ls_icon_master_small=0x7f02008b;
-        public static int gl_ls_icon_play=0x7f02008c;
-        public static int gl_ls_icon_replyviews=0x7f02008d;
-        public static int gl_ls_icon_search_small_w=0x7f02008e;
-        public static int gl_ls_icon_staff_small=0x7f02008f;
-        public static int gl_ls_icon_warningbic=0x7f020090;
-        public static int gl_ls_navi_1=0x7f020091;
-        public static int gl_ls_navi_1_normal=0x7f020092;
-        public static int gl_ls_navi_1_pressed=0x7f020093;
-        public static int gl_ls_navi_2=0x7f020094;
-        public static int gl_ls_navi_2_normal=0x7f020095;
-        public static int gl_ls_navi_2_pressed=0x7f020096;
-        public static int gl_ls_navi_3=0x7f020097;
-        public static int gl_ls_navi_3_normal=0x7f020098;
-        public static int gl_ls_navi_3_pressed=0x7f020099;
-        public static int gl_ls_navi_4=0x7f02009a;
-        public static int gl_ls_navi_4_normal=0x7f02009b;
-        public static int gl_ls_navi_4_pressed=0x7f02009c;
-        public static int gl_ls_navi_5=0x7f02009d;
-        public static int gl_ls_navi_5_normal=0x7f02009e;
-        public static int gl_ls_navi_5_pressed=0x7f02009f;
-        public static int gl_ls_navi_s_cafe=0x7f0200a0;
-        public static int gl_ls_navi_s_cafe_n=0x7f0200a1;
-        public static int gl_ls_navi_s_cafe_p=0x7f0200a2;
-        public static int gl_ls_navi_s_mov=0x7f0200a3;
-        public static int gl_ls_navi_s_mov_n=0x7f0200a4;
-        public static int gl_ls_navi_s_mov_p=0x7f0200a5;
-        public static int gl_ls_navi_s_photo=0x7f0200a6;
-        public static int gl_ls_navi_s_photo_n=0x7f0200a7;
-        public static int gl_ls_navi_s_photo_p=0x7f0200a8;
-        public static int gl_ls_navi_s_post=0x7f0200a9;
-        public static int gl_ls_navi_s_post_n=0x7f0200aa;
-        public static int gl_ls_navi_s_post_p=0x7f0200ab;
-        public static int gl_ls_navi_s_profile=0x7f0200ac;
-        public static int gl_ls_navi_s_profile_n=0x7f0200ad;
-        public static int gl_ls_navi_s_profile_p=0x7f0200ae;
-        public static int gl_menu_language_selector_text_background=0x7f0200af;
-        public static int gl_profile_cafe_join_logout=0x7f0200b0;
-        public static int gl_profile_modify_logout=0x7f0200b1;
-        public static int gl_scrubber_dark=0x7f0200b2;
-        public static int gl_scrubber_primary=0x7f0200b3;
-        public static int gl_scrubber_video_gray=0x7f0200b4;
-        public static int gl_scrubber_video_primary=0x7f0200b5;
-        public static int gl_thumb_personal_profile_stroke=0x7f0200b6;
-        public static int icon_comments=0x7f0200b7;
-        public static int icon_likes=0x7f0200b8;
-        public static int icon_posts=0x7f0200b9;
-        public static int icon_setting=0x7f0200ba;
-        public static int line_gray=0x7f0200bb;
-        public static int menu_item_check_icon=0x7f0200bc;
-        public static int menu_list_divider=0x7f0200bd;
-        public static int more_replies_background=0x7f0200be;
-        public static int oval_gray=0x7f0200bf;
-        public static int reply_background=0x7f0200c0;
-        public static int seekbar_control_selector=0x7f0200c1;
-        public static int seekbar_progress_background=0x7f0200c2;
-        public static int seekbar_video_background=0x7f0200c3;
-        public static int viewer_bottom_gradient=0x7f0200c4;
-        public static int viewer_top_gradient=0x7f0200c5;
-        public static int viewer_view_post_background=0x7f0200c6;
-        public static int widget_record_setting_button=0x7f0200c7;
-        public static int widget_record_setting_button_cancel=0x7f0200c8;
-        public static int widget_record_setting_radio=0x7f0200c9;
-        public static int widget_record_setting_radio_text=0x7f0200ca;
-        public static int widget_record_timer=0x7f0200cb;
-        public static int widget_trash_rectangle=0x7f0200cc;
-    }
-    public static final class id {
-        public static int agree_check=0x7f0900d0;
-        public static int agree_layout=0x7f0900cf;
-        public static int agree_text=0x7f0900d1;
-        public static int ani_view=0x7f090109;
-        public static int article_count=0x7f090054;
-        public static int article_count_btn=0x7f0900c0;
-        public static int article_count_txt=0x7f0900c1;
-        public static int article_write=0x7f09001b;
-        public static int attachment1=0x7f0900ed;
-        public static int attachment2=0x7f0900f2;
-        public static int attachment3=0x7f0900f7;
-        public static int attachment4=0x7f0900fc;
-        public static int back=0x7f09001a;
-        public static int black_overlay_for_video_viewer=0x7f090043;
-        public static int bottom=0x7f09000f;
-        public static int btn_close_modify=0x7f090067;
-        public static int btn_confirm=0x7f090068;
-        public static int btn_login=0x7f0900cb;
-        public static int btn_logout=0x7f09005f;
-        public static int btn_trash=0x7f09011f;
-        public static int cafe_background_img=0x7f0900ad;
-        public static int cafe_background_img_dimmed=0x7f0900ae;
-        public static int cafe_icon_img=0x7f0900b0;
-        public static int cafe_icon_img_stroke=0x7f0900b1;
-        public static int cafe_info=0x7f0900c8;
-        public static int cafe_info_layout=0x7f0900c7;
-        public static int cafe_info_line=0x7f0900d3;
-        public static int cafe_infos=0x7f090050;
-        public static int cafe_join_line=0x7f0900d2;
-        public static int cafe_member_count=0x7f0900b3;
-        public static int cafe_name=0x7f0900b2;
-        public static int cafe_url=0x7f0900cc;
-        public static int cancel=0x7f0900e1;
-        public static int channel_name=0x7f09003f;
-        public static int channel_text=0x7f090040;
-        public static int channels_button=0x7f0900af;
-        public static int check_icon=0x7f0900a9;
-        public static int close=0x7f090035;
-        public static int collapse=0x7f09003c;
-        public static int comment_count=0x7f090096;
-        public static int comment_divider=0x7f09007f;
-        public static int comment_edit=0x7f09001f;
-        public static int comment_edit_layout=0x7f09001e;
-        public static int comment_save=0x7f090020;
-        public static int comment_write=0x7f09001d;
-        public static int comments_count=0x7f09008a;
-        public static int comments_header_divider=0x7f090085;
-        public static int comments_more=0x7f090084;
-        public static int comments_text=0x7f090083;
-        public static int content=0x7f090103;
-        public static int contents=0x7f09007b;
-        public static int copyright=0x7f090041;
-        public static int custom_view_layout=0x7f090042;
-        public static int date=0x7f090073;
-        public static int delete_attachment1=0x7f0900ef;
-        public static int delete_attachment2=0x7f0900f4;
-        public static int delete_attachment3=0x7f0900f9;
-        public static int delete_attachment4=0x7f0900fe;
-        public static int delete_history=0x7f0900a3;
-        public static int details=0x7f09004e;
-        public static int dialog_cancel=0x7f090014;
-        public static int dialog_confirm=0x7f090015;
-        public static int dialog_confirm_layout=0x7f090013;
-        public static int dialog_layout=0x7f090011;
-        public static int dialog_message=0x7f090012;
-        public static int dialog_prg_bar=0x7f090016;
-        public static int disclosure_icon=0x7f0900b8;
-        public static int divider=0x7f090087;
-        public static int down=0x7f09000b;
-        public static int empty_contents_layout=0x7f0900a4;
-        public static int empty_header_for_portrait=0x7f090019;
-        public static int empty_image=0x7f0900a5;
-        public static int empty_message=0x7f0900a6;
-        public static int encoding_message=0x7f0900e4;
-        public static int end=0x7f090006;
-        public static int error_message=0x7f090075;
-        public static int error_or_loading_view=0x7f090074;
-        public static int etc_items=0x7f09007a;
-        public static int fab_label=0x7f090000;
-        public static int float_item_cafe=0x7f09010c;
-        public static int float_item_capture=0x7f09010d;
-        public static int float_item_trash=0x7f09010b;
-        public static int float_item_video=0x7f09010e;
-        public static int float_item_write=0x7f09010f;
-        public static int float_menu=0x7f09010a;
-        public static int floating_button=0x7f090110;
-        public static int floating_button_background=0x7f090105;
-        public static int floating_button_image=0x7f090106;
-        public static int fragment_error_view=0x7f090107;
-        public static int full_banners_layout=0x7f090021;
-        public static int full_image=0x7f0900ba;
-        public static int full_image_progress=0x7f0900b9;
-        public static int gif_icon=0x7f090099;
-        public static int gif_image_view=0x7f09008d;
-        public static int gif_play=0x7f09008e;
-        public static int gif_progress_bar=0x7f09008f;
-        public static int glide_image_url_tag=0x7f090001;
-        public static int glink=0x7f09003d;
-        public static int glink_contents=0x7f090069;
-        public static int glink_touch_layout=0x7f090038;
-        public static int header_divider=0x7f09009a;
-        public static int header_for_portrait=0x7f090017;
-        public static int header_grade=0x7f0900d9;
-        public static int header_mem_info_layout=0x7f0900d8;
-        public static int header_mem_name_layout=0x7f0900d5;
-        public static int header_nickname=0x7f0900d6;
-        public static int header_nickname_setting=0x7f0900d7;
-        public static int header_notice_close=0x7f09009c;
-        public static int header_notice_text=0x7f09009b;
-        public static int header_visit=0x7f0900da;
-        public static int history=0x7f0900a2;
-        public static int icon_comment_go=0x7f090059;
-        public static int icon_comment_profile=0x7f090057;
-        public static int icon_like_go=0x7f09005d;
-        public static int icon_like_profile=0x7f09005b;
-        public static int icon_post_go=0x7f090055;
-        public static int icon_post_profile=0x7f090053;
-        public static int image=0x7f0900a7;
-        public static int image_view=0x7f090044;
-        public static int imgDrawingPicture=0x7f090028;
-        public static int indicator=0x7f090023;
-        public static int infos_view_stub=0x7f090093;
-        public static int item_dialog_list=0x7f090036;
-        public static int join=0x7f0900ce;
-        public static int join_cafe=0x7f0900c9;
-        public static int join_edit_layout=0x7f0900cd;
-        public static int layoutBg=0x7f090029;
-        public static int layoutBottomCropMenu=0x7f090030;
-        public static int layoutBottomMenu=0x7f09002d;
-        public static int layoutImageEdit=0x7f090027;
-        public static int layoutTopMenu=0x7f09002a;
-        public static int left=0x7f090004;
-        public static int left_thumbnail_view_stub=0x7f090092;
-        public static int like_article_count=0x7f09005c;
-        public static int like_article_count_btn=0x7f0900c4;
-        public static int like_article_count_txt=0x7f0900c5;
-        public static int like_count=0x7f090089;
-        public static int list_view=0x7f090026;
-        public static int main_and_banners_layout=0x7f090024;
-        public static int main_banner=0x7f090025;
-        public static int main_banner_image=0x7f090108;
-        public static int manage_member_menu_layout=0x7f0900bf;
-        public static int marquee=0x7f090007;
-        public static int menu_icon=0x7f09008b;
-        public static int menu_link=0x7f0900b5;
-        public static int menu_link_layout=0x7f0900b4;
-        public static int menu_link_text=0x7f0900b6;
-        public static int menu_name=0x7f09008c;
-        public static int menus_button=0x7f090101;
-        public static int menus_list_view=0x7f09004f;
-        public static int message=0x7f0900bc;
-        public static int middle=0x7f090008;
-        public static int mini=0x7f090002;
-        public static int more_actions=0x7f09007e;
-        public static int more_replies=0x7f09007c;
-        public static int more_replies_message=0x7f09007d;
-        public static int movie_gradient=0x7f090045;
-        public static int movie_icon=0x7f090046;
-        public static int name=0x7f0900a8;
-        public static int navigation_for_portrait=0x7f09006e;
-        public static int new_icon=0x7f0900dc;
-        public static int new_image=0x7f0900b7;
-        public static int nickname=0x7f090064;
-        public static int nickname_deletion=0x7f090065;
-        public static int none=0x7f090009;
-        public static int normal=0x7f090003;
-        public static int overlay_layout=0x7f090048;
-        public static int pager=0x7f090022;
-        public static int pick_image=0x7f09006f;
-        public static int pick_movie=0x7f090070;
-        public static int plug_view=0x7f090037;
-        public static int profile_articles_comment_layout=0x7f090056;
-        public static int profile_articles_layout=0x7f090051;
-        public static int profile_articles_like_blank=0x7f09005e;
-        public static int profile_articles_like_layout=0x7f09005a;
-        public static int profile_articles_post_layout=0x7f090052;
-        public static int profile_cafe_information=0x7f0900ca;
-        public static int profile_image=0x7f090062;
-        public static int profile_image_layout=0x7f090060;
-        public static int profile_image_stroke=0x7f090061;
-        public static int profile_info_layout=0x7f0900d4;
-        public static int profile_setting_img=0x7f090063;
-        public static int progress_indicator=0x7f090104;
-        public static int query_string=0x7f09009d;
-        public static int query_string_deletion=0x7f09009f;
-        public static int rb_quality_high=0x7f090117;
-        public static int rb_quality_low=0x7f090116;
-        public static int rb_quality_std=0x7f090115;
-        public static int rb_resolution_360=0x7f09011a;
-        public static int rb_resolution_480=0x7f090119;
-        public static int rb_resolution_720=0x7f09011b;
-        public static int read_count=0x7f090088;
-        public static int record_setting_cancel=0x7f09011d;
-        public static int record_setting_ok=0x7f09011c;
-        public static int record_timer=0x7f090113;
-        public static int record_view=0x7f090111;
-        public static int record_view_stop=0x7f090112;
-        public static int rel_videocontrols=0x7f0900e5;
-        public static int reply=0x7f090082;
-        public static int retry=0x7f0900bd;
-        public static int right=0x7f090005;
-        public static int right_thumbnail_view_stub=0x7f090095;
-        public static int save=0x7f090102;
-        public static int search=0x7f09001c;
-        public static int searched_count=0x7f0900a1;
-        public static int searched_info_layout=0x7f0900a0;
-        public static int selected_overlay=0x7f090098;
-        public static int setting_quality_radio_group=0x7f090114;
-        public static int setting_resolution_radio_group=0x7f090118;
-        public static int shome_dummy_header=0x7f0900db;
-        public static int show_histories_button=0x7f09009e;
-        public static int staff_image=0x7f090079;
-        public static int start=0x7f09000a;
-        public static int subject=0x7f090072;
-        public static int swipe_refresh_layout=0x7f090018;
-        public static int tab_contents=0x7f09006b;
-        public static int tab_progress=0x7f09006c;
-        public static int tabs_view=0x7f09006a;
-        public static int text=0x7f090090;
-        public static int thumbnail1=0x7f0900ee;
-        public static int thumbnail2=0x7f0900f3;
-        public static int thumbnail3=0x7f0900f8;
-        public static int thumbnail4=0x7f0900fd;
-        public static int thumbnail_image=0x7f090097;
-        public static int thumbnail_layout=0x7f090071;
-        public static int title=0x7f090034;
-        public static int title_layout=0x7f090033;
-        public static int top=0x7f090010;
-        public static int top_layout=0x7f090039;
-        public static int total_article_layout=0x7f0900c6;
-        public static int transparent_glink=0x7f09003a;
-        public static int transparent_seekbar=0x7f09003b;
-        public static int trash_background=0x7f09011e;
-        public static int triangle=0x7f09000d;
-        public static int tvCancelCrop=0x7f090031;
-        public static int tvClose=0x7f09002b;
-        public static int tvDoCrop=0x7f090032;
-        public static int tvRotate=0x7f09002e;
-        public static int tvSave=0x7f09002c;
-        public static int tvSetCrop=0x7f09002f;
-        public static int tv_no_article_error=0x7f0900be;
-        public static int two_line_infos_view_stub=0x7f090094;
-        public static int underline=0x7f09000e;
-        public static int up=0x7f09000c;
-        public static int valid_check_text=0x7f090066;
-        public static int vcv_img_fullscreen=0x7f0900ec;
-        public static int vcv_img_play=0x7f0900e7;
-        public static int vcv_seekbar=0x7f0900e8;
-        public static int vcv_txt_divider=0x7f0900ea;
-        public static int vcv_txt_elapsed=0x7f0900e9;
-        public static int vcv_txt_total=0x7f0900eb;
-        public static int version=0x7f09003e;
-        public static int video_close=0x7f0900e6;
-        public static int video_data_alert_layout=0x7f0900e0;
-        public static int video_encoding_layout=0x7f0900e3;
-        public static int video_error_view=0x7f0900e2;
-        public static int video_gradient1=0x7f0900f1;
-        public static int video_gradient2=0x7f0900f6;
-        public static int video_gradient3=0x7f0900fb;
-        public static int video_gradient4=0x7f090100;
-        public static int video_icon1=0x7f0900f0;
-        public static int video_icon2=0x7f0900f5;
-        public static int video_icon3=0x7f0900fa;
-        public static int video_icon4=0x7f0900ff;
-        public static int video_thumb=0x7f0900de;
-        public static int video_thumb_play=0x7f0900df;
-        public static int video_view=0x7f0900dd;
-        public static int videoview_layout=0x7f090091;
-        public static int viewer_close=0x7f090049;
-        public static int viewer_date=0x7f0900ab;
-        public static int viewer_error_view=0x7f0900bb;
-        public static int viewer_nickname=0x7f0900aa;
-        public static int viewer_page=0x7f09004a;
-        public static int viewer_page_divider=0x7f09004b;
-        public static int viewer_subject=0x7f09004d;
-        public static int viewer_total_page=0x7f09004c;
-        public static int viewer_view_pager=0x7f090047;
-        public static int viewer_view_post=0x7f0900ac;
-        public static int web_view=0x7f09006d;
-        public static int write_date=0x7f090081;
-        public static int writer_level=0x7f090086;
-        public static int writer_nickname=0x7f090080;
-        public static int writer_profile=0x7f090076;
-        public static int writer_profile_image=0x7f090077;
-        public static int writer_profile_image_stroke=0x7f090078;
-        public static int written_comment_count=0x7f090058;
-        public static int written_comment_count_btn=0x7f0900c2;
-        public static int written_comment_count_txt=0x7f0900c3;
-    }
-    public static final class integer {
-        public static int default_circle_indicator_orientation=0x7f0a0000;
-        public static int default_title_indicator_footer_indicator_style=0x7f0a0001;
-        public static int default_title_indicator_line_position=0x7f0a0002;
-        public static int default_underline_indicator_fade_delay=0x7f0a0003;
-        public static int default_underline_indicator_fade_length=0x7f0a0004;
-    }
-    public static final class layout {
-        public static int activity_request=0x7f030000;
-        public static int alert_dialog=0x7f030001;
-        public static int dialog_loading=0x7f030002;
-        public static int fragment_all_media=0x7f030003;
-        public static int fragment_article=0x7f030004;
-        public static int fragment_articles=0x7f030005;
-        public static int fragment_comment=0x7f030006;
-        public static int fragment_home=0x7f030007;
-        public static int fragment_image_edit=0x7f030008;
-        public static int fragment_items_dialog=0x7f030009;
-        public static int fragment_main=0x7f03000a;
-        public static int fragment_main_banner=0x7f03000b;
-        public static int fragment_media_viewer=0x7f03000c;
-        public static int fragment_menus=0x7f03000d;
-        public static int fragment_profile=0x7f03000e;
-        public static int fragment_profile_main=0x7f03000f;
-        public static int fragment_profile_modify=0x7f030010;
-        public static int fragment_search_articles=0x7f030011;
-        public static int fragment_shome=0x7f030012;
-        public static int fragment_tabs=0x7f030013;
-        public static int fragment_web_view_article=0x7f030014;
-        public static int fragment_write=0x7f030015;
-        public static int item_all_media_item=0x7f030016;
-        public static int item_all_media_row=0x7f030017;
-        public static int item_article_comment=0x7f030018;
-        public static int item_article_comment_etc_items=0x7f030019;
-        public static int item_article_comments_header=0x7f03001a;
-        public static int item_article_contents_footer=0x7f03001b;
-        public static int item_article_empty_comments=0x7f03001c;
-        public static int item_article_header=0x7f03001d;
-        public static int item_article_image=0x7f03001e;
-        public static int item_article_text=0x7f03001f;
-        public static int item_article_video=0x7f030020;
-        public static int item_articles_article=0x7f030021;
-        public static int item_articles_article_infos=0x7f030022;
-        public static int item_articles_article_thumbnail=0x7f030023;
-        public static int item_articles_article_two_line_infos=0x7f030024;
-        public static int item_articles_deleted_article=0x7f030025;
-        public static int item_articles_header=0x7f030026;
-        public static int item_articles_notice=0x7f030027;
-        public static int item_articles_search_header=0x7f030028;
-        public static int item_articles_search_history=0x7f030029;
-        public static int item_empty=0x7f03002a;
-        public static int item_empty_space=0x7f03002b;
-        public static int item_home_banner=0x7f03002c;
-        public static int item_home_main_banner=0x7f03002d;
-        public static int item_items_dialog_item=0x7f03002e;
-        public static int item_items_dialog_section=0x7f03002f;
-        public static int item_media_viewer_article_details=0x7f030030;
-        public static int item_menus_cafe_infos=0x7f030031;
-        public static int item_menus_menu=0x7f030032;
-        public static int item_photo_media_viewer=0x7f030033;
-        public static int item_profile_articles_empty=0x7f030034;
-        public static int item_profile_articles_header=0x7f030035;
-        public static int item_profile_cafe_info=0x7f030036;
-        public static int item_profile_cafe_join=0x7f030037;
-        public static int item_profile_myinfo=0x7f030038;
-        public static int item_profile_pending_message=0x7f030039;
-        public static int item_shome_cafe_infos=0x7f03003a;
-        public static int item_tab=0x7f03003b;
-        public static int item_video_media_viewer=0x7f03003c;
-        public static int item_video_progress=0x7f03003d;
-        public static int item_video_view=0x7f03003e;
-        public static int item_view_videocontrols=0x7f03003f;
-        public static int item_write_attachments=0x7f030040;
-        public static int item_write_header=0x7f030041;
-        public static int item_write_navigation=0x7f030042;
-        public static int item_write_text=0x7f030043;
-        public static int video_loading_progress=0x7f030044;
-        public static int view_divider=0x7f030045;
-        public static int view_divider_opacity_5=0x7f030046;
-        public static int view_floating_button=0x7f030047;
-        public static int view_fragment_error=0x7f030048;
-        public static int view_home_main_banner=0x7f030049;
-        public static int widget_dialog=0x7f03004a;
-        public static int widget_floating_layout=0x7f03004b;
-        public static int widget_record_layout=0x7f03004c;
-        public static int widget_record_setting_layout=0x7f03004d;
-        public static int widget_trash_layout=0x7f03004e;
-    }
-    public static final class string {
-        public static int all_media_no_permissions=0x7f050000;
-        public static int already_exist_nickname_message=0x7f050001;
-        public static int article_comments_count=0x7f050002;
-        public static int article_count_txt=0x7f050003;
-        public static int article_empty=0x7f050004;
-        public static int article_read_count=0x7f050005;
-        public static int article_read_count_format=0x7f050006;
-        public static int article_report_alert_message=0x7f050007;
-        public static int article_report_already_reported=0x7f050008;
-        public static int article_report_completed=0x7f050009;
-        public static int article_report_menu=0x7f05000a;
-        public static int article_save_complete_message=0x7f05000b;
-        public static int article_save_fail_message=0x7f05000c;
-        public static int article_save_progress_message=0x7f05000d;
-        public static int article_search_placeholder=0x7f05000e;
-        public static int article_video_alert_message=0x7f05000f;
-        public static int article_video_encoding_message=0x7f050010;
-        public static int attachment_add_fail_message=0x7f050011;
-        public static int available_nickname_message=0x7f050012;
-        public static int cafe_app_install_confirm_message=0x7f050013;
-        public static int cancel=0x7f050014;
-        public static int cancel_article_write_confirm_message=0x7f050015;
-        public static int comment_empty=0x7f050016;
-        public static int comment_hint=0x7f050017;
-        public static int comment_not_exist=0x7f050018;
-        public static int comment_write_permission_error=0x7f050019;
-        public static int comments_more_view=0x7f05001a;
-        public static int confirm=0x7f05001b;
-        public static int count_format=0x7f05001c;
-        public static int date_format_hrs=0x7f05001d;
-        public static int date_format_just_now=0x7f05001e;
-        public static int date_format_mins=0x7f05001f;
-        public static int date_format_yesterday=0x7f050020;
-        public static int delete=0x7f050021;
-        public static int delete_confirm_message=0x7f050022;
-        public static int deleted_comment=0x7f050023;
-        public static int deleted_post=0x7f050024;
-        public static int edit=0x7f050025;
-        public static int empty_recently_search_message=0x7f050026;
-        public static int empty_search_articles_message=0x7f050027;
-        public static int error_no_article_comment=0x7f050028;
-        public static int error_no_article_like=0x7f050029;
-        public static int error_no_article_wirte=0x7f05002a;
-        public static int exist_prohibit_word_nickname_message=0x7f05002b;
-        public static int flavor_name=0x7f05008a;
-        public static int hosts_article=0x7f05008b;
-        public static int hosts_attach=0x7f05008c;
-        public static int hosts_glink=0x7f05008d;
-        public static int hosts_phinf=0x7f05008e;
-        public static int hosts_playlog=0x7f05008f;
-        public static int hosts_plug=0x7f050090;
-        public static int hosts_upphoto=0x7f050091;
-        public static int image_editor_crop=0x7f05002c;
-        public static int image_editor_rotate=0x7f05002d;
-        public static int image_permission_setting_message=0x7f05002e;
-        public static int image_upload_fail_message=0x7f05002f;
-        public static int internet_not_connected_error=0x7f050030;
-        public static int join_cafe=0x7f050031;
-        public static int join_plug=0x7f050032;
-        public static int like_article_count_txt=0x7f050033;
-        public static int logout_complete_message=0x7f050034;
-        public static int logout_confirm_message=0x7f050035;
-        public static int media_delete_message=0x7f050036;
-        public static int media_viewer_move_post=0x7f050037;
-        public static int member_count_format=0x7f050038;
-        public static int menu_change_channel=0x7f050039;
-        public static int modify_complete_message=0x7f05003a;
-        public static int more_actions=0x7f05003b;
-        public static int movie_over_limit_size_message=0x7f05003c;
-        public static int movie_permission_setting_message=0x7f05003d;
-        public static int need_login=0x7f05003e;
-        public static int network_error=0x7f05003f;
-        public static int nick_name_already_join=0x7f050040;
-        public static int nick_name_header=0x7f050041;
-        public static int nick_name_hint=0x7f050042;
-        public static int nick_name_join=0x7f050043;
-        public static int nick_name_join_agree=0x7f050044;
-        public static int nick_name_validate=0x7f050045;
-        public static int nickname_rule_global_message=0x7f050046;
-        public static int nickname_rule_message=0x7f050047;
-        public static int no_menu_setting_message=0x7f050048;
-        public static int no_permissions=0x7f050049;
-        public static int no_search_results=0x7f05004a;
-        public static int not_available_nickname_message=0x7f05004b;
-        public static int not_cafe_member=0x7f05004c;
-        public static int not_configured_event_menu_id=0x7f05004d;
-        public static int not_configured_notice_menu_id=0x7f05004e;
-        public static int not_supported_os_version=0x7f05004f;
-        public static int permission_record=0x7f050050;
-        public static int permission_storage=0x7f050051;
-        public static int permission_storage_record=0x7f050052;
-        public static int photo_album=0x7f050053;
-        public static int photo_upload_error=0x7f050054;
-        public static int pin_to_top=0x7f050055;
-        public static int plug_bottom_channel=0x7f050056;
-        public static int plug_sdk_version=0x7f050092;
-        public static int profile_articles_total=0x7f050057;
-        public static int profile_become_member=0x7f050058;
-        public static int profile_cafe_information=0x7f050059;
-        public static int profile_login=0x7f05005a;
-        public static int profile_logout=0x7f05005b;
-        public static int profile_plug_information=0x7f05005c;
-        public static int profile_string=0x7f05005d;
-        public static int profile_visit=0x7f05005e;
-        public static int recent_article_menu=0x7f05005f;
-        public static int record_error=0x7f050060;
-        public static int record_permission_error=0x7f050061;
-        public static int record_quality=0x7f050062;
-        public static int record_quality_high=0x7f050063;
-        public static int record_quality_low=0x7f050064;
-        public static int record_quality_std=0x7f050065;
-        public static int record_saved=0x7f050066;
-        public static int record_size=0x7f050067;
-        public static int record_size_360=0x7f050068;
-        public static int record_size_480=0x7f050069;
-        public static int record_size_720=0x7f05006a;
-        public static int replies_more_view=0x7f05006b;
-        public static int reply=0x7f05006c;
-        public static int require_join_message=0x7f05006d;
-        public static int require_login_message=0x7f05006e;
-        public static int retry=0x7f05006f;
-        public static int retry_after_a_while_message=0x7f050070;
-        public static int retry_error=0x7f050071;
-        public static int save=0x7f050072;
-        public static int save_error_contents=0x7f050073;
-        public static int save_error_menu=0x7f050074;
-        public static int save_error_subject=0x7f050075;
-        public static int search_all_menu=0x7f050076;
-        public static int search_hint=0x7f050077;
-        public static int search_result_count=0x7f050078;
-        public static int search_result_text=0x7f050079;
-        public static int select_channel_title=0x7f05007a;
-        public static int select_menu=0x7f05007b;
-        public static int select_menu_button=0x7f05007c;
-        public static int unable_load_images=0x7f05007d;
-        public static int unable_load_videos=0x7f05007e;
-        public static int under_construction=0x7f05007f;
-        public static int version=0x7f050080;
-        public static int waiting_join_apply_message=0x7f050081;
-        public static int want_cafe_member=0x7f050082;
-        public static int widget_button_cafe=0x7f050083;
-        public static int widget_button_capture=0x7f050084;
-        public static int widget_button_record=0x7f050085;
-        public static int widget_button_write=0x7f050086;
-        public static int widget_trash=0x7f050087;
-        public static int write_permission_error=0x7f050088;
-        public static int written_comment_count_txt=0x7f050089;
-    }
-    public static final class style {
-        public static int Glink_SeekBar=0x7f0b0000;
-        public static int Theme_glink_seekbar=0x7f0b0001;
-        public static int multimedia_dialog_anim=0x7f0b0002;
-        public static int notitle_defaultdialog_msg=0x7f0b0003;
-        public static int notitle_transparent_defaultdialog=0x7f0b0004;
-        public static int record_setting_anim=0x7f0b0005;
-        public static int record_widget_anim=0x7f0b0006;
-        public static int transparent_progress_dialog=0x7f0b0007;
-        public static int widget_dialog_anim=0x7f0b0008;
-        public static int widget_show_animation=0x7f0b0009;
-    }
-    public static final class styleable {
-        /** Attributes that can be used with a CirclePageIndicator.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CirclePageIndicator_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #CirclePageIndicator_android_orientation android:orientation}</code></td><td></td></tr>
-           <tr><td><code>{@link #CirclePageIndicator_centered com.naver.glink.android.sdk:centered}</code></td><td></td></tr>
-           <tr><td><code>{@link #CirclePageIndicator_fillColor com.naver.glink.android.sdk:fillColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #CirclePageIndicator_pageColor com.naver.glink.android.sdk:pageColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #CirclePageIndicator_radius com.naver.glink.android.sdk:radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #CirclePageIndicator_snap com.naver.glink.android.sdk:snap}</code></td><td></td></tr>
-           <tr><td><code>{@link #CirclePageIndicator_strokeColor com.naver.glink.android.sdk:strokeColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #CirclePageIndicator_strokeWidth com.naver.glink.android.sdk:strokeWidth}</code></td><td></td></tr>
-           </table>
-           @see #CirclePageIndicator_android_background
-           @see #CirclePageIndicator_android_orientation
-           @see #CirclePageIndicator_centered
-           @see #CirclePageIndicator_fillColor
-           @see #CirclePageIndicator_pageColor
-           @see #CirclePageIndicator_radius
-           @see #CirclePageIndicator_snap
-           @see #CirclePageIndicator_strokeColor
-           @see #CirclePageIndicator_strokeWidth
-         */
-        public static final int[] CirclePageIndicator = {
-            0x010100c4, 0x010100d4, 0x7f010000, 0x7f010002,
-            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
-            0x7f010008
-        };
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#background}
-          attribute's value can be found in the {@link #CirclePageIndicator} array.
-          @attr name android:background
-        */
-        public static int CirclePageIndicator_android_background = 1;
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#orientation}
-          attribute's value can be found in the {@link #CirclePageIndicator} array.
-          @attr name android:orientation
-        */
-        public static int CirclePageIndicator_android_orientation = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#centered}
-          attribute's value can be found in the {@link #CirclePageIndicator} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:centered
-        */
-        public static int CirclePageIndicator_centered = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fillColor}
-          attribute's value can be found in the {@link #CirclePageIndicator} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fillColor
-        */
-        public static int CirclePageIndicator_fillColor = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#pageColor}
-          attribute's value can be found in the {@link #CirclePageIndicator} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:pageColor
-        */
-        public static int CirclePageIndicator_pageColor = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#radius}
-          attribute's value can be found in the {@link #CirclePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:radius
-        */
-        public static int CirclePageIndicator_radius = 6;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#snap}
-          attribute's value can be found in the {@link #CirclePageIndicator} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:snap
-        */
-        public static int CirclePageIndicator_snap = 7;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#strokeColor}
-          attribute's value can be found in the {@link #CirclePageIndicator} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:strokeColor
-        */
-        public static int CirclePageIndicator_strokeColor = 8;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#strokeWidth}
-          attribute's value can be found in the {@link #CirclePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:strokeWidth
-        */
-        public static int CirclePageIndicator_strokeWidth = 3;
-        /** Attributes that can be used with a FloatingActionButton.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_colorDisabled com.naver.glink.android.sdk:fab_colorDisabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_colorNormal com.naver.glink.android.sdk:fab_colorNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_colorPressed com.naver.glink.android.sdk:fab_colorPressed}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_colorRipple com.naver.glink.android.sdk:fab_colorRipple}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_elevationCompat com.naver.glink.android.sdk:fab_elevationCompat}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_hideAnimation com.naver.glink.android.sdk:fab_hideAnimation}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_is_trash com.naver.glink.android.sdk:fab_is_trash}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_label com.naver.glink.android.sdk:fab_label}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_progress com.naver.glink.android.sdk:fab_progress}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_progress_backgroundColor com.naver.glink.android.sdk:fab_progress_backgroundColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_progress_color com.naver.glink.android.sdk:fab_progress_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_progress_indeterminate com.naver.glink.android.sdk:fab_progress_indeterminate}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_progress_max com.naver.glink.android.sdk:fab_progress_max}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_progress_showBackground com.naver.glink.android.sdk:fab_progress_showBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_shadowColor com.naver.glink.android.sdk:fab_shadowColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_shadowRadius com.naver.glink.android.sdk:fab_shadowRadius}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_shadowXOffset com.naver.glink.android.sdk:fab_shadowXOffset}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_shadowYOffset com.naver.glink.android.sdk:fab_shadowYOffset}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_showAnimation com.naver.glink.android.sdk:fab_showAnimation}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_showShadow com.naver.glink.android.sdk:fab_showShadow}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_size com.naver.glink.android.sdk:fab_size}</code></td><td></td></tr>
-           </table>
-           @see #FloatingActionButton_fab_colorDisabled
-           @see #FloatingActionButton_fab_colorNormal
-           @see #FloatingActionButton_fab_colorPressed
-           @see #FloatingActionButton_fab_colorRipple
-           @see #FloatingActionButton_fab_elevationCompat
-           @see #FloatingActionButton_fab_hideAnimation
-           @see #FloatingActionButton_fab_is_trash
-           @see #FloatingActionButton_fab_label
-           @see #FloatingActionButton_fab_progress
-           @see #FloatingActionButton_fab_progress_backgroundColor
-           @see #FloatingActionButton_fab_progress_color
-           @see #FloatingActionButton_fab_progress_indeterminate
-           @see #FloatingActionButton_fab_progress_max
-           @see #FloatingActionButton_fab_progress_showBackground
-           @see #FloatingActionButton_fab_shadowColor
-           @see #FloatingActionButton_fab_shadowRadius
-           @see #FloatingActionButton_fab_shadowXOffset
-           @see #FloatingActionButton_fab_shadowYOffset
-           @see #FloatingActionButton_fab_showAnimation
-           @see #FloatingActionButton_fab_showShadow
-           @see #FloatingActionButton_fab_size
-         */
-        public static final int[] FloatingActionButton = {
-            0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c,
-            0x7f01000d, 0x7f01000e, 0x7f01000f, 0x7f010010,
-            0x7f010011, 0x7f010012, 0x7f010013, 0x7f010014,
-            0x7f010015, 0x7f010016, 0x7f010017, 0x7f010018,
-            0x7f010019, 0x7f01001a, 0x7f01001b, 0x7f01001c,
-            0x7f01001d
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_colorDisabled}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_colorDisabled
-        */
-        public static int FloatingActionButton_fab_colorDisabled = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_colorNormal}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_colorNormal
-        */
-        public static int FloatingActionButton_fab_colorNormal = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_colorPressed}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_colorPressed
-        */
-        public static int FloatingActionButton_fab_colorPressed = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_colorRipple}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_colorRipple
-        */
-        public static int FloatingActionButton_fab_colorRipple = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_elevationCompat}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_elevationCompat
-        */
-        public static int FloatingActionButton_fab_elevationCompat = 13;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_hideAnimation}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:fab_hideAnimation
-        */
-        public static int FloatingActionButton_fab_hideAnimation = 11;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_is_trash}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_is_trash
-        */
-        public static int FloatingActionButton_fab_is_trash = 20;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_label}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_label
-        */
-        public static int FloatingActionButton_fab_label = 12;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_progress}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_progress
-        */
-        public static int FloatingActionButton_fab_progress = 18;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_progress_backgroundColor}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_progress_backgroundColor
-        */
-        public static int FloatingActionButton_fab_progress_backgroundColor = 15;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_progress_color}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_progress_color
-        */
-        public static int FloatingActionButton_fab_progress_color = 14;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_progress_indeterminate}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_progress_indeterminate
-        */
-        public static int FloatingActionButton_fab_progress_indeterminate = 16;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_progress_max}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_progress_max
-        */
-        public static int FloatingActionButton_fab_progress_max = 17;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_progress_showBackground}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_progress_showBackground
-        */
-        public static int FloatingActionButton_fab_progress_showBackground = 19;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_shadowColor}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_shadowColor
-        */
-        public static int FloatingActionButton_fab_shadowColor = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_shadowRadius}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_shadowRadius
-        */
-        public static int FloatingActionButton_fab_shadowRadius = 6;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_shadowXOffset}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_shadowXOffset
-        */
-        public static int FloatingActionButton_fab_shadowXOffset = 7;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_shadowYOffset}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_shadowYOffset
-        */
-        public static int FloatingActionButton_fab_shadowYOffset = 8;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_showAnimation}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:fab_showAnimation
-        */
-        public static int FloatingActionButton_fab_showAnimation = 10;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_showShadow}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fab_showShadow
-        */
-        public static int FloatingActionButton_fab_showShadow = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fab_size}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>normal</code></td><td>0</td><td></td></tr>
-<tr><td><code>mini</code></td><td>1</td><td></td></tr>
-</table>
-          @attr name com.naver.glink.android.sdk:fab_size
-        */
-        public static int FloatingActionButton_fab_size = 9;
-        /** Attributes that can be used with a FloatingActionMenu.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_animationDelayPerItem com.naver.glink.android.sdk:menu_animationDelayPerItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_backgroundColor com.naver.glink.android.sdk:menu_backgroundColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_buttonSpacing com.naver.glink.android.sdk:menu_buttonSpacing}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_buttonToggleAnimation com.naver.glink.android.sdk:menu_buttonToggleAnimation}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_colorNormal com.naver.glink.android.sdk:menu_colorNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_colorPressed com.naver.glink.android.sdk:menu_colorPressed}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_colorRipple com.naver.glink.android.sdk:menu_colorRipple}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_fab_hide_animation com.naver.glink.android.sdk:menu_fab_hide_animation}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_fab_label com.naver.glink.android.sdk:menu_fab_label}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_fab_show_animation com.naver.glink.android.sdk:menu_fab_show_animation}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_fab_size com.naver.glink.android.sdk:menu_fab_size}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_icon com.naver.glink.android.sdk:menu_icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_colorNormal com.naver.glink.android.sdk:menu_labels_colorNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_colorPressed com.naver.glink.android.sdk:menu_labels_colorPressed}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_colorRipple com.naver.glink.android.sdk:menu_labels_colorRipple}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_cornerRadius com.naver.glink.android.sdk:menu_labels_cornerRadius}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_ellipsize com.naver.glink.android.sdk:menu_labels_ellipsize}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_hideAnimation com.naver.glink.android.sdk:menu_labels_hideAnimation}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_margin com.naver.glink.android.sdk:menu_labels_margin}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_maxLines com.naver.glink.android.sdk:menu_labels_maxLines}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_padding com.naver.glink.android.sdk:menu_labels_padding}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_paddingBottom com.naver.glink.android.sdk:menu_labels_paddingBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_paddingLeft com.naver.glink.android.sdk:menu_labels_paddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_paddingRight com.naver.glink.android.sdk:menu_labels_paddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_paddingTop com.naver.glink.android.sdk:menu_labels_paddingTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_position com.naver.glink.android.sdk:menu_labels_position}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_showAnimation com.naver.glink.android.sdk:menu_labels_showAnimation}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_showShadow com.naver.glink.android.sdk:menu_labels_showShadow}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_singleLine com.naver.glink.android.sdk:menu_labels_singleLine}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_style com.naver.glink.android.sdk:menu_labels_style}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_textColor com.naver.glink.android.sdk:menu_labels_textColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_labels_textSize com.naver.glink.android.sdk:menu_labels_textSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_openDirection com.naver.glink.android.sdk:menu_openDirection}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_shadowColor com.naver.glink.android.sdk:menu_shadowColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_shadowRadius com.naver.glink.android.sdk:menu_shadowRadius}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_shadowXOffset com.naver.glink.android.sdk:menu_shadowXOffset}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_shadowYOffset com.naver.glink.android.sdk:menu_shadowYOffset}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionMenu_menu_showShadow com.naver.glink.android.sdk:menu_showShadow}</code></td><td></td></tr>
-           </table>
-           @see #FloatingActionMenu_menu_animationDelayPerItem
-           @see #FloatingActionMenu_menu_backgroundColor
-           @see #FloatingActionMenu_menu_buttonSpacing
-           @see #FloatingActionMenu_menu_buttonToggleAnimation
-           @see #FloatingActionMenu_menu_colorNormal
-           @see #FloatingActionMenu_menu_colorPressed
-           @see #FloatingActionMenu_menu_colorRipple
-           @see #FloatingActionMenu_menu_fab_hide_animation
-           @see #FloatingActionMenu_menu_fab_label
-           @see #FloatingActionMenu_menu_fab_show_animation
-           @see #FloatingActionMenu_menu_fab_size
-           @see #FloatingActionMenu_menu_icon
-           @see #FloatingActionMenu_menu_labels_colorNormal
-           @see #FloatingActionMenu_menu_labels_colorPressed
-           @see #FloatingActionMenu_menu_labels_colorRipple
-           @see #FloatingActionMenu_menu_labels_cornerRadius
-           @see #FloatingActionMenu_menu_labels_ellipsize
-           @see #FloatingActionMenu_menu_labels_hideAnimation
-           @see #FloatingActionMenu_menu_labels_margin
-           @see #FloatingActionMenu_menu_labels_maxLines
-           @see #FloatingActionMenu_menu_labels_padding
-           @see #FloatingActionMenu_menu_labels_paddingBottom
-           @see #FloatingActionMenu_menu_labels_paddingLeft
-           @see #FloatingActionMenu_menu_labels_paddingRight
-           @see #FloatingActionMenu_menu_labels_paddingTop
-           @see #FloatingActionMenu_menu_labels_position
-           @see #FloatingActionMenu_menu_labels_showAnimation
-           @see #FloatingActionMenu_menu_labels_showShadow
-           @see #FloatingActionMenu_menu_labels_singleLine
-           @see #FloatingActionMenu_menu_labels_style
-           @see #FloatingActionMenu_menu_labels_textColor
-           @see #FloatingActionMenu_menu_labels_textSize
-           @see #FloatingActionMenu_menu_openDirection
-           @see #FloatingActionMenu_menu_shadowColor
-           @see #FloatingActionMenu_menu_shadowRadius
-           @see #FloatingActionMenu_menu_shadowXOffset
-           @see #FloatingActionMenu_menu_shadowYOffset
-           @see #FloatingActionMenu_menu_showShadow
-         */
-        public static final int[] FloatingActionMenu = {
-            0x7f01001e, 0x7f01001f, 0x7f010020, 0x7f010021,
-            0x7f010022, 0x7f010023, 0x7f010024, 0x7f010025,
-            0x7f010026, 0x7f010027, 0x7f010028, 0x7f010029,
-            0x7f01002a, 0x7f01002b, 0x7f01002c, 0x7f01002d,
-            0x7f01002e, 0x7f01002f, 0x7f010030, 0x7f010031,
-            0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035,
-            0x7f010036, 0x7f010037, 0x7f010038, 0x7f010039,
-            0x7f01003a, 0x7f01003b, 0x7f01003c, 0x7f01003d,
-            0x7f01003e, 0x7f01003f, 0x7f010040, 0x7f010041,
-            0x7f010042, 0x7f010043
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_animationDelayPerItem}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_animationDelayPerItem
-        */
-        public static int FloatingActionMenu_menu_animationDelayPerItem = 19;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_backgroundColor}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_backgroundColor
-        */
-        public static int FloatingActionMenu_menu_backgroundColor = 34;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_buttonSpacing}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_buttonSpacing
-        */
-        public static int FloatingActionMenu_menu_buttonSpacing = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_buttonToggleAnimation}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:menu_buttonToggleAnimation
-        */
-        public static int FloatingActionMenu_menu_buttonToggleAnimation = 20;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_colorNormal}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_colorNormal
-        */
-        public static int FloatingActionMenu_menu_colorNormal = 30;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_colorPressed}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_colorPressed
-        */
-        public static int FloatingActionMenu_menu_colorPressed = 31;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_colorRipple}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_colorRipple
-        */
-        public static int FloatingActionMenu_menu_colorRipple = 32;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_fab_hide_animation}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:menu_fab_hide_animation
-        */
-        public static int FloatingActionMenu_menu_fab_hide_animation = 37;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_fab_label}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_fab_label
-        */
-        public static int FloatingActionMenu_menu_fab_label = 35;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_fab_show_animation}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:menu_fab_show_animation
-        */
-        public static int FloatingActionMenu_menu_fab_show_animation = 36;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_fab_size}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>normal</code></td><td>0</td><td></td></tr>
-<tr><td><code>mini</code></td><td>1</td><td></td></tr>
-</table>
-          @attr name com.naver.glink.android.sdk:menu_fab_size
-        */
-        public static int FloatingActionMenu_menu_fab_size = 24;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_icon}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:menu_icon
-        */
-        public static int FloatingActionMenu_menu_icon = 18;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_colorNormal}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_colorNormal
-        */
-        public static int FloatingActionMenu_menu_labels_colorNormal = 14;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_colorPressed}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_colorPressed
-        */
-        public static int FloatingActionMenu_menu_labels_colorPressed = 15;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_colorRipple}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_colorRipple
-        */
-        public static int FloatingActionMenu_menu_labels_colorRipple = 16;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_cornerRadius}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_cornerRadius
-        */
-        public static int FloatingActionMenu_menu_labels_cornerRadius = 12;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_ellipsize}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>none</code></td><td>0</td><td></td></tr>
-<tr><td><code>start</code></td><td>1</td><td></td></tr>
-<tr><td><code>middle</code></td><td>2</td><td></td></tr>
-<tr><td><code>end</code></td><td>3</td><td></td></tr>
-<tr><td><code>marquee</code></td><td>4</td><td></td></tr>
-</table>
-          @attr name com.naver.glink.android.sdk:menu_labels_ellipsize
-        */
-        public static int FloatingActionMenu_menu_labels_ellipsize = 22;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_hideAnimation}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:menu_labels_hideAnimation
-        */
-        public static int FloatingActionMenu_menu_labels_hideAnimation = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_margin}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_margin
-        */
-        public static int FloatingActionMenu_menu_labels_margin = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_maxLines}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_maxLines
-        */
-        public static int FloatingActionMenu_menu_labels_maxLines = 23;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_padding}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_padding
-        */
-        public static int FloatingActionMenu_menu_labels_padding = 9;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_paddingBottom}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_paddingBottom
-        */
-        public static int FloatingActionMenu_menu_labels_paddingBottom = 8;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_paddingLeft}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_paddingLeft
-        */
-        public static int FloatingActionMenu_menu_labels_paddingLeft = 6;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_paddingRight}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_paddingRight
-        */
-        public static int FloatingActionMenu_menu_labels_paddingRight = 7;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_paddingTop}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_paddingTop
-        */
-        public static int FloatingActionMenu_menu_labels_paddingTop = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_position}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>left</code></td><td>0</td><td></td></tr>
-<tr><td><code>right</code></td><td>1</td><td></td></tr>
-</table>
-          @attr name com.naver.glink.android.sdk:menu_labels_position
-        */
-        public static int FloatingActionMenu_menu_labels_position = 17;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_showAnimation}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:menu_labels_showAnimation
-        */
-        public static int FloatingActionMenu_menu_labels_showAnimation = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_showShadow}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_showShadow
-        */
-        public static int FloatingActionMenu_menu_labels_showShadow = 13;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_singleLine}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_singleLine
-        */
-        public static int FloatingActionMenu_menu_labels_singleLine = 21;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_style}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:menu_labels_style
-        */
-        public static int FloatingActionMenu_menu_labels_style = 25;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_textColor}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.naver.glink.android.sdk:menu_labels_textColor
-        */
-        public static int FloatingActionMenu_menu_labels_textColor = 10;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_labels_textSize}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_labels_textSize
-        */
-        public static int FloatingActionMenu_menu_labels_textSize = 11;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_openDirection}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>up</code></td><td>0</td><td></td></tr>
-<tr><td><code>down</code></td><td>1</td><td></td></tr>
-<tr><td><code>left</code></td><td>2</td><td></td></tr>
-<tr><td><code>right</code></td><td>3</td><td></td></tr>
-</table>
-          @attr name com.naver.glink.android.sdk:menu_openDirection
-        */
-        public static int FloatingActionMenu_menu_openDirection = 33;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_shadowColor}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_shadowColor
-        */
-        public static int FloatingActionMenu_menu_shadowColor = 26;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_shadowRadius}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_shadowRadius
-        */
-        public static int FloatingActionMenu_menu_shadowRadius = 27;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_shadowXOffset}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_shadowXOffset
-        */
-        public static int FloatingActionMenu_menu_shadowXOffset = 28;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_shadowYOffset}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_shadowYOffset
-        */
-        public static int FloatingActionMenu_menu_shadowYOffset = 29;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#menu_showShadow}
-          attribute's value can be found in the {@link #FloatingActionMenu} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:menu_showShadow
-        */
-        public static int FloatingActionMenu_menu_showShadow = 0;
-        /** Attributes that can be used with a LinePageIndicator.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LinePageIndicator_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinePageIndicator_centered com.naver.glink.android.sdk:centered}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinePageIndicator_gapWidth com.naver.glink.android.sdk:gapWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinePageIndicator_lineWidth com.naver.glink.android.sdk:lineWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinePageIndicator_selectedColor com.naver.glink.android.sdk:selectedColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinePageIndicator_strokeWidth com.naver.glink.android.sdk:strokeWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinePageIndicator_unselectedColor com.naver.glink.android.sdk:unselectedColor}</code></td><td></td></tr>
-           </table>
-           @see #LinePageIndicator_android_background
-           @see #LinePageIndicator_centered
-           @see #LinePageIndicator_gapWidth
-           @see #LinePageIndicator_lineWidth
-           @see #LinePageIndicator_selectedColor
-           @see #LinePageIndicator_strokeWidth
-           @see #LinePageIndicator_unselectedColor
-         */
-        public static final int[] LinePageIndicator = {
-            0x010100d4, 0x7f010000, 0x7f010001, 0x7f010002,
-            0x7f010003, 0x7f010044, 0x7f010045
-        };
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#background}
-          attribute's value can be found in the {@link #LinePageIndicator} array.
-          @attr name android:background
-        */
-        public static int LinePageIndicator_android_background = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#centered}
-          attribute's value can be found in the {@link #LinePageIndicator} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:centered
-        */
-        public static int LinePageIndicator_centered = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#gapWidth}
-          attribute's value can be found in the {@link #LinePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:gapWidth
-        */
-        public static int LinePageIndicator_gapWidth = 6;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#lineWidth}
-          attribute's value can be found in the {@link #LinePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:lineWidth
-        */
-        public static int LinePageIndicator_lineWidth = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#selectedColor}
-          attribute's value can be found in the {@link #LinePageIndicator} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:selectedColor
-        */
-        public static int LinePageIndicator_selectedColor = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#strokeWidth}
-          attribute's value can be found in the {@link #LinePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:strokeWidth
-        */
-        public static int LinePageIndicator_strokeWidth = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#unselectedColor}
-          attribute's value can be found in the {@link #LinePageIndicator} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:unselectedColor
-        */
-        public static int LinePageIndicator_unselectedColor = 4;
-        /** Attributes that can be used with a TitlePageIndicator.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #TitlePageIndicator_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_android_textColor android:textColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_android_textSize android:textSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_clipPadding com.naver.glink.android.sdk:clipPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_footerColor com.naver.glink.android.sdk:footerColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_footerIndicatorHeight com.naver.glink.android.sdk:footerIndicatorHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_footerIndicatorStyle com.naver.glink.android.sdk:footerIndicatorStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_footerIndicatorUnderlinePadding com.naver.glink.android.sdk:footerIndicatorUnderlinePadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_footerLineHeight com.naver.glink.android.sdk:footerLineHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_footerPadding com.naver.glink.android.sdk:footerPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_linePosition com.naver.glink.android.sdk:linePosition}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_selectedBold com.naver.glink.android.sdk:selectedBold}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_selectedColor com.naver.glink.android.sdk:selectedColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_titlePadding com.naver.glink.android.sdk:titlePadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #TitlePageIndicator_topPadding com.naver.glink.android.sdk:topPadding}</code></td><td></td></tr>
-           </table>
-           @see #TitlePageIndicator_android_background
-           @see #TitlePageIndicator_android_textColor
-           @see #TitlePageIndicator_android_textSize
-           @see #TitlePageIndicator_clipPadding
-           @see #TitlePageIndicator_footerColor
-           @see #TitlePageIndicator_footerIndicatorHeight
-           @see #TitlePageIndicator_footerIndicatorStyle
-           @see #TitlePageIndicator_footerIndicatorUnderlinePadding
-           @see #TitlePageIndicator_footerLineHeight
-           @see #TitlePageIndicator_footerPadding
-           @see #TitlePageIndicator_linePosition
-           @see #TitlePageIndicator_selectedBold
-           @see #TitlePageIndicator_selectedColor
-           @see #TitlePageIndicator_titlePadding
-           @see #TitlePageIndicator_topPadding
-         */
-        public static final int[] TitlePageIndicator = {
-            0x01010095, 0x01010098, 0x010100d4, 0x7f010001,
-            0x7f010046, 0x7f010047, 0x7f010048, 0x7f010049,
-            0x7f01004a, 0x7f01004b, 0x7f01004c, 0x7f01004d,
-            0x7f01004e, 0x7f01004f, 0x7f010050
-        };
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#background}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-          @attr name android:background
-        */
-        public static int TitlePageIndicator_android_background = 2;
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#textColor}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-          @attr name android:textColor
-        */
-        public static int TitlePageIndicator_android_textColor = 1;
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#textSize}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-          @attr name android:textSize
-        */
-        public static int TitlePageIndicator_android_textSize = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#clipPadding}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:clipPadding
-        */
-        public static int TitlePageIndicator_clipPadding = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#footerColor}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:footerColor
-        */
-        public static int TitlePageIndicator_footerColor = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#footerIndicatorHeight}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:footerIndicatorHeight
-        */
-        public static int TitlePageIndicator_footerIndicatorHeight = 8;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#footerIndicatorStyle}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>none</code></td><td>0</td><td></td></tr>
-<tr><td><code>triangle</code></td><td>1</td><td></td></tr>
-<tr><td><code>underline</code></td><td>2</td><td></td></tr>
-</table>
-          @attr name com.naver.glink.android.sdk:footerIndicatorStyle
-        */
-        public static int TitlePageIndicator_footerIndicatorStyle = 7;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#footerIndicatorUnderlinePadding}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:footerIndicatorUnderlinePadding
-        */
-        public static int TitlePageIndicator_footerIndicatorUnderlinePadding = 9;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#footerLineHeight}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:footerLineHeight
-        */
-        public static int TitlePageIndicator_footerLineHeight = 6;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#footerPadding}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:footerPadding
-        */
-        public static int TitlePageIndicator_footerPadding = 10;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#linePosition}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>bottom</code></td><td>0</td><td></td></tr>
-<tr><td><code>top</code></td><td>1</td><td></td></tr>
-</table>
-          @attr name com.naver.glink.android.sdk:linePosition
-        */
-        public static int TitlePageIndicator_linePosition = 11;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#selectedBold}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:selectedBold
-        */
-        public static int TitlePageIndicator_selectedBold = 12;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#selectedColor}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:selectedColor
-        */
-        public static int TitlePageIndicator_selectedColor = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#titlePadding}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:titlePadding
-        */
-        public static int TitlePageIndicator_titlePadding = 13;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#topPadding}
-          attribute's value can be found in the {@link #TitlePageIndicator} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:topPadding
-        */
-        public static int TitlePageIndicator_topPadding = 14;
-        /** Attributes that can be used with a UnderlinePageIndicator.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #UnderlinePageIndicator_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #UnderlinePageIndicator_fadeDelay com.naver.glink.android.sdk:fadeDelay}</code></td><td></td></tr>
-           <tr><td><code>{@link #UnderlinePageIndicator_fadeLength com.naver.glink.android.sdk:fadeLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #UnderlinePageIndicator_fades com.naver.glink.android.sdk:fades}</code></td><td></td></tr>
-           <tr><td><code>{@link #UnderlinePageIndicator_selectedColor com.naver.glink.android.sdk:selectedColor}</code></td><td></td></tr>
-           </table>
-           @see #UnderlinePageIndicator_android_background
-           @see #UnderlinePageIndicator_fadeDelay
-           @see #UnderlinePageIndicator_fadeLength
-           @see #UnderlinePageIndicator_fades
-           @see #UnderlinePageIndicator_selectedColor
-         */
-        public static final int[] UnderlinePageIndicator = {
-            0x010100d4, 0x7f010001, 0x7f010051, 0x7f010052,
-            0x7f010053
-        };
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#background}
-          attribute's value can be found in the {@link #UnderlinePageIndicator} array.
-          @attr name android:background
-        */
-        public static int UnderlinePageIndicator_android_background = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fadeDelay}
-          attribute's value can be found in the {@link #UnderlinePageIndicator} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fadeDelay
-        */
-        public static int UnderlinePageIndicator_fadeDelay = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fadeLength}
-          attribute's value can be found in the {@link #UnderlinePageIndicator} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fadeLength
-        */
-        public static int UnderlinePageIndicator_fadeLength = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#fades}
-          attribute's value can be found in the {@link #UnderlinePageIndicator} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:fades
-        */
-        public static int UnderlinePageIndicator_fades = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#selectedColor}
-          attribute's value can be found in the {@link #UnderlinePageIndicator} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.naver.glink.android.sdk:selectedColor
-        */
-        public static int UnderlinePageIndicator_selectedColor = 1;
-        /** Attributes that can be used with a ViewPagerIndicator.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ViewPagerIndicator_vpiCirclePageIndicatorStyle com.naver.glink.android.sdk:vpiCirclePageIndicatorStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewPagerIndicator_vpiIconPageIndicatorStyle com.naver.glink.android.sdk:vpiIconPageIndicatorStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewPagerIndicator_vpiLinePageIndicatorStyle com.naver.glink.android.sdk:vpiLinePageIndicatorStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewPagerIndicator_vpiTabPageIndicatorStyle com.naver.glink.android.sdk:vpiTabPageIndicatorStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewPagerIndicator_vpiTitlePageIndicatorStyle com.naver.glink.android.sdk:vpiTitlePageIndicatorStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewPagerIndicator_vpiUnderlinePageIndicatorStyle com.naver.glink.android.sdk:vpiUnderlinePageIndicatorStyle}</code></td><td></td></tr>
-           </table>
-           @see #ViewPagerIndicator_vpiCirclePageIndicatorStyle
-           @see #ViewPagerIndicator_vpiIconPageIndicatorStyle
-           @see #ViewPagerIndicator_vpiLinePageIndicatorStyle
-           @see #ViewPagerIndicator_vpiTabPageIndicatorStyle
-           @see #ViewPagerIndicator_vpiTitlePageIndicatorStyle
-           @see #ViewPagerIndicator_vpiUnderlinePageIndicatorStyle
-         */
-        public static final int[] ViewPagerIndicator = {
-            0x7f010054, 0x7f010055, 0x7f010056, 0x7f010057,
-            0x7f010058, 0x7f010059
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#vpiCirclePageIndicatorStyle}
-          attribute's value can be found in the {@link #ViewPagerIndicator} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:vpiCirclePageIndicatorStyle
-        */
-        public static int ViewPagerIndicator_vpiCirclePageIndicatorStyle = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#vpiIconPageIndicatorStyle}
-          attribute's value can be found in the {@link #ViewPagerIndicator} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:vpiIconPageIndicatorStyle
-        */
-        public static int ViewPagerIndicator_vpiIconPageIndicatorStyle = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#vpiLinePageIndicatorStyle}
-          attribute's value can be found in the {@link #ViewPagerIndicator} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:vpiLinePageIndicatorStyle
-        */
-        public static int ViewPagerIndicator_vpiLinePageIndicatorStyle = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#vpiTabPageIndicatorStyle}
-          attribute's value can be found in the {@link #ViewPagerIndicator} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:vpiTabPageIndicatorStyle
-        */
-        public static int ViewPagerIndicator_vpiTabPageIndicatorStyle = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#vpiTitlePageIndicatorStyle}
-          attribute's value can be found in the {@link #ViewPagerIndicator} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:vpiTitlePageIndicatorStyle
-        */
-        public static int ViewPagerIndicator_vpiTitlePageIndicatorStyle = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.naver.glink.android.sdk.R.attr#vpiUnderlinePageIndicatorStyle}
-          attribute's value can be found in the {@link #ViewPagerIndicator} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.naver.glink.android.sdk:vpiUnderlinePageIndicatorStyle
-        */
-        public static int ViewPagerIndicator_vpiUnderlinePageIndicatorStyle = 5;
-    };
+	public static final class anim {
+		public static final int fab_scale_down = 0x7f050000;
+		public static final int fab_scale_up = 0x7f050001;
+		public static final int fab_slide_in_from_left = 0x7f050002;
+		public static final int fab_slide_in_from_right = 0x7f050003;
+		public static final int fab_slide_out_to_left = 0x7f050004;
+		public static final int fab_slide_out_to_right = 0x7f050005;
+		public static final int record_setting_dialog_enter = 0x7f050006;
+		public static final int record_setting_dialog_exit = 0x7f050007;
+		public static final int widget_alpha_left = 0x7f050008;
+		public static final int widget_alpha_right = 0x7f050009;
+		public static final int widget_enter = 0x7f05000a;
+		public static final int widget_exit = 0x7f05000b;
+		public static final int widget_half_left = 0x7f05000c;
+		public static final int widget_half_right = 0x7f05000d;
+		public static final int widget_record_enter = 0x7f05000e;
+		public static final int widget_record_exit = 0x7f05000f;
+	}
+	public static final class attr {
+		public static final int centered = 0x7f010000;
+		public static final int clipPadding = 0x7f010046;
+		public static final int fab_colorDisabled = 0x7f01000b;
+		public static final int fab_colorNormal = 0x7f010009;
+		public static final int fab_colorPressed = 0x7f01000a;
+		public static final int fab_colorRipple = 0x7f01000c;
+		public static final int fab_elevationCompat = 0x7f010016;
+		public static final int fab_hideAnimation = 0x7f010014;
+		public static final int fab_is_trash = 0x7f01001d;
+		public static final int fab_label = 0x7f010015;
+		public static final int fab_progress = 0x7f01001b;
+		public static final int fab_progress_backgroundColor = 0x7f010018;
+		public static final int fab_progress_color = 0x7f010017;
+		public static final int fab_progress_indeterminate = 0x7f010019;
+		public static final int fab_progress_max = 0x7f01001a;
+		public static final int fab_progress_showBackground = 0x7f01001c;
+		public static final int fab_shadowColor = 0x7f01000e;
+		public static final int fab_shadowRadius = 0x7f01000f;
+		public static final int fab_shadowXOffset = 0x7f010010;
+		public static final int fab_shadowYOffset = 0x7f010011;
+		public static final int fab_showAnimation = 0x7f010013;
+		public static final int fab_showShadow = 0x7f01000d;
+		public static final int fab_size = 0x7f010012;
+		public static final int fadeDelay = 0x7f010052;
+		public static final int fadeLength = 0x7f010053;
+		public static final int fades = 0x7f010051;
+		public static final int fillColor = 0x7f010004;
+		public static final int footerColor = 0x7f010047;
+		public static final int footerIndicatorHeight = 0x7f01004a;
+		public static final int footerIndicatorStyle = 0x7f010049;
+		public static final int footerIndicatorUnderlinePadding = 0x7f01004b;
+		public static final int footerLineHeight = 0x7f010048;
+		public static final int footerPadding = 0x7f01004c;
+		public static final int gapWidth = 0x7f010045;
+		public static final int linePosition = 0x7f01004d;
+		public static final int lineWidth = 0x7f010044;
+		public static final int menu_animationDelayPerItem = 0x7f010031;
+		public static final int menu_backgroundColor = 0x7f010040;
+		public static final int menu_buttonSpacing = 0x7f01001f;
+		public static final int menu_buttonToggleAnimation = 0x7f010032;
+		public static final int menu_colorNormal = 0x7f01003c;
+		public static final int menu_colorPressed = 0x7f01003d;
+		public static final int menu_colorRipple = 0x7f01003e;
+		public static final int menu_fab_hide_animation = 0x7f010043;
+		public static final int menu_fab_label = 0x7f010041;
+		public static final int menu_fab_show_animation = 0x7f010042;
+		public static final int menu_fab_size = 0x7f010036;
+		public static final int menu_icon = 0x7f010030;
+		public static final int menu_labels_colorNormal = 0x7f01002c;
+		public static final int menu_labels_colorPressed = 0x7f01002d;
+		public static final int menu_labels_colorRipple = 0x7f01002e;
+		public static final int menu_labels_cornerRadius = 0x7f01002a;
+		public static final int menu_labels_ellipsize = 0x7f010034;
+		public static final int menu_labels_hideAnimation = 0x7f010022;
+		public static final int menu_labels_margin = 0x7f010020;
+		public static final int menu_labels_maxLines = 0x7f010035;
+		public static final int menu_labels_padding = 0x7f010027;
+		public static final int menu_labels_paddingBottom = 0x7f010026;
+		public static final int menu_labels_paddingLeft = 0x7f010024;
+		public static final int menu_labels_paddingRight = 0x7f010025;
+		public static final int menu_labels_paddingTop = 0x7f010023;
+		public static final int menu_labels_position = 0x7f01002f;
+		public static final int menu_labels_showAnimation = 0x7f010021;
+		public static final int menu_labels_showShadow = 0x7f01002b;
+		public static final int menu_labels_singleLine = 0x7f010033;
+		public static final int menu_labels_style = 0x7f010037;
+		public static final int menu_labels_textColor = 0x7f010028;
+		public static final int menu_labels_textSize = 0x7f010029;
+		public static final int menu_openDirection = 0x7f01003f;
+		public static final int menu_shadowColor = 0x7f010038;
+		public static final int menu_shadowRadius = 0x7f010039;
+		public static final int menu_shadowXOffset = 0x7f01003a;
+		public static final int menu_shadowYOffset = 0x7f01003b;
+		public static final int menu_showShadow = 0x7f01001e;
+		public static final int pageColor = 0x7f010005;
+		public static final int radius = 0x7f010006;
+		public static final int selectedBold = 0x7f01004e;
+		public static final int selectedColor = 0x7f010001;
+		public static final int snap = 0x7f010007;
+		public static final int strokeColor = 0x7f010008;
+		public static final int strokeWidth = 0x7f010002;
+		public static final int titlePadding = 0x7f01004f;
+		public static final int topPadding = 0x7f010050;
+		public static final int unselectedColor = 0x7f010003;
+		public static final int vpiCirclePageIndicatorStyle = 0x7f010054;
+		public static final int vpiIconPageIndicatorStyle = 0x7f010055;
+		public static final int vpiLinePageIndicatorStyle = 0x7f010056;
+		public static final int vpiTabPageIndicatorStyle = 0x7f010058;
+		public static final int vpiTitlePageIndicatorStyle = 0x7f010057;
+		public static final int vpiUnderlinePageIndicatorStyle = 0x7f010059;
+	}
+	public static final class bool {
+		public static final int default_circle_indicator_centered = 0x7f080000;
+		public static final int default_circle_indicator_snap = 0x7f080001;
+		public static final int default_line_indicator_centered = 0x7f080002;
+		public static final int default_title_indicator_selected_bold = 0x7f080003;
+		public static final int default_underline_indicator_fades = 0x7f080004;
+	}
+	public static final class color {
+		public static final int black1 = 0x7f090000;
+		public static final int black1_opacity_5 = 0x7f090001;
+		public static final int black2 = 0x7f090002;
+		public static final int black2_opacity_10 = 0x7f090003;
+		public static final int black2_opacity_20 = 0x7f090004;
+		public static final int black2_opacity_5 = 0x7f090005;
+		public static final int black2_opacity_50 = 0x7f090006;
+		public static final int black3 = 0x7f090007;
+		public static final int black4 = 0x7f090008;
+		public static final int blue2 = 0x7f090009;
+		public static final int default_circle_indicator_fill_color = 0x7f09000a;
+		public static final int default_circle_indicator_page_color = 0x7f09000b;
+		public static final int default_circle_indicator_stroke_color = 0x7f09000c;
+		public static final int default_line_indicator_selected_color = 0x7f09000d;
+		public static final int default_line_indicator_unselected_color = 0x7f09000e;
+		public static final int default_title_indicator_footer_color = 0x7f09000f;
+		public static final int default_title_indicator_selected_color = 0x7f090010;
+		public static final int default_title_indicator_text_color = 0x7f090011;
+		public static final int default_underline_indicator_selected_color = 0x7f090012;
+		public static final int gray1 = 0x7f090013;
+		public static final int gray10 = 0x7f090014;
+		public static final int gray11 = 0x7f090015;
+		public static final int gray2 = 0x7f090016;
+		public static final int gray3 = 0x7f090017;
+		public static final int gray4 = 0x7f090018;
+		public static final int gray5 = 0x7f090019;
+		public static final int gray6 = 0x7f09001a;
+		public static final int gray7 = 0x7f09001b;
+		public static final int gray8 = 0x7f09001c;
+		public static final int gray9 = 0x7f09001d;
+		public static final int green1 = 0x7f09001e;
+		public static final int green1_10 = 0x7f09001f;
+		public static final int list_selector_color = 0x7f090020;
+		public static final int red1 = 0x7f090021;
+		public static final int refresh_progress_1 = 0x7f090022;
+		public static final int refresh_progress_2 = 0x7f090023;
+		public static final int refresh_progress_3 = 0x7f090024;
+		public static final int text_divider = 0x7f090025;
+		public static final int viewer_bg = 0x7f090026;
+		public static final int white1 = 0x7f090027;
+		public static final int white1_30p = 0x7f090028;
+		public static final int white2 = 0x7f090029;
+		public static final int white3 = 0x7f09002a;
+	}
+	public static final class dimen {
+		public static final int article_media_item_margin = 0x7f070002;
+		public static final int comment_reply_width = 0x7f070000;
+		public static final int comment_writer_nickname_margin_right = 0x7f070001;
+		public static final int default_circle_indicator_radius = 0x7f070004;
+		public static final int default_circle_indicator_stroke_width = 0x7f070005;
+		public static final int default_line_indicator_gap_width = 0x7f070006;
+		public static final int default_line_indicator_line_width = 0x7f070007;
+		public static final int default_line_indicator_stroke_width = 0x7f070008;
+		public static final int default_title_indicator_clip_padding = 0x7f070009;
+		public static final int default_title_indicator_footer_indicator_height = 0x7f07000a;
+		public static final int default_title_indicator_footer_indicator_underline_padding = 0x7f07000b;
+		public static final int default_title_indicator_footer_line_height = 0x7f07000c;
+		public static final int default_title_indicator_footer_padding = 0x7f07000d;
+		public static final int default_title_indicator_text_size = 0x7f07000e;
+		public static final int default_title_indicator_title_padding = 0x7f07000f;
+		public static final int default_title_indicator_top_padding = 0x7f070010;
+		public static final int fab_margin = 0x7f070011;
+		public static final int fab_size_mini = 0x7f070012;
+		public static final int fab_size_normal = 0x7f070013;
+		public static final int glink_trash_round_size = 0x7f070014;
+		public static final int glink_trash_top_margine = 0x7f070015;
+		public static final int glink_widget_padding = 0x7f070016;
+		public static final int glink_widget_size_normal = 0x7f070017;
+		public static final int labels_text_size = 0x7f070018;
+		public static final int list_item_margin = 0x7f070003;
+		public static final int viewer_animation_speed = 0x7f070019;
+		public static final int widget_speed = 0x7f07001a;
+	}
+	public static final class drawable {
+		public static final int alert_dialog_button_background = 0x7f020000;
+		public static final int article_video_gradient = 0x7f020001;
+		public static final int articles_article_background = 0x7f020002;
+		public static final int blt_logout = 0x7f020003;
+		public static final int channel_name_background = 0x7f020004;
+		public static final int empty_rectangle_background = 0x7f020005;
+		public static final int empty_rectangle_background_pressed = 0x7f020006;
+		public static final int floating_button_background = 0x7f020007;
+		public static final int gl_article_header_text_color = 0x7f020008;
+		public static final int gl_black_text = 0x7f020009;
+		public static final int gl_btn_alphacontrol_normal = 0x7f02000a;
+		public static final int gl_btn_back = 0x7f02000b;
+		public static final int gl_btn_boardcancel = 0x7f02000c;
+		public static final int gl_btn_boardcancel_dimmed = 0x7f02000d;
+		public static final int gl_btn_boardcancel_normal = 0x7f02000e;
+		public static final int gl_btn_boardcancel_pressed = 0x7f02000f;
+		public static final int gl_btn_boardlistmenu = 0x7f020010;
+		public static final int gl_btn_boardlistmenu_dimmed = 0x7f020011;
+		public static final int gl_btn_boardlistmenu_normal = 0x7f020012;
+		public static final int gl_btn_boardlistmenu_pressed = 0x7f020013;
+		public static final int gl_btn_cancel = 0x7f020014;
+		public static final int gl_btn_cancel_dimmed = 0x7f020015;
+		public static final int gl_btn_cancel_normal = 0x7f020016;
+		public static final int gl_btn_cancel_pressed = 0x7f020017;
+		public static final int gl_btn_confirm1 = 0x7f020018;
+		public static final int gl_btn_confirm1_dimmed = 0x7f020019;
+		public static final int gl_btn_confirm1_normal = 0x7f02001a;
+		public static final int gl_btn_confirm1_pressed = 0x7f02001b;
+		public static final int gl_btn_flmov = 0x7f02001c;
+		public static final int gl_btn_flpic = 0x7f02001d;
+		public static final int gl_btn_flsearch = 0x7f02001e;
+		public static final int gl_btn_flwrite = 0x7f02001f;
+		public static final int gl_btn_imagethumbdelete = 0x7f020020;
+		public static final int gl_btn_imagethumbdelete_dimmed = 0x7f020021;
+		public static final int gl_btn_imagethumbdelete_normal = 0x7f020022;
+		public static final int gl_btn_imagethumbdelete_pressed = 0x7f020023;
+		public static final int gl_btn_imagethumbmov = 0x7f020024;
+		public static final int gl_btn_imagethumbmov_normal = 0x7f020025;
+		public static final int gl_btn_keypad = 0x7f020026;
+		public static final int gl_btn_keypad_dimmed = 0x7f020027;
+		public static final int gl_btn_keypad_normal = 0x7f020028;
+		public static final int gl_btn_keypad_pressed = 0x7f020029;
+		public static final int gl_btn_personal_profile_setting_camera = 0x7f02002a;
+		public static final int gl_btn_photo_cancel = 0x7f02002b;
+		public static final int gl_btn_photo_crop = 0x7f02002c;
+		public static final int gl_btn_photo_crop_normal = 0x7f02002d;
+		public static final int gl_btn_photo_crop_press = 0x7f02002e;
+		public static final int gl_btn_photo_done = 0x7f02002f;
+		public static final int gl_btn_photo_rotate = 0x7f020030;
+		public static final int gl_btn_photo_rotation_normal = 0x7f020031;
+		public static final int gl_btn_photo_rotation_press = 0x7f020032;
+		public static final int gl_btn_popuplistclose = 0x7f020033;
+		public static final int gl_btn_popuplistclose_dimmed = 0x7f020034;
+		public static final int gl_btn_popuplistclose_normal = 0x7f020035;
+		public static final int gl_btn_popuplistclose_pressed = 0x7f020036;
+		public static final int gl_btn_profile_modify_ok = 0x7f020037;
+		public static final int gl_btn_searchdelete = 0x7f020038;
+		public static final int gl_btn_trash = 0x7f020039;
+		public static final int gl_btn_viewerclose = 0x7f02003a;
+		public static final int gl_btn_viewerpage = 0x7f02003b;
+		public static final int gl_btn_wj_rec_play = 0x7f02003c;
+		public static final int gl_btn_wj_rec_play_normal = 0x7f02003d;
+		public static final int gl_btn_wj_rec_play_pressed = 0x7f02003e;
+		public static final int gl_btn_wj_rec_stop = 0x7f02003f;
+		public static final int gl_btn_wj_rec_stop_normal = 0x7f020040;
+		public static final int gl_btn_wj_rec_stop_pressed = 0x7f020041;
+		public static final int gl_cafe_icon = 0x7f020042;
+		public static final int gl_green_selector = 0x7f020043;
+		public static final int gl_icon_alert_s = 0x7f020044;
+		public static final int gl_icon_capture_normal = 0x7f020045;
+		public static final int gl_icon_close_normal = 0x7f020046;
+		public static final int gl_icon_comment_small = 0x7f020047;
+		public static final int gl_icon_del_s = 0x7f020048;
+		public static final int gl_icon_edit_s = 0x7f020049;
+		public static final int gl_icon_home_normal = 0x7f02004a;
+		public static final int gl_icon_mainmov = 0x7f02004b;
+		public static final int gl_icon_mainmov_dimmed = 0x7f02004c;
+		public static final int gl_icon_mainmov_normal = 0x7f02004d;
+		public static final int gl_icon_mainmov_pressed = 0x7f02004e;
+		public static final int gl_icon_menu_new = 0x7f02004f;
+		public static final int gl_icon_more_s = 0x7f020050;
+		public static final int gl_icon_option_quality = 0x7f020051;
+		public static final int gl_icon_option_size = 0x7f020052;
+		public static final int gl_icon_plughome_g_104 = 0x7f020053;
+		public static final int gl_icon_plughome_k_104 = 0x7f020054;
+		public static final int gl_icon_profile = 0x7f020055;
+		public static final int gl_icon_search = 0x7f020056;
+		public static final int gl_icon_search_w = 0x7f020057;
+		public static final int gl_icon_trash = 0x7f020058;
+		public static final int gl_icon_video_normal = 0x7f020059;
+		public static final int gl_icon_write_normal = 0x7f02005a;
+		public static final int gl_img_cafeprofile_none = 0x7f02005b;
+		public static final int gl_img_fullboard_gradient = 0x7f02005c;
+		public static final int gl_img_imagethumbmov_gradient = 0x7f02005d;
+		public static final int gl_img_imagethumbmov_stroke = 0x7f02005e;
+		public static final int gl_img_personal_profile_none = 0x7f02005f;
+		public static final int gl_img_plate_shadow = 0x7f020060;
+		public static final int gl_img_search = 0x7f020061;
+		public static final int gl_img_searchbar = 0x7f020062;
+		public static final int gl_img_searchbar_normal = 0x7f020063;
+		public static final int gl_img_write_nothumbnail_mov = 0x7f020064;
+		public static final int gl_img_write_nothumbnail_pic = 0x7f020065;
+		public static final int gl_list_selector = 0x7f020066;
+		public static final int gl_ls_blt_popup_logout = 0x7f020067;
+		public static final int gl_ls_boards_btn_move_off = 0x7f020068;
+		public static final int gl_ls_boards_btn_move_on = 0x7f020069;
+		public static final int gl_ls_btn_back = 0x7f02006a;
+		public static final int gl_ls_btn_back_pr = 0x7f02006b;
+		public static final int gl_ls_btn_close = 0x7f02006c;
+		public static final int gl_ls_btn_comment = 0x7f02006d;
+		public static final int gl_ls_btn_comment_pressed = 0x7f02006e;
+		public static final int gl_ls_btn_comment_selector = 0x7f02006f;
+		public static final int gl_ls_btn_login_back = 0x7f020070;
+		public static final int gl_ls_btn_minimize = 0x7f020071;
+		public static final int gl_ls_btn_mov = 0x7f020072;
+		public static final int gl_ls_btn_mov_pressed = 0x7f020073;
+		public static final int gl_ls_btn_photo = 0x7f020074;
+		public static final int gl_ls_btn_photo_pressed = 0x7f020075;
+		public static final int gl_ls_btn_search = 0x7f020076;
+		public static final int gl_ls_btn_search_pressed = 0x7f020077;
+		public static final int gl_ls_btn_write = 0x7f020078;
+		public static final int gl_ls_btn_write_pressed = 0x7f020079;
+		public static final int gl_ls_icon_board = 0x7f02007a;
+		public static final int gl_ls_icon_cafeimgst = 0x7f02007b;
+		public static final int gl_ls_icon_check = 0x7f02007c;
+		public static final int gl_ls_icon_check_off = 0x7f02007d;
+		public static final int gl_ls_icon_check_on = 0x7f02007e;
+		public static final int gl_ls_icon_check_sp = 0x7f02007f;
+		public static final int gl_ls_icon_combined_shape = 0x7f020080;
+		public static final int gl_ls_icon_defaultimg = 0x7f020081;
+		public static final int gl_ls_icon_detail_comment = 0x7f020082;
+		public static final int gl_ls_icon_detail_like = 0x7f020083;
+		public static final int gl_ls_icon_detail_like_pressed = 0x7f020084;
+		public static final int gl_ls_icon_detail_views = 0x7f020085;
+		public static final int gl_ls_icon_end_pause_normal = 0x7f020086;
+		public static final int gl_ls_icon_end_play_normal = 0x7f020087;
+		public static final int gl_ls_icon_fullplay_normal = 0x7f020088;
+		public static final int gl_ls_icon_gif = 0x7f020089;
+		public static final int gl_ls_icon_gif_bic = 0x7f02008a;
+		public static final int gl_ls_icon_lgpulldown_normal = 0x7f02008b;
+		public static final int gl_ls_icon_link = 0x7f02008c;
+		public static final int gl_ls_icon_link_white = 0x7f02008d;
+		public static final int gl_ls_icon_listlike = 0x7f02008e;
+		public static final int gl_ls_icon_listlike_pressed = 0x7f02008f;
+		public static final int gl_ls_icon_master_small = 0x7f020090;
+		public static final int gl_ls_icon_play = 0x7f020091;
+		public static final int gl_ls_icon_replyviews = 0x7f020092;
+		public static final int gl_ls_icon_search_small_w = 0x7f020093;
+		public static final int gl_ls_icon_staff_small = 0x7f020094;
+		public static final int gl_ls_icon_warningbic = 0x7f020095;
+		public static final int gl_ls_navi_1 = 0x7f020096;
+		public static final int gl_ls_navi_1_normal = 0x7f020097;
+		public static final int gl_ls_navi_1_pressed = 0x7f020098;
+		public static final int gl_ls_navi_2 = 0x7f020099;
+		public static final int gl_ls_navi_2_normal = 0x7f02009a;
+		public static final int gl_ls_navi_2_pressed = 0x7f02009b;
+		public static final int gl_ls_navi_3 = 0x7f02009c;
+		public static final int gl_ls_navi_3_normal = 0x7f02009d;
+		public static final int gl_ls_navi_3_pressed = 0x7f02009e;
+		public static final int gl_ls_navi_4 = 0x7f02009f;
+		public static final int gl_ls_navi_4_normal = 0x7f0200a0;
+		public static final int gl_ls_navi_4_pressed = 0x7f0200a1;
+		public static final int gl_ls_navi_5 = 0x7f0200a2;
+		public static final int gl_ls_navi_5_normal = 0x7f0200a3;
+		public static final int gl_ls_navi_5_pressed = 0x7f0200a4;
+		public static final int gl_ls_navi_s_cafe = 0x7f0200a5;
+		public static final int gl_ls_navi_s_cafe_n = 0x7f0200a6;
+		public static final int gl_ls_navi_s_cafe_p = 0x7f0200a7;
+		public static final int gl_ls_navi_s_mov = 0x7f0200a8;
+		public static final int gl_ls_navi_s_mov_n = 0x7f0200a9;
+		public static final int gl_ls_navi_s_mov_p = 0x7f0200aa;
+		public static final int gl_ls_navi_s_photo = 0x7f0200ab;
+		public static final int gl_ls_navi_s_photo_n = 0x7f0200ac;
+		public static final int gl_ls_navi_s_photo_p = 0x7f0200ad;
+		public static final int gl_ls_navi_s_post = 0x7f0200ae;
+		public static final int gl_ls_navi_s_post_n = 0x7f0200af;
+		public static final int gl_ls_navi_s_post_p = 0x7f0200b0;
+		public static final int gl_ls_navi_s_profile = 0x7f0200b1;
+		public static final int gl_ls_navi_s_profile_n = 0x7f0200b2;
+		public static final int gl_ls_navi_s_profile_p = 0x7f0200b3;
+		public static final int gl_menu_language_selector_text_background = 0x7f0200b4;
+		public static final int gl_profile_article_header_layout = 0x7f0200b5;
+		public static final int gl_profile_modify_logout = 0x7f0200b6;
+		public static final int gl_profilelogo = 0x7f0200b7;
+		public static final int gl_scrubber_dark = 0x7f0200b8;
+		public static final int gl_scrubber_primary = 0x7f0200b9;
+		public static final int gl_scrubber_video_gray = 0x7f0200ba;
+		public static final int gl_scrubber_video_primary = 0x7f0200bb;
+		public static final int gl_thumb_personal_profile_stroke = 0x7f0200bc;
+		public static final int gl_w_ic_icon_translate = 0x7f0200bd;
+		public static final int icon_comments = 0x7f0200c0;
+		public static final int icon_likes = 0x7f0200c1;
+		public static final int icon_posts = 0x7f0200c2;
+		public static final int icon_setting = 0x7f0200c3;
+		public static final int line_gray = 0x7f0200c4;
+		public static final int loading_000 = 0x7f0200c5;
+		public static final int loading_004 = 0x7f0200c6;
+		public static final int loading_008 = 0x7f0200c7;
+		public static final int loading_012 = 0x7f0200c8;
+		public static final int loading_016 = 0x7f0200c9;
+		public static final int loading_020 = 0x7f0200ca;
+		public static final int loading_024 = 0x7f0200cb;
+		public static final int loading_028 = 0x7f0200cc;
+		public static final int loading_032 = 0x7f0200cd;
+		public static final int loading_036 = 0x7f0200ce;
+		public static final int loading_040 = 0x7f0200cf;
+		public static final int loading_044 = 0x7f0200d0;
+		public static final int loading_048 = 0x7f0200d1;
+		public static final int loading_052 = 0x7f0200d2;
+		public static final int loading_056 = 0x7f0200d3;
+		public static final int loading_060 = 0x7f0200d4;
+		public static final int loading_064 = 0x7f0200d5;
+		public static final int loading_068 = 0x7f0200d6;
+		public static final int loading_progress = 0x7f0200d7;
+		public static final int menu_item_check_icon = 0x7f0200d8;
+		public static final int menu_list_divider = 0x7f0200d9;
+		public static final int more_replies_background = 0x7f0200da;
+		public static final int oval_gray = 0x7f0200db;
+		public static final int oval_gray_2dp = 0x7f0200dc;
+		public static final int reply_background = 0x7f0200dd;
+		public static final int seekbar_control_selector = 0x7f0200de;
+		public static final int seekbar_progress_background = 0x7f0200df;
+		public static final int seekbar_video_background = 0x7f0200e0;
+		public static final int shome_gradation_background = 0x7f0200e1;
+		public static final int viewer_bottom_gradient = 0x7f0200e2;
+		public static final int viewer_top_gradient = 0x7f0200e3;
+		public static final int viewer_view_post_background = 0x7f0200e4;
+		public static final int widget_record_setting_button = 0x7f0200e5;
+		public static final int widget_record_setting_button_cancel = 0x7f0200e6;
+		public static final int widget_record_setting_radio = 0x7f0200e7;
+		public static final int widget_record_setting_radio_text = 0x7f0200e8;
+		public static final int widget_record_timer = 0x7f0200e9;
+		public static final int widget_trash_rectangle = 0x7f0200ea;
+	}
+	public static final class id {
+		public static final int agree_check = 0x7f0a00de;
+		public static final int agree_layout = 0x7f0a00dd;
+		public static final int agree_text = 0x7f0a00df;
+		public static final int ani_view = 0x7f0a0116;
+		public static final int article_count = 0x7f0a005e;
+		public static final int article_count_btn = 0x7f0a00cf;
+		public static final int article_count_txt = 0x7f0a00d0;
+		public static final int article_write = 0x7f0a0024;
+		public static final int attachment1 = 0x7f0a00fa;
+		public static final int attachment2 = 0x7f0a00ff;
+		public static final int attachment3 = 0x7f0a0104;
+		public static final int attachment4 = 0x7f0a0109;
+		public static final int back = 0x7f0a0023;
+		public static final int black_overlay_for_video_viewer = 0x7f0a004d;
+		public static final int bottom = 0x7f0a000f;
+		public static final int btn_close_modify = 0x7f0a0072;
+		public static final int btn_confirm = 0x7f0a0073;
+		public static final int btn_login = 0x7f0a00da;
+		public static final int btn_logout = 0x7f0a006a;
+		public static final int btn_trash = 0x7f0a012c;
+		public static final int cafe_background_img = 0x7f0a00bc;
+		public static final int cafe_background_img_dimmed = 0x7f0a00bd;
+		public static final int cafe_icon_img = 0x7f0a00bf;
+		public static final int cafe_icon_img_stroke = 0x7f0a00c0;
+		public static final int cafe_info = 0x7f0a00d7;
+		public static final int cafe_info_layout = 0x7f0a00d6;
+		public static final int cafe_infos = 0x7f0a005a;
+		public static final int cafe_member_count = 0x7f0a00c2;
+		public static final int cafe_name = 0x7f0a00c1;
+		public static final int cancel = 0x7f0a00ee;
+		public static final int channel_name = 0x7f0a0049;
+		public static final int channel_text = 0x7f0a004a;
+		public static final int channels_button = 0x7f0a00be;
+		public static final int check_icon = 0x7f0a00b8;
+		public static final int close = 0x7f0a003e;
+		public static final int collapse = 0x7f0a0046;
+		public static final int comment_count = 0x7f0a00a6;
+		public static final int comment_divider = 0x7f0a008f;
+		public static final int comment_edit = 0x7f0a0028;
+		public static final int comment_edit_layout = 0x7f0a0027;
+		public static final int comment_save = 0x7f0a0029;
+		public static final int comment_write = 0x7f0a0026;
+		public static final int comments_count = 0x7f0a0099;
+		public static final int comments_header_divider = 0x7f0a0094;
+		public static final int comments_more = 0x7f0a0093;
+		public static final int comments_text = 0x7f0a0092;
+		public static final int content = 0x7f0a0110;
+		public static final int contents = 0x7f0a0088;
+		public static final int contents_delete = 0x7f0a012e;
+		public static final int contents_edit = 0x7f0a012d;
+		public static final int contents_report = 0x7f0a012f;
+		public static final int copyright = 0x7f0a004b;
+		public static final int copyright_layout = 0x7f0a0069;
+		public static final int custom_view_layout = 0x7f0a004c;
+		public static final int date = 0x7f0a0082;
+		public static final int delete_attachment1 = 0x7f0a00fc;
+		public static final int delete_attachment2 = 0x7f0a0101;
+		public static final int delete_attachment3 = 0x7f0a0106;
+		public static final int delete_attachment4 = 0x7f0a010b;
+		public static final int delete_history = 0x7f0a00b2;
+		public static final int details = 0x7f0a0058;
+		public static final int dialog_cancel = 0x7f0a001e;
+		public static final int dialog_close = 0x7f0a0040;
+		public static final int dialog_confirm = 0x7f0a001f;
+		public static final int dialog_confirm_layout = 0x7f0a001d;
+		public static final int dialog_layout = 0x7f0a001b;
+		public static final int dialog_message = 0x7f0a001c;
+		public static final int dialog_prg_bar = 0x7f0a0020;
+		public static final int disclosure_icon = 0x7f0a00c7;
+		public static final int divider = 0x7f0a0096;
+		public static final int down = 0x7f0a000b;
+		public static final int empty_contents_layout = 0x7f0a00b3;
+		public static final int empty_header_for_portrait = 0x7f0a0022;
+		public static final int empty_image = 0x7f0a00b4;
+		public static final int empty_message = 0x7f0a00b5;
+		public static final int encoding_message = 0x7f0a00f1;
+		public static final int end = 0x7f0a0006;
+		public static final int etc_items = 0x7f0a0087;
+		public static final int fab_label = 0x7f0a0000;
+		public static final int float_item_cafe = 0x7f0a0119;
+		public static final int float_item_capture = 0x7f0a011a;
+		public static final int float_item_trash = 0x7f0a0118;
+		public static final int float_item_video = 0x7f0a011b;
+		public static final int float_item_write = 0x7f0a011c;
+		public static final int float_menu = 0x7f0a0117;
+		public static final int floating_button = 0x7f0a011d;
+		public static final int floating_button_background = 0x7f0a0112;
+		public static final int floating_button_image = 0x7f0a0113;
+		public static final int fragment_error_view = 0x7f0a0114;
+		public static final int full_banners_layout = 0x7f0a002a;
+		public static final int full_image = 0x7f0a00c9;
+		public static final int full_image_progress = 0x7f0a00c8;
+		public static final int gif_icon = 0x7f0a0080;
+		public static final int gif_image_view = 0x7f0a009b;
+		public static final int gif_play = 0x7f0a009c;
+		public static final int gif_progress_bar = 0x7f0a009d;
+		public static final int glide_image_url_tag = 0x7f0a0001;
+		public static final int glink = 0x7f0a0047;
+		public static final int glink_contents = 0x7f0a0074;
+		public static final int glink_touch_layout = 0x7f0a0042;
+		public static final int header_divider = 0x7f0a00a7;
+		public static final int header_grade = 0x7f0a00e5;
+		public static final int header_mem_info_layout = 0x7f0a00e4;
+		public static final int header_mem_name_layout = 0x7f0a00e1;
+		public static final int header_nickname = 0x7f0a00e2;
+		public static final int header_nickname_setting = 0x7f0a00e3;
+		public static final int header_notice_close = 0x7f0a00aa;
+		public static final int header_visit = 0x7f0a00e6;
+		public static final int history = 0x7f0a00b1;
+		public static final int icon_comment_go = 0x7f0a0063;
+		public static final int icon_comment_profile = 0x7f0a0061;
+		public static final int icon_like_go = 0x7f0a0067;
+		public static final int icon_like_profile = 0x7f0a0065;
+		public static final int icon_post_go = 0x7f0a005f;
+		public static final int icon_post_profile = 0x7f0a005d;
+		public static final int image = 0x7f0a00b6;
+		public static final int image_view = 0x7f0a004e;
+		public static final int imgDrawingPicture = 0x7f0a0031;
+		public static final int indicator = 0x7f0a002c;
+		public static final int infos_view_stub = 0x7f0a00a3;
+		public static final int item_dialog_list = 0x7f0a003f;
+		public static final int join = 0x7f0a00dc;
+		public static final int join_cafe = 0x7f0a00d8;
+		public static final int join_edit_layout = 0x7f0a00db;
+		public static final int layoutBg = 0x7f0a0032;
+		public static final int layoutBottomCropMenu = 0x7f0a0039;
+		public static final int layoutBottomMenu = 0x7f0a0036;
+		public static final int layoutImageEdit = 0x7f0a0030;
+		public static final int layoutTopMenu = 0x7f0a0033;
+		public static final int left = 0x7f0a0004;
+		public static final int left_thumbnail_view_stub = 0x7f0a00a2;
+		public static final int like_article_count = 0x7f0a0066;
+		public static final int like_article_count_btn = 0x7f0a00d3;
+		public static final int like_article_count_txt = 0x7f0a00d4;
+		public static final int like_count = 0x7f0a0098;
+		public static final int list_view = 0x7f0a002f;
+		public static final int main_and_banners_layout = 0x7f0a002d;
+		public static final int main_banner = 0x7f0a002e;
+		public static final int main_banner_image = 0x7f0a0115;
+		public static final int manage_member_menu_layout = 0x7f0a00ce;
+		public static final int marquee = 0x7f0a0007;
+		public static final int menu_link = 0x7f0a00c4;
+		public static final int menu_link_layout = 0x7f0a00c3;
+		public static final int menu_link_text = 0x7f0a00c5;
+		public static final int menu_name = 0x7f0a009a;
+		public static final int menus_button = 0x7f0a010e;
+		public static final int menus_list_view = 0x7f0a0059;
+		public static final int message = 0x7f0a00cb;
+		public static final int middle = 0x7f0a0008;
+		public static final int mini = 0x7f0a0002;
+		public static final int more_actions = 0x7f0a008e;
+		public static final int more_replies = 0x7f0a008c;
+		public static final int more_replies_message = 0x7f0a008d;
+		public static final int movie_gradient = 0x7f0a004f;
+		public static final int movie_icon = 0x7f0a0050;
+		public static final int name = 0x7f0a00b7;
+		public static final int navigation_for_portrait = 0x7f0a0079;
+		public static final int new_icon = 0x7f0a00e8;
+		public static final int new_image = 0x7f0a00c6;
+		public static final int nickname = 0x7f0a006f;
+		public static final int nickname_deletion = 0x7f0a0070;
+		public static final int none = 0x7f0a0009;
+		public static final int normal = 0x7f0a0003;
+		public static final int notice_date = 0x7f0a00a9;
+		public static final int notice_subject = 0x7f0a00ab;
+		public static final int notice_type = 0x7f0a00a8;
+		public static final int overlay_layout = 0x7f0a0052;
+		public static final int pager = 0x7f0a002b;
+		public static final int pick_image = 0x7f0a007a;
+		public static final int pick_movie = 0x7f0a007b;
+		public static final int placeholder_image = 0x7f0a007d;
+		public static final int plug_view = 0x7f0a0041;
+		public static final int profile_articles_comment_layout = 0x7f0a0060;
+		public static final int profile_articles_layout = 0x7f0a005b;
+		public static final int profile_articles_like_blank = 0x7f0a0068;
+		public static final int profile_articles_like_layout = 0x7f0a0064;
+		public static final int profile_articles_post_layout = 0x7f0a005c;
+		public static final int profile_cafe_information = 0x7f0a00d9;
+		public static final int profile_image = 0x7f0a006d;
+		public static final int profile_image_layout = 0x7f0a006b;
+		public static final int profile_image_stroke = 0x7f0a006c;
+		public static final int profile_info_layout = 0x7f0a00e0;
+		public static final int profile_setting_img = 0x7f0a006e;
+		public static final int progress_indicator = 0x7f0a0111;
+		public static final int query_string = 0x7f0a00ac;
+		public static final int query_string_deletion = 0x7f0a00ae;
+		public static final int rb_quality_high = 0x7f0a0124;
+		public static final int rb_quality_low = 0x7f0a0123;
+		public static final int rb_quality_std = 0x7f0a0122;
+		public static final int rb_resolution_360 = 0x7f0a0127;
+		public static final int rb_resolution_480 = 0x7f0a0126;
+		public static final int rb_resolution_720 = 0x7f0a0128;
+		public static final int read_count = 0x7f0a0097;
+		public static final int record_setting_cancel = 0x7f0a012a;
+		public static final int record_setting_ok = 0x7f0a0129;
+		public static final int record_timer = 0x7f0a0120;
+		public static final int record_view = 0x7f0a011e;
+		public static final int record_view_stop = 0x7f0a011f;
+		public static final int rel_videocontrols = 0x7f0a00f2;
+		public static final int reply = 0x7f0a008a;
+		public static final int reply_and_translate = 0x7f0a0089;
+		public static final int retry = 0x7f0a00cc;
+		public static final int right = 0x7f0a0005;
+		public static final int right_thumbnail_view_stub = 0x7f0a00a5;
+		public static final int save = 0x7f0a010f;
+		public static final int search = 0x7f0a0025;
+		public static final int searched_count = 0x7f0a00b0;
+		public static final int searched_info_layout = 0x7f0a00af;
+		public static final int selected_overlay = 0x7f0a007f;
+		public static final int setting_quality_radio_group = 0x7f0a0121;
+		public static final int setting_resolution_radio_group = 0x7f0a0125;
+		public static final int shome_gradation = 0x7f0a00e7;
+		public static final int show_histories_button = 0x7f0a00ad;
+		public static final int staff_image = 0x7f0a0086;
+		public static final int start = 0x7f0a000a;
+		public static final int subject = 0x7f0a0081;
+		public static final int swipe_refresh_layout = 0x7f0a0021;
+		public static final int tab_contents = 0x7f0a0076;
+		public static final int tab_progress = 0x7f0a0077;
+		public static final int tabs_view = 0x7f0a0075;
+		public static final int text = 0x7f0a009e;
+		public static final int thumbnail1 = 0x7f0a00fb;
+		public static final int thumbnail2 = 0x7f0a0100;
+		public static final int thumbnail3 = 0x7f0a0105;
+		public static final int thumbnail4 = 0x7f0a010a;
+		public static final int thumbnail_image = 0x7f0a007e;
+		public static final int thumbnail_layout = 0x7f0a007c;
+		public static final int title = 0x7f0a003d;
+		public static final int title_layout = 0x7f0a003c;
+		public static final int top = 0x7f0a0010;
+		public static final int top_layout = 0x7f0a0043;
+		public static final int total_article_layout = 0x7f0a00d5;
+		public static final int translate = 0x7f0a008b;
+		public static final int transparent_glink = 0x7f0a0044;
+		public static final int transparent_seekbar = 0x7f0a0045;
+		public static final int trash_background = 0x7f0a012b;
+		public static final int triangle = 0x7f0a000d;
+		public static final int tvCancelCrop = 0x7f0a003a;
+		public static final int tvClose = 0x7f0a0034;
+		public static final int tvDoCrop = 0x7f0a003b;
+		public static final int tvRotate = 0x7f0a0037;
+		public static final int tvSave = 0x7f0a0035;
+		public static final int tvSetCrop = 0x7f0a0038;
+		public static final int tv_no_article_error = 0x7f0a00cd;
+		public static final int two_line_infos_view_stub = 0x7f0a00a4;
+		public static final int underline = 0x7f0a000e;
+		public static final int up = 0x7f0a000c;
+		public static final int valid_check_text = 0x7f0a0071;
+		public static final int vcv_img_fullscreen = 0x7f0a00f9;
+		public static final int vcv_img_play = 0x7f0a00f4;
+		public static final int vcv_seekbar = 0x7f0a00f5;
+		public static final int vcv_txt_divider = 0x7f0a00f7;
+		public static final int vcv_txt_elapsed = 0x7f0a00f6;
+		public static final int vcv_txt_total = 0x7f0a00f8;
+		public static final int version = 0x7f0a0048;
+		public static final int video_close = 0x7f0a00f3;
+		public static final int video_data_alert_layout = 0x7f0a00ed;
+		public static final int video_encoding_layout = 0x7f0a00f0;
+		public static final int video_error_view = 0x7f0a00ef;
+		public static final int video_gradient = 0x7f0a00a1;
+		public static final int video_gradient1 = 0x7f0a00fe;
+		public static final int video_gradient2 = 0x7f0a0103;
+		public static final int video_gradient3 = 0x7f0a0108;
+		public static final int video_gradient4 = 0x7f0a010d;
+		public static final int video_icon1 = 0x7f0a00fd;
+		public static final int video_icon2 = 0x7f0a0102;
+		public static final int video_icon3 = 0x7f0a0107;
+		public static final int video_icon4 = 0x7f0a010c;
+		public static final int video_log = 0x7f0a009f;
+		public static final int video_play = 0x7f0a00a0;
+		public static final int video_thumb = 0x7f0a00eb;
+		public static final int video_thumb_play = 0x7f0a00ec;
+		public static final int video_view = 0x7f0a00ea;
+		public static final int videoview_layout = 0x7f0a00e9;
+		public static final int viewer_close = 0x7f0a0053;
+		public static final int viewer_date = 0x7f0a00ba;
+		public static final int viewer_error_view = 0x7f0a00ca;
+		public static final int viewer_nickname = 0x7f0a00b9;
+		public static final int viewer_page = 0x7f0a0054;
+		public static final int viewer_page_divider = 0x7f0a0055;
+		public static final int viewer_subject = 0x7f0a0057;
+		public static final int viewer_total_page = 0x7f0a0056;
+		public static final int viewer_view_pager = 0x7f0a0051;
+		public static final int viewer_view_post = 0x7f0a00bb;
+		public static final int web_view = 0x7f0a0078;
+		public static final int write_date = 0x7f0a0091;
+		public static final int writer_level = 0x7f0a0095;
+		public static final int writer_nickname = 0x7f0a0090;
+		public static final int writer_profile = 0x7f0a0083;
+		public static final int writer_profile_image = 0x7f0a0084;
+		public static final int writer_profile_image_stroke = 0x7f0a0085;
+		public static final int written_comment_count = 0x7f0a0062;
+		public static final int written_comment_count_btn = 0x7f0a00d1;
+		public static final int written_comment_count_txt = 0x7f0a00d2;
+	}
+	public static final class integer {
+		public static final int default_circle_indicator_orientation = 0x7f0b0000;
+		public static final int default_title_indicator_footer_indicator_style = 0x7f0b0001;
+		public static final int default_title_indicator_line_position = 0x7f0b0002;
+		public static final int default_underline_indicator_fade_delay = 0x7f0b0003;
+		public static final int default_underline_indicator_fade_length = 0x7f0b0004;
+	}
+	public static final class layout {
+		public static final int activity_request = 0x7f040001;
+		public static final int alert_dialog = 0x7f040002;
+		public static final int dialog_loading = 0x7f040003;
+		public static final int fragment_all_media = 0x7f040004;
+		public static final int fragment_article = 0x7f040005;
+		public static final int fragment_articles = 0x7f040006;
+		public static final int fragment_comment = 0x7f040007;
+		public static final int fragment_home = 0x7f040008;
+		public static final int fragment_image_edit = 0x7f040009;
+		public static final int fragment_items_dialog = 0x7f04000a;
+		public static final int fragment_main = 0x7f04000b;
+		public static final int fragment_main_banner = 0x7f04000c;
+		public static final int fragment_media_viewer = 0x7f04000d;
+		public static final int fragment_menus = 0x7f04000e;
+		public static final int fragment_profile = 0x7f04000f;
+		public static final int fragment_profile_main = 0x7f040010;
+		public static final int fragment_profile_modify = 0x7f040011;
+		public static final int fragment_search_articles = 0x7f040012;
+		public static final int fragment_shome = 0x7f040013;
+		public static final int fragment_tabs = 0x7f040014;
+		public static final int fragment_web_view_article = 0x7f040015;
+		public static final int fragment_write = 0x7f040016;
+		public static final int item_all_media_item = 0x7f040017;
+		public static final int item_all_media_row = 0x7f040018;
+		public static final int item_article_comment = 0x7f040019;
+		public static final int item_article_comment_etc_items = 0x7f04001a;
+		public static final int item_article_comments_header = 0x7f04001b;
+		public static final int item_article_contents_footer = 0x7f04001c;
+		public static final int item_article_empty_comments = 0x7f04001d;
+		public static final int item_article_header = 0x7f04001e;
+		public static final int item_article_image = 0x7f04001f;
+		public static final int item_article_text = 0x7f040020;
+		public static final int item_article_video = 0x7f040021;
+		public static final int item_articles_article = 0x7f040022;
+		public static final int item_articles_article_infos = 0x7f040023;
+		public static final int item_articles_article_thumbnail = 0x7f040024;
+		public static final int item_articles_article_two_line_infos = 0x7f040025;
+		public static final int item_articles_deleted_article = 0x7f040026;
+		public static final int item_articles_header = 0x7f040027;
+		public static final int item_articles_notice = 0x7f040028;
+		public static final int item_articles_search_header = 0x7f040029;
+		public static final int item_articles_search_history = 0x7f04002a;
+		public static final int item_empty = 0x7f04002b;
+		public static final int item_empty_space = 0x7f04002c;
+		public static final int item_home_banner = 0x7f04002d;
+		public static final int item_home_main_banner = 0x7f04002e;
+		public static final int item_items_dialog_item = 0x7f04002f;
+		public static final int item_items_dialog_section = 0x7f040030;
+		public static final int item_media_viewer_article_details = 0x7f040031;
+		public static final int item_menus_cafe_infos = 0x7f040032;
+		public static final int item_menus_menu = 0x7f040033;
+		public static final int item_photo_media_viewer = 0x7f040034;
+		public static final int item_profile_articles_empty = 0x7f040035;
+		public static final int item_profile_articles_header = 0x7f040036;
+		public static final int item_profile_cafe_info = 0x7f040037;
+		public static final int item_profile_cafe_join = 0x7f040038;
+		public static final int item_profile_myinfo = 0x7f040039;
+		public static final int item_profile_pending_message = 0x7f04003a;
+		public static final int item_shome_cafe_infos = 0x7f04003b;
+		public static final int item_tab = 0x7f04003c;
+		public static final int item_video_media_viewer = 0x7f04003d;
+		public static final int item_video_progress = 0x7f04003e;
+		public static final int item_video_view = 0x7f04003f;
+		public static final int item_view_videocontrols = 0x7f040040;
+		public static final int item_write_attachments = 0x7f040041;
+		public static final int item_write_header = 0x7f040042;
+		public static final int item_write_navigation = 0x7f040043;
+		public static final int item_write_text = 0x7f040044;
+		public static final int video_loading_progress = 0x7f040045;
+		public static final int view_divider = 0x7f040046;
+		public static final int view_divider_opacity_5 = 0x7f040047;
+		public static final int view_floating_button = 0x7f040048;
+		public static final int view_fragment_error = 0x7f040049;
+		public static final int view_home_main_banner = 0x7f04004a;
+		public static final int widget_dialog = 0x7f04004b;
+		public static final int widget_floating_layout = 0x7f04004c;
+		public static final int widget_record_layout = 0x7f04004d;
+		public static final int widget_record_setting_layout = 0x7f04004e;
+		public static final int widget_trash_layout = 0x7f04004f;
+	}
+	public static final class menu {
+		public static final int article_more_actions = 0x7f0d0000;
+	}
+	public static final class string {
+		public static final int all_board = 0x7f060000;
+		public static final int all_media_no_permissions = 0x7f060001;
+		public static final int already_exist_nickname_message = 0x7f060002;
+		public static final int article_comments_count = 0x7f060003;
+		public static final int article_count_txt = 0x7f060004;
+		public static final int article_empty = 0x7f060005;
+		public static final int article_read_count = 0x7f060006;
+		public static final int article_read_count_format = 0x7f060007;
+		public static final int article_report_alert_message = 0x7f060008;
+		public static final int article_report_already_reported = 0x7f060009;
+		public static final int article_report_completed = 0x7f06000a;
+		public static final int article_report_menu = 0x7f06000b;
+		public static final int article_save_complete_message = 0x7f06000c;
+		public static final int article_save_fail_message = 0x7f06000d;
+		public static final int article_save_progress_message = 0x7f06000e;
+		public static final int article_search_placeholder = 0x7f06000f;
+		public static final int article_video_alert_message = 0x7f060010;
+		public static final int article_video_encoding_message = 0x7f060011;
+		public static final int attachment_add_fail_message = 0x7f060012;
+		public static final int available_nickname_message = 0x7f060013;
+		public static final int cafe_app_install_confirm_message = 0x7f060014;
+		public static final int cancel = 0x7f060015;
+		public static final int cancel_article_write_confirm_message = 0x7f060016;
+		public static final int comment_empty = 0x7f060017;
+		public static final int comment_hint = 0x7f060018;
+		public static final int comment_not_exist = 0x7f060019;
+		public static final int comment_write_permission_error = 0x7f06001a;
+		public static final int comments_more_view = 0x7f06001b;
+		public static final int confirm = 0x7f06001c;
+		public static final int count_format = 0x7f06001d;
+		public static final int date_format_hrs = 0x7f06001e;
+		public static final int date_format_just_now = 0x7f06001f;
+		public static final int date_format_mins = 0x7f060020;
+		public static final int date_format_yesterday = 0x7f060021;
+		public static final int delete = 0x7f060022;
+		public static final int delete_confirm_message = 0x7f060023;
+		public static final int deleted_comment = 0x7f060024;
+		public static final int deleted_post = 0x7f060025;
+		public static final int edit = 0x7f060026;
+		public static final int empty_recently_search_message = 0x7f060027;
+		public static final int empty_search_articles_message = 0x7f060028;
+		public static final int error_no_article_comment = 0x7f060029;
+		public static final int error_no_article_like = 0x7f06002a;
+		public static final int error_no_article_wirte = 0x7f06002b;
+		public static final int exist_prohibit_word_nickname_message = 0x7f06002c;
+		public static final int flavor_name = 0x7f060090;
+		public static final int hosts_article = 0x7f060091;
+		public static final int hosts_attach = 0x7f060092;
+		public static final int hosts_glink = 0x7f060093;
+		public static final int hosts_phinf = 0x7f060094;
+		public static final int hosts_playlog = 0x7f060095;
+		public static final int hosts_plug = 0x7f060096;
+		public static final int hosts_upphoto = 0x7f060097;
+		public static final int image_editor_crop = 0x7f06002d;
+		public static final int image_editor_rotate = 0x7f06002e;
+		public static final int image_permission_setting_message = 0x7f06002f;
+		public static final int image_upload_fail_message = 0x7f060030;
+		public static final int internet_not_connected_error = 0x7f060031;
+		public static final int join_cafe = 0x7f060032;
+		public static final int join_plug = 0x7f060033;
+		public static final int like_article_count_txt = 0x7f060034;
+		public static final int logout_complete_message = 0x7f060035;
+		public static final int logout_confirm_message = 0x7f060036;
+		public static final int media_delete_message = 0x7f060037;
+		public static final int media_viewer_move_post = 0x7f060038;
+		public static final int member_count_format = 0x7f060039;
+		public static final int menu_change_channel = 0x7f06003a;
+		public static final int modify_complete_message = 0x7f06003b;
+		public static final int more_actions = 0x7f06003c;
+		public static final int movie_over_limit_size_message = 0x7f06003d;
+		public static final int movie_permission_setting_message = 0x7f06003e;
+		public static final int need_login = 0x7f06003f;
+		public static final int need_register_clientid = 0x7f060040;
+		public static final int need_register_partnership = 0x7f060041;
+		public static final int network_error = 0x7f060042;
+		public static final int nick_name_already_join = 0x7f060043;
+		public static final int nick_name_header = 0x7f060044;
+		public static final int nick_name_hint = 0x7f060045;
+		public static final int nick_name_join = 0x7f060046;
+		public static final int nick_name_join_agree = 0x7f060047;
+		public static final int nick_name_validate = 0x7f060048;
+		public static final int nickname_rule_global_message = 0x7f060049;
+		public static final int nickname_rule_message = 0x7f06004a;
+		public static final int no_menu_setting_message = 0x7f06004b;
+		public static final int no_permissions = 0x7f06004c;
+		public static final int no_search_results = 0x7f06004d;
+		public static final int not_available_nickname_message = 0x7f06004e;
+		public static final int not_cafe_member = 0x7f06004f;
+		public static final int not_configured_event_menu_id = 0x7f060050;
+		public static final int not_configured_notice_menu_id = 0x7f060051;
+		public static final int not_supported_os_version = 0x7f060052;
+		public static final int permission_record = 0x7f060053;
+		public static final int permission_storage = 0x7f060054;
+		public static final int permission_storage_record = 0x7f060055;
+		public static final int photo_album = 0x7f060056;
+		public static final int photo_upload_error = 0x7f060057;
+		public static final int pin_to_top = 0x7f060058;
+		public static final int plug_bottom_channel = 0x7f060059;
+		public static final int plug_sdk_version = 0x7f060098;
+		public static final int profile_articles_total = 0x7f06005a;
+		public static final int profile_become_member = 0x7f06005b;
+		public static final int profile_cafe_information = 0x7f06005c;
+		public static final int profile_login = 0x7f06005d;
+		public static final int profile_logout = 0x7f06005e;
+		public static final int profile_plug_information = 0x7f06005f;
+		public static final int profile_string = 0x7f060060;
+		public static final int profile_visit = 0x7f060061;
+		public static final int recent_article_menu = 0x7f060062;
+		public static final int recent_board = 0x7f060063;
+		public static final int record_error = 0x7f060064;
+		public static final int record_permission_error = 0x7f060065;
+		public static final int record_quality = 0x7f060066;
+		public static final int record_quality_high = 0x7f060067;
+		public static final int record_quality_low = 0x7f060068;
+		public static final int record_quality_std = 0x7f060069;
+		public static final int record_saved = 0x7f06006a;
+		public static final int record_size = 0x7f06006b;
+		public static final int record_size_360 = 0x7f06006c;
+		public static final int record_size_480 = 0x7f06006d;
+		public static final int record_size_720 = 0x7f06006e;
+		public static final int replies_more_view = 0x7f06006f;
+		public static final int reply = 0x7f060070;
+		public static final int require_join_message = 0x7f060071;
+		public static final int require_login_message = 0x7f060072;
+		public static final int retry = 0x7f060073;
+		public static final int retry_after_a_while_message = 0x7f060074;
+		public static final int retry_error = 0x7f060075;
+		public static final int save = 0x7f060076;
+		public static final int save_error_contents = 0x7f060077;
+		public static final int save_error_menu = 0x7f060078;
+		public static final int save_error_subject = 0x7f060079;
+		public static final int search_all_menu = 0x7f06007a;
+		public static final int search_hint = 0x7f06007b;
+		public static final int search_result_count = 0x7f06007c;
+		public static final int search_result_text = 0x7f06007d;
+		public static final int select_channel_title = 0x7f06007e;
+		public static final int select_menu = 0x7f06007f;
+		public static final int select_menu_button = 0x7f060080;
+		public static final int translation = 0x7f060081;
+		public static final int unable_load_images = 0x7f060082;
+		public static final int unable_load_videos = 0x7f060083;
+		public static final int under_construction = 0x7f060084;
+		public static final int version = 0x7f060085;
+		public static final int view_original = 0x7f060086;
+		public static final int waiting_join_apply_message = 0x7f060087;
+		public static final int want_cafe_member = 0x7f060088;
+		public static final int widget_button_cafe = 0x7f060089;
+		public static final int widget_button_capture = 0x7f06008a;
+		public static final int widget_button_record = 0x7f06008b;
+		public static final int widget_button_write = 0x7f06008c;
+		public static final int widget_trash = 0x7f06008d;
+		public static final int write_permission_error = 0x7f06008e;
+		public static final int written_comment_count_txt = 0x7f06008f;
+	}
+	public static final class style {
+		public static final int Glink_SeekBar = 0x7f0c0000;
+		public static final int SdkTheme = 0x7f0c0001;
+		public static final int Theme_glink_seekbar = 0x7f0c0002;
+		public static final int multimedia_dialog_anim = 0x7f0c0003;
+		public static final int notitle_defaultdialog_msg = 0x7f0c0004;
+		public static final int notitle_transparent_defaultdialog = 0x7f0c0005;
+		public static final int record_setting_anim = 0x7f0c0006;
+		public static final int record_widget_anim = 0x7f0c0007;
+		public static final int transparent_progress_dialog = 0x7f0c0008;
+		public static final int widget_dialog_anim = 0x7f0c0009;
+		public static final int widget_show_animation = 0x7f0c000a;
+	}
+	public static final class styleable {
+		public static final int[] CirclePageIndicator = { 0x010100c4, 0x010100d4, 0x7f010000, 0x7f010002, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008 };
+		public static final int CirclePageIndicator_android_background = 1;
+		public static final int CirclePageIndicator_android_orientation = 0;
+		public static final int CirclePageIndicator_centered = 2;
+		public static final int CirclePageIndicator_fillColor = 4;
+		public static final int CirclePageIndicator_pageColor = 5;
+		public static final int CirclePageIndicator_radius = 6;
+		public static final int CirclePageIndicator_snap = 7;
+		public static final int CirclePageIndicator_strokeColor = 8;
+		public static final int CirclePageIndicator_strokeWidth = 3;
+		public static final int[] FloatingActionButton = { 0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011, 0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015, 0x7f010016, 0x7f010017, 0x7f010018, 0x7f010019, 0x7f01001a, 0x7f01001b, 0x7f01001c, 0x7f01001d };
+		public static final int FloatingActionButton_fab_colorDisabled = 2;
+		public static final int FloatingActionButton_fab_colorNormal = 0;
+		public static final int FloatingActionButton_fab_colorPressed = 1;
+		public static final int FloatingActionButton_fab_colorRipple = 3;
+		public static final int FloatingActionButton_fab_elevationCompat = 13;
+		public static final int FloatingActionButton_fab_hideAnimation = 11;
+		public static final int FloatingActionButton_fab_is_trash = 20;
+		public static final int FloatingActionButton_fab_label = 12;
+		public static final int FloatingActionButton_fab_progress = 18;
+		public static final int FloatingActionButton_fab_progress_backgroundColor = 15;
+		public static final int FloatingActionButton_fab_progress_color = 14;
+		public static final int FloatingActionButton_fab_progress_indeterminate = 16;
+		public static final int FloatingActionButton_fab_progress_max = 17;
+		public static final int FloatingActionButton_fab_progress_showBackground = 19;
+		public static final int FloatingActionButton_fab_shadowColor = 5;
+		public static final int FloatingActionButton_fab_shadowRadius = 6;
+		public static final int FloatingActionButton_fab_shadowXOffset = 7;
+		public static final int FloatingActionButton_fab_shadowYOffset = 8;
+		public static final int FloatingActionButton_fab_showAnimation = 10;
+		public static final int FloatingActionButton_fab_showShadow = 4;
+		public static final int FloatingActionButton_fab_size = 9;
+		public static final int[] FloatingActionMenu = { 0x7f01001e, 0x7f01001f, 0x7f010020, 0x7f010021, 0x7f010022, 0x7f010023, 0x7f010024, 0x7f010025, 0x7f010026, 0x7f010027, 0x7f010028, 0x7f010029, 0x7f01002a, 0x7f01002b, 0x7f01002c, 0x7f01002d, 0x7f01002e, 0x7f01002f, 0x7f010030, 0x7f010031, 0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035, 0x7f010036, 0x7f010037, 0x7f010038, 0x7f010039, 0x7f01003a, 0x7f01003b, 0x7f01003c, 0x7f01003d, 0x7f01003e, 0x7f01003f, 0x7f010040, 0x7f010041, 0x7f010042, 0x7f010043 };
+		public static final int FloatingActionMenu_menu_animationDelayPerItem = 19;
+		public static final int FloatingActionMenu_menu_backgroundColor = 34;
+		public static final int FloatingActionMenu_menu_buttonSpacing = 1;
+		public static final int FloatingActionMenu_menu_buttonToggleAnimation = 20;
+		public static final int FloatingActionMenu_menu_colorNormal = 30;
+		public static final int FloatingActionMenu_menu_colorPressed = 31;
+		public static final int FloatingActionMenu_menu_colorRipple = 32;
+		public static final int FloatingActionMenu_menu_fab_hide_animation = 37;
+		public static final int FloatingActionMenu_menu_fab_label = 35;
+		public static final int FloatingActionMenu_menu_fab_show_animation = 36;
+		public static final int FloatingActionMenu_menu_fab_size = 24;
+		public static final int FloatingActionMenu_menu_icon = 18;
+		public static final int FloatingActionMenu_menu_labels_colorNormal = 14;
+		public static final int FloatingActionMenu_menu_labels_colorPressed = 15;
+		public static final int FloatingActionMenu_menu_labels_colorRipple = 16;
+		public static final int FloatingActionMenu_menu_labels_cornerRadius = 12;
+		public static final int FloatingActionMenu_menu_labels_ellipsize = 22;
+		public static final int FloatingActionMenu_menu_labels_hideAnimation = 4;
+		public static final int FloatingActionMenu_menu_labels_margin = 2;
+		public static final int FloatingActionMenu_menu_labels_maxLines = 23;
+		public static final int FloatingActionMenu_menu_labels_padding = 9;
+		public static final int FloatingActionMenu_menu_labels_paddingBottom = 8;
+		public static final int FloatingActionMenu_menu_labels_paddingLeft = 6;
+		public static final int FloatingActionMenu_menu_labels_paddingRight = 7;
+		public static final int FloatingActionMenu_menu_labels_paddingTop = 5;
+		public static final int FloatingActionMenu_menu_labels_position = 17;
+		public static final int FloatingActionMenu_menu_labels_showAnimation = 3;
+		public static final int FloatingActionMenu_menu_labels_showShadow = 13;
+		public static final int FloatingActionMenu_menu_labels_singleLine = 21;
+		public static final int FloatingActionMenu_menu_labels_style = 25;
+		public static final int FloatingActionMenu_menu_labels_textColor = 10;
+		public static final int FloatingActionMenu_menu_labels_textSize = 11;
+		public static final int FloatingActionMenu_menu_openDirection = 33;
+		public static final int FloatingActionMenu_menu_shadowColor = 26;
+		public static final int FloatingActionMenu_menu_shadowRadius = 27;
+		public static final int FloatingActionMenu_menu_shadowXOffset = 28;
+		public static final int FloatingActionMenu_menu_shadowYOffset = 29;
+		public static final int FloatingActionMenu_menu_showShadow = 0;
+		public static final int[] LinePageIndicator = { 0x010100d4, 0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003, 0x7f010044, 0x7f010045 };
+		public static final int LinePageIndicator_android_background = 0;
+		public static final int LinePageIndicator_centered = 1;
+		public static final int LinePageIndicator_gapWidth = 6;
+		public static final int LinePageIndicator_lineWidth = 5;
+		public static final int LinePageIndicator_selectedColor = 2;
+		public static final int LinePageIndicator_strokeWidth = 3;
+		public static final int LinePageIndicator_unselectedColor = 4;
+		public static final int[] TitlePageIndicator = { 0x01010095, 0x01010098, 0x010100d4, 0x7f010001, 0x7f010046, 0x7f010047, 0x7f010048, 0x7f010049, 0x7f01004a, 0x7f01004b, 0x7f01004c, 0x7f01004d, 0x7f01004e, 0x7f01004f, 0x7f010050 };
+		public static final int TitlePageIndicator_android_background = 2;
+		public static final int TitlePageIndicator_android_textColor = 1;
+		public static final int TitlePageIndicator_android_textSize = 0;
+		public static final int TitlePageIndicator_clipPadding = 4;
+		public static final int TitlePageIndicator_footerColor = 5;
+		public static final int TitlePageIndicator_footerIndicatorHeight = 8;
+		public static final int TitlePageIndicator_footerIndicatorStyle = 7;
+		public static final int TitlePageIndicator_footerIndicatorUnderlinePadding = 9;
+		public static final int TitlePageIndicator_footerLineHeight = 6;
+		public static final int TitlePageIndicator_footerPadding = 10;
+		public static final int TitlePageIndicator_linePosition = 11;
+		public static final int TitlePageIndicator_selectedBold = 12;
+		public static final int TitlePageIndicator_selectedColor = 3;
+		public static final int TitlePageIndicator_titlePadding = 13;
+		public static final int TitlePageIndicator_topPadding = 14;
+		public static final int[] UnderlinePageIndicator = { 0x010100d4, 0x7f010001, 0x7f010051, 0x7f010052, 0x7f010053 };
+		public static final int UnderlinePageIndicator_android_background = 0;
+		public static final int UnderlinePageIndicator_fadeDelay = 3;
+		public static final int UnderlinePageIndicator_fadeLength = 4;
+		public static final int UnderlinePageIndicator_fades = 2;
+		public static final int UnderlinePageIndicator_selectedColor = 1;
+		public static final int[] ViewPagerIndicator = { 0x7f010054, 0x7f010055, 0x7f010056, 0x7f010057, 0x7f010058, 0x7f010059 };
+		public static final int ViewPagerIndicator_vpiCirclePageIndicatorStyle = 0;
+		public static final int ViewPagerIndicator_vpiIconPageIndicatorStyle = 1;
+		public static final int ViewPagerIndicator_vpiLinePageIndicatorStyle = 2;
+		public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle = 4;
+		public static final int ViewPagerIndicator_vpiTitlePageIndicatorStyle = 3;
+		public static final int ViewPagerIndicator_vpiUnderlinePageIndicatorStyle = 5;
+	}
 }

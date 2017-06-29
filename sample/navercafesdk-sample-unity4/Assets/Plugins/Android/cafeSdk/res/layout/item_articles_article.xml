@@ -9,10 +9,10 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:paddingTop="8dp"
-      android:paddingBottom="8dp"
-      android:gravity="center_vertical"
-      android:baselineAligned="false"
+      android:paddingLeft="@dimen/list_item_margin"
+      android:paddingTop="12dp"
+      android:paddingRight="@dimen/list_item_margin"
+      android:paddingBottom="12dp"
       android:orientation="horizontal">
 
     <ViewStub
@@ -35,21 +35,21 @@
           android:layout_height="wrap_content"
           android:maxLines="2"
           android:ellipsize="end"
-          android:textColor="@color/black2"
+          android:textColor="@color/black4"
           android:textSize="15dp"/>
 
       <ViewStub
           android:id="@+id/infos_view_stub"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginTop="6dp"
+          android:layout_marginTop="4dp"
           android:layout="@layout/item_articles_article_infos"/>
 
       <ViewStub
           android:id="@+id/two_line_infos_view_stub"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginTop="6dp"
+          android:layout_marginTop="4dp"
           android:layout="@layout/item_articles_article_two_line_infos"/>
     </LinearLayout>
 
@@ -58,13 +58,12 @@
         android:inflatedId="@+id/thumbnail_layout"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="16dp"
         android:layout="@layout/item_articles_article_thumbnail"/>
   </LinearLayout>
 
   <View
-      android:id="@+id/divider"
       android:layout_width="match_parent"
       android:layout_height="1dp"
-      android:background="@color/black2_opacity_5"/>
+      android:background="#66ced4d4"/>
 </LinearLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_board">全体公告板</string>
     <string name="all_media_no_permissions">您没有权限。</string>
     <string name="already_exist_nickname_message">已在使用的昵称。</string>
     <string name="article_comments_count">评论</string>
@@ -63,15 +64,17 @@
     <string name="movie_over_limit_size_message">所选的视频容量超过了\n最大上传容量范围。</string>
     <string name="movie_permission_setting_message">没有权限，不能添加视频。\n请在【设置 > 应用程序】的相关游戏中确认保存权限。</string>
     <string name="need_login">请登录。</string>
+    <string name="need_register_clientid">Cafe管理需登录客户端ID</string>
+    <string name="need_register_partnership">若要使用APP内社区，需要申请合作。</string>
     <string name="network_error">出现网络问题，没有成功连接。\n请检查您的网络连接后重试。</string>
     <string name="nick_name_already_join">已申请加入的社区。现在正在进行加入批准步骤。</string>
     <string name="nick_name_header">输入昵称</string>
     <string name="nick_name_hint">请输入昵称。</string>
     <string name="nick_name_join">注册</string>
     <string name="nick_name_join_agree">同意Naver Cafe使用条款。</string>
-    <string name="nick_name_validate">可以使用10字以内的韩文或20字以内的英文与数字。</string>
+    <string name="nick_name_validate">可以使用20字以内的英文与数字。</string>
     <string name="nickname_rule_global_message">Up to 20 characters</string>
-    <string name="nickname_rule_message">最多10个韩文字符，20个英文字符(可以混用数字)</string>
+    <string name="nickname_rule_message">最多20个英文字符(可以混用数字)</string>
     <string name="no_menu_setting_message">尚未设置菜单。</string>
     <string name="no_permissions">您没有使用权限。</string>
     <string name="no_search_results">没有搜索结果</string>
@@ -96,6 +99,7 @@
     <string name="profile_string">我的个人资料</string>
     <string name="profile_visit">访问</string>
     <string name="recent_article_menu">查看新文章</string>
+    <string name="recent_board">最近访问的公告板</string>
     <string name="record_error">视频没有正常录制。</string>
     <string name="record_permission_error">没有权限，不能录制视频。\n请在【设置 > 应用程序】中的相关游戏中确认麦克风访问权限和保存权限。</string>
     <string name="record_quality">录制质量</string>
@@ -125,10 +129,12 @@
     <string name="select_channel_title">更改频道</string>
     <string name="select_menu">选择公告板</string>
     <string name="select_menu_button">请选择公告板。</string>
+    <string name="translation">翻译</string>
     <string name="unable_load_images">无法加载图片。</string>
     <string name="unable_load_videos">无法加载视频。</string>
     <string name="under_construction">正在准备中。</string>
     <string name="version">当前版本 %s</string>
+    <string name="view_original">原文</string>
     <string name="waiting_join_apply_message">正在申请注册。</string>
     <string name="want_cafe_member">想要加入会员吗？</string>
     <string name="widget_button_cafe">游戏社区</string>

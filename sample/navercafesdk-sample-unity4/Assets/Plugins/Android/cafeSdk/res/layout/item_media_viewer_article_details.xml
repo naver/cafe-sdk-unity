@@ -34,9 +34,10 @@
 
   <TextView
       android:id="@+id/viewer_view_post"
-      android:layout_width="74dp"
-      android:layout_height="20dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
+      android:padding="8dp"
       android:background="@drawable/viewer_view_post_background"
       android:gravity="center"
       android:textColor="#979797"

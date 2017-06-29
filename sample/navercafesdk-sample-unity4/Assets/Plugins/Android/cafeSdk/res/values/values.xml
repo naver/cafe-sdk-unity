@@ -30,6 +30,7 @@
     <color name="default_underline_indicator_selected_color">#FF33B5E5</color>
     <color name="gray1">#cccccc</color>
     <color name="gray10">#aaaaaa</color>
+    <color name="gray11">#ced4d4</color>
     <color name="gray2">#c1c1c1</color>
     <color name="gray3">#c7c8ca</color>
     <color name="gray4">#999999</color>
@@ -85,6 +86,7 @@
     </attr><attr name="selectedColor"/><attr format="boolean" name="selectedBold"/><attr name="android:textColor"/><attr name="android:textSize"/><attr format="dimension" name="titlePadding"/><attr format="dimension" name="topPadding"/><attr name="android:background"/></declare-styleable>
     <declare-styleable name="UnderlinePageIndicator"><attr format="boolean" name="fades"/><attr format="integer" name="fadeDelay"/><attr format="integer" name="fadeLength"/><attr name="selectedColor"/><attr name="android:background"/></declare-styleable>
     <declare-styleable name="ViewPagerIndicator"><attr format="reference" name="vpiCirclePageIndicatorStyle"/><attr format="reference" name="vpiIconPageIndicatorStyle"/><attr format="reference" name="vpiLinePageIndicatorStyle"/><attr format="reference" name="vpiTitlePageIndicatorStyle"/><attr format="reference" name="vpiTabPageIndicatorStyle"/><attr format="reference" name="vpiUnderlinePageIndicatorStyle"/></declare-styleable>
+    <dimen name="article_media_item_margin">0dp</dimen>
     <dimen name="comment_reply_width">48dp</dimen>
     <dimen name="comment_writer_nickname_margin_right">56dp</dimen>
     <dimen name="default_circle_indicator_radius">3dp</dimen>
@@ -108,6 +110,7 @@
     <dimen name="glink_widget_padding">9dp</dimen>
     <dimen name="glink_widget_size_normal">54dp</dimen>
     <dimen name="labels_text_size">14sp</dimen>
+    <dimen name="list_item_margin">16dp</dimen>
     <dimen name="viewer_animation_speed">2dp</dimen>
     <dimen name="widget_speed">3dp</dimen>
     <item name="fab_label" type="id"/>
@@ -117,6 +120,7 @@
     <integer name="default_title_indicator_line_position">0</integer>
     <integer name="default_underline_indicator_fade_delay">300</integer>
     <integer name="default_underline_indicator_fade_length">400</integer>
+    <string name="all_board">All</string>
     <string name="all_media_no_permissions">No permissions</string>
     <string name="already_exist_nickname_message">The nickname is already in use.</string>
     <string name="article_comments_count">Comments</string>
@@ -162,9 +166,9 @@
     <string name="error_no_article_wirte">No posts you have written.</string>
     <string name="exist_prohibit_word_nickname_message">Prohibited words are included.</string>
     <string name="flavor_name" translatable="false">real</string>
-    <string name="hosts_article" translatable="false">http://openapi.naver.com</string>
+    <string name="hosts_article" translatable="false">https://apis.naver.com</string>
     <string name="hosts_attach" translatable="false">https://up.cafe.naver.com</string>
-    <string name="hosts_glink" translatable="false">https://openapi.naver.com</string>
+    <string name="hosts_glink" translatable="false">https://apis.naver.com</string>
     <string name="hosts_phinf" translatable="false">https://g-plug.pstatic.net</string>
     <string name="hosts_playlog" translatable="false">http://global.apis.naver.com</string>
     <string name="hosts_plug" translatable="false">https://global.apis.naver.com</string>
@@ -188,15 +192,17 @@
     <string name="movie_over_limit_size_message">The size limit of selected video\nis exceeded.</string>
     <string name="movie_permission_setting_message">You do not have permission to attach a video.\nPlease check your permission to save in the game which can be accessed from [Settings > App]. </string>
     <string name="need_login">Please log in.</string>
+    <string name="need_register_clientid">You need to register the client ID at the management menu.</string>
+    <string name="need_register_partnership">Required to join the partnership network to use in-app communities. </string>
     <string name="network_error">Not connected due to a network problem.\nPlease check your network status and then try again.</string>
     <string name="nick_name_already_join">You\'ve already asked to join this community. You are currently undergoing the approval process.</string>
     <string name="nick_name_header">Enter Nickname</string>
     <string name="nick_name_hint">Enter your nickname.</string>
     <string name="nick_name_join">Join</string>
     <string name="nick_name_join_agree">You must agree to NAVER Cafe Terms of Use.</string>
-    <string name="nick_name_validate">You can enter no more than 10 Korean characters or 20 alphanumeric characters.</string>
+    <string name="nick_name_validate">You can enter no more than 20 alphanumeric characters.</string>
     <string name="nickname_rule_global_message">Up to 20 characters</string>
-    <string name="nickname_rule_message">Maximum of 10 Korean characters or 20 English characters (alphanumeric characters allowed)</string>
+    <string name="nickname_rule_message">Maximum of 20 English characters (alphanumeric characters allowed)</string>
     <string name="no_menu_setting_message">Menus have not been set.</string>
     <string name="no_permissions">No permissions</string>
     <string name="no_search_results">No results found</string>
@@ -212,7 +218,7 @@
     <string name="photo_upload_error">Uploading a photo failed.</string>
     <string name="pin_to_top">Pin to Top</string>
     <string name="plug_bottom_channel">Channel</string>
-    <string name="plug_sdk_version" translatable="false">2.4.5</string>
+    <string name="plug_sdk_version" translatable="false">2.5.0</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">By logging in, you become a member of this Cafe.</string>
     <string name="profile_cafe_information">A community for every mobile game around the world, NAVER Cafe</string>
@@ -222,6 +228,7 @@
     <string name="profile_string">My Profile</string>
     <string name="profile_visit">Visit</string>
     <string name="recent_article_menu">View New Posts</string>
+    <string name="recent_board">Recent</string>
     <string name="record_error">The video has not been successfully recorded.</string>
     <string name="record_permission_error">You do not have permission to record a video.\nPlease check your permission to use your microphone and save in the game which can be accessed from [Settings > App].</string>
     <string name="record_quality">Recording Quality</string>
@@ -251,10 +258,12 @@
     <string name="select_channel_title">Change Channel</string>
     <string name="select_menu">Select Forum</string>
     <string name="select_menu_button">Select a forum.</string>
+    <string name="translation">Translation</string>
     <string name="unable_load_images">Unable to load images.</string>
     <string name="unable_load_videos">Unable to load videos.</string>
     <string name="under_construction">Under Construction</string>
     <string name="version">Current version %s</string>
+    <string name="view_original">Original</string>
     <string name="waiting_join_apply_message">Waiting for joining the Cafe…</string>
     <string name="want_cafe_member">Do you want to join the Cafe?</string>
     <string name="widget_button_cafe">Community</string>
@@ -278,6 +287,7 @@
     <item name="android:minWidth">103dip</item>
     <item name="android:focusable">true</item>
   </style>
+    <style name="SdkTheme" parent="android:Theme.Holo.Light"/>
     <style name="Theme.glink.seekbar" parent="@android:style/Theme.Black">
 
   </style>

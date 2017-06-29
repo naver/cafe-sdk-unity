@@ -2,6 +2,7 @@
 <resources>
     <dimen name="comment_reply_width">58dp</dimen>
     <dimen name="comment_writer_nickname_margin_right">66dp</dimen>
+    <string name="all_board">Tout</string>
     <string name="all_media_no_permissions">Aucune permission</string>
     <string name="already_exist_nickname_message">Le pseudo est déjà utilisé.</string>
     <string name="article_comments_count">Commentaires</string>
@@ -65,15 +66,17 @@
     <string name="movie_over_limit_size_message">La limite de taille de la vidéo sélectionné\nest dépassée.</string>
     <string name="movie_permission_setting_message">Vous n\'avez pas la permission de joindre une vidéo.\nVeuillez vérifier vos permissions de sauvegardes dans le jeu, elles peuvent être trouvées dans [Paramètres > App].</string>
     <string name="need_login">Veuillez vous connecter.</string>
+    <string name="need_register_clientid">Vous devez inscrire l\'ID de client au menu de gestion.</string>
+    <string name="need_register_partnership">Requis pour rejoindre le réseau de partenariat et utiliser les communautés dans l\'app.</string>
     <string name="network_error">Non connecté en raison d\'un problème réseau.\nVeuillez vérifier l\'état de votre réseau et réessayer.</string>
     <string name="nick_name_already_join">Vous avez déjà demandé à rejoindre cette communauté. Le processus d\'approbation est en cours.</string>
     <string name="nick_name_header">Saisir pseudo</string>
     <string name="nick_name_hint">Saisissez votre pseudo.</string>
     <string name="nick_name_join">Rejoindre</string>
     <string name="nick_name_join_agree">Vous devez accepter les conditions d\'utilisation de NAVER Cafe.</string>
-    <string name="nick_name_validate">Vous ne pouvez pas saisir plus de 10 caractères coréens ou 20 caractères alphanumériques.</string>
+    <string name="nick_name_validate">Vous ne pouvez pas saisir plus de 20 caractères alphanumériques.</string>
     <string name="nickname_rule_global_message">Up to 20 characters</string>
-    <string name="nickname_rule_message">10 caractères coréens ou 20 caractères latins au maximum (caractères alphanumériques autorisés)</string>
+    <string name="nickname_rule_message">20 caractères latins au maximum (caractères alphanumériques autorisés)</string>
     <string name="no_menu_setting_message">Les menus n\'ont pas été définis.</string>
     <string name="no_permissions">Aucune permission</string>
     <string name="no_search_results">Aucun résultat trouvé</string>
@@ -98,6 +101,7 @@
     <string name="profile_string">Mon profil</string>
     <string name="profile_visit">Visiter</string>
     <string name="recent_article_menu">Voir les nouvelles publications</string>
+    <string name="recent_board">Récent</string>
     <string name="record_error">La vidéo a bien été enregistrée.</string>
     <string name="record_permission_error">Vous n\'avez pas la permission d\'enregistrer une vidéo.\nVeuillez vérifier vos permissions de microphone et de sauvegarde dans le jeu à [Paramètres > App].</string>
     <string name="record_quality">Qualité d\'enregistrement</string>
@@ -127,10 +131,12 @@
     <string name="select_channel_title">Changer de canal</string>
     <string name="select_menu">Sélectionner forum</string>
     <string name="select_menu_button">Sélectionnez un forum.</string>
+    <string name="translation">Traduction</string>
     <string name="unable_load_images">Impossible de charger les images.</string>
     <string name="unable_load_videos">Impossible de charger les vidéos.</string>
     <string name="under_construction">En construction</string>
     <string name="version">Version actuelle %s</string>
+    <string name="view_original">Original</string>
     <string name="waiting_join_apply_message">En attente de rejoindre Cafe…</string>
     <string name="want_cafe_member">Voulez-vous rejoindre de Cafe ?</string>
     <string name="widget_button_cafe">Communauté</string>

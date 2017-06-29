@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_board">すべての掲示板</string>
     <string name="all_media_no_permissions">権限がありません。</string>
     <string name="already_exist_nickname_message">すでに使用中のニックネームです。</string>
     <string name="article_comments_count">コメント</string>
@@ -63,6 +64,8 @@
     <string name="movie_over_limit_size_message">選択した動画のサイズが\nアップロードサイズの上限を越えています。</string>
     <string name="movie_permission_setting_message">権限がないため動画を添付できません。\n[設定＞アプリ]にてゲームの保存権限を確認してください</string>
     <string name="need_login">ログインしてください。</string>
+    <string name="need_register_clientid">Cafe管理でクライアントIDを登録する必要があります</string>
+    <string name="need_register_partnership">アプリ内コミュニティを使用するには、提携を申請してください。</string>
     <string name="network_error">ネットワークに問題があるため接続できませんでした。\nネットワーク接続を確認してもう一度お試しください。</string>
     <string name="nick_name_already_join">すでに入会申請したコミュニティです。現在入会承認手続が行われています。</string>
     <string name="nick_name_header">ニックネーム入力</string>
@@ -96,6 +99,7 @@
     <string name="profile_string">マイプロフィール</string>
     <string name="profile_visit">訪問</string>
     <string name="recent_article_menu">新しい記事を見る</string>
+    <string name="recent_board">最近閲覧した掲示板</string>
     <string name="record_error">動画を正常に録画できませんでした。</string>
     <string name="record_permission_error">権限がないため映像を添付できません。\n[設定＞アプリ]にてゲームのマイクアクセス権限と保存権限を確認してください。</string>
     <string name="record_quality">録画品質</string>
@@ -125,10 +129,12 @@
     <string name="select_channel_title">チャンネル変更</string>
     <string name="select_menu">掲示板選択</string>
     <string name="select_menu_button">掲示板を選択してください。</string>
+    <string name="translation">翻訳</string>
     <string name="unable_load_images">画像の読み込みに失敗しました。</string>
     <string name="unable_load_videos">動画の読み込みに失敗しました。</string>
     <string name="under_construction">準備中です。</string>
     <string name="version">現在バージョン %s</string>
+    <string name="view_original">原文</string>
     <string name="waiting_join_apply_message">入会申請中です。</string>
     <string name="want_cafe_member">会員登録しますか？</string>
     <string name="widget_button_cafe">ゲームコミュニティ</string>

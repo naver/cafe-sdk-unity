@@ -10,18 +10,53 @@
       android:layout_height="wrap_content"
       android:orientation="vertical">
 
-    <include
+    <RelativeLayout
         android:id="@+id/thumbnail_layout"
         android:layout_width="match_parent"
-        android:layout_height="73dp"
-        layout="@layout/item_articles_article_thumbnail"/>
+        android:layout_height="wrap_content"
+        android:background="#66a3a9a9">
+
+      <ImageView
+          android:id="@+id/placeholder_image"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_centerInParent="true"/>
+
+      <ImageView
+          android:id="@+id/thumbnail_image"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"/>
+
+      <View
+          android:id="@+id/selected_overlay"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"/>
+
+      <ImageView
+          android:id="@+id/movie_icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentBottom="true"
+          android:layout_marginRight="6dp"
+          android:layout_marginBottom="6dp"
+          android:src="@drawable/gl_ls_icon_play"/>
+
+      <ImageView
+          android:id="@+id/gif_icon"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_centerInParent="true"
+          android:src="@drawable/gl_ls_icon_gif_bic"/>
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/subject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textSize="12dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="14dp"
         android:singleLine="true"/>
 
     <TextView
@@ -29,31 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:layout_marginLeft="8dp"
         android:textSize="10dp"/>
-  </LinearLayout>
-
-  <LinearLayout
-      android:id="@+id/error_or_loading_view"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:gravity="center"
-      android:background="@color/white3"
-      android:orientation="vertical"
-      android:clickable="true">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/gl_ls_icon_defaultimg"/>
-
-    <TextView
-        android:id="@+id/error_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="13dp"
-        android:textColor="#7e7e7e"
-        android:text="@string/media_delete_message"/>
   </LinearLayout>
 </FrameLayout>

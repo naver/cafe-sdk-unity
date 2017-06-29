@@ -85,6 +85,9 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	private static extern void _SetSDKDidVoteAtArticleDelegate(NCSDKDidVoteAtArticleDelegate callback);
 	
 	[DllImport("__Internal")]
+	private static extern void _SetSDKAppSchemeBannerDelegate(NCSDKAppSchemeBannerDelegate callback);
+
+	[DllImport("__Internal")]
 	private static extern void _StartWidget();
 
 	[DllImport("__Internal")]
@@ -104,6 +107,9 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	[DllImport("__Internal")]
 	private static extern void _SetWidgetStartPosition(bool isLeft, int heightPercentage);
+
+	[DllImport("__Internal")]
+	private static extern void _SetUseWidgetScreenShot(bool useScreenShot);
 	
 	[DllImport("__Internal")]
 	public static extern void _ExecuteEtc();
@@ -163,6 +169,14 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public static void _NCSDKDidVoteAtArticleCallback (int articleId) {
 //		_ShowMessageToast ("Did Vote at " + articleId);
 	}
+
+	delegate void NCSDKAppSchemeBannerDelegate(string appScheme);
+	[MonoPInvokeCallback(typeof(NCSDKAppSchemeBannerDelegate))]
+	public static void _NCSDKAppSchemeBannerCallback (string appScheme) {
+		Debug.Log("AppSceme : " + appScheme);
+		_ShowMessageToast ("AppScheme" + appScheme);
+	}
+	
 	#endif
 	
 	public GLinkiOS() {
@@ -178,6 +192,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		_SetSDKPostedCommentAtArticleDelegate(_NCSDKPostedCommentAtArticleCallback);
 		_SetSDKWidgetPostAriticleWithImageCallback(_NCSDKWidgetPostAriticleWithImageCallback);
 		_SetSDKDidVoteAtArticleDelegate(_NCSDKDidVoteAtArticleCallback);
+		_SetSDKAppSchemeBannerDelegate(_NCSDKAppSchemeBannerCallback);
 		#endif
 	}
 	
@@ -264,11 +279,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		_SetUseWidgetVideoRecord(useVideoRecord);
 		#endif
 	}
-
-	public void setUseWidgetScreenShot (bool useScreenShot) {
-		// TODO:
-	}
-
+		
 	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
 		#if UNITY_IPHONE 
 		_SetShowWidgetWhenUnloadSDK(useWidget);		
@@ -304,6 +315,12 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public void setWidgetStartPosition(bool isLeft, int heightPercentage) {
 		#if UNITY_IPHONE
 		_SetWidgetStartPosition(isLeft, heightPercentage);
+		#endif
+	}
+
+	public void setUseWidgetScreenShot(bool useScreenShot) {
+		#if UNITY_IPHONE
+		_SetUseWidgetScreenShot(useScreenShot);
 		#endif
 	}
 }

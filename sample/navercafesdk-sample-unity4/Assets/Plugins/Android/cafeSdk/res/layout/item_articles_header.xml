@@ -9,8 +9,11 @@
       android:id="@+id/menu_name"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/list_item_margin"
+      android:layout_marginTop="@dimen/list_item_margin"
       android:layout_marginBottom="8dp"
-      android:textColor="@color/black2"
+      android:textColor="#363838"
+      android:textSize="18dp"
       android:textStyle="bold"/>
 
   <include android:id="@+id/header_divider" layout="@layout/view_divider"/>

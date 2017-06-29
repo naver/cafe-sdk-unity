@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_board">Semua</string>
     <string name="all_media_no_permissions">Tidak memiliki izin</string>
     <string name="already_exist_nickname_message">Nickname telah digunakan.</string>
     <string name="article_comments_count">Komen</string>
@@ -63,15 +64,17 @@
     <string name="movie_over_limit_size_message">Batas ukuran untuk video terpilih\berlebih.</string>
     <string name="movie_permission_setting_message">Anda tidak memiliki ijin untuk melampirkan video. \nSilahkan cek ijin penyimpan dalam game yang dapat diakses dari [Pengaturan > App].</string>
     <string name="need_login">Silakan log in.</string>
+    <string name="need_register_clientid">Anda harus mendaftarkan client ID di menu management.</string>
+    <string name="need_register_partnership">Silahkan bergabung dalam partnership network untuk menggunakan komunitas in-app.</string>
     <string name="network_error">Tidak dapat terhubung karena masalah pada network.\nSilahkan cek status network Anda dan coba lagi.</string>
     <string name="nick_name_already_join">Anda telah meminta persetujuan untuk bergabung dalam komunitas. Sedang dalam proses penerimaan. </string>
     <string name="nick_name_header">Masukan Nickname</string>
     <string name="nick_name_hint">Masukan nickname anda.</string>
     <string name="nick_name_join">Gabung</string>
     <string name="nick_name_join_agree">Anda harus menyetujui syarat dan ketentuan penggunaan Naver Café.</string>
-    <string name="nick_name_validate">Anda tidak bisa memasukan lebih dari 10 karakter korea atau 20 karakter alfabet.</string>
+    <string name="nick_name_validate">Anda tidak bisa memasukan lebih dari 20 karakter alfabet.</string>
     <string name="nickname_rule_global_message">Up to 20 characters</string>
-    <string name="nickname_rule_message">Maksimal 10 karakter Korea atau 20 karakter Inggirs (dapat menggunakan alfabet)</string>
+    <string name="nickname_rule_message">Maksimal 20 karakter Inggris (dapat menggunakan alfabet)</string>
     <string name="no_menu_setting_message">Menu belum diset.</string>
     <string name="no_permissions">Tidak memiliki izin.</string>
     <string name="no_search_results">Hasil tidak ditemukan</string>
@@ -96,6 +99,7 @@
     <string name="profile_string">Profile Saya</string>
     <string name="profile_visit">Kunjungi</string>
     <string name="recent_article_menu">Lihat Post baru</string>
+    <string name="recent_board">Terbaru</string>
     <string name="record_error">Video telah berhasil direkam.</string>
     <string name="record_permission_error">Anda tidak memiliki ijin untuk merekam video.\nSilahkan cek ijin untuk menggunakan mikrofon dan menyimpan dalam game yang dapat diakses dari [Pengaturan > App].</string>
     <string name="record_quality">Kualitas Rekaman</string>
@@ -125,10 +129,12 @@
     <string name="select_channel_title">Ubah Channel</string>
     <string name="select_menu">Pilih Forum</string>
     <string name="select_menu_button">Pilih satu forum.</string>
+    <string name="translation">Terjemahan</string>
     <string name="unable_load_images">Tidak dapat membuka image.</string>
     <string name="unable_load_videos">Tidak dapat membuka video.</string>
     <string name="under_construction">Sedang Disiapkan.</string>
     <string name="version">Versi sekarang %s</string>
+    <string name="view_original">Asli</string>
     <string name="waiting_join_apply_message">Menunggu bergabung dalam Café…</string>
     <string name="want_cafe_member">Apakah Anda ingin bergabung dalam Café?</string>
     <string name="widget_button_cafe">Komunitas</string>

@@ -7,10 +7,10 @@
     android:background="@null"
     android:orientation="vertical">
 
-  <ProgressBar
+  <com.naver.glink.android.sdk.ui.widget.PlugProgressbar
       android:id="@+id/dialog_prg_bar"
-      android:layout_width="21.33dp"
-      android:layout_height="21.33dp"
+      android:layout_width="35dp"
+      android:layout_height="35dp"
       android:layout_centerInParent="true"/>
 
 </RelativeLayout>

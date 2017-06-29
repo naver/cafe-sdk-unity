@@ -25,15 +25,4 @@
       android:layout_height="wrap_content"
       android:textColor="@color/gray4"
       android:textSize="11dp"/>
-
-  <TextView
-      android:id="@+id/reply"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginLeft="6dp"
-      android:drawableLeft="@drawable/line_gray"
-      android:drawablePadding="8dp"
-      android:textColor="#4a90e2"
-      android:textSize="11dp"
-      android:text="@string/reply"/>
 </LinearLayout>

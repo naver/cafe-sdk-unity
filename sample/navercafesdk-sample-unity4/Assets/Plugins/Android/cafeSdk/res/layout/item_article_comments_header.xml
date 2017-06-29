@@ -10,11 +10,11 @@
       android:id="@+id/comments_text"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="23dp"
-      android:layout_marginLeft="21dp"
-      android:layout_marginBottom="11dp"
-      android:textColor="@color/black2"
-      android:textSize="15dp"
+      android:layout_marginLeft="@dimen/list_item_margin"
+      android:layout_marginTop="24dp"
+      android:layout_marginBottom="12dp"
+      android:textColor="#363838"
+      android:textSize="18dp"
       android:textStyle="bold"
       android:text="@string/article_comments_count"/>
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="all_board">所有佈告欄</string>
     <string name="all_media_no_permissions">沒有權限。</string>
     <string name="already_exist_nickname_message">已使用的暱稱。</string>
     <string name="article_comments_count">留言</string>
@@ -63,15 +64,17 @@
     <string name="movie_over_limit_size_message">所選影片\n超過上傳容量上限。</string>
     <string name="movie_permission_setting_message">沒有權限，無法夾帶影片。\n請於[設定 > APP]確認該儲存權限。</string>
     <string name="need_login">請登入。</string>
+    <string name="need_register_clientid">需於Cafe管理登錄客戶ID </string>
+    <string name="need_register_partnership">若要使用App內的社群須申請合作。</string>
     <string name="network_error">因網路問題無法連結，\n請確認網路連線狀態後再試一次。</string>
     <string name="nick_name_already_join">請申請加入的社群。加入核准程序進行中。</string>
     <string name="nick_name_header">輸入暱稱</string>
     <string name="nick_name_hint">請輸入暱稱。</string>
     <string name="nick_name_join">加入</string>
     <string name="nick_name_join_agree">同意NAVER Cafe使用條款。</string>
-    <string name="nick_name_validate">可使用10字中文或20字英文與數字。</string>
+    <string name="nick_name_validate">可使用20字英文與數字。</string>
     <string name="nickname_rule_global_message">Up to 20 characters</string>
-    <string name="nickname_rule_message">中文最多10字、英文20字(可混用數字)</string>
+    <string name="nickname_rule_message">最多英文20字(可混用數字)</string>
     <string name="no_menu_setting_message">尚未設定目錄。</string>
     <string name="no_permissions">沒有使用權限。</string>
     <string name="no_search_results">沒有搜尋結果。</string>
@@ -96,6 +99,7 @@
     <string name="profile_string">我的個人資料</string>
     <string name="profile_visit">訪問</string>
     <string name="recent_article_menu">查看新文章</string>
+    <string name="recent_board">最近開啟的佈告欄</string>
     <string name="record_error">未正常錄影。</string>
     <string name="record_permission_error">沒有權限，無法錄影。\n請於[設定 > App]確認該遊戲連接麥克風與儲存權限。</string>
     <string name="record_quality">錄影畫質</string>
@@ -125,10 +129,12 @@
     <string name="select_channel_title">變更頻道</string>
     <string name="select_menu">選擇布告欄</string>
     <string name="select_menu_button">請選擇布告欄。</string>
+    <string name="translation">翻譯</string>
     <string name="unable_load_images">無法讀取圖片。</string>
     <string name="unable_load_videos">無法讀取影片。</string>
     <string name="under_construction">準備中。</string>
     <string name="version">目前版本 %s</string>
+    <string name="view_original">原文</string>
     <string name="waiting_join_apply_message">申請加入中。</string>
     <string name="want_cafe_member">要加入會員嗎？</string>
     <string name="widget_button_cafe">遊戲社群</string>

@@ -152,6 +152,7 @@
           android:text="@string/profile_login"
           android:textStyle="bold"
           android:gravity="center"
+          android:textColor="@color/white1"
           android:layout_alignParentBottom="true"
           android:textSize="15dp"/>
     </RelativeLayout>

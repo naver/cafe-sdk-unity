@@ -15,7 +15,7 @@
         android:id="@+id/writer_profile"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="@dimen/list_item_margin"
         android:layout_marginRight="8dp">
 
       <ImageView
@@ -63,12 +63,41 @@
         android:autoLink="web"/>
 
     <LinearLayout
+        android:id="@+id/reply_and_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/writer_profile"
+        android:layout_below="@+id/contents"
+        android:orientation="horizontal">
+
+      <TextView
+          android:id="@+id/reply"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingTop="8dp"
+          android:paddingRight="8dp"
+          android:drawablePadding="8dp"
+          android:textColor="#4990e2"
+          android:textSize="13dp"
+          android:text="@string/reply"/>
+
+      <TextView
+          android:id="@+id/translate"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingTop="8dp"
+          android:paddingRight="8dp"
+          android:textColor="#4990e2"
+          android:textSize="13dp"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/more_replies"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
         android:layout_toRightOf="@+id/writer_profile"
-        android:layout_below="@+id/contents"
+        android:layout_below="@+id/reply_and_translate"
         android:orientation="vertical">
 
       <View
@@ -99,9 +128,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:paddingLeft="22dp"
-        android:paddingRight="22dp"
+        android:paddingRight="@dimen/list_item_margin"
         android:paddingBottom="10dp"
-        android:src="@drawable/gl_ls_icon_combined_shape"/>
+        android:src="@drawable/gl_icon_more_s"/>
   </RelativeLayout>
 
   <View
