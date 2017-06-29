@@ -143,6 +143,7 @@ public class GLinkRecordAndroid : IGLinkRecord {
 
 	public void startRecord() {
 		#if UNITY_ANDROID 
+		GLink.sharedInstance();
 		delegateClass.CallStatic ("startRecord", currentActivity);
 		#endif
 	}
