@@ -88,6 +88,12 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	private static extern void _SetSDKAppSchemeBannerDelegate(NCSDKAppSchemeBannerDelegate callback);
 
 	[DllImport("__Internal")]
+	private static extern void _SetSDKDidEndStreamingLiveViewCountDelegate(NCSDKDidEndStreamingLiveViewCountDelegate callback);
+
+	[DllImport("__Internal")]
+	private static extern void _SetSDKDidEndWatchingLiveSecondsDelegate(NCSDKDidEndWatchingLiveSecondsDelegate callback);
+
+	[DllImport("__Internal")]
 	private static extern void _StartWidget();
 
 	[DllImport("__Internal")]
@@ -177,6 +183,20 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		_ShowMessageToast ("AppScheme" + appScheme);
 	}
 	
+	delegate void NCSDKDidEndStreamingLiveViewCountDelegate(int viewCount, int reactionCount);
+	[MonoPInvokeCallback(typeof(NCSDKDidEndStreamingLiveViewCountDelegate))]
+	public static void _NCSDKDidEndStreamingLiveViewCountCallback (int viewCount, int reactionCount) {
+//		String message = String.Format ("Live {0} : {1} ", viewCount, reactionCount);
+//		_ShowMessageToast (message);
+	}
+
+    delegate void NCSDKDidEndWatchingLiveSecondsDelegate(int seconds);
+	[MonoPInvokeCallback(typeof(NCSDKDidEndWatchingLiveSecondsDelegate))]
+	public static void _NCSDKDidEndWatchingLiveSecondsCallback (int seconds) {
+//		String message = String.Format ("Live {0} ", viewCount);
+//		_ShowMessageToast (message);
+	}
+
 	#endif
 	
 	public GLinkiOS() {
@@ -193,6 +213,8 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		_SetSDKWidgetPostAriticleWithImageCallback(_NCSDKWidgetPostAriticleWithImageCallback);
 		_SetSDKDidVoteAtArticleDelegate(_NCSDKDidVoteAtArticleCallback);
 		_SetSDKAppSchemeBannerDelegate(_NCSDKAppSchemeBannerCallback);
+		_SetSDKDidEndStreamingLiveViewCountDelegate(_NCSDKDidEndStreamingLiveViewCountCallback);
+		_SetSDKDidEndWatchingLiveSecondsDelegate(_NCSDKDidEndWatchingLiveSecondsCallback);
 		#endif
 	}
 	

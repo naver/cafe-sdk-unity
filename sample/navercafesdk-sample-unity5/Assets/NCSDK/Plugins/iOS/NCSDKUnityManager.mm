@@ -20,6 +20,8 @@ typedef void (*GLSDKRecordStartDelegate)();
 typedef void (*GLSDKRecordErrorDelegate)(const char *errMsg);
 typedef void (*GLSDKRecordFinishDelegate)();
 typedef void (*GLSDKRecordFinishWithPreviewDelegate)();
+typedef void (*GLSDKDidEndStreamingLiveViewCountDelegate)(NSInteger viewCount, NSInteger likeCount);
+typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
 
 @interface GLinkViewController : UIViewController <NCSDKManagerDelegate, NCNaverLoginManagerDelegate, NCSDKRecordManagerDelegate>
 @property (nonatomic, strong) UIView *mainView;
@@ -39,6 +41,8 @@ typedef void (*GLSDKRecordFinishWithPreviewDelegate)();
 @property (nonatomic, assign) GLSDKRecordErrorDelegate glSDKRecordErrorDelegate;
 @property (nonatomic, assign) GLSDKRecordFinishDelegate glSDKRecordFinishDelegate;
 @property (nonatomic, assign) GLSDKRecordFinishWithPreviewDelegate glSDKRecordFinishWithPreviewDelegate;
+@property (nonatomic, assign) GLSDKDidEndStreamingLiveViewCountDelegate glSDKDidEndStreamingLiveViewCountDelegate;
+@property (nonatomic, assign) GLSDKDidEndWatchingLiveSecondsDelegate glSDKDidEndWatchingLiveSecondsDelegate;
 
 - (void)executeGlink;
 
@@ -330,6 +334,22 @@ typedef void (*GLSDKRecordFinishWithPreviewDelegate)();
     }
 }
 
+#pragma mark - Live
+- (void)ncSDKDidEndStreamingLiveViewCount:(NSInteger)viewCount
+                                likeCount:(NSInteger)likeCount {
+    
+    if (self.glSDKDidEndStreamingLiveViewCountDelegate) {
+        self.glSDKDidEndStreamingLiveViewCountDelegate(viewCount, viewCount);
+    }
+    
+}
+
+- (void)ncSDKDidEndWatchingLiveSeconds:(NSInteger)seconds {
+    if (self.glSDKDidEndWatchingLiveSecondsDelegate) {
+        self.glSDKDidEndWatchingLiveSecondsDelegate(seconds);
+    }
+}
+
 @end
 
 // Converts C style string to NSString
@@ -548,5 +568,13 @@ extern "C" {
     
     void _SetSDKRecordFinishWithPreviewDelegate(GLSDKRecordFinishWithPreviewDelegate glSDKRecordFinishWithPreviewDelegate) {
         vc.glSDKRecordFinishWithPreviewDelegate = glSDKRecordFinishWithPreviewDelegate;
+    }
+    
+    void _SetSDKDidEndStreamingLiveViewCountDelegate(GLSDKDidEndStreamingLiveViewCountDelegate glSDKDidEndStreamingLiveViewCountDelegate) {
+        vc.glSDKDidEndStreamingLiveViewCountDelegate = glSDKDidEndStreamingLiveViewCountDelegate;
+    }
+    
+    void _SetSDKDidEndWatchingLiveSecondsDelegate(GLSDKDidEndWatchingLiveSecondsDelegate glSDKDidEndWatchingLiveSecondsDelegate) {
+        vc.glSDKDidEndWatchingLiveSecondsDelegate = glSDKDidEndWatchingLiveSecondsDelegate;
     }
 }

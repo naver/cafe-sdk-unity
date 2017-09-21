@@ -39,7 +39,7 @@
 /*
  Check Login With Refresh Token
  */
-- (void)isLoginWithFinish:(void (^)(BOOL successACToken))finish
+- (void)isLoginWithFinish:(void (^)(BOOL isLogin))finish
                   failure:(void (^)(NSError *error))failure;
 
 
