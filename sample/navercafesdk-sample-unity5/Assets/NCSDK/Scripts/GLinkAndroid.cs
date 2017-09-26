@@ -111,6 +111,24 @@ public class GLinkAndroid : IGLink {
 		}
 	}
 
+	class OnEndStreamingLiveListener : AndroidJavaProxy {
+		public OnEndStreamingLiveListener () : base("com.naver.glink.android.sdk.Glink$OnEndStreamingLiveListener") { /* empty. */ }
+
+		void onEndStreamingLive(int viewCount, int likeCount) {
+			String message = String.Format ("viewCount: {0}, likeCount: {1}", viewCount, likeCount);
+			showToast (message);
+		}
+	}
+
+	class OnEndWatchingLiveListener : AndroidJavaProxy {
+		public OnEndWatchingLiveListener () : base("com.naver.glink.android.sdk.Glink$OnEndWatchingLiveListener") { /* empty. */ }
+
+		void onEndWatchingLive(int seconds) {
+			String message = String.Format ("seconds: {0}", seconds);
+			showToast (message);
+		}
+	}
+
 	static void showToast(string message) {
 //		var activity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
 //		activity.Call ("runOnUiThread", new AndroidJavaRunnable (() => {
@@ -146,6 +164,10 @@ public class GLinkAndroid : IGLink {
 		// glinkClass.CallStatic ("setOnPostedCommentListener", new OnPostedCommentListener ());
 
 		glinkClass.CallStatic ("setOnWidgetScreenshotClickListener", new OnWidgetScreenshotClickListener ());
+
+		// live listener 사용 하려면 아래 주석을 풀어 주세요.
+		// glinkClass.CallStatic ("setOnEndStreamingLiveListener", new OnEndStreamingLiveListener ());
+		// glinkClass.CallStatic ("setOnEndWatchingLiveListener", new OnEndWatchingLiveListener ());
 
 		setUseWidgetVideoRecord (true);
 		glinkClass.CallStatic ("setOnRecordFinishListener", new OnRecordFinishListener ());
