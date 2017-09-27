@@ -167,12 +167,12 @@ XCode에서 다음과 같이 개발 환경을 설정합니다.
     - ReplayKit.framework(라이브러리의 **Status**를 **Optional**로 설정합니다)
     - Webkit.framework
 
-## v.2.5.0
-Unity Package 2.5.0 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
+## v.2.5.2
+Unity Package 2.5.2 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
 
-NaverCafeSDK For Android 2.5.0
+NaverCafeSDK For Android 2.5.1
 
-NaverCafeSDK For iOS 2.5.0
+NaverCafeSDK For iOS 2.5.2
 
 
 ## Files and Folders
