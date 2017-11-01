@@ -23,6 +23,7 @@
     <string name="cafe_app_install_confirm_message">安裝或更新NAVER Cafe App即可使用。\n要安裝NAVER Cafe App嗎？</string>
     <string name="cancel">取消</string>
     <string name="cancel_article_write_confirm_message">要取消貼文嗎？</string>
+    <string name="close_title">關閉</string>
     <string name="comment_empty">沒有登錄的留言。</string>
     <string name="comment_hint">請輸入內容。</string>
     <string name="comment_not_exist">沒有留言。</string>

@@ -23,6 +23,7 @@
     <string name="cafe_app_install_confirm_message">Pode usá-lo se  instalar ou atualizar o NAVER Cafe app.\nVai instalar o aplicativo?</string>
     <string name="cancel">Cancelar</string>
     <string name="cancel_article_write_confirm_message">Deseja cancelar uma publicação??</string>
+    <string name="close_title">Fechar</string>
     <string name="comment_empty">Sem comentários</string>
     <string name="comment_hint">Por favor digite texto.</string>
     <string name="comment_not_exist">Sem comentários</string>

@@ -23,6 +23,7 @@
     <string name="cafe_app_install_confirm_message">NAVER Cafe uygulamasını yükler ya da güncellersen kullanabilirsin. \nUygulamayı yüklemek ister misin?</string>
     <string name="cancel">Iptal</string>
     <string name="cancel_article_write_confirm_message">Bir gönderi silmek ister misin?</string>
+    <string name="close_title">Kapat</string>
     <string name="comment_empty">Yorum yok</string>
     <string name="comment_hint">Lütfen mesajı giriniz.</string>
     <string name="comment_not_exist">Yorum yok</string>

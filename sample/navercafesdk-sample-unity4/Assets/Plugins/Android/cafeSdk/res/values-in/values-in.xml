@@ -23,6 +23,7 @@
     <string name="cafe_app_install_confirm_message">Anda dapat menggunakannya bila menginstall atau mengupdate app NAVER Café.\nApa Anda ingin menginstall app?</string>
     <string name="cancel">Batal</string>
     <string name="cancel_article_write_confirm_message">Apa Anda ingin membatalkan post?</string>
+    <string name="close_title">Tutup</string>
     <string name="comment_empty">Tak ada komentar.</string>
     <string name="comment_hint">Silahkan masukan text.</string>
     <string name="comment_not_exist">Tidak ada komen</string>

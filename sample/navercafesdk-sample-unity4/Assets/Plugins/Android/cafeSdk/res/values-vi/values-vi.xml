@@ -23,6 +23,7 @@
     <string name="cafe_app_install_confirm_message">Nếu cài đặt hoặc cập nhật Ứng dụng Café NAVER thì bạn có thể sử dụng.\nBạn có muốn cài đặt Ứng dụng Café NAVER không?</string>
     <string name="cancel">Hủy</string>
     <string name="cancel_article_write_confirm_message">Bạn muốn hủy bài viết đăng phải không?</string>
+    <string name="close_title">Đóng</string>
     <string name="comment_empty">Không có bình luận</string>
     <string name="comment_hint">Vui lòng nhập nội dung.</string>
     <string name="comment_not_exist">Không có bình luận</string>

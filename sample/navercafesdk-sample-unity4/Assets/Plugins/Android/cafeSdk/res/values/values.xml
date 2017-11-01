@@ -143,6 +143,7 @@
     <string name="cafe_app_install_confirm_message">You can use it if you install or update the NAVER Cafe app.\nAre you going to install the app?</string>
     <string name="cancel">Cancel</string>
     <string name="cancel_article_write_confirm_message">Do you want to cancel a post?</string>
+    <string name="close_title">Close</string>
     <string name="comment_empty">No comments</string>
     <string name="comment_hint">Please enter text.</string>
     <string name="comment_not_exist">No comments</string>
@@ -218,7 +219,7 @@
     <string name="photo_upload_error">Uploading a photo failed.</string>
     <string name="pin_to_top">Pin to Top</string>
     <string name="plug_bottom_channel">Channel</string>
-    <string name="plug_sdk_version" translatable="false">2.5.1</string>
+    <string name="plug_sdk_version" translatable="false">2.5.2</string>
     <string name="profile_articles_total">Total</string>
     <string name="profile_become_member">By logging in, you become a member of this Cafe.</string>
     <string name="profile_cafe_information">A community for every mobile game around the world, NAVER Cafe</string>

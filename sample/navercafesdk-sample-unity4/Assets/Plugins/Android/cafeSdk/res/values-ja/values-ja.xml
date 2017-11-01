@@ -23,6 +23,7 @@
     <string name="cafe_app_install_confirm_message">NAVER Cafeアプリをインストールまたはアップデートしてご利用いただけます。\nNAVER Cafeアプリをインストールしますか？</string>
     <string name="cancel">キャンセル</string>
     <string name="cancel_article_write_confirm_message">投稿を取り消しますか？</string>
+    <string name="close_title">閉じる</string>
     <string name="comment_empty">作成されたコメントがありません。</string>
     <string name="comment_hint">内容を入力してください。</string>
     <string name="comment_not_exist">コメントがありません。</string>

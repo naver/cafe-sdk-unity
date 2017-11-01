@@ -23,6 +23,7 @@
     <string name="cafe_app_install_confirm_message">Можно использовать после установки или обновления приложения NAVER Cafe. Установить приложение?</string>
     <string name="cancel">Отмена</string>
     <string name="cancel_article_write_confirm_message">Отменить публикацию поста?</string>
+    <string name="close_title">Закрыть</string>
     <string name="comment_empty">Нет комментариев.</string>
     <string name="comment_hint">Введите текст.</string>
     <string name="comment_not_exist">Нет комментариев</string>
