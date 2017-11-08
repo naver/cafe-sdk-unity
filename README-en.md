@@ -31,9 +31,7 @@ If you have any questions regarding working this SDK, please [visit our issue pa
 
 To use the PLUG SDK, you must set up a development environment in Unity as follows:
 
-1. Go to **Asset** and click **Import package** to import the PLUG SDK package to your Unity game project. The following SDKs are included in the Unity Package 2.3.1.  
-    - NaverCafeSDK For Android 2.3.1
-    - NaverCafeSDK For iOS 2.3.0
+1. Go to **Asset** and click **Import package** to import the PLUG SDK package to your Unity game project. 
 2. Create the PLUG SDK execute button by dragging **NCSDK.Prefabs** located under the **NCSDK > Sample** folder to your desired scene.
 
 You can create your own execute button of PLUG SDK even though it is provided with the PLUG SDK for your convenience. The sample code is written in the **SampleBehaviour.cs** file. 

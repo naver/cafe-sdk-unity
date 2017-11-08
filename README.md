@@ -34,9 +34,7 @@ PLUG SDK를 앱에 적용하려면 PLUG SDK 제휴를 신청해야 합니다. �
 
 PLUG SDK를 사용하려면 Unity에서 다음과 같이 개발 환경을 설정합니다.
 
-1. Unity의 **Asset > Import package** 메뉴를 클릭해 적용하려는 Unity 게임 프로젝트에 PLUG SDK 패키지를 불러옵니다. Unity Package 2.3.1 에는 다음과 같은 PLUG SDK를 포함하고 있습니다.  
-    - NaverCafeSDK For Android 2.3.1
-    - NaverCafeSDK For iOS 2.3.0
+1. Unity의 **Asset > Import package** 메뉴를 클릭해 적용하려는 Unity 게임 프로젝트에 PLUG SDK 패키지를 불러옵니다.
 2. **NCSDK** 폴더의 **Sample** 폴더에 있는 **NCSDK.Prefabs**를 원하는 신으로 끌어다 놓아 PLUG SDK 실행 버튼을 생성합니다.
 
 PLUG SDK 실행 버튼은 개발 편의를 위해 PLUG SDK가 기본으로 제공하는 버튼으로 직접 생성해도 됩니다. **SampleBehaviour.cs** 파일에 샘플 코드가 작성되어 있습니다. 
@@ -166,13 +164,6 @@ XCode에서 다음과 같이 개발 환경을 설정합니다.
     - QuartzCore.framework
     - ReplayKit.framework(라이브러리의 **Status**를 **Optional**로 설정합니다)
     - Webkit.framework
-
-## v.2.5.0
-Unity Package 2.5.0 에는 다음과 같은 NaverCafeSDK 를 포함하고 있습니다.
-
-NaverCafeSDK For Android 2.5.0
-
-NaverCafeSDK For iOS 2.5.0
 
 
 ## Files and Folders
