@@ -26,7 +26,7 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 @property (nonatomic, weak) id<NCSDKManagerDelegate> ncSDKDelegate;
 @property (nonatomic, weak) id parentViewController;
 @property (nonatomic, assign) BOOL orientationIsLandscape;
-
+@property (nonatomic, copy, readonly) NSString *sdkVersion;
 #pragma mark - Widget property
 @property (nonatomic, assign) BOOL showWidgetWhenUnloadSDK;
 @property (nonatomic, assign) BOOL useWidgetVideoRecord NS_AVAILABLE_IOS(9_0);
@@ -53,6 +53,10 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
  */
 - (void)setNeoIdConsumerKey:(NSString *)neoIdConsumerKey
                 communityId:(NSInteger)communityId;
+
+- (void)setNeoIdConsumerKey:(NSString *)neoIdConsumerKey
+                communityId:(NSInteger)communityId
+                  channelId:(NSInteger)channelId;
 
 /*
  SDK Theme Color
@@ -157,7 +161,7 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 - (void)ncSDKDidEndWatchingLiveSeconds:(NSInteger)seconds;
 
 /*
- App Scheme 처리
+ App Scheme
  */
 - (void)ncSDKAppSchemeBanner:(NSString *)appScheme;
 

@@ -368,7 +368,7 @@ extern "C" {
         [vc setGLinkGlobalInfoWithNeoIdConsumerKey:NCSDKCreateNSString(neoIdConsumerKey) andCommunityId:communityId];
     }
     
-    void _InitGLinkForGlobal(const char* neoIdConsumerKey, int communityId, int channelId) {
+    void _InitGLinkForGlobalWithChannelId(const char* neoIdConsumerKey, int communityId, int channelId) {
         [vc setGLinkGlobalInfoWithNeoIdConsumerKey:NCSDKCreateNSString(neoIdConsumerKey) andCommunityId:communityId andChannelId:channelId];
     }
     

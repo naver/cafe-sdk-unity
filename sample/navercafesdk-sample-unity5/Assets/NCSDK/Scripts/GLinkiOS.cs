@@ -25,7 +25,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int communityId);
 
 	[DllImport("__Internal")]
-	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int communityId, int channelId);
+	public static extern void _InitGLinkForGlobalWithChannelId(string neoIdConsumerKey, int communityId, int channelId);
 
 	[DllImport("__Internal")]
 	public static extern void _ExecuteMain();
