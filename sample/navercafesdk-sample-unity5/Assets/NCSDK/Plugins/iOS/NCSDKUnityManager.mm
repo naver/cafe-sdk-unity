@@ -75,26 +75,6 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
     [[NCSDKManager getSharedInstance] presentMainViewController];
 }
 
-- (void)executeNotice {
-    [self setGLRootViewController];
-    [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:1];
-}
-
-- (void)executeEvent {
-    [self setGLRootViewController];
-    [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:2];
-}
-
-- (void)executeMenu {
-    [self setGLRootViewController];
-    [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:3];
-}
-
-- (void)executeProfile {
-    [self setGLRootViewController];
-    [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:4];
-}
-
 - (void)executeArticleWithArticleId:(NSUInteger)articleId  {
     [self setGLRootViewController];
     [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:articleId];
@@ -135,15 +115,20 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
 }
 
 - (void)setGLinkGlobalInfoWithNeoIdConsumerKey:(NSString *)neoIdConsumerKey
-                                andCommunityId:(NSInteger)communityId
-                                andChannelCode:(NSString *)channelCode{
+                                andCommunityId:(NSInteger)communityId {
     
     [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:neoIdConsumerKey
                                               communityId:communityId];
-    
-    [[NCSDKManager getSharedInstance] setChannelCode:channelCode];
 }
 
+- (void)setGLinkGlobalInfoWithNeoIdConsumerKey:(NSString *)neoIdConsumerKey
+                                andCommunityId:(NSInteger)communityId
+                                  andChannelId:(NSInteger)channelId {
+    
+    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:neoIdConsumerKey
+                                              communityId:communityId
+                                                channelId:channelId];
+}
 
 - (void)executeShowMessageToast:(NSString *)message {
     [[NCSDKManager getSharedInstance] showToast:message];
@@ -379,28 +364,16 @@ extern "C" {
         //        [vc setChannelCode:@"ko"];
     }
     
-    void _InitGLinkForGlobal(const char* neoIdConsumerKey, int communityId, const char* channelCode) {
-        [vc setGLinkGlobalInfoWithNeoIdConsumerKey:NCSDKCreateNSString(neoIdConsumerKey) andCommunityId:communityId andChannelCode:NCSDKCreateNSString(channelCode)];
+    void _InitGLinkForGlobal(const char* neoIdConsumerKey, int communityId) {
+        [vc setGLinkGlobalInfoWithNeoIdConsumerKey:NCSDKCreateNSString(neoIdConsumerKey) andCommunityId:communityId];
+    }
+    
+    void _InitGLinkForGlobal(const char* neoIdConsumerKey, int communityId, int channelId) {
+        [vc setGLinkGlobalInfoWithNeoIdConsumerKey:NCSDKCreateNSString(neoIdConsumerKey) andCommunityId:communityId andChannelId:channelId];
     }
     
     void _ExecuteMain(){
         [vc executeGlink];
-    }
-    
-    void _ExecuteNotice() {
-        [vc executeNotice];
-    }
-    
-    void _ExecuteEvent() {
-        [vc executeEvent];
-    }
-    
-    void _ExecuteMenu() {
-        [vc executeMenu];
-    }
-    
-    void _ExecuteProfile() {
-        [vc executeProfile];
     }
     
     void _ExecuteArticle(int articleId) {

@@ -25,6 +25,9 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int communityId);
 
 	[DllImport("__Internal")]
+	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int communityId, int channelId);
+
+	[DllImport("__Internal")]
 	public static extern void _ExecuteMain();
 	
 	[DllImport("__Internal")]
@@ -35,18 +38,6 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	[DllImport("__Internal")]
 	public static extern void _ExecuteArticlePostWithVideo(string filePath);
-	
-	[DllImport("__Internal")]
-	public static extern void _ExecuteNotice();
-	
-	[DllImport("__Internal")]
-	public static extern void _ExecuteEvent();
-	
-	[DllImport("__Internal")]
-	public static extern void _ExecuteMenu();
-	
-	[DllImport("__Internal")]
-	public static extern void _ExecuteProfile();
 	
 	[DllImport("__Internal")]
 	public static extern void _ExecuteArticle(int articleId);
@@ -222,30 +213,6 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public void executeHome() {
 		#if UNITY_IPHONE 
 		_ExecuteMain ();
-		#endif
-	}
-	
-	public void executeNotice() {
-		#if UNITY_IPHONE 
-		_ExecuteNotice ();
-		#endif
-	}
-	
-	public void executeEvent() {
-		#if UNITY_IPHONE 
-		_ExecuteEvent ();
-		#endif
-	}
-	
-	public void executeMenu() {
-		#if UNITY_IPHONE 
-		_ExecuteMenu ();
-		#endif
-	}
-	
-	public void executeProfile() {
-		#if UNITY_IPHONE 
-		_ExecuteProfile ();
 		#endif
 	}
 	

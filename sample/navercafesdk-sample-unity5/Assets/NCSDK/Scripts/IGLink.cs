@@ -12,22 +12,8 @@ using System.Runtime.InteropServices;
 
 public interface IGLink
 {
-	// home 탭으로 시작.
 	void executeHome ();
-	
-	// notice 탭으로 시작.
-	void executeNotice ();
-	
-	// event 탭으로 시작.
-	void executeEvent ();
-	
-	// menu 탭으로 시작.
-	void executeMenu ();
-	
-	// profile 탭으로 시작.
-	void executeProfile ();
-	
-	// 특정 게시글로 바로 시작.
+
 	void executeArticle (int articleId);
 	
 	void executeArticlePost ();

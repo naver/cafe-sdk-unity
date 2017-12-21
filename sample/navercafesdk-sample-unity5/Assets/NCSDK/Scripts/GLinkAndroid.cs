@@ -183,30 +183,6 @@ public class GLinkAndroid : IGLink {
 		#endif
 	}
 
-	public void executeNotice() {
-		#if UNITY_ANDROID
-		glinkClass.CallStatic("startNotice", currentActivity);
-		#endif
-	}
-
-	public void executeEvent() {
-		#if UNITY_ANDROID
-		glinkClass.CallStatic("startEvent", currentActivity);
-		#endif
-	}
-
-	public void executeMenu() {
-		#if UNITY_ANDROID
-		glinkClass.CallStatic("startMenu", currentActivity);
-		#endif
-	}
-
-	public void executeProfile() {
-		#if UNITY_ANDROID
-		glinkClass.CallStatic("startProfile", currentActivity);
-		#endif
-	}
-
 	public void executeArticle (int articleId) {
 		#if UNITY_ANDROID
 		glinkClass.CallStatic("startArticle", currentActivity, articleId);
