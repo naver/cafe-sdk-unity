@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 2c0ac7c7af7fb45409365eb99dc1a5bd
+guid: 5617b252c7f904d4dab4c86ddbf8fb01
 folderAsset: yes
-timeCreated: 1498715386
-licenseType: Pro
+timeCreated: 1514356009
+licenseType: Free
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
@@ -10,14 +10,9 @@ PluginImporter:
   isPreloaded: 0
   isOverridable: 0
   platformData:
-    Android:
-      enabled: 0
-      settings:
-        CPU: ARMv7
     Any:
       enabled: 0
       settings:
-        Exclude Android: 1
         Exclude Editor: 0
         Exclude Linux: 1
         Exclude Linux64: 1
@@ -61,9 +56,6 @@ PluginImporter:
       enabled: 0
       settings:
         CPU: AnyCPU
-    data:
-      enabled: 0
-      settings: {}
     iOS:
       enabled: 1
       settings:
