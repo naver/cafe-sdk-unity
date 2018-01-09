@@ -1,3 +1,10 @@
+v.3.1.1
+-------------
+### fixed
+1. 라이브/VOD 시청 콜백 오류 수정
+2. 네이버 프로필 API 오류 수정 (NCNaverLoginManager.getNaverIdProfile) (iOS)
+
+
 v.3.1.0
 -------------
 ### updated
