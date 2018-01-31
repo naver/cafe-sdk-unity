@@ -99,6 +99,11 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
 - (void)presentMainViewControllerWithArticleId:(NSUInteger)articleId;
 
 /*
+ Start With MenuId
+ */
+- (void)presentArticleListViewControllerWithMenuId:(NSInteger)menuId;
+    
+/*
  Start With Article Post
  */
 - (void)presentArticlePostViewController;
