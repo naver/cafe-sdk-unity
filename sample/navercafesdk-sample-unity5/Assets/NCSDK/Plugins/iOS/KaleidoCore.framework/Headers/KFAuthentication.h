@@ -19,7 +19,7 @@ EXPORT
 /**
  * Supports Authentication type of Kaleido.
  */
-@property(nonatomic, strong) KFAuthenticationType *type;
+@property(atomic, strong) KFAuthenticationType * _Nonnull type;
 
 /**
  * Creates NeoId authentication instance
@@ -32,7 +32,7 @@ EXPORT
  *
  * @returns KFAuthenticationResult that results for authentication.
  */
-+ (instancetype)authenticationWithNeoId:(NSString *)aServiceId serviceKey:(NSString *)aServiceKey consumerKey:(NSString *)aConsumerKey accessToken:(NSString *)aAccessToken failure:(void (^)(KFAuthenticationResult))onFailure;
++ (nullable instancetype)authenticationWithNeoId:(nullable NSString *)aServiceId serviceKey:(nullable NSString *)aServiceKey consumerKey:(nullable NSString *)aConsumerKey accessToken:(nullable NSString *)aAccessToken failure:(nullable void (^)(KFAuthenticationResult))onFailure;
 
 /**
  * Creates NaverOAuth authentication instance
@@ -42,7 +42,7 @@ EXPORT
  *
  * @returns KFAuthenticationResult that results for authentication.
  */
-+ (instancetype)authenticationWithNaverOAuth:(NSString *)aAccessToken failure:(void (^)(KFAuthenticationResult))onFailure;
++ (nullable instancetype)authenticationWithNaverOAuth:(nullable NSString *)aAccessToken failure:(nullable void (^)(KFAuthenticationResult))onFailure;
 
 /**
  * Creates NaverCookie authentication instance
@@ -53,21 +53,21 @@ EXPORT
  *
  * @returns KFAuthenticationResult that results for authentication.
  */
-+ (instancetype)authenticationWithNaverCookie:(NSString *)aCookieAuth cookieSession:(NSString *)aCookieSession failure:(void (^)(KFAuthenticationResult))onFailure;
++ (nullable instancetype)authenticationWithNaverCookie:(nullable NSString *)aCookieAuth cookieSession:(nullable NSString *)aCookieSession failure:(nullable void (^)(KFAuthenticationResult))onFailure;
 
 /**
  * Creates anonymously working NeoId authentication instance
  */
-+ (instancetype)authenticationWithNeoIdForAnonymous;
++ (nonnull instancetype)authenticationWithNeoIdForAnonymous;
 
 /**
  * Creates anonymously working NaverCookie authentication instance
  */
-+ (instancetype)authenticationWithNaverCookieForAnonymous;
++ (nullable instancetype)authenticationWithNaverCookieForAnonymous;
 
 /**
  * Creates anonymously working NaverOAuth authentication instance
  */
-+ (instancetype)authenticationWithNaverOAuthForAnonymous;
++ (nullable instancetype)authenticationWithNaverOAuthForAnonymous;
 
 @end

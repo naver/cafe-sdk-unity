@@ -14,8 +14,8 @@
 #import "KFUserQueryResult.h"
 
 typedef NS_ENUM(NSUInteger, KFSyncType) {
-    KFSyncTypeRealtime = 1,
-    KFSyncTypeManual = 2
+    KFSyncTypeRealtime = 0,
+    KFSyncTypeManual = 1
 };
 
 typedef NS_ENUM(NSUInteger, KFClientState) {
