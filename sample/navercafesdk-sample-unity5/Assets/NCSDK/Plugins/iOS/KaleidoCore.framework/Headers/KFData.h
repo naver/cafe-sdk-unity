@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "KFGlobal.h"
 #import "KFDataProperty.h"
+#import "KFDatatypeOptions.h"
 #import "KFKeyConflictResolver.h"
 #import "KFPublicPermission.h"
 #import "KFUser.h"
@@ -290,33 +291,35 @@ EXPORT
  * If KFData with the same key already exists in Kaleido cloud, Datatype can be in KFDataState KFDataStateKeyConflict.
  * Recommends to see KFKeyConflictResolver to handle this.
  *
- * @param aPermission determines whether to expose this KFData publicly or not.
+ * @param options to set up data type properties.
  *
  * @see KFDataState
  * @see KFDataResult
  * @see KFKeyConflictResolver
  */
-- (void)createWithPublicPermission:(KFPublicPermission)aPermission;
+- (void)create:(nullable KFDatatypeOptions*)options;
 
 /**
  * Fetches datatype from server
  *
  * If Datatype does not exist in Kaleido cloud, the state of Datatype will turn into KFDataState KFDataStateMemoryOnly
  *
+ * @param options to set up data type properties.
+ *
  * @see KFDataState
  * @see KFDataResult
  */
-- (void)attach;
+- (void)attach:(nullable KFDatatypeOptions*)options;
 
 /**
  * Fetches datatype from server if it exists, otherwise creates new Datatype
  *
- * @param aPermission determines whether to expose this KFData publicly or not.
+ * @param options to set up data type properties.
  *
  * @see KFDataState
  * @see KFDataResult
  */
-- (void)attachOrCreateWithPublicPermission:(KFPublicPermission)aPermission;
+- (void)attachOrCreate:(nullable KFDatatypeOptions*)options;
 
 /**
  * Deletes this datatype both from local and remote storage
@@ -355,7 +358,7 @@ EXPORT
  *
  * @param aSize the maximum number of operations that clients can accommodate
  */
-- (bool)setMaxHistorySize:(size_t)aSize;
+- (bool)setMaxPullOperationSize:(size_t)aSize;
 
 /**
  * Returns if the user of this KFClient has read permission on this KFData

@@ -23,7 +23,7 @@ EXPORT
 /**
  * Authentication failure block.
  */
-@property(nonatomic, strong) onFailureBlock onFailure;
+@property(atomic, weak) onFailureBlock onFailure;
 @property(nonatomic) BOOL isAnonymous;
 
 @end

@@ -34,3 +34,6 @@ FOUNDATION_EXPORT const unsigned char KaleidoCoreVersionString[];
 #import "KFUpdateParam.h"
 #import "KFValue.h"
 #import "KFVariable.h"
+#import "KFNeoID.h"
+#import "KFNaverCookie.h"
+#import "KFNaverOAuth.h"

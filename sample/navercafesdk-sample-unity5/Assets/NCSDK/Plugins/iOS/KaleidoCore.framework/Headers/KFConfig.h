@@ -19,7 +19,8 @@ typedef NS_ENUM(NSUInteger, KFLogLevel) {
     KFLogLevelDebug = 1,
     KFLogLevelInfo = 2,
     KFLogLevelWarn = 3,
-    KFLogLevelError = 4
+    KFLogLevelError = 4,
+    KFLogLevelCritical = 5
 };
 
 /**
@@ -124,5 +125,19 @@ EXPORT
  * @param aName API Gateway partner name.
  */
 + (void)setApiGwPartner:(NSString*) aName;
+
+/**
+ * Returns 'true' if nelo2 log is enabled
+ *
+ * <p>Nelo2 log is enabled by default
+ */
++ (bool)isNelo2LogEnabled;
+
+/**
+ * Turns on or turns off nelo2 log
+ *
+ * @param aEnable turns on nelo2 log if 'true', turns off otherwise
+ */
++ (void)enableNelo2Log:(bool)aEnable;
 
 @end
