@@ -1,3 +1,13 @@
+v.3.2.6
+-------------
+### updated
+1. kaleido 1.4.8 update - android
+
+### fixed
+1. Android 8.0 이상일 때 live 중 화면 터치 안되는 이슈 수정 - android
+2. 앱 Window 사이즈가 Screen 사이즈랑 맞지 않을 화면 깨지는 문제 수정 - iOS
+3. 세로모드 분할형 배너 동영상에서 화면 깨지는 문제 수정 - iOS
+
 v.3.2.5
 -------------
 ### fixed
