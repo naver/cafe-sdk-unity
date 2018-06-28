@@ -1,6 +1,0 @@
-framework module KaleidoCore {
-  umbrella header "KaleidoCore.h"
-
-  export *
-  module * { export * }
-}

@@ -405,4 +405,19 @@ EXPORT
  */
 -(void)setUserAcl:(nonnull KFUserAcl*)aUserAcl;
 
+/**
+ * @return true if feature that merging operations is enabled, false otherwise
+ */
+-(bool)isMergingOperationsEnabled;
+
+/**
+ * Sets how to pull remote changes.
+ * If enabled, merged results for conflicting changes are sent from server.
+ * That may reduce network traffic.
+ * Please be aware that List does not support this feature.
+ *
+ * @param enable determines if merging operations can be activated
+ */
+-(void)enableMergingOperations:(bool)enable;
+
 @end
