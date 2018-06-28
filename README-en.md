@@ -178,6 +178,8 @@ You should add the following libraries to your project and build together with t
 ### For Android
 
 - Android Support Library v4
+- Android Support Custom Tabs
+- Android Support RecyclerView
 - [NAVER Login](https://nid.naver.com/devcenter/docs.nhn?menu=Android)
 - [NAVER Volleyer](http://mvnrepository.com/artifact/com.navercorp.volleyextensions/volleyer) (version 2.0.1)
 - [Volley](http://mvnrepository.com/artifact/com.mcxiaoke.volley/library/) (version 1.0.2)
