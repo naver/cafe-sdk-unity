@@ -77,6 +77,12 @@ typedef NS_ENUM(NSUInteger, GLTabType) {
  */
 - (void)syncGameUserId:(NSString *)gameUserId;
 - (void)disableTransparentSlider:(BOOL)disable;
+
+/*
+ It simply sets whether the channel change button should be visible or not.
+ */
+- (void)disableChangeChannel:(BOOL)disable;
+
 #pragma mark - Start SDK function
 /*
  Start SDK
