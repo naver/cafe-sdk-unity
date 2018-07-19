@@ -1,3 +1,12 @@
+v.3.3.1
+-------------
+### updated
+1. showWidgetWhenUnloadSDK 를 사용할 경우 최소화버튼이 보이지 않도록 수정
+
+### fixed
+1. Android P 에서 플러그 화면이 표시되지 않고 투명하게 보이는 현상 수정 (Android)
+2. Oreo 이상 버전에서 라이브 촬영 후 저장 시에 터치가 되지 않는 현상 수정 (Android)
+
 v.3.3.0
 -------------
 ### updated
