@@ -1,3 +1,9 @@
+v.3.3.2
+-------------
+### fixed
+1. initGlobal API 채널 id 설정 이슈 수정  (Android)
+2. setChannelCode API 채널 Code 설정 이슈 수정 (Android)
+
 v.3.3.1
 -------------
 ### updated
