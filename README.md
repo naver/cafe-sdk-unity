@@ -1,7 +1,7 @@
 # PLUG SDK
 
-* UnityPackage 3.3.1 은 LFS 로 업로드 되어있어서 zip download 를 지원하지 않습니다.
-(https://github.com/naver/cafe-sdk-unity/blob/master/lib/PLUGSDK-3.3.1.unitypackage)
+* UnityPackage 3.3.2 은 LFS 로 업로드 되어있어서 zip download 를 지원하지 않습니다.
+(https://github.com/naver/cafe-sdk-unity/blob/master/lib/PLUGSDK-3.3.2.unitypackage)
 이 경로로 직접 다운로드 하여주세요.
 
 
