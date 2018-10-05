@@ -7,8 +7,4 @@
 	public const string NeoIdConsumerKey = "IHCd_HmSiMcXOMC37xZ8";
 	public const int CommunityId = 1013329;
 	public const string Language = "";
-
-	public const string ConsumerKey = "PLUGTESTKEY";
-	public const string ConsumerSecureKey = "PLUGTESTSECRET";
-	public const int CommunityNo = 1;
 }
