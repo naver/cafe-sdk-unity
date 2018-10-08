@@ -1,14 +1,15 @@
 # PLUG SDK
 
-* UnityPackage 3.3.2 은 LFS 로 업로드 되어있어서 zip download 를 지원하지 않습니다.
-(https://github.com/naver/cafe-sdk-unity/blob/master/lib/PLUGSDK-3.3.2.unitypackage)
+* PLUG SDK 3.x 버전은 더 이상 지원되지 않습니다.
+* UnityPackage 4.0.0 은 LFS 로 업로드 되어있어서 zip download 를 지원하지 않습니다.
+(https://github.com/naver/cafe-sdk-unity/blob/master/lib/PLUGSDK-4.0.0.unitypackage)
 이 경로로 직접 다운로드 하여주세요.
 
 
 PLUG SDK는 모바일 게임 사용자가 게임 도중 게임을 벗어나지 않고 게임의 커뮤니티와 소통할 수 있도록 제공되는 인앱 커뮤니티 라이브러리입니다. 간단한 조작으로 프로젝트에 PLUG SDK를 추가할 수 있습니다.
 
 이미 많은 게임에 적용돼 검증된 PLUG SDK를 사용하면 손쉽게 커뮤니케이션 기능을 게임 안에 넣을 수 있습니다.
- 
+
 ![PLUG SDK](http://static.naver.net/m/cafe/glink/promotion/cafe_sdk_open/img_intro1_20151111.png)
 
 ## How To Get Started 
@@ -67,13 +68,13 @@ PLUG SDK가 지원하는 언어에 따라 다음과 같이 PLUG SDK를 초기화
 Android용 스크립트 파일인 **GlinkAndroid.cs** 파일에서 다음 항목을 주석으로 처리합니다.
 
 ```objective-c
-glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
+glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
 ```
 
 iOS용 스크립트 파일인 **GlinkiOS.cs** 파일에서 다음 항목을 주석으로 처리합니다.
 
 ```objective-c
-_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
+_InitGLinkForGlobal(GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
 ```
 #### 2.2 PLUG SDK 초기화(외국어만 지원)
 
@@ -89,19 +90,14 @@ _InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
 Android용 스크립트 파일인 **GlinkAndroid.cs** 파일에서 다음 항목의 주석을 해제합니다.
 
 ```objective-c
-glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
+glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
 ```
 
 iOS용 스크립트 파일인 **GlinkiOS.cs** 파일에서 다음 항목의 주석을 해제합니다.
 
 ```objective-c
-_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
+_InitGLinkForGlobal(GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
 ```
-
-> **커뮤니티 ID와 컨슈머 키 확인**  
-> 커뮤니티를 개설하고 받은 커뮤니티 ID와 컨슈머 키를 확인하려면 [커뮤니티 관리 페이지](http://g.cafe.naver.com/plugsample/manage/consumer)에 매니저 권한으로 접근하십시오.  
-> 커뮤니티 관리 페이지에서 **Settings > Communities > In-App Community Settings** 메뉴를 선택하면 커뮤니티 ID와 컨슈머 키를 확인할 수 있습니다.  
-> ![In-App Community Settings](https://plug.gitbooks.io/plug-sdk-android/content/assets/wiki-plug-setting.png)
 
 ### 3. PLUG SDK 시작
 
@@ -135,11 +131,11 @@ iOS용 게임을 개발할 때에는 다음과 같은 사항을 추가로 설정
 
 ```objective-c
 - (void)setGLRootViewController {
-    _mainViewcontroller = UnityGetGLViewController();
-    
-    [[NCSDKManager getSharedInstance] setParentViewController:_mainViewcontroller];
-    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:NO];
+_mainViewcontroller = UnityGetGLViewController();
+
+[[NCSDKManager getSharedInstance] setParentViewController:_mainViewcontroller];
+[[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
+[[NCSDKManager getSharedInstance] setOrientationIsLandscape:NO];
 }
 
 ```
@@ -148,7 +144,7 @@ iOS용 게임을 개발할 때에는 다음과 같은 사항을 추가로 설정
 
 Unity 5.4.0f3 버전 이상에서는 iOS용 애플리케이션을 빌드할 때 .bundle 파일이 링크되지 않도록 설정돼 있습니다.
 **NaverAuth.bundle** 파일과 **NaverCafeSDK.bundle** 파일을 링크하도록 다음과 같이 **Select for plugin**에서 **iOS**를 선택해야 합니다.
- 
+
 ![NaverAuth.bundle 파일을 위한 설정](http://cafeptthumb3.phinf.naver.net/MjAxNjA5MjFfMTcw/MDAxNDc0NDM1ODY2NjMy.f6PEBXPB6yrmhY0HFRf0ans0jLaE4-kO9RqLmPCd1bcg.4LyBxzBvuulvTM8GZgDJH1-Mc9N9uR7Vzaf6CLaDlokg.PNG.cafesdksupport/12.png?type=w740)
 ![NaverCafeSDK.bundle 파일을 위한 설정](http://cafeptthumb2.phinf.naver.net/MjAxNjA5MjFfNjgg/MDAxNDc0NDM1ODY2ODA1.9ks28hm-J0Vws9UxNyw0VuNJXRj6LtlHjcpQQC7FIBEg.58cYn1IJ7HlreiT-9dczAnWNhyJAQemYF_H5HojizBEg.PNG.cafesdksupport/13.png?type=w740)
 
@@ -158,17 +154,17 @@ XCode에서 다음과 같이 개발 환경을 설정합니다.
 
 1. **Build Settings**의 **Other Linker Flags**에 **-ObjC** 옵션을 추가합니다.
 2. **Build Phases**의 **Link Binary With Libraries**에 다음 라이브러리를 추가합니다. 추가한 라이브러리의 **Status**는 **Required**로 설정합니다.
-    - MobileCoreServices.framework
-    - SystemConfiguration.framework
-    - MediaPlayer.framework
-    - AVFoundation.framework
-    - CoreMedia.framework
-    - AssetsLibrary.framework
-    - Security.framework
-    - ImageIO.framework
-    - QuartzCore.framework
-    - ReplayKit.framework(라이브러리의 **Status**를 **Optional**로 설정합니다)
-    - Webkit.framework
+- MobileCoreServices.framework
+- SystemConfiguration.framework
+- MediaPlayer.framework
+- AVFoundation.framework
+- CoreMedia.framework
+- AssetsLibrary.framework
+- Security.framework
+- ImageIO.framework
+- QuartzCore.framework
+- ReplayKit.framework(라이브러리의 **Status**를 **Optional**로 설정합니다)
+- Webkit.framework
 
 ### 5. LIVE
 
@@ -183,13 +179,13 @@ PLUG SDK는 사용자가 게임 화면을 실시간 스트리밍 할 수 있는 
 
 ## Files and Folders
 
-|폴더 및 파일 이름	|설명|
+|폴더 및 파일 이름    |설명|
 |---|---|
-|guide/	|PLUG SDK 적용 가이드가 있는 폴더|
-|lib/	|Unity용 PLUG SDK 라이브러리 파일이 있는 폴더|
-|sample/	|샘플 프로젝트가 있는 폴더|
-|LICENSE	|라이선스 파일| 
-|README.md	|리드미 파일|
+|guide/    |PLUG SDK 적용 가이드가 있는 폴더|
+|lib/    |Unity용 PLUG SDK 라이브러리 파일이 있는 폴더|
+|sample/    |샘플 프로젝트가 있는 폴더|
+|LICENSE    |라이선스 파일| 
+|README.md    |리드미 파일|
 
 ## Dependent Libraries
 

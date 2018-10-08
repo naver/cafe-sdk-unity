@@ -20,13 +20,10 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	#if UNITY_IPHONE
 	[DllImport("__Internal")]
 	public static extern void _InitGLink(string consumerKey, string consumerSecret, int cafeId);
-
+	
 	[DllImport("__Internal")]
-	public static extern void _InitGLinkForGlobal(string neoIdConsumerKey, int communityId);
-
-	[DllImport("__Internal")]
-	public static extern void _InitGLinkForGlobalWithChannelId(string neoIdConsumerKey, int communityId, int channelId);
-
+	public static extern void _InitGLinkForGlobal(string globalConsumerKey, string globalConsumerSecret, int globalCommunityNo, int globalLoungeNo);
+	
 	[DllImport("__Internal")]
 	public static extern void _ExecuteMain();
 	
@@ -44,7 +41,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	[DllImport("__Internal")]
 	public static extern void _SyncGameUserId(string gameUserId);
-		
+	
 	[DllImport("__Internal")]
 	public static extern string _GetCurrentChannelCode();
 	
@@ -77,25 +74,25 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKAppSchemeBannerDelegate(NCSDKAppSchemeBannerDelegate callback);
-
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKDidEndStreamingLiveViewCountDelegate(NCSDKDidEndStreamingLiveViewCountDelegate callback);
-
+	
 	[DllImport("__Internal")]
 	private static extern void _SetSDKDidEndWatchingLiveSecondsDelegate(NCSDKDidEndWatchingLiveSecondsDelegate callback);
-
+	
 	[DllImport("__Internal")]
 	private static extern void _StartWidget();
-
+	
 	[DllImport("__Internal")]
 	private static extern void _StopWidget();
-
+	
 	[DllImport("__Internal")]
 	private static extern void _SetUseWidgetVideoRecord(bool useVideoRecord);
 	
 	[DllImport("__Internal")]
 	private static extern void _SetShowWidgetWhenUnloadSDK(bool useWidget);
-
+	
 	[DllImport("__Internal")]
 	private static extern void _SetChannelCode(string channelCode);
 	
@@ -104,7 +101,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	[DllImport("__Internal")]
 	private static extern void _SetWidgetStartPosition(bool isLeft, int heightPercentage);
-
+	
 	[DllImport("__Internal")]
 	private static extern void _SetUseWidgetScreenShot(bool useScreenShot);
 	
@@ -117,38 +114,38 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	delegate void NCSDKDidLoadDelegate();
 	[MonoPInvokeCallback(typeof(NCSDKDidLoadDelegate))]
 	public static void _NCSDKDidLoadCallback () {
-//		_ShowMessageToast ("Did Load sdk");
+		//		_ShowMessageToast ("Did Load sdk");
 	}
 	
 	delegate void NCSDKDidUnLoadDelegate();
 	[MonoPInvokeCallback(typeof(NCSDKDidUnLoadDelegate))]
 	public static void _NCSDKDidUnLoadCallback () {
-//		_ShowMessageToast ("Did UnLoad sdk");
+		//		_ShowMessageToast ("Did UnLoad sdk");
 	}
 	
 	delegate void NCSDKJoinedCafeDelegate();
 	[MonoPInvokeCallback(typeof(NCSDKJoinedCafeDelegate))]
 	public static void _NCSDKJoinedCafeCallback () {
-//		_ShowMessageToast ("Joined Cafe");
+		//		_ShowMessageToast ("Joined Cafe");
 	}
-
+	
 	delegate void NCSDKPostedArticleAtMenuDelegate(int menuId, int imageCount, int videoCount);
 	[MonoPInvokeCallback(typeof(NCSDKPostedArticleAtMenuDelegate))]
 	public static void _NCSDKPostedArticleAtMenuCallback (int menuId, int imageCount, int videoCount) {
-//		String message = String.Format ("Posted Article at {0} image : {1} video : {2}", menuId, imageCount, videoCount);
-//		_ShowMessageToast (message);
+		//		String message = String.Format ("Posted Article at {0} image : {1} video : {2}", menuId, imageCount, videoCount);
+		//		_ShowMessageToast (message);
 	}
-
+	
 	delegate void NCSDKPostedCommentAtArticleDelegate(int articleId);
 	[MonoPInvokeCallback(typeof(NCSDKPostedCommentAtArticleDelegate))]
 	public static void _NCSDKPostedCommentAtArticleCallback (int articleId) {
-//		_ShowMessageToast ("Posted Comment at " + articleId);
+		//		_ShowMessageToast ("Posted Comment at " + articleId);
 	}
-
+	
 	delegate void NCSDKWidgetPostAriticleWithImageDelegate();
 	[MonoPInvokeCallback(typeof(NCSDKWidgetPostAriticleWithImageDelegate))]
 	public static void _NCSDKWidgetPostAriticleWithImageCallback () {
-//		_ShowMessageToast ("Post Article With Image" );
+		//		_ShowMessageToast ("Post Article With Image" );
 		
 		string name = "CafeSdkController";
 		GameObject obj = GameObject.Find (name);
@@ -164,9 +161,9 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	delegate void NCSDKDidVoteAtArticleDelegate(int articleId);
 	[MonoPInvokeCallback(typeof(NCSDKDidVoteAtArticleDelegate))]
 	public static void _NCSDKDidVoteAtArticleCallback (int articleId) {
-//		_ShowMessageToast ("Did Vote at " + articleId);
+		//		_ShowMessageToast ("Did Vote at " + articleId);
 	}
-
+	
 	delegate void NCSDKAppSchemeBannerDelegate(string appScheme);
 	[MonoPInvokeCallback(typeof(NCSDKAppSchemeBannerDelegate))]
 	public static void _NCSDKAppSchemeBannerCallback (string appScheme) {
@@ -177,24 +174,24 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	delegate void NCSDKDidEndStreamingLiveViewCountDelegate(int viewCount, int reactionCount);
 	[MonoPInvokeCallback(typeof(NCSDKDidEndStreamingLiveViewCountDelegate))]
 	public static void _NCSDKDidEndStreamingLiveViewCountCallback (int viewCount, int reactionCount) {
-//		String message = String.Format ("Live {0} : {1} ", viewCount, reactionCount);
-//		_ShowMessageToast (message);
+		//		String message = String.Format ("Live {0} : {1} ", viewCount, reactionCount);
+		//		_ShowMessageToast (message);
 	}
-
-    delegate void NCSDKDidEndWatchingLiveSecondsDelegate(int seconds);
+	
+	delegate void NCSDKDidEndWatchingLiveSecondsDelegate(int seconds);
 	[MonoPInvokeCallback(typeof(NCSDKDidEndWatchingLiveSecondsDelegate))]
 	public static void _NCSDKDidEndWatchingLiveSecondsCallback (int seconds) {
-//		String message = String.Format ("Live {0} ", viewCount);
-//		_ShowMessageToast (message);
+		//		String message = String.Format ("Live {0} ", viewCount);
+		//		_ShowMessageToast (message);
 	}
-
+	
 	#endif
 	
 	public GLinkiOS() {
 		#if UNITY_IPHONE
 		_InitGLink(GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
-		_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
-
+		_InitGLinkForGlobal(GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
+		
 		//set callback funcs
 		_SetSDKDidLoadDelegate(_NCSDKDidLoadCallback);
 		_SetSDKDidUnLoadDelegate(_NCSDKDidUnLoadCallback);
@@ -268,13 +265,13 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		_SetUseWidgetVideoRecord(useVideoRecord);
 		#endif
 	}
-		
+	
 	public void setShowWidgetWhenUnloadSDK (bool useWidget) {
 		#if UNITY_IPHONE 
 		_SetShowWidgetWhenUnloadSDK(useWidget);		
 		#endif
 	}
-
+	
 	public string getCurrentChannelCode () {
 		string code = null;
 		#if UNITY_IPHONE 
@@ -282,31 +279,31 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		#endif
 		return code;
 	}
-
+	
 	public void setChannelCode (string channelCode) {
 		#if UNITY_IPHONE 
 		_SetChannelCode(channelCode);
 		#endif
 	}
-
+	
 	public void setThemeColor(string themeColorCSSString) {
 		#if UNITY_IPHONE 
 		_SetThemeColor(themeColorCSSString, "");
 		#endif
 	}
-
+	
 	public void setThemeColor(string themeColorCSSString, string backgroundCSSString) {
 		#if UNITY_IPHONE 
 		_SetThemeColor(themeColorCSSString, backgroundCSSString);
 		#endif
 	}
-
+	
 	public void setWidgetStartPosition(bool isLeft, int heightPercentage) {
 		#if UNITY_IPHONE
 		_SetWidgetStartPosition(isLeft, heightPercentage);
 		#endif
 	}
-
+	
 	public void setUseWidgetScreenShot(bool useScreenShot) {
 		#if UNITY_IPHONE
 		_SetUseWidgetScreenShot(useScreenShot);

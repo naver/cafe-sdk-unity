@@ -3,7 +3,9 @@
 The PLUG SDK is a dedicated in-app community library for mobile games, which lets mobile gamers use community features without leaving games while they are playing. It is easy to apply the PLUG SDK to your project.
 
 As a proven SDK, which has been used in many mobile games, this lets you simply and quickly add community features in your game.
- 
+
+-  PLUG SDK 2.x, 3.x versions are no longer supported
+
 ![PLUG SDK](http://static.naver.net/m/cafe/glink/promotion/cafe_sdk_open/img_intro1_20151111.png)
 
 ## How To Get Started 
@@ -59,13 +61,13 @@ Comment out the code associated with languages support other than Korean in the 
 Comment out the code below in the **GlinkAndroid.cs** file, a script file for Android.
 
 ```objective-c
-glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
+glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
 ```
 
 Comment out the code below in the **GlinkiOS.cs** file, a script file for iOS.
 
 ```objective-c
-_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
+_InitGLinkForGlobal(GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
 ```
 #### 2.2 Support for languages other than Korean
 
@@ -81,19 +83,15 @@ Uncomment the code associated with languages support other than Korean in the sc
 Uncomment the code below in the **GlinkAndroid.cs** file, a script file for Android.
 
 ```objective-c
-glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
+glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
+
 ```
 
 Uncomment the code below in the **GlinkiOS.cs** file, a script file for iOS.
 
 ```objective-c
-_InitGLinkForGlobal(GLinkConfig.NeoIdConsumerKey, GLinkConfig.CommunityId);
+_InitGLinkForGlobal(GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
 ```
-
-> **How to check your community ID and consumer key**  
-> Visit http://g.cafe.naver.com/plugsample/manage/consumer and log in to your community using the account with manager privileges.
-> You can find the information in **Settings > Communities > In-App Community Settings** as shown in the image below.  
-> ![In-App Community Settings](https://plug.gitbooks.io/plug-sdk-android/content/assets/wiki-plug-setting.png)
 
 ### 3. Start the PLUG SDK
 
@@ -128,11 +126,11 @@ To develop game apps that require executions in portrait mode, set the NCSDKMana
 
 ```objective-c
 - (void)setGLRootViewController {
-    _mainViewcontroller = UnityGetGLViewController();
-    
-    [[NCSDKManager getSharedInstance] setParentViewController:_mainViewcontroller];
-    [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:NO];
+_mainViewcontroller = UnityGetGLViewController();
+
+[[NCSDKManager getSharedInstance] setParentViewController:_mainViewcontroller];
+[[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
+[[NCSDKManager getSharedInstance] setOrientationIsLandscape:NO];
 }
 
 ```
@@ -141,7 +139,7 @@ To develop game apps that require executions in portrait mode, set the NCSDKMana
 
 For Unity 5.4.0f3 or later, the .bundle file is not linked by default when building applications for iOS.
 To make **NaverAuth.bundle** and **NaverCafeSDK.bundle** linked, you should select **iOS** in **Select for plugin** as shown the image below.
- 
+
 ![Configuration to link the NaverAuth.bundle file](http://cafeptthumb3.phinf.naver.net/MjAxNjA5MjFfMTcw/MDAxNDc0NDM1ODY2NjMy.f6PEBXPB6yrmhY0HFRf0ans0jLaE4-kO9RqLmPCd1bcg.4LyBxzBvuulvTM8GZgDJH1-Mc9N9uR7Vzaf6CLaDlokg.PNG.cafesdksupport/12.png?type=w740)
 ![Configuration to link the NaverCafeSDK.bundle file](http://cafeptthumb2.phinf.naver.net/MjAxNjA5MjFfNjgg/MDAxNDc0NDM1ODY2ODA1.9ks28hm-J0Vws9UxNyw0VuNJXRj6LtlHjcpQQC7FIBEg.58cYn1IJ7HlreiT-9dczAnWNhyJAQemYF_H5HojizBEg.PNG.cafesdksupport/13.png?type=w740)
 
@@ -151,25 +149,25 @@ You must set up a development environment in Xcode as follows:
 
 1. Go to **Build Settings > Other Linker Flags** and add the **-ObjC** option. 
 2. Go to **Build Phases > Link Binary With Libraries** and add the following libraries. Set **Status** of each library to **Required**.
-    - MobileCoreServices.framework
-    - SystemConfiguration.framework
-    - MediaPlayer.framework
-    - AVFoundation.framework
-    - CoreMedia.framework
-    - AssetsLibrary.framework
-    - Security.framework
-    - ImageIO.framework
-    - QuartzCore.framework
-    - ReplayKit.framework (set **Status** to **Optional**)
+- MobileCoreServices.framework
+- SystemConfiguration.framework
+- MediaPlayer.framework
+- AVFoundation.framework
+- CoreMedia.framework
+- AssetsLibrary.framework
+- Security.framework
+- ImageIO.framework
+- QuartzCore.framework
+- ReplayKit.framework (set **Status** to **Optional**)
 
 ## Files and Folders 
-|Name	|Description|
+|Name    |Description|
 |---|---|
-|guide/	|Folder for PLUG SDK documentation|
-|lib/	|Folder for Unity PLUG SDK library|
-|sample/	|Folder for sample project|
-|LICENSE	|License file| 
-|README.md	|Readme file|
+|guide/    |Folder for PLUG SDK documentation|
+|lib/    |Folder for Unity PLUG SDK library|
+|sample/    |Folder for sample project|
+|LICENSE    |License file| 
+|README.md    |Readme file|
 
 ## Dependent Libraries 
 
