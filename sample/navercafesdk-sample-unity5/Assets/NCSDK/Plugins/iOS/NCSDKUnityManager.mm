@@ -114,6 +114,15 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
                                                      cafeId:cafeId];
 }
 
+- (void)setGlobalInfoWithGlobalConsumerKey:(NSString *)globalConsumerKey
+                      globalConsumerSecret:(NSString *)globalConsumerSecret
+                         globalCommunityNo:(NSInteger)globalCommunityNo
+                            globalLoungeNo:(NSInteger)globalLoungeNo {
+    [[NCSDKManager getSharedInstance] setGlobalConsumerKey:globalConsumerKey globalConsumerSecret:globalConsumerSecret globalCommunityNo:globalCommunityNo globalLoungeNo:globalLoungeNo];
+}
+
+/*
+  Don't Use GLOBAL
 - (void)setGLinkGlobalInfoWithNeoIdConsumerKey:(NSString *)neoIdConsumerKey
                                 andCommunityId:(NSInteger)communityId {
     
@@ -129,6 +138,7 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
                                               communityId:communityId
                                                 channelId:channelId];
 }
+ */
 
 - (void)executeShowMessageToast:(NSString *)message {
     [[NCSDKManager getSharedInstance] showToast:message];
