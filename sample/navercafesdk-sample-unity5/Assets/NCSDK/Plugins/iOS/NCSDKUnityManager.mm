@@ -65,7 +65,7 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
 
 - (void)setGLRootViewController {
     _mainViewcontroller = UnityGetGLViewController();
-    
+
     [[NCSDKManager getSharedInstance] setParentViewController:_mainViewcontroller];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
     [[NCSDKManager getSharedInstance] setOrientationIsLandscape:NO];
@@ -114,31 +114,16 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
                                                      cafeId:cafeId];
 }
 
-- (void)setGlobalInfoWithGlobalConsumerKey:(NSString *)globalConsumerKey
-                      globalConsumerSecret:(NSString *)globalConsumerSecret
-                         globalCommunityNo:(NSInteger)globalCommunityNo
-                            globalLoungeNo:(NSInteger)globalLoungeNo {
-    [[NCSDKManager getSharedInstance] setGlobalConsumerKey:globalConsumerKey globalConsumerSecret:globalConsumerSecret globalCommunityNo:globalCommunityNo globalLoungeNo:globalLoungeNo];
-}
+- (void)setGLinkGlobalInfoWithConsumerKey:(NSString *)globalConsumerKey
+                     globalConsumerSecret:(NSString *)globalConsumerSecret
+                        globalCommunityNo:(NSInteger)globalCommunityNo
+                           globalLoungeNo:(NSInteger)globalLoungeNo {
 
-/*
-  Don't Use GLOBAL
-- (void)setGLinkGlobalInfoWithNeoIdConsumerKey:(NSString *)neoIdConsumerKey
-                                andCommunityId:(NSInteger)communityId {
-    
-    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:neoIdConsumerKey
-                                              communityId:communityId];
+    [[NCSDKManager getSharedInstance] setGlobalConsumerKey:globalConsumerKey
+                                      globalConsumerSecret:globalConsumerSecret
+                                         globalCommunityNo:globalCommunityNo
+                                            globalLoungeNo:globalLoungeNo];
 }
-
-- (void)setGLinkGlobalInfoWithNeoIdConsumerKey:(NSString *)neoIdConsumerKey
-                                andCommunityId:(NSInteger)communityId
-                                  andChannelId:(NSInteger)channelId {
-    
-    [[NCSDKManager getSharedInstance] setNeoIdConsumerKey:neoIdConsumerKey
-                                              communityId:communityId
-                                                channelId:channelId];
-}
- */
 
 - (void)executeShowMessageToast:(NSString *)message {
     [[NCSDKManager getSharedInstance] showToast:message];
@@ -185,7 +170,7 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
     if (backgroundCSSString.length == 0) {
         backgroundCSSString = @"#44484e";
     }
-    
+
     [[NCSDKManager getSharedInstance] setThemeColor:themeColorCSSString andTabBackgroundColor:backgroundCSSString];
 }
 
@@ -247,7 +232,7 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
     if (self.glSDKPostedCommentAtArticleDelegate) {
         self.glSDKPostedCommentAtArticleDelegate(articleId);
     }
-    
+
 }
 
 - (void)ncSDKDidVoteAtArticle:(NSInteger)articleId {
@@ -258,7 +243,7 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
 
 - (void)ncSDKAppSchemeBanner:(NSString *)appScheme {
     const char* res = [appScheme UTF8String];
-    
+
     if (self.glSDKAppSchemeBannerDelegate) {
         self.glSDKAppSchemeBannerDelegate(res);
     }
@@ -284,7 +269,7 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
 
 - (void)ncSDKGetProfile:(NSString *)result {
     const char* res = [result UTF8String];
-    
+
     if (self.glNaverIdGetProfileDelegate) {
         self.glNaverIdGetProfileDelegate(res);
     }
@@ -311,7 +296,7 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
 
 - (void)ncSDKRecordError:(NSString *)msg {
     const char* res = [msg UTF8String];
-    
+
     if (self.glSDKRecordErrorDelegate) {
         self.glSDKRecordErrorDelegate(res);
     }
@@ -332,11 +317,11 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
 #pragma mark - Live
 - (void)ncSDKDidEndStreamingLiveViewCount:(NSInteger)viewCount
                                 likeCount:(NSInteger)likeCount {
-    
+
     if (self.glSDKDidEndStreamingLiveViewCountDelegate) {
         self.glSDKDidEndStreamingLiveViewCountDelegate(viewCount, viewCount);
     }
-    
+
 }
 
 - (void)ncSDKDidEndWatchingLiveSeconds:(NSInteger)seconds {
@@ -365,56 +350,51 @@ extern "C" {
         strcpy (res, string);
         return res;
     }
-    
+
     GLinkViewController *vc = [[GLinkViewController alloc] init];
-    
+
     void _InitGLink(const char* NaverLoginClientId, const char* NaverLoginClientSecret, int cafeId ) {
         [vc setGLinkInfoWithNaverLoginClientId:NCSDKCreateNSString(NaverLoginClientId)andNaverLoginClientSecret:NCSDKCreateNSString(NaverLoginClientSecret)
                                      andCafeId:cafeId];
-        //        [vc setChannelCode:@"ko"];
     }
-    
-    void _InitGLinkForGlobal(const char* neoIdConsumerKey, int communityId) {
-        [vc setGLinkGlobalInfoWithNeoIdConsumerKey:NCSDKCreateNSString(neoIdConsumerKey) andCommunityId:communityId];
+
+    void _InitGLinkForGlobal(const char* globalConsumerKey, const char* globalConsumerSecret, int globalCommunityNo, int globalLoungeNo) {
+        [vc setGLinkGlobalInfoWithConsumerKey:NCSDKCreateNSString(globalConsumerKey) globalConsumerSecret:NCSDKCreateNSString(globalConsumerSecret) globalCommunityNo:globalCommunityNo globalLoungeNo:globalLoungeNo];
     }
-    
-    void _InitGLinkForGlobalWithChannelId(const char* neoIdConsumerKey, int communityId, int channelId) {
-        [vc setGLinkGlobalInfoWithNeoIdConsumerKey:NCSDKCreateNSString(neoIdConsumerKey) andCommunityId:communityId andChannelId:channelId];
-    }
-    
+
     void _ExecuteMain(){
         [vc executeGlink];
     }
-    
+
     void _ExecuteArticle(int articleId) {
         [vc executeArticleWithArticleId:articleId];
     }
-    
+
     void _SyncGameUserId(const char* gameUserId) {
         [vc syncGameUserId:NCSDKCreateNSString(gameUserId)];
     }
-    
+
     void _ExecuteArticlePost() {
         [vc executeArticle];
     }
-    
+
     void _ExecuteArticlePostWithImage(const char* filePath) {
         [vc executeArticleForImageWithFilePath:NCSDKCreateNSString(filePath)];
     }
-    
+
     void _ExecuteArticlePostWithVideo(const char* filePath) {
         [vc executeArticleForVideoWithFilePath:NCSDKCreateNSString(filePath)];
-        
+
     }
-    
+
     void _ExecuteEtc() {
         [vc executeEtc];
     }
-    
+
     void _ShowMessageToast(const char* message) {
         [vc executeShowMessageToast:NCSDKCreateNSString(message)];
     }
-    
+
     void _SetSDKDidLoadDelegate(GLSDKDidLoadDelegate glSDKDidLoadDelegate) {
         vc.glSDKDidLoadDelegate = glSDKDidLoadDelegate;
     }
@@ -440,124 +420,125 @@ extern "C" {
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory,convertFileName];
         UIImage *image = [[UIImage alloc] initWithContentsOfFile:filePath];
-        
+
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-        
+
     }
-    
+
     void _SetSDKDidVoteAtArticleDelegate(GLSDKDidVoteAtArticleDelegate glSDKDidVoteAtArticleDelegate) {
         vc.glSDKDidVoteAtArticleDelegate = glSDKDidVoteAtArticleDelegate;
     }
-    
+
     void _SetSDKAppSchemeBannerDelegate(GLSDKAppSchemeBannerDelegate glSDKAppSchemeBannerDelegate) {
         vc.glSDKAppSchemeBannerDelegate = glSDKAppSchemeBannerDelegate;
     }
-    
+
     void _StartWidget() {
         [vc startWidget];
     }
-    
+
     void _StopWidget() {
         [vc stopWidget];
     }
-    
+
     void _SetUseWidgetVideoRecord(BOOL useVideo) {
         [vc setUseWidgetVideoRecord:useVideo];
     }
-    
+
     void _SetShowWidgetWhenUnloadSDK(BOOL useWidget) {
         [vc setShowWidgetWhenUnloadSDK:useWidget];
     }
-    
+
     const char* _GetCurrentChannelCode() {
         return NCSDKCreateNSStrintToChar([[vc currentChannelCode] UTF8String]);
     }
-    
+
     void _SendNewUser(const char* gameUserId, const char* market) {
         [vc sendNewUser:NCSDKCreateNSString(gameUserId) andMarket:NCSDKCreateNSString(market)];
     }
-    
+
     void _SendPayUser(const char *gameUserId, double pay, const char *productCode, const char *currency, const char *market) {
         [vc sendPayUser:NCSDKCreateNSString(gameUserId) andPay:pay andProductCode:NCSDKCreateNSString(productCode) andCurrency:NCSDKCreateNSString(currency) andMarket:NCSDKCreateNSString(market)];
     }
-    
+
     void _SendPageVisit(const char* gameUserId) {
         [vc sendPageVisit:NCSDKCreateNSString(gameUserId)];
     }
-    
+
     void _SetChannelCode(const char* code) {
         [vc setChannelCode:NCSDKCreateNSString(code)];
     }
-    
+
     void _SetThemeColor(const char* themeColorCSSString, const char* backgroundCSSString) {
         [vc setThemeColor:NCSDKCreateNSString(themeColorCSSString) andTabBackgroundColor:NCSDKCreateNSString(backgroundCSSString)];
     }
-    
+
     void _InitNaverLogin(const char* clientId, const char* clientSecret) {
         [vc initNaverIdLoginWithClientId:NCSDKCreateNSString(clientId) andCleitnSecret:NCSDKCreateNSString(clientSecret)];
     }
-    
+
     void _Login() {
         [vc naverIdLogin];
     }
-    
+
     void _Logout() {
         [vc naverIdLogout];
     }
-    
+
     bool _IsLogin() {
         return [vc isNaverIdLogin];
     }
-    
+
     void _GetProfile() {
         [vc getNaverIdProfile];
     }
-    
+
     void _SetNaverIdLoginCallback(GLNaverIdLoginDelelgate glNaverIdLoginDelelgate) {
         vc.glNaverIdLoginDelelgate = glNaverIdLoginDelelgate;
     }
-    
+
     void _SetNaverIdGetProfileDelegate(GLNaverIdGetProfileDelegate glNaverIdGetProfileDelegate) {
         vc.glNaverIdGetProfileDelegate = glNaverIdGetProfileDelegate;
     }
-    
+
     void _SetWidgetStartPosition(BOOL isLeft, int positionY) {
         [vc setWidgetStartPosition:isLeft andY:positionY];
     }
-    
+
     void _SetUseWidgetScreenShot(BOOL use) {
         [vc setUseWidgetScreenShot:use];
     }
-    
+
     void _StartRecord() {
         [vc startRecord];
     }
-    
+
     void _StopRecord() {
         [vc stopRecord];
     }
-    
+
     void _SetSDKRecordStartDelegate(GLSDKRecordStartDelegate glSDKRecordStartDelegate) {
         vc.glSDKRecordStartDelegate = glSDKRecordStartDelegate;
     }
-    
+
     void _SetSDKRecordErrorDelegate(GLSDKRecordErrorDelegate glSDKRecordErrorDelegate) {
         vc.glSDKRecordErrorDelegate = glSDKRecordErrorDelegate;
     }
-    
+
     void _SetSDKRecordFinishDelegate(GLSDKRecordFinishDelegate glSDKRecordFinishDelegate) {
         vc.glSDKRecordFinishDelegate = glSDKRecordFinishDelegate;
     }
-    
+
     void _SetSDKRecordFinishWithPreviewDelegate(GLSDKRecordFinishWithPreviewDelegate glSDKRecordFinishWithPreviewDelegate) {
         vc.glSDKRecordFinishWithPreviewDelegate = glSDKRecordFinishWithPreviewDelegate;
     }
-    
+
     void _SetSDKDidEndStreamingLiveViewCountDelegate(GLSDKDidEndStreamingLiveViewCountDelegate glSDKDidEndStreamingLiveViewCountDelegate) {
         vc.glSDKDidEndStreamingLiveViewCountDelegate = glSDKDidEndStreamingLiveViewCountDelegate;
     }
-    
+
     void _SetSDKDidEndWatchingLiveSecondsDelegate(GLSDKDidEndWatchingLiveSecondsDelegate glSDKDidEndWatchingLiveSecondsDelegate) {
         vc.glSDKDidEndWatchingLiveSecondsDelegate = glSDKDidEndWatchingLiveSecondsDelegate;
     }
 }
+
