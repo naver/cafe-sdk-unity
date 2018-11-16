@@ -1,10 +1,12 @@
 # PLUG SDK
 
+* PLUG SDK 2.x, 3.x versions are no longer supported.
+* A iOS Sample Project contains large files over 100mb. Therefore, the sample project should be downloaded from below link instead of git clone.
+(https://github.com/naver/cafe-sdk-unity/releases/download/4.0.4/PLUGSDK-4.0.4.unitypackage)
+
 The PLUG SDK is a dedicated in-app community library for mobile games, which lets mobile gamers use community features without leaving games while they are playing. It is easy to apply the PLUG SDK to your project.
 
 As a proven SDK, which has been used in many mobile games, this lets you simply and quickly add community features in your game.
-
--  PLUG SDK 2.x, 3.x versions are no longer supported
 
 ![PLUG SDK](http://static.naver.net/m/cafe/glink/promotion/cafe_sdk_open/img_intro1_20151111.png)
 
@@ -22,7 +24,6 @@ You can manage the PLUG SDK content on the Settings page from your computer afte
 ### Documentation
 
 - [PLUG documents](https://github.com/naver/cafe-sdk-unity/wiki)
-- [Downloads of latest library and sample project files](https://github.com/naver/cafe-sdk-unity/archive/master.zip)
 
 ## Communication 
 If you have any questions regarding working this SDK, please [visit our issue page for unity](https://github.com/naver/cafe-sdk-unity/issues).

@@ -1,9 +1,8 @@
 # PLUG SDK
 
-* PLUG SDK 3.x 버전은 더 이상 지원되지 않습니다.
-* UnityPackage 4.0.0 은 LFS 로 업로드 되어있어서 zip download 를 지원하지 않습니다.
-(https://github.com/naver/cafe-sdk-unity/blob/master/lib/PLUGSDK-4.0.0.unitypackage)
-이 경로로 직접 다운로드 하여주세요.
+* PLUG SDK 2.x, 3.x 버전은 더 이상 지원되지 않습니다.
+* iOS 샘플 프로젝트는 100mb가 넘는 파일을 포함하고 있습니다. git clone 대신 아래 링크에서 다운로드 바랍니다.
+(https://github.com/naver/cafe-sdk-unity/releases/download/4.0.4/PLUGSDK-4.0.4.unitypackage)
 
 
 PLUG SDK는 모바일 게임 사용자가 게임 도중 게임을 벗어나지 않고 게임의 커뮤니티와 소통할 수 있도록 제공되는 인앱 커뮤니티 라이브러리입니다. 간단한 조작으로 프로젝트에 PLUG SDK를 추가할 수 있습니다.
@@ -26,7 +25,6 @@ PLUG SDK를 앱에 적용하려면 PLUG SDK 제휴를 신청해야 합니다. �
 ### 적용 가이드
 
 - [PLUG 적용 가이드](https://github.com/naver/cafe-sdk-unity/wiki)
-- [최신 버전 및 샘플 프로젝트 다운로드](https://github.com/naver/cafe-sdk-unity/archive/master.zip)
 
 ## Communication 
 개발과 관련된 문의 사항은 PLUG 공식 카페를 사용합니다.
