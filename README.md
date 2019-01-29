@@ -1,8 +1,7 @@
 # PLUG SDK
 
 * PLUG SDK 2.x, 3.x 버전은 더 이상 지원되지 않습니다.
-* iOS 샘플 프로젝트는 100mb가 넘는 파일을 포함하고 있습니다. git clone 대신 아래 링크에서 다운로드 바랍니다.
-(https://github.com/naver/cafe-sdk-unity/releases/download/4.0.4/PLUGSDK-4.0.4.unitypackage)
+* iOS 샘플 프로젝트는 100mb가 넘는 파일을 포함하고 있습니다. git clone 대신 releases 메뉴에서 다운로드 해 주십시오.
 
 
 PLUG SDK는 모바일 게임 사용자가 게임 도중 게임을 벗어나지 않고 게임의 커뮤니티와 소통할 수 있도록 제공되는 인앱 커뮤니티 라이브러리입니다. 간단한 조작으로 프로젝트에 PLUG SDK를 추가할 수 있습니다.
@@ -151,7 +150,7 @@ Unity 5.4.0f3 버전 이상에서는 iOS용 애플리케이션을 빌드할 때 
 XCode에서 다음과 같이 개발 환경을 설정합니다.
 
 1. **Build Settings**의 **Other Linker Flags**에 **-ObjC** 옵션을 추가합니다.
-2. **Build Phases**의 **Link Binary With Libraries**에 다음 라이브러리를 추가합니다. 추가한 라이브러리의 **Status**는 **Required**로 설정합니다.
+2. **Build Phases**의 **Link Binary With Libraries**에 다음 라이브러리를 추가합니다. 
 - MobileCoreServices.framework
 - SystemConfiguration.framework
 - MediaPlayer.framework
@@ -161,7 +160,7 @@ XCode에서 다음과 같이 개발 환경을 설정합니다.
 - Security.framework
 - ImageIO.framework
 - QuartzCore.framework
-- ReplayKit.framework(라이브러리의 **Status**를 **Optional**로 설정합니다)
+- ReplayKit.framework
 - Webkit.framework
 
 ## Files and Folders
@@ -199,7 +198,7 @@ PLUG SDK를 사용하려면 다음 라이브러리를 프로젝트에 추가해 
 - [SDWebImage](https://github.com/rs/SDWebImage)(3.8.2 버전)
 - [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)(1.0.12 버전)
 - ApiGateway-1.5.0 
-- KaleidoCore.framework
+- openssl.framework
 
 ## License 
 
