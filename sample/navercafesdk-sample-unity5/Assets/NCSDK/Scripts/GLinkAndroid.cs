@@ -189,6 +189,12 @@ public class GLinkAndroid : IGLink {
 		#endif
 	}
 
+	public void executeMenu (int menuId) {
+		#if UNITY_ANDROID
+		glinkClass.CallStatic("startMenu", currentActivity, menuId);
+		#endif
+	}
+
 	public void executeArticlePost() {
 		#if UNITY_ANDROID
 		glinkClass.CallStatic ("startWrite", currentActivity);

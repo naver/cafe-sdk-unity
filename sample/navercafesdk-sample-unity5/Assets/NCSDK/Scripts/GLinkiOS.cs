@@ -38,6 +38,9 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	[DllImport("__Internal")]
 	public static extern void _ExecuteArticle(int articleId);
+
+	[DllImport("__Internal")]
+	public static extern void _ExecuteMenu(int menuId);
 	
 	[DllImport("__Internal")]
 	public static extern void _SyncGameUserId(string gameUserId);
@@ -216,6 +219,12 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	public void executeArticle (int articleId) {
 		#if UNITY_IPHONE 
 		_ExecuteArticle (articleId);
+		#endif
+	}
+
+	public void executeMenu (int menuId) {
+		#if UNITY_IPHONE 
+		_ExecuteMenu (menuId);
 		#endif
 	}
 	

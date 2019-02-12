@@ -15,6 +15,8 @@ public interface IGLink
 	void executeHome ();
 
 	void executeArticle (int articleId);
+
+	void executeMenu (int menuId);
 	
 	void executeArticlePost ();
 	
