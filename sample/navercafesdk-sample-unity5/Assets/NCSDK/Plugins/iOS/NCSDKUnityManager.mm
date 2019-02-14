@@ -75,6 +75,31 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
     [[NCSDKManager getSharedInstance] presentMainViewController];
 }
 
+- (void)executeNotice {
+    [self setGLRootViewController];
+    [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:1];
+}
+
+- (void)executeEvent {
+    [self setGLRootViewController];
+    [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:2];
+}
+
+- (void)executeMenu {
+    [self setGLRootViewController];
+    [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:3];
+}
+
+- (void)executeMenuWithMenuId:(NSUInteger)menuId {
+    [self setGLRootViewController];
+    [[NCSDKManager getSharedInstance] presentArticleListViewControllerWithMenuId:menuId];
+}
+
+- (void)executeProfile {
+    [self setGLRootViewController];
+    [[NCSDKManager getSharedInstance] presentMainViewControllerWithTabIndex:4];
+}
+
 - (void)executeArticleWithArticleId:(NSUInteger)articleId  {
     [self setGLRootViewController];
     [[NCSDKManager getSharedInstance] presentMainViewControllerWithArticleId:articleId];
@@ -366,6 +391,22 @@ extern "C" {
         [vc executeGlink];
     }
 
+    void _ExecuteNotice() {
+        [vc executeNotice];
+    }
+
+    void _ExecuteEvent() {
+        [vc executeEvent];
+    }
+
+    void _ExecuteMenu(int menuId) {
+        [vc executeMenuWithMenuId:menuId];
+    }
+
+    void _ExecuteProfile() {
+        [vc executeProfile];
+    }
+
     void _ExecuteArticle(int articleId) {
         [vc executeArticleWithArticleId:articleId];
     }
@@ -541,4 +582,3 @@ extern "C" {
         vc.glSDKDidEndWatchingLiveSecondsDelegate = glSDKDidEndWatchingLiveSecondsDelegate;
     }
 }
-
