@@ -14,6 +14,10 @@ public interface IGLink
 {
 	void executeHome ();
 
+	void executePopup();
+
+	void executePopup(int popupId); 
+
 	void executeArticle (int articleId);
 
 	void executeMenu (int menuId);
