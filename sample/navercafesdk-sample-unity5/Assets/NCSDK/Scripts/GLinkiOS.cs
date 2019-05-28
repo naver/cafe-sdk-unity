@@ -215,19 +215,7 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		_ExecuteMain ();
 		#endif
 	}
-
-		public void executePopup() {
-		#if UNITY_IPHONE 
-
-		#endif
-	}
 	
-		public void executePopup(int popupId) {
-		#if UNITY_IPHONE 
-
-		#endif
-	}
-
 	public void executeArticle (int articleId) {
 		#if UNITY_IPHONE 
 		_ExecuteArticle (articleId);
