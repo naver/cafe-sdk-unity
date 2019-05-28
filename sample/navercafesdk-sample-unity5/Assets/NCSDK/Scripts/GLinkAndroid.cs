@@ -183,17 +183,6 @@ public class GLinkAndroid : IGLink {
 		#endif
 	}
 
-	public void executePopup() {
-		#if UNITY_ANDROID
-		glinkClass.CallStatic("startPopup", currentActivity);
-		#endif
-	}
-	public void executePopup(int popupId) {
-		#if UNITY_ANDROID
-		glinkClass.CallStatic("startPopup", currentActivity, popupId);
-		#endif
-	}
-
 	public void executeArticle (int articleId) {
 		#if UNITY_ANDROID
 		glinkClass.CallStatic("startArticle", currentActivity, articleId);
