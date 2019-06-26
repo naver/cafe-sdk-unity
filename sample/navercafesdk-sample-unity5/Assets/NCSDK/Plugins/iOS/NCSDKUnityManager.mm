@@ -68,7 +68,7 @@ typedef void (*GLSDKDidEndWatchingLiveSecondsDelegate)(NSInteger seconds);
 
     [[NCSDKManager getSharedInstance] setParentViewController:_mainViewcontroller];
     [[NCSDKManager getSharedInstance] setNcSDKDelegate:self];
-    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:NO];
+    [[NCSDKManager getSharedInstance] setOrientationIsLandscape:YES];
 }
 - (void)executeGlink{
     [self setGLRootViewController];
