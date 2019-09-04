@@ -1,7 +1,15 @@
+v.4.4.1
+-------------
+### fixed
+1. iOS AFNetworking Framework 의존성 제거.
+2. iOS ApiGateway Framework 의존성 제거.
+3. iOS setChannelCode 설정 오류 수정.
+4. iOS App Bundle Preferred Localization 기준으로 채널 설정되게 수정.
+
 v.4.3.1
 -------------
 ### fixed
-1. OpenSSL framework 의존성 제거.
+1. iOS OpenSSL Framework 의존성 제거.
 
 v.4.3.0
 -------------
