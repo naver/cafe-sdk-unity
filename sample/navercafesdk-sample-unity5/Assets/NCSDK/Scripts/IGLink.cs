@@ -47,4 +47,8 @@ public interface IGLink
 	void setThemeColor(string themeColorCSSString, string backgroundCSSString);
 
 	void setWidgetStartPosition(bool isLeft, int heightPercentage);
+
+    void init(int cafeId, string clientId, string clientSecret);
+
+    void initGlobal(string consumerKey, string secretKey, int communityNo, int loungeNo);
 }

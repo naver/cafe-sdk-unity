@@ -192,8 +192,8 @@ public class GLinkiOS : MonoBehaviour, IGLink
 	
 	public GLinkiOS() {
 		#if UNITY_IPHONE
-		_InitGLink(GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
-		_InitGLinkForGlobal(GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
+		//_InitGLink(GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
+		//_InitGLinkForGlobal(GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
 		
 		//set callback funcs
 		_SetSDKDidLoadDelegate(_NCSDKDidLoadCallback);
@@ -318,4 +318,19 @@ public class GLinkiOS : MonoBehaviour, IGLink
 		_SetUseWidgetScreenShot(useScreenShot);
 		#endif
 	}
+
+    public void init(int cafeId, string clientId, string clientSecret)
+    {
+        #if UNITY_IPHONE
+        _InitGLink(clientId, clientSecret, cafeId);   
+        #endif
+    }
+
+    public void initGlobal(string consumerKey, string secretKey, int communityNo, int loungeNo)
+    {
+        #if UNITY_IPHONE
+        _InitGLinkForGlobal(consumerKey, secretKey, communityNo, loungeNo);
+        #endif
+    }
+
 }

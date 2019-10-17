@@ -130,12 +130,13 @@ public class GLinkAndroid : IGLink {
 	}
 
 	static void showToast(string message) {
-//		var activity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
-//		activity.Call ("runOnUiThread", new AndroidJavaRunnable (() => {
-//			AndroidJavaObject toast = new AndroidJavaClass ("android.widget.Toast").CallStatic<AndroidJavaObject>("makeText", activity, message, 1);
-//			toast.Call ("show");
-//		}));
-	}
+        //var activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+        //activity.Call("runOnUiThread", new AndroidJavaRunnable(() =>
+        //{
+        //    AndroidJavaObject toast = new AndroidJavaClass("android.widget.Toast").CallStatic<AndroidJavaObject>("makeText", activity, message, 1);
+        //    toast.Call("show");
+        //}));
+    }
 	#endif
 
 	public GLinkAndroid () {
@@ -143,36 +144,29 @@ public class GLinkAndroid : IGLink {
 		currentActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
 		glinkClass = new AndroidJavaClass ("com.naver.glink.android.sdk.Glink");
 
-		string name = "CafeSdkController";
-		GameObject obj = GameObject.Find (name);
-		if (obj == null) {
-			obj = new GameObject ("CafeSdkController");
-			obj.AddComponent<SampleBehaviour> ();
-		}
+        // Move to /Assets/NCSDK/Sample/SampleBehaviour.cs 
+        //glinkClass.CallStatic("init", currentActivity, GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
+        //glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.
 
-		SampleBehaviour behaviour = obj.GetComponent<SampleBehaviour> ();
-        behaviour.OnClickGlinkInitial();
-        //glinkClass.CallStatic ("init", currentActivity, behaviour.NaverLoginClientId, behaviour.NaverLoginClientSecret, behaviour.CafeId);
-		//glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.
-		// 앱스킴 listener 사용 하려면 아래 주석을 풀어 주세요.
-		// glinkClass.CallStatic ("setOnClickAppSchemeBannerListener", new OnClickAppSchemeBannerListener ());
+        // 앱스킴 listener 사용 하려면 아래 주석을 풀어 주세요.
+        // glinkClass.CallStatic ("setOnClickAppSchemeBannerListener", new OnClickAppSchemeBannerListener ());
 
-		// sdk start listener 사용 하려면 아래 주석을 풀어 주세요.
-		// glinkClass.CallStatic ("setOnSdkStartedListener", new OnSdkStartedListener ());
+        // sdk start listener 사용 하려면 아래 주석을 풀어 주세요.
+        // glinkClass.CallStatic ("setOnSdkStartedListener", new OnSdkStartedListener ());
 
-		// sdk stop listener 사용 하려면 아래 주석을 풀어 주세요.
-		// glinkClass.CallStatic ("setOnSdkStoppedListener", new OnSdkStoppedListener ());
+        // sdk stop listener 사용 하려면 아래 주석을 풀어 주세요.
+        // glinkClass.CallStatic ("setOnSdkStoppedListener", new OnSdkStoppedListener ());
 
-		// join listener 사용 하려면 아래 주석을 풀어 주세요.
-		// glinkClass.CallStatic ("setOnJoinedListener", new OnJoinedListener ());
+        // join listener 사용 하려면 아래 주석을 풀어 주세요.
+        // glinkClass.CallStatic ("setOnJoinedListener", new OnJoinedListener ());
 
-		// post article listener 사용 하려면 아래 주석을 풀어 주세요.
-		// glinkClass.CallStatic ("setOnPostedArticleListener", new OnPostedArticleListener ());
+        // post article listener 사용 하려면 아래 주석을 풀어 주세요.
+        // glinkClass.CallStatic ("setOnPostedArticleListener", new OnPostedArticleListener ());
 
-		// post comment listener 사용 하려면 아래 주석을 풀어 주세요.
-		// glinkClass.CallStatic ("setOnPostedCommentListener", new OnPostedCommentListener ());
+        // post comment listener 사용 하려면 아래 주석을 풀어 주세요.
+        // glinkClass.CallStatic ("setOnPostedCommentListener", new OnPostedCommentListener ());
 
-		glinkClass.CallStatic ("setOnWidgetScreenshotClickListener", new OnWidgetScreenshotClickListener ());
+        glinkClass.CallStatic ("setOnWidgetScreenshotClickListener", new OnWidgetScreenshotClickListener ());
 
 		// live listener 사용 하려면 아래 주석을 풀어 주세요.
 		// glinkClass.CallStatic ("setOnEndStreamingLiveListener", new OnEndStreamingLiveListener ());
@@ -296,4 +290,18 @@ public class GLinkAndroid : IGLink {
 		glinkClass.CallStatic ("setWidgetStartPosition", currentActivity, isLeft, heightPercentage);
 		#endif
 	}
+
+    public void init(int cafeId, string clientId, string clientSecret)
+    {
+        #if UNITY_ANDROID
+        glinkClass.CallStatic("init", currentActivity, clientId, clientSecret, cafeId);
+        #endif
+    }
+
+    public void initGlobal(string consumerKey, string secretKey, int communityNo, int loungeNo)
+    {
+        #if UNITY_ANDROID
+        glinkClass.CallStatic ("initGlobal", currentActivity, consumerKey, secretKey, communityNo, loungeNo);
+        #endif
+    }
 }

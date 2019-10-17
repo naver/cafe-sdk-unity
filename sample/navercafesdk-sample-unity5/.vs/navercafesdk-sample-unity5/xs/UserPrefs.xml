@@ -1,15 +1,17 @@
 ﻿<Properties StartupConfiguration="{7F83CBB5-7AFA-43AF-3C41-AB40A1A48FF1}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ConfigGlink.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NCSDK/Sample/SampleBehaviour.cs">
     <Files>
-      <File FileName="Assets/NCSDK/Sample/SampleBehaviour.cs" Line="50" Column="1" />
-      <File FileName="Assets/NCSDK/Scripts/GLinkAndroid.cs" Line="154" Column="41" />
-      <File FileName="Assets/NCSDK/Scripts/GLinkiOS.cs" Line="1" Column="1" />
-      <File FileName="Assets/NCSDK/Scripts/GLinkConfig.cs" Line="1" Column="1" />
-      <File FileName="Assets/NCSDK/Scripts/GLink.cs" Line="1" Column="1" />
+      <File FileName="Assets/NCSDK/Sample/SampleBehaviour.cs" Line="31" Column="27" />
+      <File FileName="Assets/NCSDK/Scripts/GLinkAndroid.cs" Line="310" Column="12" />
+      <File FileName="Assets/NCSDK/Scripts/GLinkiOS.cs" Line="328" Column="1" />
+      <File FileName="Assets/NCSDK/Scripts/GLinkConfig.cs" Line="7" Column="1" />
+      <File FileName="Assets/NCSDK/Scripts/GLink.cs" Line="16" Column="37" />
       <File FileName="Assets/NCSDK/Scripts/GLinkLanguage.cs" Line="1" Column="1" />
-      <File FileName="Assets/NCSDK/Scripts/GLinkNaverId.cs" Line="1" Column="1" />
-      <File FileName="Assets/NCSDK/Scripts/GLinkRecord.cs" Line="15" Column="36" />
-      <File FileName="Assets/ConfigGlink.cs" Line="16" Column="48" />
+      <File FileName="Assets/NCSDK/Scripts/GLinkNaverId.cs" Line="109" Column="19" />
+      <File FileName="Assets/NCSDK/Scripts/GLinkRecord.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/Android/AndroidManifest.xml" />
+      <File FileName="Assets/NCSDK/Scripts/IGLink.cs" Line="53" Column="90" />
+      <File FileName="Assets/NCSDK/Scripts/GLinkStatistics.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,16 +19,18 @@
           <Node name="navercafesdk-sample-unity5" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="NCSDK" expanded="True">
-                <Node name="Sample" expanded="True" />
+                <Node name="Plugins" expanded="True" />
+                <Node name="Sample" expanded="True">
+                  <Node name="SampleBehaviour.cs" selected="True" />
+                </Node>
                 <Node name="Scripts" expanded="True" />
               </Node>
-              <Node name="Plugins" expanded="True">
-                <Node name="Android" expanded="True" />
-              </Node>
-              <Node name="ConfigGlink.cs" selected="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">

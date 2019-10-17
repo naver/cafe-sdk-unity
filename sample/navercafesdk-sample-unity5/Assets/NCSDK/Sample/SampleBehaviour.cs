@@ -6,9 +6,7 @@ using System.IO;
 
 public class SampleBehaviour : MonoBehaviour {
 
-
-
-	[Header("NAVER CAFE ID")]
+    [Header("NAVER CAFE ID")]
 	public int CafeId = 28290504;
 
 	[Header("NAVER CAFE ClientId")]
@@ -17,36 +15,36 @@ public class SampleBehaviour : MonoBehaviour {
 	[Header("NAVER CAFE ClientSecret")]
 	public string NaverLoginClientSecret = "evCgKH1kJL";
 
-	public string NeoIdConsumerKey = "IHCd_HmSiMcXOMC37xZ8";
-	public int CommunityId = 1013329;
-	public string Language = "";
+    [Header("GLOBAL SUPPORT")]
+    public bool SupportGlobal = false;
 
-	public void OnClickGlinkButton () {
+    [Header("GLOBAL Consumer Key")]
+    public string ConsumerKey = "PLUGTESTKEY";
 
-		GLink.sharedInstance().setWidgetStartPosition(false, 60);
+    [Header("GLOBAL Secret Key")]
+    public string ConsumerSecureKey = "PLUGTESTSECRET";
+
+    [Header("GLOBAL Commnunity Number")]
+    public int CommunityNo = 1;
+
+    [Header("GLOBAL Lounge Number")]
+    public int LoungeNo = 58;
+
+
+    void Start()
+    {
+        GLink.sharedInstance().init(CafeId, NaverLoginClientId, NaverLoginClientSecret);
+
+        if (SupportGlobal)
+        {
+            GLink.sharedInstance().initGlobal(ConsumerKey, ConsumerSecureKey, CommunityNo, LoungeNo);
+        }
+    }
+
+    public void OnClickGlinkButton () {
+        GLink.sharedInstance().setWidgetStartPosition(false, 60);
 		GLink.sharedInstance().executeHome ();
 	}
-
-	public void OnClickGlinkInitial () {
-
-				AndroidJavaClass glinkClass = null;
-				AndroidJavaObject currentActivity = null;
-		
-				currentActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
-				glinkClass = new AndroidJavaClass ("com.naver.glink.android.sdk.Glink");
-		
-				string name = "CafeSdkController";
-				GameObject obj = GameObject.Find (name);
-				if (obj == null) {
-					obj = new GameObject ("CafeSdkController");
-					obj.AddComponent<SampleBehaviour> ();
-				}
-		
-				SampleBehaviour behaviour = obj.GetComponent<SampleBehaviour> ();
-
-				glinkClass.CallStatic ("init", currentActivity, NaverLoginClientId, NaverLoginClientSecret, CafeId);
-	}
-
 
 	public void OnClickScreenShotButton () {
 		StartCoroutine (SaveScreenShot ());
