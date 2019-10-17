@@ -13,7 +13,7 @@ using System.Collections;
 using System.Runtime.InteropServices;
 
 public class GLinkAndroid : IGLink {
-	
+
 	#if UNITY_ANDROID
 	AndroidJavaClass glinkClass = null;
 	AndroidJavaObject currentActivity = null;
@@ -142,9 +142,19 @@ public class GLinkAndroid : IGLink {
 		#if UNITY_ANDROID
 		currentActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject> ("currentActivity");
 		glinkClass = new AndroidJavaClass ("com.naver.glink.android.sdk.Glink");
-		glinkClass.CallStatic ("init", currentActivity, GLinkConfig.NaverLoginClientId, GLinkConfig.NaverLoginClientSecret, GLinkConfig.CafeId);
-		//glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.LoungeNo);
 
+		string name = "CafeSdkController";
+		GameObject obj = GameObject.Find (name);
+		if (obj == null) {
+			obj = new GameObject ("CafeSdkController");
+			obj.AddComponent<SampleBehaviour> ();
+		}
+
+		SampleBehaviour behaviour = obj.GetComponent<SampleBehaviour> ();
+	
+
+		glinkClass.CallStatic ("init", currentActivity, behaviour.NaverLoginClientId, behaviour.NaverLoginClientSecret, behaviour.CafeId);
+		//glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.
 		// 앱스킴 listener 사용 하려면 아래 주석을 풀어 주세요.
 		// glinkClass.CallStatic ("setOnClickAppSchemeBannerListener", new OnClickAppSchemeBannerListener ());
 
