@@ -151,9 +151,8 @@ public class GLinkAndroid : IGLink {
 		}
 
 		SampleBehaviour behaviour = obj.GetComponent<SampleBehaviour> ();
-	
-
-		glinkClass.CallStatic ("init", currentActivity, behaviour.NaverLoginClientId, behaviour.NaverLoginClientSecret, behaviour.CafeId);
+        behaviour.OnClickGlinkInitial();
+        //glinkClass.CallStatic ("init", currentActivity, behaviour.NaverLoginClientId, behaviour.NaverLoginClientSecret, behaviour.CafeId);
 		//glinkClass.CallStatic ("initGlobal", currentActivity, GLinkConfig.ConsumerKey, GLinkConfig.ConsumerSecureKey, GLinkConfig.CommunityNo, GLinkConfig.
 		// 앱스킴 listener 사용 하려면 아래 주석을 풀어 주세요.
 		// glinkClass.CallStatic ("setOnClickAppSchemeBannerListener", new OnClickAppSchemeBannerListener ());

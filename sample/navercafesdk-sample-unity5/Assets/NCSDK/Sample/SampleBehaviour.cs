@@ -44,7 +44,6 @@ public class SampleBehaviour : MonoBehaviour {
 		
 				SampleBehaviour behaviour = obj.GetComponent<SampleBehaviour> ();
 
-
 				glinkClass.CallStatic ("init", currentActivity, NaverLoginClientId, NaverLoginClientSecret, CafeId);
 	}
 
