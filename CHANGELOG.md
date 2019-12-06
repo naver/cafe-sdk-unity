@@ -1,3 +1,11 @@
+v.4.4.6
+-------------
+### fixed
+1. [iOS] 특정 게시글 이동으로 PLUG 처음 실행 시 동작하이 않음.
+2. [iOS] setShowWidgetWhenUnloadSDK false 설정 시, 최소화 버튼 숨김이 되지 않음.
+3. [iOS] Xcode 11 버전에서 Framework 빌드 시, Xcode 10 버전에서 빌드 오류 발생.
+4. [Android] 특정 기기에서 내비게이션바 애니메이션이 무한히 발생 
+
 v.4.4.5
 -------------
 ### fixed
