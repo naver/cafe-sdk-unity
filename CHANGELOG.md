@@ -1,3 +1,11 @@
+v.4.4.9
+-------------
+### fixed
+1. [Android]Target SDK 30 관련사항 수정 (추가 작업 필요)
+2. [Android]Androidx 지원 제공 (support-library 는 더이상 지원하지 않습니다.)
+3. [Android]Glide v4.12.0 지원 제공 (Glide v3.x.x 는 더이상 지원하지 않습니다)
+4. Unity 2019 부터 지원 (Unity 2018의 일부버전도 빌드가 가능하나 2019을 기준으로 지원됩니다)
+
 v.4.4.8
 -------------
 ### fixed
