@@ -80,11 +80,11 @@ public class GLinkAndroid : IGLink {
 		public OnWidgetScreenshotClickListener () : base("com.naver.glink.android.sdk.Glink$OnWidgetScreenshotClickListener") { /* empty. */ }
 
 		void onScreenshotClick() {
-			string name = "CafeSdkController";
+			string name = "GLinkController";
 
 			GameObject obj = GameObject.Find (name);
 			if (obj == null) {
-				obj = new GameObject ("CafeSdkController");
+				obj = new GameObject ("GLinkController");
 				obj.AddComponent<SampleBehaviour> ();
 			}
 

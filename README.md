@@ -206,13 +206,12 @@ PLUG SDK의 저작권은 네이버(주)에 있습니다.
 
 ```
 =======
-- Android Support Library v4
+- Androidx Jetpack Library
 - Android Support Custom Tabs
-- Android Support RecyclerView
 - [naver volleyer](http://mvnrepository.com/artifact/com.navercorp.volleyextensions/volleyer)   (2.0.1 사용 중)
 - [volley](http://mvnrepository.com/artifact/com.mcxiaoke.volley/library/) (1.0.2사용 중)
 - [google gson](http://mvnrepository.com/artifact/com.google.code.gson/gson)  (2.3.1 사용 중)
-- [glide](http://mvnrepository.com/artifact/com.github.bumptech.glide/glide)  (3.6.1 사용 중)
+- [glide](http://mvnrepository.com/artifact/com.github.bumptech.glide/glide)  (4.12.0 사용 중)
 - [otto](http://mvnrepository.com/artifact/com.squareup/otto)  (1.3.8 사용 중)
 - hmac (2.3.1 사용중)
 

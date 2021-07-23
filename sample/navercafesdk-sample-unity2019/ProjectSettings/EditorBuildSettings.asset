@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/NCSDK/Sample/NCSDK_Sample_Scene.unity
+    guid: 14cf712190ca44e8fa8a3a5364f5bd48
   m_configObjects: {}
