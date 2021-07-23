@@ -179,12 +179,12 @@ PLUG SDK를 사용하려면 다음 라이브러리를 프로젝트에 추가해 
 
 ### Android용 라이브러리
 
-- Android Support Library v4
+- Androidx Jetpack Library
 - [네이버 아이디 로그인](https://nid.naver.com/devcenter/docs.nhn?menu=Android)
 - [NAVER Volleyer](http://mvnrepository.com/artifact/com.navercorp.volleyextensions/volleyer)(2.0.1 버전 사용 중)
 - [Volley](http://mvnrepository.com/artifact/com.mcxiaoke.volley/library/)(1.0.2 버전 사용 중)
 - [Google Gson](http://mvnrepository.com/artifact/com.google.code.gson/gson)(2.3.1 버전 사용 중)
-- [Glide](http://mvnrepository.com/artifact/com.github.bumptech.glide/glide)(3.6.1 버전 사용 중)
+- [Glide](http://mvnrepository.com/artifact/com.github.bumptech.glide/glide)(4.12.0 버전 사용 중)
 - [Otto](http://mvnrepository.com/artifact/com.squareup/otto)(1.3.8 버전 사용 중)
 - hmac(2.3.1 버전 사용중)
 
